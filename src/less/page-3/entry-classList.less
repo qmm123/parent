@@ -1,0 +1,150 @@
+/* 3-课程列表页 */
+@import "../public";
+@import "./variable";
+@import "./search-shai";
+
+// 滚动加载容器
+.scrollWrapper{
+	margin-top: @header-h + 46;
+}
+
+// 滚动加载列表包裹层
+.ScrollContent{
+	margin-top: 5px;
+}
+
+// 课程列表
+.class_list_folder{
+	padding: 0 10px;
+	li{
+		border-radius: 5px;
+		overflow: hidden;
+		background-color: #fff;
+		padding: 0 0 6px 0;
+		margin: 0 0 10px 0;
+		position: relative;
+		.up{
+			background: url("@{img_url_tpl}/bgc_class.png") no-repeat 0 0;
+			background-size: 100% 100%;
+			.u{
+				overflow: hidden;
+				.img,.name{
+					float: left;
+				}
+				.img{
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+					margin: 10px 0 0 10px;
+				}
+				.name{
+					font-size: 1.2rem;
+					color: #333;
+					border-radius: 8px;
+					line-height: 1.6rem;
+					background: #fff;
+					box-sizing: content-box;
+					padding: 1px 10px;
+					margin: 43px 0 0 0;
+					position: relative;
+					img.arrow{
+						position: absolute;
+						left: -6px;
+						bottom: 0px;
+					}
+				}
+				.money{
+					font-size: 1.8rem;
+					color: #FFDB26;
+					float: right;
+					margin: 10px 10px 0 0;
+				}
+			}
+			.d{
+				min-height: 27px;
+				overflow: hidden;
+				background: rgba(52, 165, 53, .5);
+				padding: 4px 10px 0 10px;
+				margin: 10px 0 0 0;
+				.mark{
+					font-size: 1.2rem;
+					color: #fff;
+					border: 1px solid #fff;
+					border-radius: 10px;
+					padding: 0 12px;
+					margin: 0 5px 0 0;
+					float: left;
+				}
+				.bao{
+					font-size: 1.3rem;
+					color: #fff;
+					float: right;
+				}
+			}
+		}
+		.down{
+			padding: 10px 10px 0 10px;
+			.class_infor{
+				margin: 0 0 2px 0;
+				.name{
+					font-size: 1.6rem;
+					color: #333;
+				}
+				.hui{
+					float: right;
+					span{
+						font-size: 1.2rem;
+						color: #fff;
+						border-radius: 2px;
+						float: left;
+						padding: 1px 4px;
+						margin: 0 3px;
+						&.zhe{
+							background: #EAB629;
+						}
+						&.jian{
+							background: #F36337;
+						}
+						&.lian{
+							background: #F99630;
+						}
+						&.tao{
+							background: #FE514B;
+						}
+					}
+					float: right;
+				}
+			}
+			.campus,.time,.date{
+				color: #838383;
+				background-repeat: no-repeat;
+				background-position: left center;
+				background-size: 13px 13px;
+				padding: 0 0 0 18px;
+				margin: 0 0 2px 0;
+			}
+			.campus{
+				background-image: url("@{img_url_tpl}/icon/campus.png");
+			}
+			.time{
+				background-image: url("@{img_url_tpl}/icon/time.png");
+			}
+			.date{
+				background-image: url("@{img_url_tpl}/icon/date.png");
+			}
+			.position{
+				color: #838383;
+			}
+		}
+		// 班级状态
+		.class_status{
+			width: 38px;
+			height: 14px;
+			background: url("@{img_url_tpl}/icon/class_man.png") no-repeat 0 0;
+			background-size: 38px 14px;
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+		}
+	}
+}

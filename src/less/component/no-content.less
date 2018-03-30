@@ -1,0 +1,33 @@
+/* 数据为空 */
+.no_content{
+	text-align: center;
+	.pic{
+		display: inline-block;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0 0 10px 0;
+		// 题目
+		&.topic{
+			@w:168px;
+			@h:120px;
+			width: @w;
+			height: @h;
+			background-image: url("@{img_url}/no-content/topic.png");
+			background-size: @w @h;
+		}
+		// 通用
+		&.common{
+			@w:167px;
+			@h:120px;
+			width: @w;
+			height: @h;
+			background-image: url("@{img_url}/no-content/common.png");
+			background-size: @w @h;
+		}
+	}
+	.txt{
+		font-size: 1.4rem;
+		color: #333;
+		margin: 0 0 10px 0;
+	}
+}

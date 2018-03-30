@@ -1,0 +1,15 @@
+_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*.map
+/node_modules
+/bower_components
+.vscode
+.idea
+.log
+/dist

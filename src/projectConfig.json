@@ -1,0 +1,12 @@
+{
+  "version"           : "v1.0.0",
+  "svnVersion"        : "v1.0.0",
+  "title"             : "机构专属家长APP",
+  "sftpProjectConfig" : {
+    "host"       : "192.168.1.101",
+    "port"       : "22",
+    "user"       : "xiaohe",
+    "pass"       : "Wfzf6&uoxGwzcpvA4+eRgiuMbH6oZv^P^C",
+    "remotePath" : "/home/xiaohe/www/app/shangjia_pc_3.0/webroot/"
+  }
+}

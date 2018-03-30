@@ -1,0 +1,49 @@
+{
+  "name": "jigou_parent_app",
+  "version": "1.0.0",
+  "description": "机构专属家长APP",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp do --env development",
+    "pro": "gulp do --env production",
+    "build": "gulp build --env production",
+    "sftp": "gulp sftp",
+    "clean": "gulp clean",
+    "version": "gulp version"
+  },
+  "author": {
+    "name": "高同檩"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-changed": "3.1.0",
+    "gulp-clean": "0.3.2",
+    "gulp-clean-css": "3.4.1",
+    "gulp-file-include": "^1.2.0",
+    "gulp-htmlmin": "3.0.0",
+    "gulp-if": "2.0.2",
+    "gulp-imagemin": "3.2.0",
+    "gulp-less": "3.3.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-sequence": "0.4.6",
+    "gulp-sftp": "0.1.5",
+    "gulp-sourcemaps": "2.6.0",
+    "gulp-strip-debug": "1.1.0",
+    "gulp-uglify": "2.1.2",
+    "gulp-watch": "4.3.11",
+    "less-plugin-autoprefix": "^1.5.1",
+    "minimist": "1.2.0"
+  },
+  "devDependencies": {
+    "gulp-requirejs-optimize": "1.2.0",
+    "gulp-rev": "7.1.2",
+    "gulp-rev-collector": "1.1.1",
+    "gulp-uncss": "^1.0.6",
+    "vconsole": "^3.1.0"
+  }
+}

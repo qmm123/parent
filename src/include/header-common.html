@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>@@title@@subtitle</title>
+  <link rel="shortcut icon" href="http://cdn.baonahao.com/common/img/ico_aixiao_login.ico" />
+  <link rel="stylesheet" href="/css/@@css.css?v=v@@version">
+  <script type="text/javascript">
+	  // 版本号控制
+	  window.version = "@@version";
+	  // 是否开启反向代理
+		window.IsProxy = "@@IsProxy";
+  </script>
+  <!-- 手机端调试 -->
+  @@if(IsProxy == true){
+    <script src="/lib/js/vconsole.min.js"></script>
+    <script>
+      var vConsole = new VConsole();
+    </script>
+  }
+  <script data-main="/js/config.js?v=v@@version" src="/lib/js/require.js"></script>
+  <script src="/js/init.js?v=v@@version"></script>
+</head>

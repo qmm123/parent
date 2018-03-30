@@ -1,0 +1,30 @@
+// 公共布局
+
+@import "./nav";
+@import "./header";
+
+// body
+body{
+	background-color: #f0f0f0;
+	// 含有顶部
+	&.header{
+		padding: @header-h 0 0 0;
+	}
+}
+
+// container
+.container{
+	width: 100%;
+	// 两边有留白
+	padding-left: @pad_l_5;
+	padding-right: @pad_r_5;
+	// 两边没有留白
+	&.full{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	// 设置overflow属性
+	&.overflow{
+		overflow: hidden;
+	}
+}

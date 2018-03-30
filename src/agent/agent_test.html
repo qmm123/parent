@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test1</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<form action="/agent/index.php?func=upload" method="POST" enctype="multipart/form-data">
+<input type="text" name="cut_width" value="150">
+<input type="text" name="cut_height" value="150">
+<input type="text" name="image[width]" value='30'>
+<input type="text" name="image[height]" value='30'>
+<input type="text" name="image[x]" value='30'>
+<input type="text" name="image[y]" value='30'>
+<input type="file" name="file">
+<input type="submit" name="" value="submit">
+</form>
+
+<form action="/agent/index.php?func=upload" method="post">
+	<input type="file" value="sdgsdg" id="demo_input" />
+	<textarea name="file" id="result" rows=30 cols=300></textarea>
+	<input type="text" name="img_type" value="1">
+	<input type="text" name="cut_width" value="150">
+	<input type="text" name="cut_height" value="150">
+	<input type="text" name="image[width]" value='30'>
+	<input type="text" name="image[height]" value='30'>
+	<input type="text" name="image[x]" value='30'>
+	<input type="text" name="image[y]" value='30'>
+	<p id="img_area"></p>
+	<input type="submit" value="提交">
+</form>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+// 请求api
+ var params =
+ {
+   "uri": "web/order/MerchantApp/addOrder",
+   "data": {
+     "keys": {
+       "token_key": "6cbe9476afdf4edab6c1a53d651a2783",
+       'token_val': "b01a8fb795c54bdea64a74010224f2f1"
+     },
+     "data": {
+		 "merchant_id": "f0c25d1af79d4e90a36d1f1d6b715995",
+		 "member_id": '6cbe9476afdf4edab6c1a53d651a2783',
+		 'buy_time': 9,
+		 'student_num': 300,
+		 'total_amt': 30
+     }
+   }
+ };
+ $.post("/agent/index.php?func=api", params, function(result){
+ 	console.log(result);
+ }, 'json');
+
+$.post("/agent/index.php?func=api",
+	{
+        "uri": "web/order/MerchantApp/getSystemCapacity",
+        "data": {
+            "keys": {
+                "token_key": "6cbe9476afdf4edab6c1a53d651a2783",
+                'token_val': "90f9c80ce7bd4e7296bad43a60c37c72"
+            },
+            "data": {
+                "merchant_id": "f0c25d1af79d4e90a36d1f1d6b715995"
+            }
+        }
+	}
+	,function(result){
+    	console.log(result);
+}, 'json');
+
+
+window.onload = function(){
+    var input = document.getElementById("demo_input");
+    var result= document.getElementById("result");
+    var img_area = document.getElementById("img_area");
+    if ( typeof(FileReader) === 'undefined' ){
+        result.innerHTML = "抱歉，你的浏览器不支持 FileReader，请使用现代浏览器操作！";
+        input.setAttribute('disabled','disabled');
+    }else{
+        input.addEventListener('change',readFile,false);
+    }
+}
+function readFile(){
+    var file = this.files[0];
+    //这里我们判断下类型如果不是图片就返回 去掉就可以上传任意文件
+    if(!/image\/\w+/.test(file.type)){
+        alert("请确保文件为图像类型");
+        return false;
+    }
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    console.log();
+    reader.onload = function(e){
+        result.innerHTML = this.result;
+        img_area.innerHTML = '<div class="sitetip">图片img标签展示：</div><img src="'+this.result+'" alt=""/>';
+    }
+}
+</script>
+</body>
+</html>

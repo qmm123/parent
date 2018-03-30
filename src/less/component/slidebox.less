@@ -1,0 +1,41 @@
+/* slide轮播图 */
+.slideBox{
+	width: 100%;
+	position:relative;
+	overflow:hidden;
+	// 图片样式
+	.bd{
+		li{
+			width: 100%;
+		}
+		a{
+			display: block;
+			height: 100%;
+		}
+	}
+	img{
+		width: 100%;
+	}
+	// 圆点
+	.hd{
+		ul{
+			overflow: hidden;
+			position: absolute;
+			right: 50%;
+			bottom: 6px;
+			transform: translate(50%);
+		}
+		li{
+			width: 10px;
+			height: 10px;
+			background: url("@{img_url}/slidebox/dotte.png") no-repeat center center;
+			background-size: 5px 5px;
+			float: left;
+			margin: 0 6px 0 0;
+			&.on{
+				background-image: url("@{img_url}/slidebox/dotte_on.png");
+				background-size: 10px 10px;
+			}
+		}
+	}
+}
