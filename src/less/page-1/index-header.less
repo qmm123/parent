@@ -1,0 +1,55 @@
+/* 顶部 */
+header{
+	position: relative;
+	background-color: @col-main;
+	// 分类按钮
+	.menu{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 40px;
+		height: 100%;
+		background: url("@{img_url_tpl}/header/left_menu.png") no-repeat center center;
+		background-size: 20px 17px;
+	}
+	// 城市切换
+	.location{
+		text-align: center;
+		font-size: 1.8rem;
+		line-height: 45px;
+		.city_change{
+			position: relative;
+			display: inline-block;
+			padding: 0 17px 0 15px;
+			color: #fff;
+			&:before{
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 10px;
+				height: 100%;
+				background: url("@{img_url_tpl}/header/location_white.png") no-repeat 0 center;
+				background-size: 10px 15px;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				right: 0;
+				width: 13px;
+				height: 100%;
+				background: url("@{img_url_tpl}/header/arrow_down.png") no-repeat 0 center;
+				background-size: 13px 7px;
+			}
+		}
+	}
+	// 信息
+	.message{
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 44px;
+		height: 100%;
+		background: url("@{img_url_tpl}/header/message_white.png") no-repeat center center;
+		background-size: 22px 24px;
+	}
+}
