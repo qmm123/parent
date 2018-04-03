@@ -1,3 +1,186 @@
 /* 1-课程列表页 */
 @import "../public";
 @import "./variable";
+@import "./search-shai";
+
+// 滚动加载容器
+.scrollWrapper{
+	margin-top: @header-h + 46;
+}
+
+// 滚动加载列表包裹层
+.ScrollContent{
+	margin-top: 5px;
+}
+
+// 头部
+header{
+	.search{
+		margin-right: 50px;
+	}
+}
+// 课程列表
+.class_list_folder{
+	.item{
+		margin-top: 10px;
+		padding: 7px 0 12px 10px;
+		background: #fff;
+		.up{
+			overflow: hidden;
+			.avator{
+				float: left;
+				padding-right: 10px;
+				padding-top: 3px;
+				text-align: center;
+				img{
+					width: 65px;
+					height: 65px;
+				}
+				a{
+					font-size: 1rem;
+					color: #f84848;
+				}
+			}
+			.text{
+				margin-left: 85px;
+				border-bottom: 1px solid #ddd;
+				.class_name{
+					margin-bottom: 4px;
+					line-height: 1.375;
+					font-size: 1.6rem;
+					color: #333;
+				}
+				.address{
+					margin-bottom: 2px;
+					font-size: 1.2rem;
+					color: #848484;
+					&:before{
+						content: '';
+						display: inline-block;
+						width: 13px;
+						height: 13px;
+						vertical-align: middle;
+						margin-top: -3px;
+						background: url("@{img_url_tpl}/icon_search_xiaoqu.png") no-repeat;
+						background-size: cover;
+					}
+				}
+				.time{
+					margin-bottom: 2px;
+					font-size: 1.2rem;
+					color: #848484;
+					&:before{
+						content: '';
+						display: inline-block;
+						width: 13px;
+						height: 13px;
+						vertical-align: middle;
+						margin-top: -3px;
+						background: url("@{img_url_tpl}/lesson_time_icon.png") no-repeat;
+						background-size: cover;
+					}
+				}
+				.weak{
+					margin-bottom: 8px;
+					font-size: 1.2rem;
+					color: #848484;
+					&:before{
+						content: '';
+						display: inline-block;
+						width: 13px;
+						height: 13px;
+						vertical-align: middle;
+						margin-top: -3px;
+						background: url("@{img_url_tpl}/ic_timetable_unselected.png") no-repeat;
+						background-size: cover;
+					}
+				}
+			}
+			.icon_img_1{
+				float: right;
+				width: 14px;
+				height: 14px;
+				margin-right: 4px;
+				margin-top: 11px;
+				line-height: 14px;
+				text-align: center;
+				font-size: 1rem;
+				color: #fff;
+				background: #fe514b;
+				border-radius: 2.5px;
+				font-family: PingFangSC-Regular;			
+				/* background: url("@{img_url_tpl}/course_package_tip.png") no-repeat;
+				background-size: cover; */
+			}
+			.icon_img_2{
+				float: right;
+				width: 14px;
+				height: 14px;
+				margin-right: 10px;
+				margin-top: 11px;
+				line-height: 14px;
+				text-align: center;
+				font-size: 1rem;
+				color: #fff;
+				background: #fe514b;
+				border-radius: 2.5px;
+				font-family: PingFangSC-Regular;
+				/* background: url("@{img_url_tpl}/course_package_tip.png") no-repeat;
+				background-size: cover; */
+			}
+		}
+		.down{
+			overflow: hidden;
+			.left{
+				float: left;
+				width: 70px;
+				margin-right: 13px;
+				padding-top: 8px;
+				text-align: right;
+				.icon_img_3{
+					display: inline-block;
+					padding: 2px;
+					box-sizing: content-box;
+					height: 15px;
+					line-height: 15px;
+					border: 1px solid #f84848;
+					border-radius: 2.5px;
+					text-align: center;
+					color: #f84848;
+					font-size: 1rem;
+				}
+			}
+			.right{
+				float: left;
+				padding-top: 4.5px;
+				.money{
+					margin-bottom: 3.5px;
+					font-size: 1.6rem;
+					line-height: 1.1;
+					color: #000000;
+				}
+				.num{
+					margin-bottom: 2px;
+					font-size: 1.2rem;
+					color: #848484;
+				}
+				.mark{
+					width: 50px;
+					height: 17px;
+					border: 1px solid #848484;
+					border-radius: 10px;
+					margin-right: 5px;
+					font-size: 1rem;
+					color: #848484;
+				}
+			}
+			.address_message{
+				float: right;
+				margin-top: 26.5px;
+				margin-right: 10px;
+				font-size: 1rem;
+				color: #848484;
+			}
+		}
+	}
+}
