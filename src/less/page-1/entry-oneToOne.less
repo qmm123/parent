@@ -1,0 +1,75 @@
+/* 1-课程列表页 */
+@import "../public";
+@import "./variable";
+@import "./search-shai";
+
+// 滚动加载容器
+.scrollWrapper{
+	margin-top: @header-h + 46;
+}
+
+// 滚动加载列表包裹层
+.ScrollContent{
+	margin-top: 5px;
+}
+
+// 选项卡
+.order_sort{
+	.order_sort_u{
+		li{
+			width: 33.33%;
+		}
+	}
+}
+
+// 列表
+.one-list{
+	.item{
+		margin-top: 10px;
+		padding: 15px 0 15px 10px;
+		background: #fff;
+		.img{
+			float: left;
+			img{
+				width: 108px;
+				height: 80px;
+			}
+		}
+		.text{
+			padding-left: 10px;
+			overflow: hidden;
+			.title{
+				font-size: 1.6rem;
+				font-weight: bold;
+				color: #333;
+			}
+			.icon-list{
+				font-size: 0;
+				span{
+					display: inline-block;
+					width: 34px;
+					height: 15px;
+					margin-top: 4px;
+					margin-right: 4px;
+					text-align: center;
+					line-height: 15px;
+					padding: 1px;
+					border: 1px solid #848484;
+					font-size: 0.9rem;
+					color: #848484;
+				}
+			}
+			.price-wrapper{
+				margin-top: 3px;
+				font-size: 1.6rem;
+				color: #5b94fb;
+				span{
+					font-size: 1.3rem;
+				}
+				.gray{
+					color: #848484;
+				}
+			}	
+		}
+	}
+}
