@@ -1,0 +1,232 @@
+@import "../public";
+@import "./variable";
+
+/* banner图 */
+.banner{
+	position: relative;
+	img{
+		width: 100%;
+	}
+	a{
+		position: absolute;
+		top: 0;
+		box-sizing: content-box;
+		width: 30px;
+		height: 30px;
+	}
+	.back{
+		left: 0;
+		padding: 10px 16px;
+		background: url("@{img_url_tpl}/org_back.png") no-repeat center center;
+		background-size: 30px 30px;
+	}
+	.shortcut{
+		right: 42px;
+		padding: 10px 6px;
+		background: url("@{img_url_tpl}/shoppingcar.png") no-repeat center center;
+		background-size: 30px 30px;
+	}
+	.listen{
+		right: 0;
+		padding: 10px 6px;
+		background: url("@{img_url_tpl}/consult_white.png") no-repeat center center;
+		background-size: 30px 30px;
+	}
+}
+/* 精品钢琴课 */
+.class-content{
+	padding: 10px 0 0 10px;
+	.title{
+		line-height: 1.4;
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: #333;
+	}
+	.price{
+		margin-top: 8px;
+		.rq{
+			width: 35px;
+			height: 15px;
+			margin-right: 5px;
+			line-height: 15px;
+			text-align: center;
+			border: 1px solid #f84848;
+			border-radius: 2.5px;
+			font-size: 1rem;
+			color: #f84848;
+		}
+		.new{
+			margin-right: 5px;
+			font-size: 1.7rem;
+			line-height: 1;
+			color: #5b94fb;
+			i{
+				font-style: normal;
+				font-size: 1.2rem;
+			}
+		}
+		.old{
+			font-size: 1.2rem;
+			line-height: 1.4;
+			color: #000;
+			text-decoration: line-through;
+		}
+	}
+	.num{
+		margin-top: 6px;
+		font-size: 1.2rem;
+		color: #999;
+	}
+	.rqt-wrapper{
+		margin-top: 10px;
+		.rqt{
+			margin-right: 10px;
+			font-size: 1.8rem;
+			font-weight: bold;
+			color: #f84844;
+		}
+		.time{
+			font-size: 1.2rem;
+			color: #848484;
+		}
+	}
+	.icon-wrapper{
+		margin-top: 12px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #ddd;
+		.icon{
+			margin-right: 20px;
+			font-size: 1.2rem;
+			color: #848484;
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 13px;
+				height: 13px;
+				vertical-align: middle;
+				margin-right: 5px;
+				background: url("@{img_url_tpl}/red_check_icon.png") no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+	.fav{
+		position: relative;
+		margin-top: 5px;
+		padding-bottom: 10px;
+		.point-click{
+			position: absolute;
+			height: 100%;
+			top: 0;
+			right: 0;
+			width: 40px;
+			background: url("@{img_url_tpl}/discount_point.png") no-repeat center center;
+			background-size: 20px 4px;
+		}
+		.icon1{
+			font-size: 1.2rem;
+			color: #848484;
+			&:before{
+				content: '折';
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				margin-right: 5px;
+				color: #fff;
+				text-align: center;
+				line-height: 14px;
+				background: #eab629;
+				border-radius: 2.5px;
+			}
+		}
+		.icon2{
+			margin-top: 3px;
+			font-size: 1.2rem;
+			color: #848484;
+			&:before{
+				content: '连';
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				margin-right: 5px;
+				color: #fff;
+				text-align: center;
+				line-height: 14px;
+				background: #eab629;
+				border-radius: 2.5px;
+			}
+		}
+	}
+}
+
+// 课程信息
+.class-message{
+	margin-top: 10px;
+	padding-left: 10px;
+	background: #fff;
+	.title{
+		padding: 12px 0;
+		border-bottom: 1px solid #ddd;
+		font-size: 1.4rem;
+		color: #333;
+		&:before{
+			content: '';
+			display: inline-block;
+			width: 1px;
+			height: 14px;
+			vertical-align: middle;
+			margin-right: 5px;
+			background: #5b94fb;
+		}
+	}
+	.item{
+		position: relative;
+		padding: 12px 0;
+		border-bottom: 1px solid #ddd;
+		.arrow-right{
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 20px;
+			background: url("@{img_url_tpl}/right_next.png") no-repeat left center;
+			background-size: 6.7px 13px;
+		}
+		.point-click{
+			position: absolute;
+			height: 36px;
+			top: 0;
+			right: 0;
+			width: 40px;
+			background: url("@{img_url_tpl}/discount_point.png") no-repeat center center;
+			background-size: 20px 4px;
+		}
+		.item-left{
+			float: left;
+			font-size: 1.3rem;
+			color: #999;
+		}
+		.item-right{
+			overflow: hidden;
+			padding-right: 35px;
+			font-size: 1.3rem;
+			color: #666;
+			.item-right-weak-wrapper{
+				margin-top: 2px;
+				.weak{
+					float: left;
+					margin-right: 8px;
+				}
+				.time{
+					overflow: hidden;
+					p{
+
+					}
+				}
+			}
+		}
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+}
