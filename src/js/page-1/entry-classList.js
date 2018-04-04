@@ -50,6 +50,5 @@ define([
 			// 列表渲染
 			// new ClassList();
 			// ClassList.init();
-			
 		}
 });
