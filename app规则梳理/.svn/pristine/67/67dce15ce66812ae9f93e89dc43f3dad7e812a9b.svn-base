@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>杰睿学校介绍</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/杰睿学校介绍/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/杰睿学校介绍/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (iphone) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u383" class="ax_default _图片">
+        <img id="u383_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u384" class="ax_default box_2">
+        <div id="u384_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u385" class="ax_default box_1">
+        <div id="u385_div" class=""></div>
+        <div id="u385_text" class="text ">
+          <p><span>XXX学校简介</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u386" class="ax_default _图片">
+        <img id="u386_img" class="img " src="images/杰睿学校介绍/u386.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u387" class="ax_default box_1">
+        <div id="u387_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u388" class="ax_default _文本段落">
+        <div id="u388_div" class=""></div>
+        <div id="u388_text" class="text ">
+          <p><span>北京XXX学校是由国内著名基础英语教育专家、国内考试专家、北京大学国际关系学院传播学硕士、XXX教育董事长张建成先生和他所率领的专业团队创办的以中小学生培训为主的专业培训机构。XXX学校成立于2004年8月，是北京市仅有拥有办学资格的民办学校之一。自创办以来，XXX学校凭借其专业、专职的教师团队、独家研发的教材、个性化的辅导、独特的方法、严格的教学管理、一对一跟踪服务体系和极佳的学习效果赢得了良好的口碑。目前XXX学校已经拥有了50多个教学点，每期有数万名学员在XXX学校学习。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u389" class="ax_default image">
+        <img id="u389_img" class="img " src="images/杰睿学校介绍/u389.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u390" class="ax_default _文本段落">
+        <div id="u390_div" class=""></div>
+        <div id="u390_text" class="text ">
+          <p><span>愿景和理念</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u391" class="ax_default _文本段落">
+        <div id="u391_div" class=""></div>
+        <div id="u391_text" class="text ">
+          <p><span>领跑中小学教育的权威培训机构</span></p><p><span>XXX品质，XXX责任</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u392" class="ax_default _文本段落">
+        <div id="u392_div" class=""></div>
+        <div id="u392_text" class="text ">
+          <p><span>XXX校训</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u393" class="ax_default _文本段落">
+        <div id="u393_div" class=""></div>
+        <div id="u393_text" class="text ">
+          <p><span>默默耕耘，励精图治；笑对磨难，相信未来。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u394" class="ax_default _文本段落">
+        <div id="u394_div" class=""></div>
+        <div id="u394_text" class="text ">
+          <p><span>品牌课程</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u395" class="ax_default _文本段落">
+        <div id="u395_div" class=""></div>
+        <div id="u395_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;">&nbsp; 3T英语进阶系列</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;&nbsp;&nbsp; 3T英语进阶系列涵盖了词汇、常用句型、口语和听力练习、日常会话、英语16种时态、英语语法和英语常用短语等课程，课程体系完整、课程服务完备。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u396" class="ax_default _文本段落">
+        <div id="u396_div" class=""></div>
+        <div id="u396_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;">&nbsp; 全新3T教材改版</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;&nbsp; &nbsp;&nbsp; 随着2014中高考改革的政策的制定，由张建成领衔的XXX教研组将新加入京版教材中的词汇分别在少儿英语和新3T低阶段的教本中大量呈现。新3T教材，对小学四年级以上的词汇，句型，口语话题，包括听力操练等，都有着全新的呈现。《新3T》在知识结构、学练比例、练习题型、授课方式……等多方面上做了很大调整，并秉承一贯的语法优势，及时加入听说读写。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u397" class="ax_default _文本段落">
+        <div id="u397_div" class=""></div>
+        <div id="u397_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;">&nbsp;&nbsp; 快乐思维英语</span></p><p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">课程简介</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;&nbsp; &nbsp; 快乐思维英语涵盖了英语26个字母的读音与书写、英语单词的认读、基本交际、家庭描述、日常活动等等课程，课程体系完整、课程服务完备。</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">培训教材</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;&nbsp;&nbsp; 《快乐思维英语》是XXX学校少儿部教师独家研发的一套教材。结构上完整清晰，共分为初、中、高三个级别，每级分上、下两册。层次分明，入学前有严格完整的测试体系，教材设计图文并茂。教材目的在于培养了很好的听说习惯及兴趣，增强语感，做到见词能读，听音能写。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u398" class="ax_default _文本段落">
+        <div id="u398_div" class=""></div>
+        <div id="u398_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;">&nbsp;&nbsp;&nbsp; 京睿1对1</span></p><p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;课程简介</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;&nbsp;&nbsp; 课程包括小学数学、初中数学、初中物理、初中化学、高中数学、高中物理、高中化学、高中生物。</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;教学特色</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;&nbsp;&nbsp; 拥有从小学到高中完整的课程体系，以及高质量、高品质、高效率的“三高”教师团队。我们本着“一切为了孩子，为了孩子的一切”的教育理念，从知识、心理、应试、社会各个角度对学生进行全方位的培训，让孩子们成为生活中的佼佼者！</span></p><p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u399" class="ax_default _文本段落">
+        <div id="u399_div" class=""></div>
+        <div id="u399_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;">&nbsp;&nbsp; 艺术天地</span></p><p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;&nbsp; 课程简介</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;&nbsp; &nbsp; 专业美术培训，其中包括素描、水粉、漫画、儿童画和硬笔书法。以后我们还会陆续开设国画、油画、书法等课程。我们打造专业艺术品牌，培养艺术人才，兴趣与考学相结合，为专业院校输送人才。</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;&nbsp; 课程特色</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;&nbsp; &nbsp; 通过正规专业的方法精讲传授，全程跟踪式辅导。根据每个学生不同的学习目标给予学生专业发展定位指导。在传授学生专业技法的同时让学生充分领略到艺术的魅力、感受到艺术的熏陶，使学生能够全身心的投入到绘画学习中去。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u400" class="ax_default line">
+        <img id="u400_img" class="img " src="images/杰睿学校介绍/u400.png"/>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u401" class="ax_default line">
+        <img id="u401_img" class="img " src="images/杰睿学校介绍/u400.png"/>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u402" class="ax_default line">
+        <img id="u402_img" class="img " src="images/杰睿学校介绍/u400.png"/>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u403" class="ax_default line">
+        <img id="u403_img" class="img " src="images/杰睿学校介绍/u400.png"/>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u404" class="ax_default line">
+        <img id="u404_img" class="img " src="images/杰睿学校介绍/u400.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u405" class="ax_default _文本段落">
+        <div id="u405_div" class=""></div>
+        <div id="u405_text" class="text ">
+          <p><span>层级分布：</span></p><p><span>一、愿景和理念</span></p><p><span>二、XXX校训</span></p><p><span>三、品牌课程</span></p><p><span>&nbsp;&nbsp; 1、 3T英语进阶系列</span></p><p><span>&nbsp;&nbsp; 2、 全新3T教材改版</span></p><p><span>&nbsp;&nbsp; 3、 快乐思维英语</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; a 、课程简介</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; b 、培训教材</span></p><p><span>&nbsp;&nbsp; 4、 京睿1对1</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; a 、课程简介</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; b 、教学特色</span></p><p><span>&nbsp;&nbsp;&nbsp; 5、艺术天地</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; a、 课程简介</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; b、 课程特色</span></p><p><span><br></span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

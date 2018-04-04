@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>招生简章</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/招生简章/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/招生简章/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (iphone) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u801" class="ax_default _图片">
+        <img id="u801_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u802" class="ax_default box_2">
+        <div id="u802_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u803" class="ax_default box_1">
+        <div id="u803_div" class=""></div>
+        <div id="u803_text" class="text ">
+          <p><span>招生简章</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u804" class="ax_default _图片">
+        <img id="u804_img" class="img " src="images/杰睿学校介绍/u386.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u805" class="ax_default box_1">
+        <div id="u805_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u806" class="ax_default image">
+        <img id="u806_img" class="img " src="images/招生简章/u806.png"/>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u807" class="ax_default image">
+        <img id="u807_img" class="img " src="images/招生简章/u807.png"/>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u808" class="ax_default image">
+        <img id="u808_img" class="img " src="images/招生简章/u808.png"/>
+      </div>
+    </div>
+  </body>
+</html>

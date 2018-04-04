@@ -1,0 +1,619 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>订单详情-已转班</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/订单详情-已转班/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/订单详情-已转班/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (iphone) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u5294" class="ax_default _图片">
+        <img id="u5294_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5295" class="ax_default box_2">
+        <div id="u5295_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5296" class="ax_default box_2">
+        <div id="u5296_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5297" class="ax_default label">
+        <div id="u5297_div" class=""></div>
+        <div id="u5297_text" class="text ">
+          <p><span>＜</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5298" class="ax_default box_1">
+        <div id="u5298_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u5299" class="ax_default line">
+        <img id="u5299_img" class="img " src="images/预约试听-已登录/u890.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5300" class="ax_default label">
+        <div id="u5300_div" class=""></div>
+        <div id="u5300_text" class="text ">
+          <p><span>课程安排</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5301" class="ax_default label">
+        <div id="u5301_div" class=""></div>
+        <div id="u5301_text" class="text ">
+          <p><span>2015-11-30&nbsp; 15:00开课&nbsp; &nbsp; 2016-02-18&nbsp; 16:30结课 </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5302" class="ax_default label">
+        <div id="u5302_div" class=""></div>
+        <div id="u5302_text" class="text ">
+          <p><span>共10课时&nbsp; 20小时</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u5303" class="ax_default" data-left="47" data-top="786" data-width="385" data-height="50">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5304" class="ax_default box_1">
+          <div id="u5304_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5305" class="ax_default box_1">
+          <div id="u5305_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5306" class="ax_default label">
+          <div id="u5306_div" class=""></div>
+          <div id="u5306_text" class="text ">
+            <p><span>30</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5307" class="ax_default label">
+          <div id="u5307_div" class=""></div>
+          <div id="u5307_text" class="text ">
+            <p><span>第1课时15:00-16:30</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5308" class="ax_default label">
+          <div id="u5308_div" class=""></div>
+          <div id="u5308_text" class="text ">
+            <p><span>主讲：张淼</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u5309" class="ax_default" data-left="47" data-top="856" data-width="385" data-height="50">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5310" class="ax_default box_1">
+          <div id="u5310_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5311" class="ax_default box_1">
+          <div id="u5311_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5312" class="ax_default label">
+          <div id="u5312_div" class=""></div>
+          <div id="u5312_text" class="text ">
+            <p><span>05</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5313" class="ax_default label">
+          <div id="u5313_div" class=""></div>
+          <div id="u5313_text" class="text ">
+            <p><span>第2课时15:00-16:30</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5314" class="ax_default label">
+          <div id="u5314_div" class=""></div>
+          <div id="u5314_text" class="text ">
+            <p><span>主讲：张淼</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u5315" class="ax_default" data-left="47" data-top="926" data-width="385" data-height="50">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5316" class="ax_default box_1">
+          <div id="u5316_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5317" class="ax_default box_1">
+          <div id="u5317_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5318" class="ax_default label">
+          <div id="u5318_div" class=""></div>
+          <div id="u5318_text" class="text ">
+            <p><span>10</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5319" class="ax_default label">
+          <div id="u5319_div" class=""></div>
+          <div id="u5319_text" class="text ">
+            <p><span>第3课时15:00-16:30</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5320" class="ax_default label">
+          <div id="u5320_div" class=""></div>
+          <div id="u5320_text" class="text ">
+            <p><span>主讲：张淼</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5321" class="ax_default label">
+        <div id="u5321_div" class=""></div>
+        <div id="u5321_text" class="text ">
+          <p><span>已转班</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5322" class="ax_default label">
+        <div id="u5322_div" class=""></div>
+        <div id="u5322_text" class="text ">
+          <p><span>已上课</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5323" class="ax_default label">
+        <div id="u5323_div" class=""></div>
+        <div id="u5323_text" class="text ">
+          <p><span>订单详情</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5324" class="ax_default box_2">
+        <div id="u5324_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5325" class="ax_default label">
+        <div id="u5325_div" class=""></div>
+        <div id="u5325_text" class="text ">
+          <p><span>已转班</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5326" class="ax_default box_2">
+        <div id="u5326_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5327" class="ax_default label">
+        <div id="u5327_div" class=""></div>
+        <div id="u5327_text" class="text ">
+          <p><span>上课地点：中关村大厦705</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5328" class="ax_default link_button">
+        <div id="u5328_div" class=""></div>
+        <div id="u5328_text" class="text ">
+          <p><span>查看地图</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u5329" class="ax_default" data-left="29" data-top="422" data-width="414" data-height="144">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5330" class="ax_default box_1">
+          <div id="u5330_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5331" class="ax_default label">
+          <div id="u5331_div" class=""></div>
+          <div id="u5331_text" class="text ">
+            <p><span>课时费</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5332" class="ax_default label">
+          <div id="u5332_div" class=""></div>
+          <div id="u5332_text" class="text ">
+            <p><span>教材费</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5333" class="ax_default label">
+          <div id="u5333_div" class=""></div>
+          <div id="u5333_text" class="text ">
+            <p><span>优惠金额</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u5334" class="ax_default line">
+          <img id="u5334_img" class="img " src="images/预约试听-已登录/u890.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5335" class="ax_default label">
+          <div id="u5335_div" class=""></div>
+          <div id="u5335_text" class="text ">
+            <p><span>订单明细</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5336" class="ax_default label">
+          <div id="u5336_div" class=""></div>
+          <div id="u5336_text" class="text ">
+            <p><span>￥500</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5337" class="ax_default label">
+          <div id="u5337_div" class=""></div>
+          <div id="u5337_text" class="text ">
+            <p><span>￥20</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5338" class="ax_default label">
+          <div id="u5338_div" class=""></div>
+          <div id="u5338_text" class="text ">
+            <p><span>-￥300</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u5339" class="ax_default line">
+          <img id="u5339_img" class="img " src="images/预约试听-已登录/u890.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5340" class="ax_default label">
+          <div id="u5340_div" class=""></div>
+          <div id="u5340_text" class="text ">
+            <p><span>合计</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5341" class="ax_default label">
+          <div id="u5341_div" class=""></div>
+          <div id="u5341_text" class="text ">
+            <p><span>￥220</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5342" class="ax_default box_2">
+        <div id="u5342_div" class=""></div>
+        <div id="u5342_text" class="text ">
+          <p><span>评价</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u5343" class="ax_default" data-left="29" data-top="276" data-width="414" data-height="136">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5344" class="ax_default box_1">
+          <div id="u5344_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5345" class="ax_default label">
+          <div id="u5345_div" class=""></div>
+          <div id="u5345_text" class="text ">
+            <p><span>钢琴精品课程</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u5346" class="ax_default line">
+          <img id="u5346_img" class="img " src="images/待付款/u3122.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5347" class="ax_default label">
+          <div id="u5347_div" class=""></div>
+          <div id="u5347_text" class="text ">
+            <p><span>杰睿公主坟校区</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5348" class="ax_default label">
+          <div id="u5348_div" class=""></div>
+          <div id="u5348_text" class="text ">
+            <p><span>订单号码：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5349" class="ax_default label">
+          <div id="u5349_div" class=""></div>
+          <div id="u5349_text" class="text ">
+            <p><span>GJS128763524</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5350" class="ax_default label">
+          <div id="u5350_div" class=""></div>
+          <div id="u5350_text" class="text ">
+            <p><span>下单时间：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5351" class="ax_default label">
+          <div id="u5351_div" class=""></div>
+          <div id="u5351_text" class="text ">
+            <p><span>2015-10-26&nbsp; 15:30:24</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5352" class="ax_default label">
+          <div id="u5352_div" class=""></div>
+          <div id="u5352_text" class="text ">
+            <p><span>支付方式：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5353" class="ax_default label">
+          <div id="u5353_div" class=""></div>
+          <div id="u5353_text" class="text ">
+            <p><span>在线支付</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u5354" class="ax_default" data-left="29" data-top="581" data-width="414" data-height="99">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5355" class="ax_default box_1">
+          <div id="u5355_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5356" class="ax_default label">
+          <div id="u5356_div" class=""></div>
+          <div id="u5356_text" class="text ">
+            <p><span>剩余课时</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5357" class="ax_default label">
+          <div id="u5357_div" class=""></div>
+          <div id="u5357_text" class="text ">
+            <p><span>退款金额</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u5358" class="ax_default line">
+          <img id="u5358_img" class="img " src="images/预约试听-已登录/u890.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5359" class="ax_default label">
+          <div id="u5359_div" class=""></div>
+          <div id="u5359_text" class="text ">
+            <p><span>退班明细</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5360" class="ax_default label">
+          <div id="u5360_div" class=""></div>
+          <div id="u5360_text" class="text ">
+            <p><span>3课时</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5361" class="ax_default label">
+          <div id="u5361_div" class=""></div>
+          <div id="u5361_text" class="text ">
+            <p><span>￥20</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u5362" class="ax_default line">
+        <img id="u5362_img" class="img " src="images/订单详情-已退班/u5271.png"/>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u5363" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5364" class="ax_default label">
+        <div id="u5364_div" class=""></div>
+        <div id="u5364_text" class="text ">
+          <p><span>十一月</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5365" class="ax_default label">
+        <div id="u5365_div" class=""></div>
+        <div id="u5365_text" class="text ">
+          <p><span>十二月</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5366" class="ax_default label">
+        <div id="u5366_div" class=""></div>
+        <div id="u5366_text" class="text ">
+          <p><span>十二月</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5367" class="ax_default label">
+        <div id="u5367_div" class=""></div>
+        <div id="u5367_text" class="text ">
+          <p><span>“评价”固定在屏幕底部</span></p><p><span>评价显示规则：没有评价次数的置灰</span></p><p><span style="color:#CC0000;">评价次数=考勤次数-已评次数</span></p><p><span style="color:#CC0000;"><br></span></p><p><span style="color:#CC0000;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- 删除订单提示 (组 合) -->
+      <div id="u5368" class="ax_default ax_default_hidden" data-label="删除订单提示" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5369" class="ax_default box_1">
+          <div id="u5369_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5370" class="ax_default label">
+          <div id="u5370_div" class=""></div>
+          <div id="u5370_text" class="text ">
+            <p><span>确定要删除订单吗？</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u5371" class="ax_default line">
+          <img id="u5371_img" class="img " src="images/确认支付页面/u1275.png"/>
+        </div>
+
+        <!-- Unnamed (垂直线) -->
+        <div id="u5372" class="ax_default line">
+          <img id="u5372_img" class="img " src="images/确认支付页面/u1276.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5373" class="ax_default label">
+          <div id="u5373_div" class=""></div>
+          <div id="u5373_text" class="text ">
+            <p><span>删除订单</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5374" class="ax_default label">
+          <div id="u5374_div" class=""></div>
+          <div id="u5374_text" class="text ">
+            <p><span>返回</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u5375" class="ax_default">
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u5376" class="ax_default">
+        </div>
+      </div>
+
+      <!-- 删除订单成功 (矩形) -->
+      <div id="u5377" class="ax_default box_4 ax_default_hidden" data-label="删除订单成功" style="display:none; visibility: hidden">
+        <div id="u5377_div" class=""></div>
+        <div id="u5377_text" class="text ">
+          <p><span>删除订单成功</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u5378" class="ax_default line">
+        <img id="u5378_img" class="img " src="images/订单详情-待评价/u5198.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5379" class="ax_default label">
+        <div id="u5379_div" class=""></div>
+        <div id="u5379_text" class="text ">
+          <p><span>已转班</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5380" class="ax_default label">
+        <div id="u5380_div" class=""></div>
+        <div id="u5380_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;color:#FF0000;">某节课次的自然状态有两个：</span><span style="font-family:'Arial Normal', 'Arial';font-weight:400;color:#000000;">未完成、已完成（由下课时间判断，初试状态是“未完成”，过了下课时间后，自动变为“已完成”）</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;color:#000000;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;color:#FF0000;">家长端某个学员某节课次的考勤有三种状态</span><span style="font-family:'Arial Normal', 'Arial';font-weight:400;color:#FF0000;">：</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">已上课、未上课、待上课。</span></p><p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;color:#FF0000;">学校端某个学员某节课次的考勤有三种状态：</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;color:#000000;">出勤、缺勤、待考勤</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">1、家长端某</span><span style="font-family:'Arial Normal', 'Arial';font-weight:400;color:#1E1E1E;">课次考勤</span><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">的默认状态是“待上课”，学校端默认状态是“待考勤”</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">2、学校端改为“出勤”后，家长端变为“已上课”</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">&nbsp;&nbsp; &nbsp; 未修改状态的，所有“待考勤”变为“未上课”</span></p><p><span style="font-family:'Arial Negreta', 'Arial';font-weight:700;color:#FF0000;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">如转出或退班，则剩余课次不展示</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;">如为插班，则从插班成功后的第一次课开始展示</span></p><p><span style="font-family:'Arial Normal', 'Arial';font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5381" class="ax_default _文本段落">
+        <div id="u5381_div" class=""></div>
+        <div id="u5381_text" class="text ">
+          <p><span>只显示已转班&nbsp; 退款金额</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

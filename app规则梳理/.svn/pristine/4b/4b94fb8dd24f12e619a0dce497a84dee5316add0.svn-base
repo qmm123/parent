@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>常见问题</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/常见问题/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/常见问题/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (iphone) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u4386" class="ax_default _图片">
+        <img id="u4386_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4387" class="ax_default box_2">
+        <div id="u4387_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4388" class="ax_default box_2">
+        <div id="u4388_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4389" class="ax_default label">
+        <div id="u4389_div" class=""></div>
+        <div id="u4389_text" class="text ">
+          <p><span>常见问题</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4390" class="ax_default label">
+        <div id="u4390_div" class=""></div>
+        <div id="u4390_text" class="text ">
+          <p><span>＜</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4391" class="ax_default _文本段落">
+        <div id="u4391_div" class=""></div>
+        <div id="u4391_text" class="text ">
+          <p><span><br></span></p><p><span>Ø&nbsp; 预约试听</span></p><p><span>凡有“免费试听”标签的课程都支持线上预约免费到校试听，家长选择试听课程后，进入课程详情页面，点击“预约试听”按钮，填写试听信息预约成功后，会给家长发送预约试听成功短信，即可按照短信内时间和地点到校区进行试听。</span></p><p><span><br></span></p><p><span>Ø&nbsp; 报名上课</span></p><p><span>家长成功注册并登录后，为孩子选择合适的课程，进入课程详情页点击“立即报名”提交订单进行在线支付，我们会将上课的电子凭证以短信形式发到家长手机上。</span></p><p><span><br></span></p><p><span>Ø&nbsp; 退班换课</span></p><p><span>凡有“随时退班”标签的的课程，家长可联系校区经核实会无条件将剩余课时的费用返还给您。</span></p><p><span><br></span></p><p><span>Ø&nbsp; 添加孩子</span></p><p><span>登录后，在“我的“页面，选择”我的孩子“可添加想报班的孩子，也可以在“确认订单“里“选择上课孩子”一步添加需要上课的孩子信息。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (topbar) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u4393" class="ax_default">
+        <img id="u4393_img" class="img " src="images/登录/u213.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4394" class="ax_default _文本段落">
+        <div id="u4394_div" class=""></div>
+        <div id="u4394_text" class="text ">
+          <p><span>文案修改</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

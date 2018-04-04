@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>设置</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/设置/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/设置/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (图片) -->
+      <div id="u4172" class="ax_default _图片">
+        <img id="u4172_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4173" class="ax_default box_2">
+        <div id="u4173_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4174" class="ax_default label">
+        <div id="u4174_div" class=""></div>
+        <div id="u4174_text" class="text ">
+          <p><span>＜</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4175" class="ax_default label">
+        <div id="u4175_div" class=""></div>
+        <div id="u4175_text" class="text ">
+          <p><span>设置</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4176" class="ax_default label">
+        <div id="u4176_div" class=""></div>
+        <div id="u4176_text" class="text ">
+          <p><span>关于我们</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u4177" class="ax_default line">
+        <img id="u4177_img" class="img " src="images/设置/u4177.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4178" class="ax_default label">
+        <div id="u4178_div" class=""></div>
+        <div id="u4178_text" class="text ">
+          <p><span>＞</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4179" class="ax_default label">
+        <div id="u4179_div" class=""></div>
+        <div id="u4179_text" class="text ">
+          <p><span>＞</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4180" class="ax_default box_1">
+        <div id="u4180_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4181" class="ax_default label">
+        <div id="u4181_div" class=""></div>
+        <div id="u4181_text" class="text ">
+          <p><span>清理缓存</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4182" class="ax_default label">
+        <div id="u4182_div" class=""></div>
+        <div id="u4182_text" class="text ">
+          <p><span>＞</span></p>
+        </div>
+      </div>
+
+      <!-- 缓存量 (动态面板) -->
+      <div id="u4183" class="ax_default" data-label="缓存量">
+        <div id="u4183_state0" class="panel_state" data-label="清理前" style="">
+          <div id="u4183_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u4184" class="ax_default label">
+              <div id="u4184_div" class=""></div>
+              <div id="u4184_text" class="text ">
+                <p><span>17.21M</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="u4183_state1" class="panel_state" data-label="清理后" style="visibility: hidden;">
+          <div id="u4183_state1_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u4185" class="ax_default label">
+              <div id="u4185_div" class=""></div>
+              <div id="u4185_text" class="text ">
+                <p><span>0.00M</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u4186" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4187" class="ax_default label">
+        <div id="u4187_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4188" class="ax_default primary_button">
+        <div id="u4188_div" class=""></div>
+        <div id="u4188_text" class="text ">
+          <p><span>退出登录</span></p>
+        </div>
+      </div>
+
+      <!-- 清理缓存中 (组 合) -->
+      <div id="u4189" class="ax_default ax_default_hidden" data-label="清理缓存中" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u4190" class="ax_default box_1">
+          <div id="u4190_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u4191" class="ax_default image">
+          <img id="u4191_img" class="img " src="images/设置/u4191.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u4192" class="ax_default label">
+          <div id="u4192_div" class=""></div>
+          <div id="u4192_text" class="text ">
+            <p><span>清理缓存中</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 缓存清理成功 (矩形) -->
+      <div id="u4193" class="ax_default box_4 ax_default_hidden" data-label="缓存清理成功" style="display:none; visibility: hidden">
+        <div id="u4193_div" class=""></div>
+        <div id="u4193_text" class="text ">
+          <p><span>缓存清理成功</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u4194" class="ax_default line">
+        <img id="u4194_img" class="img " src="images/设置/u4194.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4195" class="ax_default label">
+        <div id="u4195_div" class=""></div>
+        <div id="u4195_text" class="text ">
+          <p><span>无登录状态时不显示该按钮</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4196" class="ax_default label">
+        <div id="u4196_div" class=""></div>
+        <div id="u4196_text" class="text ">
+          <p><span>关于我们页面修改</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u4197" class="ax_default line">
+        <img id="u4197_img" class="img " src="images/设置/u4197.png"/>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u4198" class="ax_default line">
+        <img id="u4198_img" class="img " src="images/设置/u4197.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4199" class="ax_default label">
+        <div id="u4199_div" class=""></div>
+        <div id="u4199_text" class="text ">
+          <p><span>个人资料</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4200" class="ax_default label">
+        <div id="u4200_div" class=""></div>
+        <div id="u4200_text" class="text ">
+          <p><span>＞</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u4201" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4202" class="ax_default label">
+        <div id="u4202_div" class=""></div>
+        <div id="u4202_text" class="text ">
+          <p><span>常见问题</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4203" class="ax_default label">
+        <div id="u4203_div" class=""></div>
+        <div id="u4203_text" class="text ">
+          <p><span>＞</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u4204" class="ax_default line">
+        <img id="u4204_img" class="img " src="images/设置/u4204.png"/>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u4205" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4206" class="ax_default label">
+        <div id="u4206_div" class=""></div>
+        <div id="u4206_text" class="text ">
+          <p><span>增加常见问题入口，常见问题文案需修改</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u4207" class="ax_default">
+      </div>
+    </div>
+  </body>
+</html>

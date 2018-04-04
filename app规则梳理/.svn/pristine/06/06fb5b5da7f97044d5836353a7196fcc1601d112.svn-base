@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>订单详情-待付款</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/订单详情-待付款/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/订单详情-待付款/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (iphone) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u5013" class="ax_default _图片">
+        <img id="u5013_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5014" class="ax_default box_2">
+        <div id="u5014_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5015" class="ax_default box_2">
+        <div id="u5015_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5016" class="ax_default label">
+        <div id="u5016_div" class=""></div>
+        <div id="u5016_text" class="text ">
+          <p><span>＜</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5017" class="ax_default label">
+        <div id="u5017_div" class=""></div>
+        <div id="u5017_text" class="text ">
+          <p><span>订单详情</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5018" class="ax_default box_2">
+        <div id="u5018_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5019" class="ax_default label">
+        <div id="u5019_div" class=""></div>
+        <div id="u5019_text" class="text ">
+          <p><span>待付款</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5020" class="ax_default label">
+        <div id="u5020_div" class=""></div>
+        <div id="u5020_text" class="text ">
+          <p><span>请在43分12秒内完成支付，超时订单自动取消</span></p>
+        </div>
+      </div>
+
+      <!-- 取消订单成功 (矩形) -->
+      <div id="u5021" class="ax_default box_4 ax_default_hidden" data-label="取消订单成功" style="display:none; visibility: hidden">
+        <div id="u5021_div" class=""></div>
+        <div id="u5021_text" class="text ">
+          <p><span>取消订单成功</span></p>
+        </div>
+      </div>
+
+      <!-- 取消订单提示 (组 合) -->
+      <div id="u5022" class="ax_default ax_default_hidden" data-label="取消订单提示" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5023" class="ax_default box_1">
+          <div id="u5023_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) [footnote] -->
+        <div id="u5023_ann" class="annotation"></div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5024" class="ax_default label">
+          <div id="u5024_div" class=""></div>
+          <div id="u5024_text" class="text ">
+            <p><span>是否取消该订单</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u5025" class="ax_default line">
+          <img id="u5025_img" class="img " src="images/确认支付页面/u1275.png"/>
+        </div>
+
+        <!-- Unnamed (垂直线) -->
+        <div id="u5026" class="ax_default line">
+          <img id="u5026_img" class="img " src="images/确认支付页面/u1276.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5027" class="ax_default label">
+          <div id="u5027_div" class=""></div>
+          <div id="u5027_text" class="text ">
+            <p><span>取消订单</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5028" class="ax_default label">
+          <div id="u5028_div" class=""></div>
+          <div id="u5028_text" class="text ">
+            <p><span>返回</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u5029" class="ax_default">
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u5030" class="ax_default">
+        </div>
+      </div>
+
+      <!-- Unnamed (topbar) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u5032" class="ax_default">
+        <img id="u5032_img" class="img " src="images/登录/u213.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5033" class="ax_default _文本段落">
+        <div id="u5033_div" class=""></div>
+        <div id="u5033_text" class="text ">
+          <p><span>无操作按钮，支付或取消订单到列表页去操作母订单</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5034" class="ax_default box_1">
+        <div id="u5034_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u5035" class="ax_default line">
+        <img id="u5035_img" class="img " src="images/待付款/u3122.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5036" class="ax_default label">
+        <div id="u5036_div" class=""></div>
+        <div id="u5036_text" class="text ">
+          <p><span>海淀校区</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5037" class="ax_default label">
+        <div id="u5037_div" class=""></div>
+        <div id="u5037_text" class="text ">
+          <p><span>订单号码：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5038" class="ax_default label">
+        <div id="u5038_div" class=""></div>
+        <div id="u5038_text" class="text ">
+          <p><span>GJS128763524</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5039" class="ax_default label">
+        <div id="u5039_div" class=""></div>
+        <div id="u5039_text" class="text ">
+          <p><span>下单时间：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5040" class="ax_default label">
+        <div id="u5040_div" class=""></div>
+        <div id="u5040_text" class="text ">
+          <p><span>2015-10-26&nbsp; 15:30:24</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5041" class="ax_default label">
+        <div id="u5041_div" class=""></div>
+        <div id="u5041_text" class="text ">
+          <p><span>支付方式：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5042" class="ax_default label">
+        <div id="u5042_div" class=""></div>
+        <div id="u5042_text" class="text ">
+          <p><span>在线支付</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5043" class="ax_default box_2">
+        <div id="u5043_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5044" class="ax_default label">
+        <div id="u5044_div" class=""></div>
+        <div id="u5044_text" class="text ">
+          <p><span>待付款</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u5045" class="ax_default" data-left="29" data-top="534" data-width="414" data-height="144">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5046" class="ax_default box_1">
+          <div id="u5046_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5047" class="ax_default label">
+          <div id="u5047_div" class=""></div>
+          <div id="u5047_text" class="text ">
+            <p><span>原课时费</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5048" class="ax_default label">
+          <div id="u5048_div" class=""></div>
+          <div id="u5048_text" class="text ">
+            <p><span>教材费</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5049" class="ax_default label">
+          <div id="u5049_div" class=""></div>
+          <div id="u5049_text" class="text ">
+            <p><span>优惠金额</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u5050" class="ax_default line">
+          <img id="u5050_img" class="img " src="images/预约试听-已登录/u890.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5051" class="ax_default label">
+          <div id="u5051_div" class=""></div>
+          <div id="u5051_text" class="text ">
+            <p><span>订单明细</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5052" class="ax_default label">
+          <div id="u5052_div" class=""></div>
+          <div id="u5052_text" class="text ">
+            <p><span>￥500</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5053" class="ax_default label">
+          <div id="u5053_div" class=""></div>
+          <div id="u5053_text" class="text ">
+            <p><span>￥20</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5054" class="ax_default label">
+          <div id="u5054_div" class=""></div>
+          <div id="u5054_text" class="text ">
+            <p><span>-￥300</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u5055" class="ax_default line">
+          <img id="u5055_img" class="img " src="images/预约试听-已登录/u890.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5056" class="ax_default label">
+          <div id="u5056_div" class=""></div>
+          <div id="u5056_text" class="text ">
+            <p><span>实付总额</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5057" class="ax_default label">
+          <div id="u5057_div" class=""></div>
+          <div id="u5057_text" class="text ">
+            <p><span>￥220</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u5058" class="ax_default line">
+        <img id="u5058_img" class="img " src="images/我的/u2600.png"/>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u5059" class="ax_default line">
+        <img id="u5059_img" class="img " src="images/我的/u2600.png"/>
+      </div>
+
+      <!-- Unnamed (占位符) -->
+      <div id="u5060" class="ax_default placeholder">
+        <img id="u5060_img" class="img " src="images/我的订单/u2908.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5061" class="ax_default label">
+        <div id="u5061_div" class=""></div>
+        <div id="u5061_text" class="text ">
+          <p><span>钢琴精品课程</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5062" class="ax_default label">
+        <div id="u5062_div" class=""></div>
+        <div id="u5062_text" class="text ">
+          <p><span>上课孩子：萌仔</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5063" class="ax_default label">
+        <div id="u5063_div" class=""></div>
+        <div id="u5063_text" class="text ">
+          <p><span>&nbsp;￥1099</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5064" class="ax_default label">
+        <div id="u5064_div" class=""></div>
+        <div id="u5064_text" class="text ">
+          <p><span>课程时间：2015-12-05&nbsp; 至2016-05-06</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u5065" class="ax_default line">
+        <img id="u5065_img" class="img " src="images/待付款/u3156.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5066" class="ax_default box_1">
+        <div id="u5066_div" class=""></div>
+        <div id="u5066_text" class="text ">
+          <p><span>支持校区退班</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

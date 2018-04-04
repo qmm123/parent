@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>内容刷新/内容加载</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/内容刷新_内容加载/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/内容刷新_内容加载/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u183" class="ax_default label">
+        <div id="u183_div" class=""></div>
+        <div id="u183_text" class="text ">
+          <p style="font-size:12px;"><span>下拉刷新</span></p><p style="font-size:10px;"><span>&nbsp; 更新时间：12月7日 18:17</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (垂直线) -->
+      <div id="u184" class="compound ax_default" WidgetHeight="18" WidgetWidth="2" CompoundMode="true">
+        <img id="u184_img" class="singleImg img " src="images/内容刷新_内容加载/u184.png"/>
+        <div id="u184p000" class="ax_vector_shape" WidgetTopLeftX="-0.375" WidgetTopLeftY="0.166666666666667" WidgetTopRightX="-0.375" WidgetTopRightY="-0.166666666666667" WidgetBottomLeftX="0.375" WidgetBottomLeftY="0.166666666666667" WidgetBottomRightX="0.375" WidgetBottomRightY="-0.166666666666667">
+          <img id="u184p000_img" class="img " src="images/内容刷新_内容加载/u184p000.png"/>
+        </div>
+        <div id="u184p001" class="ax_vector_shape" WidgetTopLeftX="-0.25" WidgetTopLeftY="0" WidgetTopRightX="0.25" WidgetTopRightY="0" WidgetBottomLeftX="-0.25" WidgetBottomLeftY="4.5" WidgetBottomRightX="0.25" WidgetBottomRightY="4.5">
+          <img id="u184p001_img" class="img " src="images/内容刷新_内容加载/u184p001.png"/>
+        </div>
+        <div id="u184p002" class="ax_vector_shape" WidgetTopLeftX="0.583333333333333" WidgetTopLeftY="-0.0416666666666667" WidgetTopRightX="0.583333333333333" WidgetTopRightY="0.0416666666666667" WidgetBottomLeftX="-0.166666666666667" WidgetBottomLeftY="-0.0416666666666667" WidgetBottomRightX="-0.166666666666667" WidgetBottomRightY="0.0416666666666667">
+          <img id="u184p002_img" class="img " src="images/内容刷新_内容加载/u184p002.png"/>
+        </div>
+      </div>
+
+      <!-- Unnamed (垂直线) -->
+      <div id="u185" class="ax_default line">
+        <img id="u185_img" class="img " src="images/内容刷新_内容加载/u185.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u186" class="ax_default">
+        <div id="u186_div" class=""></div>
+        <div id="u186_text" class="text ">
+          <p><span>状态1&nbsp;&nbsp; 下拉刷新</span></p><p><span>状态2&nbsp;&nbsp; 释放刷新</span></p><p><span>状态3&nbsp;&nbsp; 正在加载</span></p><p><span>状态4&nbsp;&nbsp; 刷新成功</span></p><p><span><br></span></p><p><span>状态5&nbsp;&nbsp; 刷新失败</span></p><p><span><br></span></p><p><span>效果：淡入淡出</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u187" class="ax_default label">
+        <div id="u187_div" class=""></div>
+        <div id="u187_text" class="text ">
+          <p style="font-size:12px;"><span>释放刷新</span></p><p style="font-size:10px;"><span>&nbsp; 更新时间：12月7日 18:17</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u188" class="ax_default">
+        <img id="u188_img" class="img " src="images/内容刷新_内容加载/u188.png"/>
+      </div>
+
+      <!-- Unnamed (垂直线) -->
+      <div id="u189" class="ax_default line">
+        <img id="u189_img" class="img " src="images/内容刷新_内容加载/u185.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u190" class="ax_default label">
+        <div id="u190_div" class=""></div>
+        <div id="u190_text" class="text ">
+          <p><span>刷新中,请稍后</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (椭圆形) -->
+      <div id="u191" class="ax_default box_1">
+        <img id="u191_img" class="img " src="images/内容刷新_内容加载/u191.png"/>
+      </div>
+
+      <!-- Unnamed (椭圆形) -->
+      <div id="u192" class="ax_default box_1">
+        <img id="u192_img" class="img " src="images/内容刷新_内容加载/u192.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u193" class="ax_default label">
+        <div id="u193_div" class=""></div>
+        <div id="u193_text" class="text ">
+          <p style="font-size:12px;"><span>刷新成功</span></p><p style="font-size:10px;"><span>更新时间：12月7日 18:17</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u194" class="ax_default line">
+        <img id="u194_img" class="img " src="images/内容刷新_内容加载/u194.png"/>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u195" class="ax_default line">
+        <img id="u195_img" class="img " src="images/内容刷新_内容加载/u195.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u196" class="ax_default label">
+        <div id="u196_div" class=""></div>
+        <div id="u196_text" class="text ">
+          <p><span>抱歉，刷新失败，请检查网络连接</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u197" class="ax_default">
+        <div id="u197_div" class=""></div>
+        <div id="u197_text" class="text ">
+          <p><span>状态1&nbsp;&nbsp; 上拉刷新</span></p><p><span>状态2&nbsp;&nbsp; 正在加载</span></p><p><span>状态3&nbsp;&nbsp; 刷新成功</span></p><p><span>状态4&nbsp;&nbsp; 刷新失败</span></p><p><span>状态5&nbsp;&nbsp; 无内容可加载</span></p><p><span>效果：淡入淡出</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u198" class="ax_default label">
+        <div id="u198_div" class=""></div>
+        <div id="u198_text" class="text ">
+          <p><span>正在加载</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u199" class="ax_default label">
+        <div id="u199_div" class=""></div>
+        <div id="u199_text" class="text ">
+          <p><span>加载失败</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u200" class="ax_default label">
+        <div id="u200_div" class=""></div>
+        <div id="u200_text" class="text ">
+          <p><span>加载成功</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u201" class="ax_default label">
+        <div id="u201_div" class=""></div>
+        <div id="u201_text" class="text ">
+          <p><span>加载更多</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u202" class="ax_default label">
+        <div id="u202_div" class=""></div>
+        <div id="u202_text" class="text ">
+          <p><span>没有更多内容啦~</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

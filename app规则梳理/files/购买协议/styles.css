@@ -1,0 +1,120 @@
+﻿body {
+  margin:0px;
+  background-image:none;
+  position:static;
+  left:auto;
+  width:407px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u1570_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:407px;
+  height:640px;
+}
+#u1570 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:407px;
+  height:640px;
+}
+#u1570_text {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u1571_div {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:407px;
+  height:962px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 1);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+}
+#u1571 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:45px;
+  width:407px;
+  height:962px;
+}
+#u1571_text {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u1572_div {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:407px;
+  height:980px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 0);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-family:'微软雅黑';
+  font-weight:410;
+  font-style:normal;
+  font-size:14px;
+}
+#u1572 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:50px;
+  width:407px;
+  height:980px;
+  font-family:'微软雅黑';
+  font-weight:410;
+  font-style:normal;
+  font-size:14px;
+}
+#u1572_text {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:407px;
+  word-wrap:break-word;
+}
+#u1573 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:65px;
+  height:45px;
+  overflow:hidden;
+  background-image:url('../../resources/images/transparent.gif');
+}

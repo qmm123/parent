@@ -1,0 +1,442 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>提交交订单</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/提交交订单/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/提交交订单/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (图片) -->
+      <div id="u1504" class="ax_default image">
+        <img id="u1504_img" class="img " src="images/提交交订单/u1504.png"/>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u1505" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1506" class="ax_default _一级标题">
+        <div id="u1506_div" class=""></div>
+        <div id="u1506_text" class="text ">
+          <p><span>2、总价根据用户的选择实时计算出结果</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1507" class="ax_default _一级标题">
+        <div id="u1507_div" class=""></div>
+        <div id="u1507_text" class="text ">
+          <p><span>3、默认不勾选《购买协议》；用户不勾选《购买协议》点击“提交订单”按钮时弹出提示语提醒用户阅读和勾选。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1508" class="ax_default ax_default_hidden" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (图片) -->
+        <div id="u1509" class="ax_default image">
+          <img id="u1509_img" class="img " src="images/一对一详情页/u1499.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1510" class="ax_default box_2">
+          <div id="u1510_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u1511" class="ax_default image">
+          <img id="u1511_img" class="img " src="images/一对一详情页/u1501.png"/>
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u1512" class="ax_default">
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u1513" class="ax_default">
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1514" class="ax_default _一级标题">
+        <div id="u1514_div" class=""></div>
+        <div id="u1514_text" class="text ">
+          <p><span>4、所选孩子已购买该课程则Toast提示：“已购买当前课程，请选择其他课程进行购买”。若课程已下过订单且处于待付款状态则Toast提示：“订单已存在，请前往订单中心进行支付”</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1515" class="ax_default image">
+        <img id="u1515_img" class="img " src="images/提交交订单/u1515.png"/>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1516" class="ax_default image">
+        <img id="u1516_img" class="img " src="images/提交交订单/u1516.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1517" class="ax_default box_2">
+        <div id="u1517_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u1518" class="ax_default">
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1519" class="ax_default image">
+        <img id="u1519_img" class="img " src="images/一对一/u1329.png"/>
+        <div id="u1519_text" class="text ">
+          <p><span>课程图片</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1520" class="ax_default _文本段落">
+        <div id="u1520_div" class=""></div>
+        <div id="u1520_text" class="text ">
+          <p><span>¥400/节</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1521" class="ax_default _文本段落">
+        <div id="u1521_div" class=""></div>
+        <div id="u1521_text" class="text ">
+          <p><span>五年级语文</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1522" class="ax_default box_2">
+        <div id="u1522_div" class=""></div>
+        <div id="u1522_text" class="text ">
+          <p><span>¥ 20000.00</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1523" class="ax_default image">
+        <img id="u1523_img" class="img " src="images/提交交订单/u1523.png"/>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u1524" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1525" class="ax_default _文本段落">
+        <div id="u1525_div" class=""></div>
+        <div id="u1525_text" class="text ">
+          <p><span>授课模式：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1526" class="ax_default _文本段落">
+        <div id="u1526_div" class=""></div>
+        <div id="u1526_text" class="text ">
+          <p><span>一对三</span></p>
+        </div>
+      </div>
+
+      <!-- pd (动态面板) -->
+      <div id="u1527" class="ax_default" data-label="pd">
+        <div id="u1527_state0" class="panel_state" data-label="State1" style="">
+          <div id="u1527_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (SVG) -->
+            <div id="u1528" class="ax_default image">
+              <img id="u1528_img" class="img " src="images/提交交订单/u1528.svg"/>
+            </div>
+          </div>
+        </div>
+        <div id="u1527_state1" class="panel_state" data-label="State2" style="visibility: hidden;">
+          <div id="u1527_state1_content" class="panel_state_content">
+
+            <!-- Unnamed (SVG) -->
+            <div id="u1529" class="ax_default image">
+              <img id="u1529_img" class="img " src="images/提交交订单/u1529.svg"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 提示 (矩形) -->
+      <div id="u1530" class="ax_default box_3 ax_default_hidden" data-label="提示" style="display:none; visibility: hidden">
+        <div id="u1530_div" class=""></div>
+        <div id="u1530_text" class="text ">
+          <p><span>请先查看并勾选购买协议哦~</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1531" class="ax_default _文本段落">
+        <div id="u1531_div" class=""></div>
+        <div id="u1531_text" class="text ">
+          <p><span>购买课时：&nbsp; &nbsp;&nbsp; 50节</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1532" class="ax_default" data-left="0" data-top="122" data-width="407" data-height="57">
+
+        <!-- Unnamed (图片) -->
+        <div id="u1533" class="ax_default image">
+          <img id="u1533_img" class="img " src="images/提交交订单/u1533.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1534" class="ax_default box_2">
+          <div id="u1534_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (SVG) -->
+        <div id="u1535" class="ax_default image">
+          <img id="u1535_img" class="img " src="images/提交交订单/u1535.svg"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1536" class="ax_default _一级标题">
+          <div id="u1536_div" class=""></div>
+          <div id="u1536_text" class="text ">
+            <p><span>昌平校区</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1537" class="ax_default _一级标题">
+          <div id="u1537_div" class=""></div>
+          <div id="u1537_text" class="text ">
+            <p><span>详细地址：北京市昌平区马池口镇北京福利大学</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1538" class="ax_default _一级标题">
+        <div id="u1538_div" class=""></div>
+        <div id="u1538_text" class="text ">
+          <p><span>5、杰睿APP购买成功后，短信提示家长购买成功，短信文案如下：“【杰睿教育】亲爱的家长，您已成功购买&lt;杰睿学校&gt;的&lt;五年级数学&gt;一对一课程，我们为您安排相应课程后会及时与您联系，请您保持通讯畅通。祝您阖家幸福！”</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1539" class="ax_default _文本段落 ax_default_hidden" style="display:none; visibility: hidden">
+        <div id="u1539_div" class=""></div>
+        <div id="u1539_text" class="text ">
+          <p><span>上课校区：昌平校区</span></p>
+        </div>
+      </div>
+
+      <!-- 选择校区 (组 合) -->
+      <div id="u1540" class="ax_default ax_default_hidden" data-label="选择校区" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (图片) -->
+        <div id="u1541" class="ax_default image">
+          <img id="u1541_img" class="img " src="images/提交交订单/u1541.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1542" class="ax_default box_2">
+          <div id="u1542_div" class=""></div>
+          <div id="u1542_text" class="text ">
+            <p><span>校区</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1543" class="ax_default box_2">
+          <div id="u1543_div" class=""></div>
+          <div id="u1543_text" class="text ">
+            <p><span>朝阳校区</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1544" class="ax_default box_2">
+          <div id="u1544_div" class=""></div>
+          <div id="u1544_text" class="text ">
+            <p><span>详细地址：北京市朝阳区三里屯250号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1545" class="ax_default box_2">
+          <div id="u1545_div" class=""></div>
+          <div id="u1545_text" class="text ">
+            <p><span>昌平校区</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1546" class="ax_default box_2">
+          <div id="u1546_div" class=""></div>
+          <div id="u1546_text" class="text ">
+            <p><span>详细地址：北京市昌平区马池口镇北京福利大学</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u1547" class="ax_default">
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u1548" class="ax_default">
+        </div>
+
+        <!-- Unnamed (SVG) -->
+        <div id="u1549" class="ax_default image">
+          <img id="u1549_img" class="img " src="images/一对一/u1421.svg"/>
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u1550" class="ax_default">
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1551" class="ax_default _一级标题">
+        <div id="u1551_div" class=""></div>
+        <div id="u1551_text" class="text ">
+          <p><span>1、佳一APP选择孩子之后，校区选择自动填写上该孩子所属的校区，不可改变校区选择，如果选择的孩子并未绑定校区（用户自己添加非业务中心添加）则在校区选择列表中显示为：</span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1552" class="ax_default" data-left="430" data-top="473" data-width="407" data-height="57">
+
+        <!-- Unnamed (图片) -->
+        <div id="u1553" class="ax_default image">
+          <img id="u1553_img" class="img " src="images/提交交订单/u1533.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1554" class="ax_default box_2">
+          <div id="u1554_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (SVG) -->
+        <div id="u1555" class="ax_default image">
+          <img id="u1555_img" class="img " src="images/提交交订单/u1535.svg"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1556" class="ax_default _一级标题">
+          <div id="u1556_div" class=""></div>
+          <div id="u1556_text" class="text ">
+            <p><span>校区选择</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1557" class="ax_default _一级标题">
+          <div id="u1557_div" class=""></div>
+          <div id="u1557_text" class="text ">
+            <p><span>请选择方便您孩子上课的校区</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1558" class="ax_default _一级标题">
+        <div id="u1558_div" class=""></div>
+        <div id="u1558_text" class="text ">
+          <p><span>佳一APP选择孩子和校区后点击提交订单，若该校区不支持当前一对一价格体系，则弹窗提示：“不能跨校区报名”。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1559" class="ax_default _文本段落">
+        <div id="u1559_div" class=""></div>
+        <div id="u1559_text" class="text ">
+          <p><span>杰睿APP选择孩子后，校区选择默认页面如下：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1560" class="ax_default" data-left="430" data-top="99" data-width="409" data-height="57">
+
+        <!-- Unnamed (图片) -->
+        <div id="u1561" class="ax_default image">
+          <img id="u1561_img" class="img " src="images/提交交订单/u1533.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1562" class="ax_default box_2">
+          <div id="u1562_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (形状) -->
+        <div id="u1563" class="ax_default _形状">
+          <img id="u1563_img" class="img " src="images/提交交订单/u1563.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1564" class="ax_default _一级标题">
+          <div id="u1564_div" class=""></div>
+          <div id="u1564_text" class="text ">
+            <p><span>当前孩子暂未绑定校区</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1565" class="ax_default _文本段落">
+        <div id="u1565_div" class=""></div>
+        <div id="u1565_text" class="text ">
+          <p><span>点击“提交订单”按钮时弹窗提示，如下：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1566" class="ax_default image">
+        <img id="u1566_img" class="img " src="images/提交交订单/u1566.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1567" class="ax_default box_2">
+        <div id="u1567_div" class=""></div>
+        <div id="u1567_text" class="text ">
+          <p><span>当前孩子未绑定校区，请您与机构确定校区后再来办理购买业务。客服电话：18888888888</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1568" class="ax_default _一级标题">
+        <div id="u1568_div" class=""></div>
+        <div id="u1568_text" class="text ">
+          <p><span>校区列表中的校区为支持当前一对一价格体系的校区。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1569" class="ax_default _文本段落">
+        <div id="u1569_div" class=""></div>
+        <div id="u1569_text" class="text ">
+          <p><span>如果没有选择校区就进行提交订单，toast提示语为：“您尚未给孩子选择合适的校区，请选择校区”</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

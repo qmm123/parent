@@ -1,0 +1,1582 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>课程列表</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/课程列表/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/课程列表/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- 筛选面板 (动态面板) -->
+      <div id="u451" class="ax_default ax_default_hidden" data-label="筛选面板" style="display:none; visibility: hidden">
+        <div id="u451_state0" class="panel_state" data-label="State1" style="">
+          <div id="u451_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u452" class="ax_default _形状">
+              <div id="u452_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u453" class="ax_default _形状">
+              <div id="u453_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u454" class="ax_default box_2">
+              <div id="u454_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u455" class="ax_default label">
+              <div id="u455_div" class=""></div>
+              <div id="u455_text" class="text ">
+                <p><span>课程筛选</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u456" class="ax_default label">
+              <div id="u456_div" class=""></div>
+              <div id="u456_text" class="text ">
+                <p><span>&lt;</span></p>
+              </div>
+            </div>
+
+            <!-- 免费试听 (动态面板) -->
+            <div id="u457" class="ax_default" data-label="免费试听">
+              <div id="u457_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u457_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u458" class="ax_default _形状">
+                    <div id="u458_div" class=""></div>
+                    <div id="u458_text" class="text ">
+                      <p><span>免费试听</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u457_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u457_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u459" class="ax_default _形状">
+                    <div id="u459_div" class=""></div>
+                    <div id="u459_text" class="text ">
+                      <p><span>免费试听</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 随时插班 (动态面板) -->
+            <div id="u460" class="ax_default" data-label="随时插班">
+              <div id="u460_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u460_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u461" class="ax_default _形状">
+                    <div id="u461_div" class=""></div>
+                    <div id="u461_text" class="text ">
+                      <p><span>随时插班</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u460_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u460_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u462" class="ax_default _形状">
+                    <div id="u462_div" class=""></div>
+                    <div id="u462_text" class="text ">
+                      <p><span>随时插班</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 随时退班 (动态面板) -->
+            <div id="u463" class="ax_default" data-label="随时退班">
+              <div id="u463_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u463_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u464" class="ax_default _形状">
+                    <div id="u464_div" class=""></div>
+                    <div id="u464_text" class="text ">
+                      <p><span>随时退班</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u463_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u463_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u465" class="ax_default _形状">
+                    <div id="u465_div" class=""></div>
+                    <div id="u465_text" class="text ">
+                      <p><span>随时退班</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u466" class="ax_default _形状">
+              <div id="u466_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u467" class="ax_default">
+              <img id="u467_img" class="img " src="images/课程列表/u467.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u468" class="ax_default label">
+              <div id="u468_div" class=""></div>
+              <div id="u468_text" class="text ">
+                <p><span>上课时间</span></p>
+              </div>
+            </div>
+
+            <!-- 未开课 (动态面板) -->
+            <div id="u469" class="ax_default" data-label="未开课">
+              <div id="u469_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u469_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u470" class="ax_default _形状">
+                    <div id="u470_div" class=""></div>
+                    <div id="u470_text" class="text ">
+                      <p><span>未开课</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u469_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u469_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u471" class="ax_default _形状">
+                    <div id="u471_div" class=""></div>
+                    <div id="u471_text" class="text ">
+                      <p><span>未开课</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u472" class="ax_default label">
+              <div id="u472_div" class=""></div>
+              <div id="u472_text" class="text ">
+                <p><span>&lt;</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u473" class="ax_default">
+              <img id="u473_img" class="img " src="images/课程列表/u473.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u474" class="ax_default label">
+              <div id="u474_div" class=""></div>
+              <div id="u474_text" class="text ">
+                <p><span>价格区间</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u475" class="ax_default label">
+              <div id="u475_div" class=""></div>
+              <div id="u475_text" class="text ">
+                <p><span>&lt;</span></p>
+              </div>
+            </div>
+
+            <!-- 周一 (动态面板) -->
+            <div id="u476" class="ax_default" data-label="周一">
+              <div id="u476_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u476_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u477" class="ax_default _形状">
+                    <div id="u477_div" class=""></div>
+                    <div id="u477_text" class="text ">
+                      <p><span>周一</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u476_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u476_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u478" class="ax_default _形状">
+                    <div id="u478_div" class=""></div>
+                    <div id="u478_text" class="text ">
+                      <p><span>周一</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 周二 (动态面板) -->
+            <div id="u479" class="ax_default" data-label="周二">
+              <div id="u479_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u479_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u480" class="ax_default _形状">
+                    <div id="u480_div" class=""></div>
+                    <div id="u480_text" class="text ">
+                      <p><span>周二</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u479_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u479_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u481" class="ax_default _形状">
+                    <div id="u481_div" class=""></div>
+                    <div id="u481_text" class="text ">
+                      <p><span>周二</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 周三 (动态面板) -->
+            <div id="u482" class="ax_default" data-label="周三">
+              <div id="u482_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u482_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u483" class="ax_default _形状">
+                    <div id="u483_div" class=""></div>
+                    <div id="u483_text" class="text ">
+                      <p><span>周三</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u482_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u482_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u484" class="ax_default _形状">
+                    <div id="u484_div" class=""></div>
+                    <div id="u484_text" class="text ">
+                      <p><span>周三</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 周四 (动态面板) -->
+            <div id="u485" class="ax_default" data-label="周四">
+              <div id="u485_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u485_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u486" class="ax_default _形状">
+                    <div id="u486_div" class=""></div>
+                    <div id="u486_text" class="text ">
+                      <p><span>周四</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u485_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u485_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u487" class="ax_default _形状">
+                    <div id="u487_div" class=""></div>
+                    <div id="u487_text" class="text ">
+                      <p><span>周四</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 周五 (动态面板) -->
+            <div id="u488" class="ax_default" data-label="周五">
+              <div id="u488_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u488_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u489" class="ax_default _形状">
+                    <div id="u489_div" class=""></div>
+                    <div id="u489_text" class="text ">
+                      <p><span>周五</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u488_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u488_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u490" class="ax_default _形状">
+                    <div id="u490_div" class=""></div>
+                    <div id="u490_text" class="text ">
+                      <p><span>周五</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 周六 (动态面板) -->
+            <div id="u491" class="ax_default" data-label="周六">
+              <div id="u491_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u491_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u492" class="ax_default _形状">
+                    <div id="u492_div" class=""></div>
+                    <div id="u492_text" class="text ">
+                      <p><span>周六</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u491_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u491_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u493" class="ax_default _形状">
+                    <div id="u493_div" class=""></div>
+                    <div id="u493_text" class="text ">
+                      <p><span>周六</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 周日 (动态面板) -->
+            <div id="u494" class="ax_default" data-label="周日">
+              <div id="u494_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u494_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u495" class="ax_default _形状">
+                    <div id="u495_div" class=""></div>
+                    <div id="u495_text" class="text ">
+                      <p><span>周日</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u494_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u494_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u496" class="ax_default _形状">
+                    <div id="u496_div" class=""></div>
+                    <div id="u496_text" class="text ">
+                      <p><span>周日</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u497" class="ax_default label">
+              <div id="u497_div" class=""></div>
+              <div id="u497_text" class="text ">
+                <p><span>具体时间</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u498" class="ax_default label">
+              <div id="u498_div" class=""></div>
+              <div id="u498_text" class="text ">
+                <p><span>&lt;</span></p>
+              </div>
+            </div>
+
+            <!-- 0-1000 (动态面板) -->
+            <div id="u499" class="ax_default" data-label="0-1000">
+              <div id="u499_state0" class="panel_state" data-label="未选" style="">
+                <div id="u499_state0_content" class="panel_state_content">
+
+                  <!-- 8：00 (矩形) -->
+                  <div id="u500" class="ax_default _形状" data-label="8：00">
+                    <div id="u500_div" class=""></div>
+                    <div id="u500_text" class="text ">
+                      <p><span>0~1000</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u499_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u499_state1_content" class="panel_state_content">
+
+                  <!-- 8：00 (矩形) -->
+                  <div id="u501" class="ax_default _形状" data-label="8：00">
+                    <div id="u501_div" class=""></div>
+                    <div id="u501_text" class="text ">
+                      <p><span>0~1000</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 1000-3000 (动态面板) -->
+            <div id="u502" class="ax_default" data-label="1000-3000">
+              <div id="u502_state0" class="panel_state" data-label="未选" style="">
+                <div id="u502_state0_content" class="panel_state_content">
+
+                  <!-- 10：00 (矩形) -->
+                  <div id="u503" class="ax_default _形状" data-label="10：00">
+                    <div id="u503_div" class=""></div>
+                    <div id="u503_text" class="text ">
+                      <p><span>1000~3000</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u502_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u502_state1_content" class="panel_state_content">
+
+                  <!-- 10：00 (矩形) -->
+                  <div id="u504" class="ax_default _形状" data-label="10：00">
+                    <div id="u504_div" class=""></div>
+                    <div id="u504_text" class="text ">
+                      <p><span>1000~3000</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3000-5000 (动态面板) -->
+            <div id="u505" class="ax_default" data-label="3000-5000">
+              <div id="u505_state0" class="panel_state" data-label="未选" style="">
+                <div id="u505_state0_content" class="panel_state_content">
+
+                  <!-- 12：00 (矩形) -->
+                  <div id="u506" class="ax_default _形状" data-label="12：00">
+                    <div id="u506_div" class=""></div>
+                    <div id="u506_text" class="text ">
+                      <p><span>3000~5000</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u505_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u505_state1_content" class="panel_state_content">
+
+                  <!-- 12：00 (矩形) -->
+                  <div id="u507" class="ax_default _形状" data-label="12：00">
+                    <div id="u507_div" class=""></div>
+                    <div id="u507_text" class="text ">
+                      <p><span>3000~5000</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5000-7000 (动态面板) -->
+            <div id="u508" class="ax_default" data-label="5000-7000">
+              <div id="u508_state0" class="panel_state" data-label="未选" style="">
+                <div id="u508_state0_content" class="panel_state_content">
+
+                  <!-- 14：00 (矩形) -->
+                  <div id="u509" class="ax_default _形状" data-label="14：00">
+                    <div id="u509_div" class=""></div>
+                    <div id="u509_text" class="text ">
+                      <p><span>5000~7000</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u508_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u508_state1_content" class="panel_state_content">
+
+                  <!-- 14：00 (矩形) -->
+                  <div id="u510" class="ax_default _形状" data-label="14：00">
+                    <div id="u510_div" class=""></div>
+                    <div id="u510_text" class="text ">
+                      <p><span>5000~7000</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7000-9000 (动态面板) -->
+            <div id="u511" class="ax_default" data-label="7000-9000">
+              <div id="u511_state0" class="panel_state" data-label="未选" style="">
+                <div id="u511_state0_content" class="panel_state_content">
+
+                  <!-- 16：00 (矩形) -->
+                  <div id="u512" class="ax_default _形状" data-label="16：00">
+                    <div id="u512_div" class=""></div>
+                    <div id="u512_text" class="text ">
+                      <p><span>7000~9000</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u511_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u511_state1_content" class="panel_state_content">
+
+                  <!-- 16：00 (矩形) -->
+                  <div id="u513" class="ax_default _形状" data-label="16：00">
+                    <div id="u513_div" class=""></div>
+                    <div id="u513_text" class="text ">
+                      <p><span>7000~9000</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 9000以上 (动态面板) -->
+            <div id="u514" class="ax_default" data-label="9000以上">
+              <div id="u514_state0" class="panel_state" data-label="未选" style="">
+                <div id="u514_state0_content" class="panel_state_content">
+
+                  <!-- 18：00 (矩形) -->
+                  <div id="u515" class="ax_default _形状" data-label="18：00">
+                    <div id="u515_div" class=""></div>
+                    <div id="u515_text" class="text ">
+                      <p><span>9000以上</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u514_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u514_state1_content" class="panel_state_content">
+
+                  <!-- 18：00 (矩形) -->
+                  <div id="u516" class="ax_default _形状" data-label="18：00">
+                    <div id="u516_div" class=""></div>
+                    <div id="u516_text" class="text ">
+                      <p><span>9000以上</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u517" class="ax_default box_2">
+              <div id="u517_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u518" class="ax_default label">
+              <div id="u518_div" class=""></div>
+              <div id="u518_text" class="text ">
+                <p><span style="color:#33CCCC;">3129</span><span>门课程</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u519" class="ax_default box_4">
+              <div id="u519_div" class=""></div>
+              <div id="u519_text" class="text ">
+                <p><span>确认</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u520" class="ax_default box_4">
+              <div id="u520_div" class=""></div>
+              <div id="u520_text" class="text ">
+                <p><span>重置</span></p>
+              </div>
+            </div>
+
+            <!-- 上午 (动态面板) -->
+            <div id="u521" class="ax_default" data-label="上午">
+              <div id="u521_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u521_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u522" class="ax_default _形状">
+                    <div id="u522_div" class=""></div>
+                    <div id="u522_text" class="text ">
+                      <p><span>上 午</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u521_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u521_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u523" class="ax_default _形状">
+                    <div id="u523_div" class=""></div>
+                    <div id="u523_text" class="text ">
+                      <p><span>上 午</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 随时插班 (动态面板) -->
+            <div id="u524" class="ax_default" data-label="随时插班">
+              <div id="u524_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u524_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u525" class="ax_default _形状">
+                    <div id="u525_div" class=""></div>
+                    <div id="u525_text" class="text ">
+                      <p><span>下 午</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u524_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u524_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u526" class="ax_default _形状">
+                    <div id="u526_div" class=""></div>
+                    <div id="u526_text" class="text ">
+                      <p><span>下 午</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 随时退班 (动态面板) -->
+            <div id="u527" class="ax_default" data-label="随时退班">
+              <div id="u527_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u527_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u528" class="ax_default _形状">
+                    <div id="u528_div" class=""></div>
+                    <div id="u528_text" class="text ">
+                      <p><span>晚 上</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u527_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u527_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u529" class="ax_default _形状">
+                    <div id="u529_div" class=""></div>
+                    <div id="u529_text" class="text ">
+                      <p><span>晚 上</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u530" class="ax_default _形状">
+              <div id="u530_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u531" class="ax_default label">
+              <div id="u531_div" class=""></div>
+              <div id="u531_text" class="text ">
+                <p><span>活动优惠</span></p>
+              </div>
+            </div>
+
+            <!-- 周一 (动态面板) -->
+            <div id="u532" class="ax_default" data-label="周一">
+              <div id="u532_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u532_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u533" class="ax_default _形状">
+                    <div id="u533_div" class=""></div>
+                    <div id="u533_text" class="text ">
+                      <p><span>连报优惠</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u532_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u532_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u534" class="ax_default _形状">
+                    <div id="u534_div" class=""></div>
+                    <div id="u534_text" class="text ">
+                      <p><span>连报优惠</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 周一 (动态面板) -->
+            <div id="u535" class="ax_default" data-label="周一">
+              <div id="u535_state0" class="panel_state" data-label="未选中" style="">
+                <div id="u535_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u536" class="ax_default _形状">
+                    <div id="u536_div" class=""></div>
+                    <div id="u536_text" class="text ">
+                      <p><span>优惠套餐</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u535_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+                <div id="u535_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u537" class="ax_default _形状">
+                    <div id="u537_div" class=""></div>
+                    <div id="u537_text" class="text ">
+                      <p><span>优惠套餐</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u538" class="ax_default label">
+        <div id="u538_div" class=""></div>
+        <div id="u538_text" class="text ">
+          <p><span>一、搜索为课程维度搜索。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u539" class="ax_default _文本段落">
+        <div id="u539_div" class=""></div>
+        <div id="u539_text" class="text ">
+          <p><span>二、课程显示规则：</span></p><p><span>只显示可报名的课程，排序不变</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u540" class="ax_default _文本段落">
+        <div id="u540_div" class=""></div>
+        <div id="u540_text" class="text ">
+          <p><span>三、筛选：平台服务、上课时间、优惠活动、上课时间、具体时间、价格区间。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u541" class="ax_default _文本段落">
+        <div id="u541_div" class=""></div>
+        <div id="u541_text" class="text ">
+          <p><span>四、发布优惠课程时，若课程参加限时抢报、折扣、立减、团报时，课程的价格显示为活动价格。活动结束后恢复现价。</span></p><p><span>如右侧的3种情况。</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u542" class="ax_default _文本段落">
+        <div id="u542_div" class=""></div>
+        <div id="u542_text" class="text ">
+          <p><span>五、课程列表，</span></p><p><span><br></span></p><p><span>注意：一个课程可能有多个优惠方案，但报名时间是不重合的，app只取一个优惠方案展示给家长。即未结束（当前时间&lt;优惠截止报名时间）的所有优惠方案，按照开始时间升序，取第一个优惠方案，即当前课程的优惠方案。若全部结束则课程无优惠方案。</span></p><p><span>若该课程被创建了课程套餐并优惠时间未结束并且优惠套餐有效（即套餐内所有课程可正常报名），则显示“优惠套餐”</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u543" class="ax_default">
+        <img id="u543_img" class="img " src="images/首页/u296.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u544" class="ax_default box_2">
+        <div id="u544_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (动态面板) -->
+      <div id="u545" class="ax_default">
+        <div id="u545_state0" class="panel_state" data-label="State1" style="">
+          <div id="u545_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u546" class="ax_default" data-left="7" data-top="41" data-width="329" data-height="174">
+
+              <!-- 课程信息 (组 合) -->
+              <div id="u547" class="ax_default" data-label="课程信息" data-left="7" data-top="41" data-width="329" data-height="174">
+
+                <!-- Unnamed (矩形) -->
+                <div id="u548" class="ax_default box_2">
+                  <div id="u548_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (图片) -->
+                <div id="u549" class="ax_default image">
+                  <img id="u549_img" class="img " src="images/课程列表/u549.png"/>
+                </div>
+
+                <!-- Unnamed (图片) -->
+                <div id="u550" class="ax_default image">
+                  <img id="u550_img" class="img " src="images/课程列表/u550.png"/>
+                </div>
+
+                <!-- Unnamed (组 合) -->
+                <div id="u551" class="ax_default" data-left="12" data-top="90" data-width="70" data-height="82">
+
+                  <!-- Unnamed (图片) -->
+                  <div id="u552" class="ax_default image">
+                    <img id="u552_img" class="img " src="images/课程列表/u552.png"/>
+                  </div>
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u553" class="ax_default label">
+                    <div id="u553_div" class=""></div>
+                    <div id="u553_text" class="text ">
+                      <p><span style="text-decoration:underline;">了解更多</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u554" class="ax_default box_2">
+                <div id="u554_div" class=""></div>
+              </div>
+            </div>
+
+            <!-- 课程信息 (组 合) -->
+            <div id="u555" class="ax_default" data-label="课程信息" data-left="7" data-top="233" data-width="329" data-height="174">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u556" class="ax_default box_2">
+                <div id="u556_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (图片) -->
+              <div id="u557" class="ax_default image">
+                <img id="u557_img" class="img " src="images/课程列表/u549.png"/>
+              </div>
+
+              <!-- Unnamed (图片) -->
+              <div id="u558" class="ax_default image">
+                <img id="u558_img" class="img " src="images/课程列表/u550.png"/>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u559" class="ax_default" data-left="10" data-top="269" data-width="70" data-height="74">
+
+                <!-- Unnamed (图片) -->
+                <div id="u560" class="ax_default image">
+                  <img id="u560_img" class="img " src="images/课程列表/u552.png"/>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u561" class="ax_default box_3">
+                  <div id="u561_div" class=""></div>
+                  <div id="u561_text" class="text ">
+                    <p><span>未知</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 课程信息 (组 合) -->
+            <div id="u562" class="ax_default" data-label="课程信息" data-left="7" data-top="427" data-width="329" data-height="174">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u563" class="ax_default box_2">
+                <div id="u563_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (图片) -->
+              <div id="u564" class="ax_default image">
+                <img id="u564_img" class="img " src="images/课程列表/u549.png"/>
+              </div>
+
+              <!-- Unnamed (图片) -->
+              <div id="u565" class="ax_default image">
+                <img id="u565_img" class="img " src="images/课程列表/u550.png"/>
+              </div>
+
+              <!-- Unnamed (图片) -->
+              <div id="u566" class="ax_default image">
+                <img id="u566_img" class="img " src="images/课程列表/u552.png"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u567" class="ax_default label">
+                <div id="u567_div" class=""></div>
+                <div id="u567_text" class="text ">
+                  <p><span style="text-decoration:underline;">了解更多</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u568" class="ax_default" data-left="10" data-top="2" data-width="54" data-height="19">
+
+              <!-- Unnamed (形状) -->
+              <div id="u569" class="ax_default icon">
+                <img id="u569_img" class="img " src="images/课程列表/u569.png"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u570" class="ax_default label">
+                <div id="u570_div" class=""></div>
+                <div id="u570_text" class="text ">
+                  <p><span>校区</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u571" class="ax_default" data-left="78" data-top="2" data-width="86" data-height="19">
+
+              <!-- Unnamed (形状) -->
+              <div id="u572" class="ax_default icon">
+                <img id="u572_img" class="img " src="images/课程列表/u569.png"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u573" class="ax_default label">
+                <div id="u573_div" class=""></div>
+                <div id="u573_text" class="text ">
+                  <p><span>课程分类</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 课程信息 (组 合) -->
+            <div id="u574" class="ax_default" data-label="课程信息" data-left="7" data-top="618" data-width="329" data-height="174">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u575" class="ax_default box_2">
+                <div id="u575_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (图片) -->
+              <div id="u576" class="ax_default image">
+                <img id="u576_img" class="img " src="images/课程列表/u549.png"/>
+              </div>
+
+              <!-- Unnamed (图片) -->
+              <div id="u577" class="ax_default image">
+                <img id="u577_img" class="img " src="images/课程列表/u550.png"/>
+              </div>
+
+              <!-- Unnamed (图片) -->
+              <div id="u578" class="ax_default image">
+                <img id="u578_img" class="img " src="images/课程列表/u552.png"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u579" class="ax_default label">
+                <div id="u579_div" class=""></div>
+                <div id="u579_text" class="text ">
+                  <p><span style="text-decoration:underline;">了解更多</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u580" class="ax_default box_2">
+              <div id="u580_div" class=""></div>
+              <div id="u580_text" class="text ">
+                <p><span>剩余5个名额</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u581" class="ax_default" data-left="279" data-top="3" data-width="54" data-height="19">
+
+              <!-- Unnamed (形状) -->
+              <div id="u582" class="ax_default icon">
+                <img id="u582_img" class="img " src="images/课程列表/u569.png"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u583" class="ax_default label">
+                <div id="u583_div" class=""></div>
+                <div id="u583_text" class="text ">
+                  <p><span>教师</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 年部年级 (组 合) -->
+            <div id="u584" class="ax_default" data-label="年部年级" data-left="180" data-top="2" data-width="85" data-height="19">
+
+              <!-- Unnamed (形状) -->
+              <div id="u585" class="ax_default icon">
+                <img id="u585_img" class="img " src="images/课程列表/u569.png"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u586" class="ax_default label">
+                <div id="u586_div" class=""></div>
+                <div id="u586_text" class="text ">
+                  <p><span>年部年级</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u587" class="ax_default box_2">
+              <div id="u587_div" class=""></div>
+              <div id="u587_text" class="text ">
+                <p><span>剩余5个名额</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u588" class="ax_default box_2">
+              <div id="u588_div" class=""></div>
+              <div id="u588_text" class="text ">
+                <p><span>剩余5个名额</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u589" class="ax_default box_2">
+              <div id="u589_div" class=""></div>
+              <div id="u589_text" class="text ">
+                <p><span>剩余5个名额</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="u545_state1" class="panel_state" data-label="State2" style="visibility: hidden;">
+          <div id="u545_state1_content" class="panel_state_content">
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u590" class="ax_default image">
+        <img id="u590_img" class="img " src="images/首页/u307.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u591" class="ax_default box_3">
+        <div id="u591_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (动态面板) -->
+      <div id="u592" class="ax_default ax_default_hidden" style="display:none; visibility: hidden">
+        <div id="u592_state0" class="panel_state" data-label="State1" style="">
+          <div id="u592_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u593" class="ax_default box_2">
+              <div id="u593_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u594" class="ax_default image">
+              <img id="u594_img" class="img " src="images/课程列表/u594.png"/>
+            </div>
+          </div>
+        </div>
+        <div id="u592_state1" class="panel_state" data-label="State2" style="visibility: hidden;">
+          <div id="u592_state1_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u595" class="ax_default box_2">
+              <div id="u595_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u596" class="ax_default image">
+              <img id="u596_img" class="img " src="images/课程列表/u596.png"/>
+            </div>
+          </div>
+        </div>
+        <div id="u592_state2" class="panel_state" data-label="State3" style="visibility: hidden;">
+          <div id="u592_state2_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u597" class="ax_default box_2">
+              <div id="u597_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u598" class="ax_default image">
+              <img id="u598_img" class="img " src="images/课程列表/u598.png"/>
+            </div>
+          </div>
+        </div>
+        <div id="u592_state3" class="panel_state" data-label="State4" style="visibility: hidden;">
+          <div id="u592_state3_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u599" class="ax_default box_2">
+              <div id="u599_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u600" class="ax_default image">
+              <img id="u600_img" class="img " src="images/课程列表/u600.png"/>
+            </div>
+          </div>
+        </div>
+        <div id="u592_state4" class="panel_state" data-label="老师" style="visibility: hidden;">
+          <div id="u592_state4_content" class="panel_state_content">
+
+            <!-- Unnamed (图片) -->
+            <div id="u601" class="ax_default image">
+              <img id="u601_img" class="img " src="images/课程列表/u601.png"/>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u602" class="ax_default image">
+              <img id="u602_img" class="img " src="images/课程列表/u602.png"/>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u603" class="ax_default image">
+              <img id="u603_img" class="img " src="images/课程列表/u603.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (动态面板) -->
+      <div id="u604" class="ax_default ax_default_hidden" style="display:none; visibility: hidden">
+        <div id="u604_state0" class="panel_state" data-label="State1" style="">
+          <div id="u604_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u605" class="ax_default box_2">
+              <div id="u605_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u606" class="ax_default image">
+              <img id="u606_img" class="img " src="images/课程列表/u606.png"/>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u607" class="ax_default image">
+              <img id="u607_img" class="img " src="images/课程列表/u607.png"/>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u608" class="ax_default line">
+              <img id="u608_img" class="img " src="images/课程列表/u608.png"/>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u609" class="ax_default line">
+              <img id="u609_img" class="img " src="images/课程列表/u608.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u610" class="ax_default default_button">
+              <div id="u610_div" class=""></div>
+              <div id="u610_text" class="text ">
+                <p><span>重置</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u611" class="ax_default default_button">
+              <div id="u611_div" class=""></div>
+              <div id="u611_text" class="text ">
+                <p><span>确定</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u612" class="ax_default line">
+              <img id="u612_img" class="img " src="images/课程列表/u608.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u613" class="ax_default label">
+              <div id="u613_div" class=""></div>
+              <div id="u613_text" class="text ">
+                <p><span>不显示满班</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (复选框) -->
+            <div id="u614" class="ax_default checkbox">
+              <label for="u614_input" style="position: absolute;">
+                <div id="u614_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </label>
+              <input id="u614_input" type="checkbox" value="checkbox"/>
+            </div>
+          </div>
+        </div>
+        <div id="u604_state1" class="panel_state" data-label="State2" style="visibility: hidden;">
+          <div id="u604_state1_content" class="panel_state_content">
+
+            <!-- Unnamed (图片) -->
+            <div id="u615" class="ax_default image">
+              <img id="u615_img" class="img " src="images/课程列表/u601.png"/>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u616" class="ax_default image">
+              <img id="u616_img" class="img " src="images/课程列表/u602.png"/>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u617" class="ax_default image">
+              <img id="u617_img" class="img " src="images/课程列表/u603.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u618" class="ax_default icon">
+        <img id="u618_img" class="img " src="images/课程列表/u618.png"/>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u619" class="ax_default" data-left="351" data-top="126" data-width="49" data-height="19">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u620" class="ax_default label">
+          <div id="u620_div" class=""></div>
+          <div id="u620_text" class="text ">
+            <p><span>筛选</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (形状) -->
+        <div id="u621" class="ax_default icon">
+          <img id="u621_img" class="img " src="images/课程列表/u621.png"/>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u622" class="ax_default image">
+        <img id="u622_img" class="img " src="images/课程列表/u622.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u623" class="ax_default _文本段落">
+        <div id="u623_div" class=""></div>
+        <div id="u623_text" class="text ">
+          <p><span>六、老师的待定状态下，列表不可进入老师详情。姓名字段：待定。</span></p><p><span><br></span></p><p><span>七、现在为剩余n个名额。n=班级人数-报名人数</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u624" class="ax_default" data-left="1012" data-top="166" data-width="329" data-height="174">
+
+        <!-- 课程信息 (组 合) -->
+        <div id="u625" class="ax_default" data-label="课程信息" data-left="1012" data-top="166" data-width="329" data-height="174">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u626" class="ax_default box_2">
+            <div id="u626_div" class=""></div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u627" class="ax_default image">
+            <img id="u627_img" class="img " src="images/课程列表/u549.png"/>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u628" class="ax_default image">
+            <img id="u628_img" class="img " src="images/课程列表/u550.png"/>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u629" class="ax_default" data-left="1017" data-top="215" data-width="70" data-height="82">
+
+            <!-- Unnamed (图片) -->
+            <div id="u630" class="ax_default image">
+              <img id="u630_img" class="img " src="images/课程列表/u552.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u631" class="ax_default label">
+              <div id="u631_div" class=""></div>
+              <div id="u631_text" class="text ">
+                <p><span style="text-decoration:underline;">了解更多</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u632" class="ax_default box_2">
+          <div id="u632_div" class=""></div>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u633" class="ax_default line">
+        <img id="u633_img" class="img " src="images/课程列表/u633.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u634" class="ax_default label">
+        <div id="u634_div" class=""></div>
+        <div id="u634_text" class="text ">
+          <p><span>￥140</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u635" class="ax_default" data-left="1007" data-top="374" data-width="329" data-height="174">
+
+        <!-- 课程信息 (组 合) -->
+        <div id="u636" class="ax_default" data-label="课程信息" data-left="1007" data-top="374" data-width="329" data-height="174">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u637" class="ax_default box_2">
+            <div id="u637_div" class=""></div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u638" class="ax_default image">
+            <img id="u638_img" class="img " src="images/课程列表/u549.png"/>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u639" class="ax_default image">
+            <img id="u639_img" class="img " src="images/课程列表/u550.png"/>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u640" class="ax_default" data-left="1012" data-top="423" data-width="70" data-height="82">
+
+            <!-- Unnamed (图片) -->
+            <div id="u641" class="ax_default image">
+              <img id="u641_img" class="img " src="images/课程列表/u552.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u642" class="ax_default label">
+              <div id="u642_div" class=""></div>
+              <div id="u642_text" class="text ">
+                <p><span style="text-decoration:underline;">了解更多</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u643" class="ax_default box_2">
+          <div id="u643_div" class=""></div>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u644" class="ax_default line">
+        <img id="u644_img" class="img " src="images/课程列表/u633.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u645" class="ax_default label">
+        <div id="u645_div" class=""></div>
+        <div id="u645_text" class="text ">
+          <p><span>￥140</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u646" class="ax_default flow_shape">
+        <img id="u646_img" class="img " src="images/课程列表/u646.png"/>
+        <div id="u646_text" class="text ">
+          <p><span>折&nbsp;&nbsp; </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u647" class="ax_default" data-left="1007" data-top="576" data-width="329" data-height="174">
+
+        <!-- 课程信息 (组 合) -->
+        <div id="u648" class="ax_default" data-label="课程信息" data-left="1007" data-top="576" data-width="329" data-height="174">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u649" class="ax_default box_2">
+            <div id="u649_div" class=""></div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u650" class="ax_default image">
+            <img id="u650_img" class="img " src="images/课程列表/u549.png"/>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u651" class="ax_default image">
+            <img id="u651_img" class="img " src="images/课程列表/u550.png"/>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u652" class="ax_default" data-left="1012" data-top="625" data-width="70" data-height="82">
+
+            <!-- Unnamed (图片) -->
+            <div id="u653" class="ax_default image">
+              <img id="u653_img" class="img " src="images/课程列表/u552.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u654" class="ax_default label">
+              <div id="u654_div" class=""></div>
+              <div id="u654_text" class="text ">
+                <p><span style="text-decoration:underline;">了解更多</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u655" class="ax_default box_2">
+          <div id="u655_div" class=""></div>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u656" class="ax_default line">
+        <img id="u656_img" class="img " src="images/课程列表/u633.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u657" class="ax_default label">
+        <div id="u657_div" class=""></div>
+        <div id="u657_text" class="text ">
+          <p><span>￥140</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u658" class="ax_default flow_shape">
+        <img id="u658_img" class="img " src="images/课程列表/u646.png"/>
+        <div id="u658_text" class="text ">
+          <p><span>&nbsp;&nbsp;&nbsp; 减&nbsp; &nbsp; </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u659" class="ax_default box_1">
+        <div id="u659_div" class=""></div>
+        <div id="u659_text" class="text ">
+          <p><span>抢报价</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u660" class="ax_default label">
+        <div id="u660_div" class=""></div>
+        <div id="u660_text" class="text ">
+          <p><span>有活动的三种状态</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u661" class="ax_default" data-left="1007" data-top="778" data-width="329" data-height="174">
+
+        <!-- 课程信息 (组 合) -->
+        <div id="u662" class="ax_default" data-label="课程信息" data-left="1007" data-top="778" data-width="329" data-height="174">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u663" class="ax_default box_2">
+            <div id="u663_div" class=""></div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u664" class="ax_default image">
+            <img id="u664_img" class="img " src="images/课程列表/u549.png"/>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u665" class="ax_default image">
+            <img id="u665_img" class="img " src="images/课程列表/u550.png"/>
+          </div>
+
+          <!-- Unnamed (组 合) -->
+          <div id="u666" class="ax_default" data-left="1012" data-top="827" data-width="70" data-height="82">
+
+            <!-- Unnamed (图片) -->
+            <div id="u667" class="ax_default image">
+              <img id="u667_img" class="img " src="images/课程列表/u552.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u668" class="ax_default label">
+              <div id="u668_div" class=""></div>
+              <div id="u668_text" class="text ">
+                <p><span style="text-decoration:underline;">了解更多</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u669" class="ax_default box_2">
+          <div id="u669_div" class=""></div>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u670" class="ax_default line">
+        <img id="u670_img" class="img " src="images/课程列表/u633.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u671" class="ax_default label">
+        <div id="u671_div" class=""></div>
+        <div id="u671_text" class="text ">
+          <p><span>￥140</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u672" class="ax_default flow_shape">
+        <img id="u672_img" class="img " src="images/课程列表/u646.png"/>
+        <div id="u672_text" class="text ">
+          <p><span>&nbsp;&nbsp; 团&nbsp; &nbsp; </span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

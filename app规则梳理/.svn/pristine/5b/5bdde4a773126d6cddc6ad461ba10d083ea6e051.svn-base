@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>购买协议</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/购买协议/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/购买协议/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (图片) -->
+      <div id="u1570" class="ax_default image">
+        <img id="u1570_img" class="img " src="images/购买协议/u1570.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1571" class="ax_default box_2">
+        <div id="u1571_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1572" class="ax_default _文本段落">
+        <div id="u1572_div" class=""></div>
+        <div id="u1572_text" class="text ">
+          <p><span>尊敬的家长：</span></p><p><span><br></span></p><p><span>您好</span></p><p><span><br></span></p><p><span>感谢您选择爱校APP，为保证学员正常上课秩序及学习效果，请您了解以下内容：</span></p><p><span><br></span></p><p><span>一、上课时段</span></p><p><span><br></span></p><p><span>1、一对一课程中，学员同一科目同一时段连续两次无法按时上课则该老师时间段不再为该学生保留，老师时间段予以释放，关于时间段问题的详细信息可以咨询爱校在线，电话4000-121-121人工转在线课程。</span></p><p><span><br></span></p><p><span>2、小组课、大班课课程，因任何原因造成的缺课，爱校APP不提供补课，不予以补差额退费。</span></p><p><span><br></span></p><p><span>二、学员开发票制度：</span></p><p><span><br></span></p><p><span>1、我们为您开具增值税普通发票。</span></p><p><span><br></span></p><p><span>2、若已开具开具增值税普通发票，退费时请将原发票交回，我们会根据实际课程消耗情况为您重新开具增值税普通发票，如发票损毁、涂改或无法交回，我们将根据税务局相关规定扣除相应税费,税费为6%，例如：学员缴纳10000元并开具了全额发票，该学员已消耗5000元课时费，若原发票无法交回，则该学员实际退费应为（5000-5000*6%）元。</span></p><p><span><br></span></p><p><span>3、具体发票明细请咨询爱校APP，电话4000-121-121人工转在线课程购买及售后咨询。</span></p><p><span><br></span></p><p><span>三、学员退费制度：</span></p><p><span><br></span></p><p><span>1、&nbsp; &nbsp;&nbsp; 办理渠道：官网缴费与爱校APP缴费的家长需要统一在爱校APP上申请退费。</span></p><p><span><br></span></p><p><span>2、&nbsp; &nbsp;&nbsp; 使用优惠券后的退费金额计算：优惠金额平均分摊到每节课，退费时按实缴金额及实际剩余的课时处理退费。</span></p><p><span><br></span></p><p><span>3、&nbsp; &nbsp;&nbsp; 退费：未开具发票的课程按实际剩余未消耗费用原路退还；已开具发票的课时退费请参照学员开发票制度，学习顾问会协助核对学时和剩余费用，我们会按照爱校APP的课程价格对已发生消耗的课程收取课时费，剩余费用无息退还。</span></p><p><span><br></span></p><p><span>4、&nbsp; &nbsp;&nbsp; 退费周期：通过爱校APP申请退费成功的，约3-5个工作日退还至原账户；其他原因导致退费失败的情况，需要人工处理并且约20个工作日退还至所提供的银行卡账户。</span></p><p><span><br></span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u1573" class="ax_default">
+      </div>
+    </div>
+  </body>
+</html>

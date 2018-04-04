@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>一对一详情页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/一对一详情页/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/一对一详情页/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1463" class="ax_default box_1">
+        <div id="u1463_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1464" class="ax_default image">
+        <img id="u1464_img" class="img " src="images/一对一详情页/u1464.png"/>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1465" class="ax_default image">
+        <img id="u1465_img" class="img " src="images/一对一详情页/u1465.png"/>
+        <div id="u1465_text" class="text ">
+          <p><span>课程图片</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1466" class="ax_default box_1">
+        <div id="u1466_div" class=""></div>
+        <div id="u1466_text" class="text ">
+          <p><span>五年级</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1467" class="ax_default box_1">
+        <div id="u1467_div" class=""></div>
+        <div id="u1467_text" class="text ">
+          <p><span>语文</span></p>
+        </div>
+      </div>
+
+      <!-- bh (矩形) -->
+      <div id="u1468" class="ax_default _文本段落" data-label="bh">
+        <div id="u1468_div" class=""></div>
+        <div id="u1468_text" class="text ">
+          <p><span>¥350-500/节</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1469" class="ax_default _文本段落 ax_default_hidden" style="display:none; visibility: hidden">
+        <div id="u1469_div" class=""></div>
+        <div id="u1469_text" class="text ">
+          <p><span>25人购买</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1470" class="ax_default _文本段落">
+        <div id="u1470_div" class=""></div>
+        <div id="u1470_text" class="text ">
+          <p><span>五年级语文</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1471" class="ax_default box_1">
+        <div id="u1471_div" class=""></div>
+        <div id="u1471_text" class="text ">
+          <p><span>一对三</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (SVG) -->
+      <div id="u1472" class="ax_default image">
+        <img id="u1472_img" class="img " src="images/一对一详情页/u1472.svg"/>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u1473" class="ax_default">
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1474" class="ax_default image">
+        <img id="u1474_img" class="img " src="images/一对一详情页/u1474.png"/>
+      </div>
+
+      <!-- 价格 (矩形) -->
+      <div id="u1475" class="ax_default box_2" data-label="价格">
+        <div id="u1475_div" class=""></div>
+        <div id="u1475_text" class="text ">
+          <p><span>75000.00</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1476" class="ax_default image">
+        <img id="u1476_img" class="img " src="images/一对一详情页/u1476.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1477" class="ax_default box_2">
+        <div id="u1477_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1478" class="ax_default box_2">
+        <div id="u1478_div" class=""></div>
+        <div id="u1478_text" class="text ">
+          <p><span>选择课时&nbsp; &nbsp;&nbsp; </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1479" class="ax_default box_2" selectiongroup="课时">
+        <div id="u1479_div" class=""></div>
+        <div id="u1479_text" class="text ">
+          <p><span>50节</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1480" class="ax_default box_2" selectiongroup="课时">
+        <div id="u1480_div" class=""></div>
+        <div id="u1480_text" class="text ">
+          <p><span>100节</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1481" class="ax_default box_2" selectiongroup="课时">
+        <div id="u1481_div" class=""></div>
+        <div id="u1481_text" class="text ">
+          <p><span>150节</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1482" class="ax_default box_2" selectiongroup="课时">
+        <div id="u1482_div" class=""></div>
+        <div id="u1482_text" class="text ">
+          <p><span>200节</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1483" class="ax_default box_2" selectiongroup="课时">
+        <div id="u1483_div" class=""></div>
+        <div id="u1483_text" class="text ">
+          <p><span>自定义</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1484" class="ax_default ax_default_hidden" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (组 合) -->
+        <div id="u1485" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u1486" class="ax_default _形状">
+            <div id="u1486_div" class=""></div>
+          </div>
+
+          <!-- ipt (文本框) -->
+          <div id="u1487" class="ax_default _文本框" data-label="ipt">
+            <input id="u1487_input" type="text" value="1"/>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1488" class="ax_default _形状">
+          <div id="u1488_div" class=""></div>
+          <div id="u1488_text" class="text ">
+            <p><span>-</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1489" class="ax_default _形状">
+          <div id="u1489_div" class=""></div>
+          <div id="u1489_text" class="text ">
+            <p><span>+</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1490" class="ax_default box_2">
+        <div id="u1490_div" class=""></div>
+        <div id="u1490_text" class="text ">
+          <p><span>授课模式&nbsp; &nbsp;&nbsp; </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1491" class="ax_default box_2 selected" selectiongroup="模式">
+        <div id="u1491_div" class="selected"></div>
+        <div id="u1491_text" class="text ">
+          <p><span>一对三</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1492" class="ax_default _一级标题">
+        <div id="u1492_div" class=""></div>
+        <div id="u1492_text" class="text ">
+          <p><span>课程图片与一对一课程列表中的课程图片为同一张</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1493" class="ax_default _一级标题">
+        <div id="u1493_div" class=""></div>
+        <div id="u1493_text" class="text ">
+          <p><span>2、单节课价随用户选择课时时变化，选择自定义根据用户输入的数字（最大值为999）进行判断</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1494" class="ax_default _一级标题">
+        <div id="u1494_div" class=""></div>
+        <div id="u1494_text" class="text ">
+          <p><span>4、总价根据用户的选择实时计算出结果</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1495" class="ax_default _一级标题">
+        <div id="u1495_div" class=""></div>
+        <div id="u1495_text" class="text ">
+          <p><span>3、课时数节点取自业务中心一对一价格体系中的每个课时区间的最高值</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1496" class="ax_default _一级标题">
+        <div id="u1496_div" class=""></div>
+        <div id="u1496_text" class="text ">
+          <p><span>1、进入详情页面默认选中的参数为最低课时单价相对应的授课模式和课时数</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1497" class="ax_default _一级标题">
+        <div id="u1497_div" class=""></div>
+        <div id="u1497_text" class="text ">
+          <p><span>5、若机构未在业务中心设置《购买协议》，用户点击立即报名按钮就吐司提示“机构未设置《购买协议》，暂时无法购买一对一课程”。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1498" class="ax_default ax_default_hidden" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (图片) -->
+        <div id="u1499" class="ax_default image">
+          <img id="u1499_img" class="img " src="images/一对一详情页/u1499.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1500" class="ax_default box_2">
+          <div id="u1500_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u1501" class="ax_default image">
+          <img id="u1501_img" class="img " src="images/一对一详情页/u1501.png"/>
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u1502" class="ax_default">
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u1503" class="ax_default">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

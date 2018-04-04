@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>确认支付页面</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/确认支付页面/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/确认支付页面/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (iphone) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u1245" class="ax_default _图片">
+        <img id="u1245_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1246" class="ax_default box_2">
+        <div id="u1246_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1247" class="ax_default box_2">
+        <div id="u1247_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1248" class="ax_default label">
+        <div id="u1248_div" class=""></div>
+        <div id="u1248_text" class="text ">
+          <p><span>＜</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) [footnote] -->
+      <div id="u1248_ann" class="annotation"></div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1249" class="ax_default label">
+        <div id="u1249_div" class=""></div>
+        <div id="u1249_text" class="text ">
+          <p><span>确认支付</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1250" class="ax_default box_2">
+        <div id="u1250_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1251" class="ax_default primary_button">
+        <div id="u1251_div" class=""></div>
+        <div id="u1251_text" class="text ">
+          <p><span>确认支付</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (topbar) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u1253" class="ax_default">
+        <img id="u1253_img" class="img " src="images/登录/u213.png"/>
+      </div>
+
+      <!-- Unnamed (椭圆形) -->
+      <div id="u1254" class="ax_default box_1">
+        <img id="u1254_img" class="img " src="images/确认支付页面/u1254.png"/>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1255" class="ax_default image">
+        <img id="u1255_img" class="img " src="images/确认支付页面/u1255.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1256" class="ax_default box_1">
+        <div id="u1256_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1257" class="ax_default image">
+        <img id="u1257_img" class="img " src="images/确认支付页面/u1257.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1258" class="ax_default box_1">
+        <div id="u1258_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1259" class="ax_default _文本段落">
+        <div id="u1259_div" class=""></div>
+        <div id="u1259_text" class="text ">
+          <p><span>订单号码：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1260" class="ax_default _文本段落">
+        <div id="u1260_div" class=""></div>
+        <div id="u1260_text" class="text ">
+          <p><span>2016122815365245</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1261" class="ax_default box_1">
+        <div id="u1261_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1262" class="ax_default box_1">
+        <div id="u1262_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1263" class="ax_default _文本段落">
+        <div id="u1263_div" class=""></div>
+        <div id="u1263_text" class="text ">
+          <p><span>购买课程：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1264" class="ax_default _文本段落">
+        <div id="u1264_div" class=""></div>
+        <div id="u1264_text" class="text ">
+          <p><span>钢琴（一对二）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1265" class="ax_default _文本段落">
+        <div id="u1265_div" class=""></div>
+        <div id="u1265_text" class="text ">
+          <p><span>数学提高班</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1266" class="ax_default _文本段落">
+        <div id="u1266_div" class=""></div>
+        <div id="u1266_text" class="text ">
+          <p><span>民族舞</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1267" class="ax_default _文本段落">
+        <div id="u1267_div" class=""></div>
+        <div id="u1267_text" class="text ">
+          <p><span>应付款</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1268" class="ax_default _文本段落">
+        <div id="u1268_div" class=""></div>
+        <div id="u1268_text" class="text ">
+          <p><span>￥9100</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1269" class="ax_default _文本段落">
+        <div id="u1269_div" class=""></div>
+        <div id="u1269_text" class="text ">
+          <p><span>夏令营</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1270" class="ax_default _文本段落">
+        <div id="u1270_div" class=""></div>
+        <div id="u1270_text" class="text ">
+          <p><span>英语语法班</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1271" class="ax_default _文本段落">
+        <div id="u1271_div" class=""></div>
+        <div id="u1271_text" class="text ">
+          <p><span>一、点击返回，弹出提示框</span></p><p><span>提示“您确定要放弃支付吗？”“订单会为您保留45分钟，可在“我的订单”中进行支付”</span></p><p><span>点击“继续支付”则关闭提示框，</span></p><p><span>点击“确定放弃”则返回【提交订单】页。</span></p><p><span><br></span></p><p><span>二、</span></p><p><span>显示内容：母订单号</span></p><p><span>购买课程：显示所有课程名称</span></p><p><span>应付款：整个母订单应付款总金额</span></p><p><span>默认支付宝支付被选中。</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- 离开提示 (组 合) -->
+      <div id="u1272" class="ax_default ax_default_hidden" data-label="离开提示" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1273" class="ax_default box_1">
+          <div id="u1273_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1274" class="ax_default label">
+          <div id="u1274_div" class=""></div>
+          <div id="u1274_text" class="text ">
+            <p><span>您确定要放弃支付吗？</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u1275" class="ax_default line">
+          <img id="u1275_img" class="img " src="images/确认支付页面/u1275.png"/>
+        </div>
+
+        <!-- Unnamed (垂直线) -->
+        <div id="u1276" class="ax_default line">
+          <img id="u1276_img" class="img " src="images/确认支付页面/u1276.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1277" class="ax_default label">
+          <div id="u1277_div" class=""></div>
+          <div id="u1277_text" class="text ">
+            <p><span>确定放弃</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1278" class="ax_default label">
+          <div id="u1278_div" class=""></div>
+          <div id="u1278_text" class="text ">
+            <p><span>继续支付</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u1279" class="ax_default">
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u1280" class="ax_default">
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1281" class="ax_default label">
+          <div id="u1281_div" class=""></div>
+          <div id="u1281_text" class="text ">
+            <p><span>订单会为您保留45分钟，可在“我的订单”中进行支付</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1282" class="ax_default image">
+        <img id="u1282_img" class="img " src="images/确认支付页面/u1255.png"/>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1283" class="ax_default image">
+        <img id="u1283_img" class="img " src="images/确认支付页面/u1283.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1284" class="ax_default box_1">
+        <div id="u1284_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (占位符) -->
+      <div id="u1285" class="ax_default placeholder">
+        <img id="u1285_img" class="img " src="images/确认支付页面/u1285.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1286" class="ax_default box_1">
+        <div id="u1286_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1287" class="ax_default box_1">
+        <div id="u1287_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1288" class="ax_default _文本段落">
+        <div id="u1288_div" class=""></div>
+        <div id="u1288_text" class="text ">
+          <p><span>0元，直接支付</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1289" class="ax_default image">
+        <img id="u1289_img" class="img " src="images/确认支付页面/u1289.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1290" class="ax_default _文本段落">
+        <div id="u1290_div" class=""></div>
+        <div id="u1290_text" class="text ">
+          <p><span>三、</span></p><p><span>&nbsp;①若应付款为0，则显示“0元，直接支付”选项，不可取消选中，不可切换。</span></p><p><span>点击“确认支付”直接报名成功，提交跳到【购买课程成功】页。若支付取消或失败跳到【我的订单】页</span></p><p><span><br></span></p><p><span>②若应付款&gt;0,则不显示“0元，直接支付”选项。</span></p><p><span><br></span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

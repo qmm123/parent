@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>评价</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/评价/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/评价/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (iphone) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u3813" class="ax_default _图片">
+        <img id="u3813_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3814" class="ax_default box_2">
+        <div id="u3814_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3815" class="ax_default box_2">
+        <div id="u3815_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3816" class="ax_default label">
+        <div id="u3816_div" class=""></div>
+        <div id="u3816_text" class="text ">
+          <p><span>＜</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3817" class="ax_default label">
+        <div id="u3817_div" class=""></div>
+        <div id="u3817_text" class="text ">
+          <p><span>我要评价</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3818" class="ax_default box_1">
+        <div id="u3818_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3819" class="ax_default _形状">
+        <img id="u3819_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3820" class="ax_default _形状">
+        <img id="u3820_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3821" class="ax_default _形状">
+        <img id="u3821_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3822" class="ax_default _形状">
+        <img id="u3822_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3823" class="ax_default _形状">
+        <img id="u3823_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3824" class="ax_default _形状">
+        <img id="u3824_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3825" class="ax_default _形状">
+        <img id="u3825_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3826" class="ax_default _形状">
+        <img id="u3826_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3827" class="ax_default _形状">
+        <img id="u3827_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3828" class="ax_default _形状">
+        <img id="u3828_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3829" class="ax_default _形状">
+        <img id="u3829_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3830" class="ax_default _形状">
+        <img id="u3830_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3831" class="ax_default _形状">
+        <img id="u3831_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3832" class="ax_default _形状">
+        <img id="u3832_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (星形) -->
+      <div id="u3833" class="ax_default _形状">
+        <img id="u3833_img" class="img " src="images/评价/u3819.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3834" class="ax_default _形状">
+        <div id="u3834_div" class=""></div>
+        <div id="u3834_text" class="text ">
+          <p><span>请写下上课的感受，助人为乐( ^_^ )</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u3835" class="ax_default line">
+        <img id="u3835_img" class="img " src="images/评价/u3835.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3836" class="ax_default label">
+        <div id="u3836_div" class=""></div>
+        <div id="u3836_text" class="text ">
+          <p><span>学习效果</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3837" class="ax_default label">
+        <div id="u3837_div" class=""></div>
+        <div id="u3837_text" class="text ">
+          <p><span>课后服务</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3838" class="ax_default label">
+        <div id="u3838_div" class=""></div>
+        <div id="u3838_text" class="text ">
+          <p><span>教学态度</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3839" class="ax_default box_2">
+        <div id="u3839_div" class=""></div>
+        <div id="u3839_text" class="text ">
+          <p><span>发表评价</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3840" class="ax_default box_2">
+        <div id="u3840_div" class=""></div>
+        <div id="u3840_text" class="text ">
+          <p><span>发表评价</span></p>
+        </div>
+      </div>
+
+      <!-- 设为默认1 (动态面板) -->
+      <div id="u3841" class="ax_default" data-label="设为默认1">
+        <div id="u3841_state0" class="panel_state" data-label="未选中" style="">
+          <div id="u3841_state0_content" class="panel_state_content">
+
+            <!-- 设为默认2 (椭圆形) -->
+            <div id="u3842" class="ax_default box_1" data-label="设为默认2">
+              <img id="u3842_img" class="img " src="images/评价/设为默认2_u3842.png"/>
+              <div id="u3842_text" class="text ">
+                <p><span>✔</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="u3841_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+          <div id="u3841_state1_content" class="panel_state_content">
+
+            <!-- 设为默认1 (椭圆形) -->
+            <div id="u3843" class="ax_default box_1" data-label="设为默认1">
+              <img id="u3843_img" class="img " src="images/评价/设为默认1_u3843.png"/>
+              <div id="u3843_text" class="text ">
+                <p><span>✔</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3844" class="ax_default label">
+        <div id="u3844_div" class=""></div>
+        <div id="u3844_text" class="text ">
+          <p><span>匿名评价</span></p>
+        </div>
+      </div>
+
+      <!-- 评价成功 (矩形) -->
+      <div id="u3845" class="ax_default box_4 ax_default_hidden" data-label="评价成功" style="display:none; visibility: hidden">
+        <div id="u3845_div" class=""></div>
+        <div id="u3845_text" class="text ">
+          <p><span>评价成功</span></p>
+        </div>
+      </div>
+
+      <!-- 离开提示 (组 合) -->
+      <div id="u3846" class="ax_default ax_default_hidden" data-label="离开提示" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3847" class="ax_default box_1">
+          <div id="u3847_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3848" class="ax_default label">
+          <div id="u3848_div" class=""></div>
+          <div id="u3848_text" class="text ">
+            <p><span>评价还未完成，您确定要离开吗？</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u3849" class="ax_default line">
+          <img id="u3849_img" class="img " src="images/确认支付页面/u1275.png"/>
+        </div>
+
+        <!-- Unnamed (垂直线) -->
+        <div id="u3850" class="ax_default line">
+          <img id="u3850_img" class="img " src="images/确认支付页面/u1276.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3851" class="ax_default label">
+          <div id="u3851_div" class=""></div>
+          <div id="u3851_text" class="text ">
+            <p><span>确定</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3852" class="ax_default label">
+          <div id="u3852_div" class=""></div>
+          <div id="u3852_text" class="text ">
+            <p><span>取消</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u3853" class="ax_default">
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u3854" class="ax_default">
+        </div>
+      </div>
+
+      <!-- Unnamed (topbar) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u3856" class="ax_default">
+        <img id="u3856_img" class="img " src="images/登录/u213.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3857" class="ax_default label">
+        <div id="u3857_div" class=""></div>
+        <div id="u3857_text" class="text ">
+          <p><span>默认为非匿名评价</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3858" class="ax_default _文本段落">
+        <div id="u3858_div" class=""></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>提交订单</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/提交订单/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/提交订单/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (iphone) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u1139" class="ax_default _图片">
+        <img id="u1139_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1140" class="ax_default box_2">
+        <div id="u1140_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1141" class="ax_default box_1">
+        <div id="u1141_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1142" class="ax_default image">
+        <img id="u1142_img" class="img " src="images/提交订单/u1142.png"/>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1143" class="ax_default image">
+        <img id="u1143_img" class="img " src="images/提交订单/u1142.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1144" class="ax_default box_2">
+        <div id="u1144_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1145" class="ax_default label">
+        <div id="u1145_div" class=""></div>
+        <div id="u1145_text" class="text ">
+          <p><span>＜</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) [footnote] -->
+      <div id="u1145_ann" class="annotation"></div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1146" class="ax_default label">
+        <div id="u1146_div" class=""></div>
+        <div id="u1146_text" class="text ">
+          <p><span>提交订单</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1147" class="ax_default box_1">
+        <div id="u1147_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1148" class="ax_default label">
+        <div id="u1148_div" class=""></div>
+        <div id="u1148_text" class="text ">
+          <p><span>萌仔</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1149" class="ax_default label">
+        <div id="u1149_div" class=""></div>
+        <div id="u1149_text" class="text ">
+          <p><span>默认</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1150" class="ax_default label">
+        <div id="u1150_div" class=""></div>
+        <div id="u1150_text" class="text ">
+          <p><span>女儿</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1151" class="ax_default label">
+        <div id="u1151_div" class=""></div>
+        <div id="u1151_text" class="text ">
+          <p><span>1990-02-23</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1152" class="ax_default label">
+        <div id="u1152_div" class=""></div>
+        <div id="u1152_text" class="text ">
+          <p><span>＞</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1153" class="ax_default image">
+        <img id="u1153_img" class="img " src="images/提交套餐订单/u1065.png"/>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u1154" class="ax_default">
+      </div>
+
+      <!-- Unnamed (topbar) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u1156" class="ax_default">
+        <img id="u1156_img" class="img " src="images/登录/u213.png"/>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1157" class="ax_default" data-left="33" data-top="629" data-width="397" data-height="173">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1158" class="ax_default box_1">
+          <div id="u1158_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1159" class="ax_default _文本段落">
+          <div id="u1159_div" class=""></div>
+          <div id="u1159_text" class="text ">
+            <p><span>原课时费：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1160" class="ax_default _文本段落">
+          <div id="u1160_div" class=""></div>
+          <div id="u1160_text" class="text ">
+            <p><span>￥29000</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1161" class="ax_default box_1">
+          <div id="u1161_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1162" class="ax_default _文本段落">
+          <div id="u1162_div" class=""></div>
+          <div id="u1162_text" class="text ">
+            <p><span>教材费：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1163" class="ax_default _文本段落">
+          <div id="u1163_div" class=""></div>
+          <div id="u1163_text" class="text ">
+            <p><span>￥200</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1164" class="ax_default box_1">
+          <div id="u1164_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1165" class="ax_default _文本段落">
+          <div id="u1165_div" class=""></div>
+          <div id="u1165_text" class="text ">
+            <p><span>优惠</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1166" class="ax_default _文本段落">
+          <div id="u1166_div" class=""></div>
+          <div id="u1166_text" class="text ">
+            <p><span>-￥3100</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1167" class="ax_default box_1">
+          <div id="u1167_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1168" class="ax_default _文本段落">
+          <div id="u1168_div" class=""></div>
+          <div id="u1168_text" class="text ">
+            <p><span>应付款</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1169" class="ax_default _文本段落">
+          <div id="u1169_div" class=""></div>
+          <div id="u1169_text" class="text ">
+            <p><span>￥26100</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1170" class="ax_default" data-left="478" data-top="200" data-width="508" data-height="429">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1171" class="ax_default box_1">
+          <div id="u1171_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1172" class="ax_default _文本段落">
+          <div id="u1172_div" class=""></div>
+          <div id="u1172_text" class="text ">
+            <p><span>三、原课时费：所有课程总价格（课程套餐则取创建套餐时课程的价格）</span></p><p><span>&nbsp;&nbsp; &nbsp; 教材费：以上所有课程的教材费总和。</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; 优惠 ：所有优惠总和 (a、课程优惠=课程价格*（1-折扣）或满减金额的所有优惠)。</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; 应付款=原课时费+教材费-优惠</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; 实付总额=应付款</span></p><p><span><br></span></p><p><span><br></span></p><p><span>四 操作按钮：</span></p><p><span><br></span></p><p><span>提交订单：点击提交订单依次判断提示如下：</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ①判断选择的课程是否有失效的（即已满班、开课不可报名、已结课、已下架），有则提示“【课程名称】已开课，不可报名，请重新选择”，点击“我知道了”刷新页面。（已开课为课程状态，动态显示）</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ②判断该孩子是否报过任一课程，若报过（已支付）则提示“{孩子姓名}已报过{班级名称}，无需重新报名，请重新选择”。点击“我知道了”关闭提示框。</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ③判断该孩子是否有某任一课程待支付状态，若有则提示“{课程名称}订单已存在，是否继续支付此订单？继续支付此订单，系统会自动取消原订单。”，点击“支付原单”跳到我的订单页，点击“继续支付”，跳到选择支付页。点击叉关闭弹框。</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ④以上的没有，则提交订单直接生成母订单，对应的每个课程生成子订单。</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ⑤判断价格优惠有变化，提醒。</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 提交订单成功后，这些课程将不显示在购物车中。</span></p><p><span><br></span></p><p><span>注意：一起提交订单的所有课程即为一个母订单，对应的课程为对应的子订单</span></p><p><span><br></span></p><p><span><br></span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1173" class="ax_default image">
+        <img id="u1173_img" class="img " src="images/提交套餐订单/u1098.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1174" class="ax_default primary_button">
+        <div id="u1174_div" class=""></div>
+        <div id="u1174_text" class="text ">
+          <p><span>提交订单</span></p>
+        </div>
+      </div>
+
+      <!-- 未满班已报过 (组 合) -->
+      <div id="u1175" class="ax_default ax_default_hidden" data-label="未满班已报过" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1176" class="ax_default box_1">
+          <div id="u1176_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1177" class="ax_default _文本段落">
+          <div id="u1177_div" class=""></div>
+          <div id="u1177_text" class="text ">
+            <p><span>{孩子姓名}已报过{班级名称}，无需重新报名，请返回重新选择。</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1178" class="ax_default box_1">
+          <div id="u1178_div" class=""></div>
+          <div id="u1178_text" class="text ">
+            <p><span>我知道了</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1179" class="ax_default _文本段落">
+          <div id="u1179_div" class=""></div>
+          <div id="u1179_text" class="text ">
+            <p><span>提示</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1180" class="ax_default _文本段落">
+        <div id="u1180_div" class=""></div>
+        <div id="u1180_text" class="text ">
+          <p><span>返回，则从哪来返哪去</span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1181" class="ax_default" data-left="478" data-top="124" data-width="493" data-height="54">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1182" class="ax_default box_1">
+          <div id="u1182_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1183" class="ax_default _文本段落">
+          <div id="u1183_div" class=""></div>
+          <div id="u1183_text" class="text ">
+            <p><span>一、未选择孩子即无孩子时，显示添加孩子按钮。则下面课程不显示折扣信息。</span></p><p><span><br></span></p><p><span style="color:#0000FF;"><br></span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1184" class="ax_default box_1">
+        <div id="u1184_div" class=""></div>
+        <div id="u1184_text" class="text ">
+          <p><span>￥26100</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1185" class="ax_default box_1">
+        <div id="u1185_div" class=""></div>
+        <div id="u1185_text" class="text ">
+          <p><span>新生</span></p>
+        </div>
+      </div>
+
+      <!-- 已满班 (组 合) -->
+      <div id="u1186" class="ax_default ax_default_hidden" data-label="已满班" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (组 合) -->
+        <div id="u1187" class="ax_default" data-left="0" data-top="0" data-width="0" data-height="0">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u1188" class="ax_default box_1">
+            <div id="u1188_div" class=""></div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u1189" class="ax_default _文本段落">
+            <div id="u1189_div" class=""></div>
+            <div id="u1189_text" class="text ">
+              <p><span>提示</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u1190" class="ax_default _文本段落">
+            <div id="u1190_div" class=""></div>
+            <div id="u1190_text" class="text ">
+              <p><span>{课程名称}已满班，不可报名。开课之前可以刷刷名额哦~</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u1191" class="ax_default box_1">
+            <div id="u1191_div" class=""></div>
+            <div id="u1191_text" class="text ">
+              <p><span>我知道了</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 有待支付订单 (组 合) -->
+      <div id="u1192" class="ax_default ax_default_hidden" data-label="有待支付订单" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1193" class="ax_default box_1">
+          <div id="u1193_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1194" class="ax_default _文本段落">
+          <div id="u1194_div" class=""></div>
+          <div id="u1194_text" class="text ">
+            <p><span>提&nbsp; 示</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1195" class="ax_default _文本段落">
+          <div id="u1195_div" class=""></div>
+          <div id="u1195_text" class="text ">
+            <p><span>{班级名称}订单已存在，是否继续支付此订单？</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1196" class="ax_default _文本段落">
+          <div id="u1196_div" class=""></div>
+          <div id="u1196_text" class="text ">
+            <p><span>继续支付此订单，系统会自动取消原订单。</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1197" class="ax_default box_1">
+          <div id="u1197_div" class=""></div>
+          <div id="u1197_text" class="text ">
+            <p><span>继续支付</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1198" class="ax_default box_1">
+          <div id="u1198_div" class=""></div>
+          <div id="u1198_text" class="text ">
+            <p><span>支付原单</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u1199" class="ax_default _图片">
+          <img id="u1199_img" class="img " src="images/提交套餐订单/u1129.png"/>
+        </div>
+      </div>
+
+      <!-- 优惠价格变动 (组 合) -->
+      <div id="u1200" class="ax_default ax_default_hidden" data-label="优惠价格变动" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1201" class="ax_default _形状">
+          <div id="u1201_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u1202" class="ax_default _水平线">
+          <img id="u1202_img" class="img " src="images/提交套餐订单/u1132.png"/>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u1203" class="ax_default _水平线">
+          <img id="u1203_img" class="img " src="images/提交套餐订单/u1132.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1204" class="ax_default _一级标题1">
+          <div id="u1204_div" class=""></div>
+          <div id="u1204_text" class="text ">
+            <p><span>继续支付</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1205" class="ax_default _一级标题1">
+          <div id="u1205_div" class=""></div>
+          <div id="u1205_text" class="text ">
+            <p><span>提示</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1206" class="ax_default _文本段落1">
+          <div id="u1206_div" class=""></div>
+          <div id="u1206_text" class="text ">
+            <p><span>当前优惠活动已结束，课程价格有变，需要支付￥XXX.XX，是否继续支付？</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1207" class="ax_default _一级标题1">
+          <div id="u1207_div" class=""></div>
+          <div id="u1207_text" class="text ">
+            <p><span>返回重选</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>校区详情-主页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/校区详情-主页/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/校区详情-主页/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (topbar) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u1864" class="ax_default">
+        <img id="u1864_img" class="img " src="images/登录/u213.png"/>
+      </div>
+
+      <!-- Unnamed (iphone) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u1866" class="ax_default _图片">
+        <img id="u1866_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1867" class="ax_default box_2">
+        <div id="u1867_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1868" class="ax_default box_2">
+        <div id="u1868_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1869" class="ax_default label">
+        <div id="u1869_div" class=""></div>
+        <div id="u1869_text" class="text ">
+          <p><span>＜</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) [footnote] -->
+      <div id="u1869_ann" class="annotation"></div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1870" class="ax_default image">
+        <img id="u1870_img" class="img " src="images/校区详情-主页/u1870.png"/>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u1871" class="ax_default line">
+        <img id="u1871_img" class="img " src="images/校区详情-主页/u1871.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1872" class="ax_default box_2">
+        <div id="u1872_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1873" class="ax_default label">
+        <div id="u1873_div" class=""></div>
+        <div id="u1873_text" class="text ">
+          <p><span>主页</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1874" class="ax_default label">
+        <div id="u1874_div" class=""></div>
+        <div id="u1874_text" class="text ">
+          <p><span>课程</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1875" class="ax_default label">
+        <div id="u1875_div" class=""></div>
+        <div id="u1875_text" class="text ">
+          <p><span>老师</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1876" class="ax_default box_1">
+        <div id="u1876_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u1877" class="ax_default">
+        <img id="u1877_img" class="img " src="images/校区详情-主页/u1877.png"/>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u1878" class="ax_default">
+        <img id="u1878_img" class="img " src="images/校区详情-主页/u1877.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1879" class="ax_default _形状">
+        <div id="u1879_div" class=""></div>
+        <div id="u1879_text" class="text ">
+          <p><span>＞</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1880" class="ax_default box_2">
+        <div id="u1880_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1881" class="ax_default label">
+        <div id="u1881_div" class=""></div>
+        <div id="u1881_text" class="text ">
+          <p><span>校区地址：北京市望京西路82号</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1882" class="ax_default" data-left="358" data-top="479" data-width="67" data-height="13">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1883" class="ax_default label">
+          <div id="u1883_div" class=""></div>
+          <div id="u1883_text" class="text ">
+            <p><span>离我距离 </span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u1884" class="ax_default label">
+          <div id="u1884_div" class=""></div>
+          <div id="u1884_text" class="text ">
+            <p><span>10km</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1885" class="ax_default box_1">
+        <div id="u1885_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1886" class="ax_default _形状">
+        <div id="u1886_div" class=""></div>
+        <div id="u1886_text" class="text ">
+          <p><span>视频相册</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u1887" class="ax_default">
+        <img id="u1887_img" class="img " src="images/校区详情-主页/u1887.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1888" class="ax_default _形状">
+        <div id="u1888_div" class=""></div>
+        <div id="u1888_text" class="text ">
+          <p><span>20张照片 2视频</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (占位符) -->
+      <div id="u1889" class="ax_default _形状">
+        <img id="u1889_img" class="img " src="images/校区详情-主页/u1889.png"/>
+      </div>
+
+      <!-- Unnamed (占位符) -->
+      <div id="u1890" class="ax_default _形状">
+        <img id="u1890_img" class="img " src="images/校区详情-主页/u1889.png"/>
+      </div>
+
+      <!-- Unnamed (占位符) -->
+      <div id="u1891" class="ax_default _形状">
+        <img id="u1891_img" class="img " src="images/校区详情-主页/u1889.png"/>
+      </div>
+
+      <!-- Unnamed (占位符) -->
+      <div id="u1892" class="ax_default _形状">
+        <img id="u1892_img" class="img " src="images/校区详情-主页/u1889.png"/>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u1893" class="ax_default">
+        <img id="u1893_img" class="img " src="images/校区详情-主页/u1887.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1894" class="ax_default label">
+        <div id="u1894_div" class=""></div>
+        <div id="u1894_text" class="text ">
+          <p><span>查看全部视频/照片</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1895" class="ax_default box_1">
+        <div id="u1895_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1896" class="ax_default _形状">
+        <div id="u1896_div" class=""></div>
+        <div id="u1896_text" class="text ">
+          <p><span>家长评价</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1897" class="ax_default label">
+        <div id="u1897_div" class=""></div>
+        <div id="u1897_text" class="text ">
+          <p><span>＞</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u1898" class="ax_default">
+        <img id="u1898_img" class="img " src="images/校区详情-主页/u1887.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1899" class="ax_default _形状">
+        <div id="u1899_div" class=""></div>
+        <div id="u1899_text" class="text ">
+          <p><span>共10条评价</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1900" class="ax_default _形状">
+        <div id="u1900_div" class=""></div>
+        <div id="u1900_text" class="text ">
+          <p><span>135****2213</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1901" class="ax_default _形状">
+        <div id="u1901_div" class=""></div>
+        <div id="u1901_text" class="text ">
+          <p><span>哎呀真好真好真好真好真好哎呀真好真好真好真好真好哎呀真好真好真好真好真好哎呀真好真好真好真好真好哎呀真好真好真好真好真好哎呀真好真好真好真好真好哎呀真好呀好哟啊 好</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1902" class="ax_default" data-left="109" data-top="743" data-width="50" data-height="10">
+
+        <!-- Unnamed (星形) -->
+        <div id="u1903" class="ax_default _形状">
+          <img id="u1903_img" class="img " src="images/课程详情/u713.png"/>
+        </div>
+
+        <!-- Unnamed (星形) -->
+        <div id="u1904" class="ax_default _形状">
+          <img id="u1904_img" class="img " src="images/课程详情/u713.png"/>
+        </div>
+
+        <!-- Unnamed (星形) -->
+        <div id="u1905" class="ax_default _形状">
+          <img id="u1905_img" class="img " src="images/课程详情/u713.png"/>
+        </div>
+
+        <!-- Unnamed (星形) -->
+        <div id="u1906" class="ax_default _形状">
+          <img id="u1906_img" class="img " src="images/课程详情/u713.png"/>
+        </div>
+
+        <!-- Unnamed (星形) -->
+        <div id="u1907" class="ax_default _形状">
+          <img id="u1907_img" class="img " src="images/课程详情/u713.png"/>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u1908" class="ax_default">
+        <img id="u1908_img" class="img " src="images/校区详情-主页/u1887.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1909" class="ax_default _形状">
+        <div id="u1909_div" class=""></div>
+        <div id="u1909_text" class="text ">
+          <p><span>2015-11-20</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1910" class="ax_default _形状">
+        <div id="u1910_div" class=""></div>
+        <div id="u1910_text" class="text ">
+          <p><span>哎呀真好真好真好真好真好哎呀真好真好真好真好真好哎呀真好真好真好真好真好哎呀真好真好真好真好真好哎呀真好真好真好真好真好哎呀真好真好真好真好真好哎呀真好呀好哟啊 好</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组 合) -->
+      <div id="u1911" class="ax_default" data-left="109" data-top="848" data-width="50" data-height="10">
+
+        <!-- Unnamed (星形) -->
+        <div id="u1912" class="ax_default _形状">
+          <img id="u1912_img" class="img " src="images/课程详情/u713.png"/>
+        </div>
+
+        <!-- Unnamed (星形) -->
+        <div id="u1913" class="ax_default _形状">
+          <img id="u1913_img" class="img " src="images/课程详情/u713.png"/>
+        </div>
+
+        <!-- Unnamed (星形) -->
+        <div id="u1914" class="ax_default _形状">
+          <img id="u1914_img" class="img " src="images/课程详情/u713.png"/>
+        </div>
+
+        <!-- Unnamed (星形) -->
+        <div id="u1915" class="ax_default _形状">
+          <img id="u1915_img" class="img " src="images/课程详情/u713.png"/>
+        </div>
+
+        <!-- Unnamed (星形) -->
+        <div id="u1916" class="ax_default _形状">
+          <img id="u1916_img" class="img " src="images/课程详情/u713.png"/>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u1917" class="ax_default">
+        <img id="u1917_img" class="img " src="images/校区详情-主页/u1887.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1918" class="ax_default _形状">
+        <div id="u1918_div" class=""></div>
+        <div id="u1918_text" class="text ">
+          <p><span>2015-11-20</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1919" class="ax_default label">
+        <div id="u1919_div" class=""></div>
+        <div id="u1919_text" class="text ">
+          <p><span>查看全部评价</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1920" class="ax_default label">
+        <div id="u1920_div" class=""></div>
+        <div id="u1920_text" class="text ">
+          <p><span>＞</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1921" class="ax_default image">
+        <img id="u1921_img" class="img " src="images/课程详情/u731.png"/>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u1922" class="ax_default image">
+        <img id="u1922_img" class="img " src="images/课程详情/u731.png"/>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u1923" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u1924" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1925" class="ax_default label">
+        <div id="u1925_div" class=""></div>
+        <div id="u1925_text" class="text ">
+          <p><span>...</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1926" class="ax_default _形状">
+        <div id="u1926_div" class=""></div>
+        <div id="u1926_text" class="text ">
+          <p><span>匿名</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1927" class="ax_default _文本段落">
+        <div id="u1927_div" class=""></div>
+        <div id="u1927_text" class="text ">
+          <p><span>&gt;</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u1928" class="ax_default">
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1929" class="ax_default _形状">
+        <div id="u1929_div" class=""></div>
+        <div id="u1929_text" class="text ">
+          <p style="font-size:12px;"><span>一、该页面为校区主页，</span></p><p style="font-size:13px;"><span>点击“...”弹出菜单，首页，课表，咨询</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1930" class="ax_default _文本段落">
+        <div id="u1930_div" class=""></div>
+        <div id="u1930_text" class="text ">
+          <p><span>二,图片：显示【业务中心】上传。显示上传的最后一张。</span></p><p><span><br></span></p><p><span>三、校区电话，点击进行拨打。</span></p><p><span>&nbsp;&nbsp; &nbsp; 无电话状态：暂无开通电话咨询。</span></p><p><span><br></span></p><p><span><br></span></p><p><span>四、校区地址。点击定位。</span></p><p><span>地址：显示该校区的地址。</span></p><p><span>点击跳到地图页，展示该校区定位。</span></p><p><span><br></span></p><p><span>五、视频相册</span></p><p><span>&nbsp;&nbsp; 为校区内校区相册，班级相册与班级视频。</span></p><p><span><br></span></p><p><span>六、评价：即为该校区老师的所有评价</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u1931" class="ax_default text_field">
+        <input id="u1931_input" type="text" value=""/>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u1932" class="ax_default icon">
+        <img id="u1932_img" class="img " src="images/校区详情-主页/u1932.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1933" class="ax_default box_1">
+        <div id="u1933_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1934" class="ax_default label">
+        <div id="u1934_div" class=""></div>
+        <div id="u1934_text" class="text ">
+          <p><span>校区电话：024-09909009900</span></p>
+        </div>
+      </div>
+
+      <!-- 隐藏 (形状) -->
+      <div id="u1935" class="ax_default box_3 ax_default_hidden" data-label="隐藏" style="display:none; visibility: hidden">
+        <img id="u1935_img" class="img " src="images/校区详情-主页/隐藏_u1935.png"/>
+        <div id="u1935_text" class="text ">
+          <p><span>首页</span></p><p><span>课表</span></p><p><span>咨询</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

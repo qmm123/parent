@@ -1,0 +1,736 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>教师列表</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/教师列表/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/教师列表/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (iphone) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u2187" class="ax_default _图片">
+        <img id="u2187_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2188" class="ax_default box_2">
+        <div id="u2188_div" class=""></div>
+      </div>
+
+      <!-- 顶部 (矩形) -->
+      <div id="u2189" class="ax_default box_2" data-label="顶部">
+        <div id="u2189_div" class=""></div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u2190" class="ax_default text_field">
+        <input id="u2190_input" type="text" value=""/>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u2191" class="ax_default image">
+        <img id="u2191_img" class="img " src="images/搜索页面/u437.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2192" class="ax_default label">
+        <div id="u2192_div" class=""></div>
+        <div id="u2192_text" class="text ">
+          <p><span>＜</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2193" class="ax_default _形状">
+        <div id="u2193_div" class=""></div>
+        <div id="u2193_text" class="text ">
+          <p><span>位置∨</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2194" class="ax_default _形状">
+        <div id="u2194_div" class=""></div>
+        <div id="u2194_text" class="text ">
+          <p><span>课程分类∨</span></p>
+        </div>
+      </div>
+
+      <!-- 老师筛选 (动态面板) -->
+      <div id="u2195" class="ax_default" data-label="老师筛选">
+        <div id="u2195_state0" class="panel_state" data-label="老师列表" style="">
+          <div id="u2195_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u2196" class="ax_default" data-left="0" data-top="0" data-width="414" data-height="143">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2197" class="ax_default box_1">
+                <div id="u2197_div" class=""></div>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u2198" class="ax_default" data-left="13" data-top="21" data-width="322" data-height="96">
+
+                <!-- Unnamed (矩形) -->
+                <div id="u2199" class="ax_default _形状">
+                  <div id="u2199_div" class=""></div>
+                  <div id="u2199_text" class="text ">
+                    <p><span>张淼</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u2200" class="ax_default label">
+                  <div id="u2200_div" class=""></div>
+                  <div id="u2200_text" class="text ">
+                    <p><span style="color:#33CCCC;">18</span><span style="color:#999999;">年教龄</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u2201" class="ax_default label">
+                  <div id="u2201_div" class=""></div>
+                  <div id="u2201_text" class="text ">
+                    <p><span>教授课程：现代舞&nbsp; &nbsp; 小学英语&nbsp; &nbsp; 数学</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (图片) -->
+                <div id="u2202" class="ax_default image">
+                  <img id="u2202_img" class="img " src="images/校区老师/u2141.jpg"/>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u2203" class="ax_default label">
+                  <div id="u2203_div" class=""></div>
+                  <div id="u2203_text" class="text ">
+                    <p><span>海淀校区、朝阳校区、公主坟校区...</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u2204" class="ax_default _形状">
+                  <div id="u2204_div" class=""></div>
+                  <div id="u2204_text" class="text ">
+                    <p><span>男</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2205" class="ax_default box_1">
+              <div id="u2205_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u2206" class="ax_default" data-left="13" data-top="164" data-width="322" data-height="96">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2207" class="ax_default _形状">
+                <div id="u2207_div" class=""></div>
+                <div id="u2207_text" class="text ">
+                  <p><span>张淼</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2208" class="ax_default label">
+                <div id="u2208_div" class=""></div>
+                <div id="u2208_text" class="text ">
+                  <p><span style="color:#33CCCC;">18</span><span style="color:#999999;">年教龄</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2209" class="ax_default label">
+                <div id="u2209_div" class=""></div>
+                <div id="u2209_text" class="text ">
+                  <p><span>教授课程：现代舞&nbsp; &nbsp; 小学英语&nbsp; &nbsp; 数学</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (图片) -->
+              <div id="u2210" class="ax_default image">
+                <img id="u2210_img" class="img " src="images/校区老师/u2141.jpg"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2211" class="ax_default label">
+                <div id="u2211_div" class=""></div>
+                <div id="u2211_text" class="text ">
+                  <p><span>海淀校区、朝阳校区、公主坟校区...</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2212" class="ax_default _文本段落">
+              <div id="u2212_div" class=""></div>
+              <div id="u2212_text" class="text ">
+                <p><span>女</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2213" class="ax_default box_1">
+              <div id="u2213_div" class=""></div>
+              <div id="u2213_text" class="text ">
+                <p><span>钢琴八级</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2214" class="ax_default box_1">
+              <div id="u2214_div" class=""></div>
+              <div id="u2214_text" class="text ">
+                <p><span>教研组长</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2215" class="ax_default">
+            </div>
+          </div>
+        </div>
+        <div id="u2195_state1" class="panel_state" data-label="距离" style="visibility: hidden;">
+          <div id="u2195_state1_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2216" class="ax_default _形状">
+              <div id="u2216_div" class=""></div>
+              <div id="u2216_text" class="text ">
+                <p><span>&nbsp; 海淀区 </span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2217" class="ax_default _形状">
+              <div id="u2217_div" class=""></div>
+              <div id="u2217_text" class="text ">
+                <p><span>&nbsp; 西城区 </span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2218" class="ax_default _形状">
+              <div id="u2218_div" class=""></div>
+              <div id="u2218_text" class="text ">
+                <p><span>&nbsp;&nbsp; &nbsp; &nbsp; 朝阳区 </span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2219" class="ax_default _形状">
+              <div id="u2219_div" class=""></div>
+              <div id="u2219_text" class="text ">
+                <p><span>&nbsp; 丰台区 </span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2220" class="ax_default _形状">
+              <div id="u2220_div" class=""></div>
+              <div id="u2220_text" class="text ">
+                <p><span>&nbsp; 东城区 </span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2221" class="ax_default _形状">
+              <div id="u2221_div" class=""></div>
+              <div id="u2221_text" class="text ">
+                <p><span>&nbsp;&nbsp;&nbsp; 石景山区 </span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2222" class="ax_default _文本段落">
+              <div id="u2222_div" class=""></div>
+              <div id="u2222_text" class="text ">
+                <p><span>1012</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2223" class="ax_default _文本段落">
+              <div id="u2223_div" class=""></div>
+              <div id="u2223_text" class="text ">
+                <p><span>1012</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2224" class="ax_default _文本段落">
+              <div id="u2224_div" class=""></div>
+              <div id="u2224_text" class="text ">
+                <p><span>1012</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2225" class="ax_default _文本段落">
+              <div id="u2225_div" class=""></div>
+              <div id="u2225_text" class="text ">
+                <p><span>1012</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2226" class="ax_default _文本段落">
+              <div id="u2226_div" class=""></div>
+              <div id="u2226_text" class="text ">
+                <p><span>1012</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2227" class="ax_default _文本段落">
+              <div id="u2227_div" class=""></div>
+              <div id="u2227_text" class="text ">
+                <p><span>0</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2228" class="ax_default _形状">
+              <div id="u2228_div" class=""></div>
+              <div id="u2228_text" class="text ">
+                <p><span>&nbsp; 全城</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2229" class="ax_default _文本段落">
+              <div id="u2229_div" class=""></div>
+              <div id="u2229_text" class="text ">
+                <p><span>5016</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2230" class="ax_default">
+            </div>
+          </div>
+        </div>
+        <div id="u2195_state2" class="panel_state" data-label="科目" style="visibility: hidden;">
+          <div id="u2195_state2_content" class="panel_state_content">
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2231" class="ax_default">
+              <img id="u2231_img" class="img " src="images/校区列表/u1816.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2232" class="ax_default box_3">
+              <div id="u2232_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2233" class="ax_default _形状">
+              <div id="u2233_div" class=""></div>
+              <div id="u2233_text" class="text ">
+                <p><span>&nbsp; 艺术</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2234" class="ax_default _形状">
+              <div id="u2234_div" class=""></div>
+              <div id="u2234_text" class="text ">
+                <p><span>&nbsp; 体育</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2235" class="ax_default _形状">
+              <div id="u2235_div" class=""></div>
+              <div id="u2235_text" class="text ">
+                <p><span>&nbsp; 小学</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2236" class="ax_default _形状">
+              <div id="u2236_div" class=""></div>
+              <div id="u2236_text" class="text ">
+                <p><span>&nbsp;&nbsp; &nbsp; &nbsp; 初中</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2237" class="ax_default _形状">
+              <div id="u2237_div" class=""></div>
+              <div id="u2237_text" class="text ">
+                <p><span>&nbsp; 高中</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2238" class="ax_default _形状">
+              <div id="u2238_div" class=""></div>
+              <div id="u2238_text" class="text ">
+                <p><span>&nbsp; 语言</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2239" class="ax_default _形状">
+              <div id="u2239_div" class=""></div>
+              <div id="u2239_text" class="text ">
+                <p><span>&nbsp;&nbsp; &nbsp; 留学</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2240" class="ax_default _形状">
+              <div id="u2240_div" class=""></div>
+              <div id="u2240_text" class="text ">
+                <p><span>&nbsp; 营地</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2241" class="ax_default label">
+              <div id="u2241_div" class=""></div>
+              <div id="u2241_text" class="text ">
+                <p><span>全部</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2242" class="ax_default label">
+              <div id="u2242_div" class=""></div>
+              <div id="u2242_text" class="text ">
+                <p><span>留学考试</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2243" class="ax_default">
+              <img id="u2243_img" class="img " src="images/校区列表/u1816.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2244" class="ax_default _形状">
+              <div id="u2244_div" class=""></div>
+              <div id="u2244_text" class="text ">
+                <p><span>∨</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格) -->
+            <div id="u2245" class="ax_default table">
+
+              <!-- Unnamed (单元格) -->
+              <div id="u2246" class="ax_default table_cell">
+                <img id="u2246_img" class="img " src="images/校区列表/u1831.png"/>
+                <div id="u2246_text" class="text ">
+                  <p><span>全部</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (单元格) -->
+              <div id="u2247" class="ax_default table_cell">
+                <img id="u2247_img" class="img " src="images/校区列表/u1831.png"/>
+                <div id="u2247_text" class="text ">
+                  <p><span>雅思</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (单元格) -->
+              <div id="u2248" class="ax_default table_cell">
+                <img id="u2248_img" class="img " src="images/校区列表/u1833.png"/>
+                <div id="u2248_text" class="text ">
+                  <p><span>SAT</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (单元格) -->
+              <div id="u2249" class="ax_default table_cell">
+                <img id="u2249_img" class="img " src="images/校区列表/u1831.png"/>
+                <div id="u2249_text" class="text ">
+                  <p><span>托福</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (单元格) -->
+              <div id="u2250" class="ax_default table_cell">
+                <img id="u2250_img" class="img " src="images/校区列表/u1831.png"/>
+                <div id="u2250_text" class="text ">
+                  <p><span>GRE</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (单元格) -->
+              <div id="u2251" class="ax_default table_cell">
+                <img id="u2251_img" class="img " src="images/校区列表/u1833.png"/>
+                <div id="u2251_text" class="text ">
+                  <p><span>GMAT</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (单元格) -->
+              <div id="u2252" class="ax_default table_cell">
+                <img id="u2252_img" class="img " src="images/校区列表/u1837.png"/>
+                <div id="u2252_text" class="text ">
+                  <p><span>ACT</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (单元格) -->
+              <div id="u2253" class="ax_default table_cell">
+                <img id="u2253_img" class="img " src="images/校区列表/u1837.png"/>
+                <div id="u2253_text" class="text ">
+                  <p><span>留学预科</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (单元格) -->
+              <div id="u2254" class="ax_default table_cell">
+                <img id="u2254_img" class="img " src="images/校区列表/u1839.png"/>
+              </div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2255" class="ax_default">
+              <img id="u2255_img" class="img " src="images/校区列表/u1816.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2256" class="ax_default label">
+              <div id="u2256_div" class=""></div>
+              <div id="u2256_text" class="text ">
+                <p><span>留学技巧</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2257" class="ax_default">
+              <img id="u2257_img" class="img " src="images/校区列表/u1816.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2258" class="ax_default _形状">
+              <div id="u2258_div" class=""></div>
+              <div id="u2258_text" class="text ">
+                <p><span>∨</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2259" class="ax_default label">
+              <div id="u2259_div" class=""></div>
+              <div id="u2259_text" class="text ">
+                <p><span>留学指导</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2260" class="ax_default">
+              <img id="u2260_img" class="img " src="images/校区列表/u1816.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2261" class="ax_default _形状">
+              <div id="u2261_div" class=""></div>
+              <div id="u2261_text" class="text ">
+                <p><span>∨</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2262" class="ax_default _形状">
+              <div id="u2262_div" class=""></div>
+              <div id="u2262_text" class="text ">
+                <p><span>&nbsp; 全部</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2263" class="ax_default">
+            </div>
+          </div>
+        </div>
+        <div id="u2195_state3" class="panel_state" data-label="年部年级" style="visibility: hidden;">
+          <div id="u2195_state3_content" class="panel_state_content">
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u2264" class="ax_default line">
+        <img id="u2264_img" class="img " src="images/校区列表/u1854.png"/>
+      </div>
+
+      <!-- Unnamed (topbar) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u2266" class="ax_default">
+        <img id="u2266_img" class="img " src="images/登录/u213.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2267" class="ax_default _文本段落">
+        <div id="u2267_div" class=""></div>
+        <div id="u2267_text" class="text ">
+          <p style="font-size:13px;"><span><br></span></p><p style="font-size:13px;"><span>一、搜索：</span></p><p style="font-size:13px;"><span>点击“老师”，可切换“校区列表”“老师列表”“课程列表”。</span></p><p style="font-size:12px;"><span style="color:#000000;">点击进入“搜索页”，</span></p><p style="font-size:12px;"><span style="color:#000000;"><br></span></p><p style="font-size:13px;"><span>二、字段显示：</span></p><p style="font-size:13px;"><span>&nbsp;显示老师头像</span></p><p style="font-size:13px;"><span>老师名称</span></p><p style="font-size:13px;"><span>性别</span></p><p style="font-size:13px;"><span>教龄：显示教师教龄，若未设置显示0年教龄。</span></p><p style="font-size:13px;"><span>教师标签：每个标签最多显示6个字，超过6个字“...”,</span></p><p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 最多显示2个标签。如 钢琴八级、教研组长。</span></p><p style="font-size:13px;"><span>教授课程：显示老师的授课分类可报名课程最多的三个三级分类名称，若为小学、小升初、初中、中考和高考，则显示&quot;二级分类三级分类&quot;，如一年级数学。</span></p><p style="font-size:13px;"><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 若无：则显示“暂时未排课”</span></p><p style="font-size:13px;"><span><br></span></p><p style="font-size:13px;"><span>排课校区：显示老师的排课校区，显示一行，显示不下....显示。</span></p><p style="font-size:13px;"><span><br></span></p><p style="font-size:13px;"><span style="color:#1E1E1E;">三、附近：可根据区域筛选出老师排课校区属于该区域的所有在职老师</span></p><p style="font-size:13px;"><span style="color:#1E1E1E;">课程分类：点击课程分类，选择某一级分类默认对应的二级三级分类全部展开。可筛选老师授课分类符合筛选的老师。</span></p><p style="font-size:13px;"><span style="color:#1E1E1E;">课程分类显示杰睿勾选的课程分类。</span></p><p style="font-size:13px;"><span style="color:#1E1E1E;">筛选：可根据教龄和性别筛选。&nbsp;&nbsp; </span></p><p style="font-size:13px;"><span style="color:#1E1E1E;">&nbsp;教龄单选，若筛1-5年，则筛选&nbsp; &nbsp;&nbsp; 1&lt;=教龄&lt;=5的所有在职教师。</span></p><p style="font-size:13px;"><span style="color:#1E1E1E;">&nbsp;性别单选，筛选出符合的在职教师。</span></p><p style="font-size:13px;"><span style="color:#1E1E1E;">&nbsp;&nbsp;&nbsp; </span></p><p style="font-size:13px;"><span style="color:#1E1E1E;"><br></span></p><p style="font-size:13px;"><span style="color:#1E1E1E;"><br></span></p><p style="font-size:13px;"><span style="color:#1E1E1E;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2268" class="ax_default _文本段落">
+        <div id="u2268_div" class=""></div>
+        <div id="u2268_text" class="text ">
+          <p><span>四、显示规则：</span></p><p><span>显示符合搜索内容的所有有排课校区的在职老师。</span></p><p><span>按照老师的可报名课程数量倒序，可报名数量相同则按照可报名课程的剩余名额总和升序排列，剩余名额也相同，则按照添加老师的时间降序。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2269" class="ax_default _形状">
+        <div id="u2269_div" class=""></div>
+        <div id="u2269_text" class="text ">
+          <p><span>筛选</span></p>
+        </div>
+      </div>
+
+      <!-- 筛选 (组 合) -->
+      <div id="u2270" class="ax_default ax_default_hidden" data-label="筛选" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2271" class="ax_default box_1">
+          <div id="u2271_div" class=""></div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2272" class="ax_default _文本段落">
+          <div id="u2272_div" class=""></div>
+          <div id="u2272_text" class="text ">
+            <p><span>老师教龄：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2273" class="ax_default box_1">
+          <div id="u2273_div" class=""></div>
+          <div id="u2273_text" class="text ">
+            <p><span>不限</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2274" class="ax_default box_1">
+          <div id="u2274_div" class=""></div>
+          <div id="u2274_text" class="text ">
+            <p><span>1-5年</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2275" class="ax_default box_1">
+          <div id="u2275_div" class=""></div>
+          <div id="u2275_text" class="text ">
+            <p><span>5-10年</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2276" class="ax_default box_1">
+          <div id="u2276_div" class=""></div>
+          <div id="u2276_text" class="text ">
+            <p><span>10-15年</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2277" class="ax_default box_1">
+          <div id="u2277_div" class=""></div>
+          <div id="u2277_text" class="text ">
+            <p><span>15年以上</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (水平线) -->
+        <div id="u2278" class="ax_default line">
+          <img id="u2278_img" class="img " src="images/教师列表/u2278.png"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2279" class="ax_default _文本段落">
+          <div id="u2279_div" class=""></div>
+          <div id="u2279_text" class="text ">
+            <p><span>老师性别：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2280" class="ax_default box_1">
+          <div id="u2280_div" class=""></div>
+          <div id="u2280_text" class="text ">
+            <p><span>不限</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2281" class="ax_default box_1">
+          <div id="u2281_div" class=""></div>
+          <div id="u2281_text" class="text ">
+            <p><span>男</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2282" class="ax_default box_1">
+          <div id="u2282_div" class=""></div>
+          <div id="u2282_text" class="text ">
+            <p><span>女</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2283" class="ax_default box_1">
+          <div id="u2283_div" class=""></div>
+          <div id="u2283_text" class="text ">
+            <p><span>确定</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2284" class="ax_default box_1">
+          <div id="u2284_div" class=""></div>
+          <div id="u2284_text" class="text ">
+            <p><span>重置</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2285" class="ax_default _形状">
+        <div id="u2285_div" class=""></div>
+        <div id="u2285_text" class="text ">
+          <p><span>年部年级∨</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

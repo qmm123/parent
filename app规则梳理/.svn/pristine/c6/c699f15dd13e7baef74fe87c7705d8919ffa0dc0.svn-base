@@ -1,0 +1,664 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>我的</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/我的/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/我的/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (图片) -->
+      <div id="u2581" class="ax_default _图片">
+        <img id="u2581_img" class="img " src="images/登录/u215.png"/>
+      </div>
+
+      <!-- 我的 (动态面板) -->
+      <div id="u2582" class="ax_default" data-label="我的">
+        <div id="u2582_state0" class="panel_state" data-label="State1" style="">
+          <div id="u2582_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (图片) -->
+            <div id="u2583" class="ax_default image">
+              <img id="u2583_img" class="img " src="images/我的/u2583.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2584" class="ax_default label">
+              <div id="u2584_div" class=""></div>
+              <div id="u2584_text" class="text ">
+                <p><span>小丸子豆豆</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u2585" class="ax_default image">
+              <img id="u2585_img" class="img " src="images/我的/u2585.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2586" class="ax_default box_1">
+              <div id="u2586_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2587" class="ax_default line">
+              <img id="u2587_img" class="img " src="images/我的/u2587.png"/>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u2588" class="ax_default" data-left="24" data-top="205" data-width="34" data-height="38">
+
+              <!-- Unnamed (占位符) -->
+              <div id="u2589" class="ax_default placeholder">
+                <img id="u2589_img" class="img " src="images/我的/u2589.png"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2590" class="ax_default label">
+                <div id="u2590_div" class=""></div>
+                <div id="u2590_text" class="text ">
+                  <p><span>待付款</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u2591" class="ax_default" data-left="183" data-top="205" data-width="34" data-height="38">
+
+              <!-- Unnamed (占位符) -->
+              <div id="u2592" class="ax_default placeholder">
+                <img id="u2592_img" class="img " src="images/我的/u2589.png"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2593" class="ax_default label">
+                <div id="u2593_div" class=""></div>
+                <div id="u2593_text" class="text ">
+                  <p><span>待评价</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2594" class="ax_default label">
+              <div id="u2594_div" class=""></div>
+              <div id="u2594_text" class="text ">
+                <p><span>我的订单</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2595" class="ax_default label">
+              <div id="u2595_div" class=""></div>
+              <div id="u2595_text" class="text ">
+                <p><span>查看全部订单»</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (组 合) -->
+            <div id="u2596" class="ax_default" data-left="345" data-top="205" data-width="37" data-height="38">
+
+              <!-- Unnamed (占位符) -->
+              <div id="u2597" class="ax_default placeholder">
+                <img id="u2597_img" class="img " src="images/我的/u2589.png"/>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2598" class="ax_default label">
+                <div id="u2598_div" class=""></div>
+                <div id="u2598_text" class="text ">
+                  <p><span>已取消</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2599" class="ax_default box_1">
+              <div id="u2599_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2600" class="ax_default line">
+              <img id="u2600_img" class="img " src="images/我的/u2600.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2601" class="ax_default label">
+              <div id="u2601_div" class=""></div>
+              <div id="u2601_text" class="text ">
+                <p><span>我的孩子</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2602" class="ax_default label">
+              <div id="u2602_div" class=""></div>
+              <div id="u2602_text" class="text ">
+                <p><span>系统设置</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2603" class="ax_default label">
+              <div id="u2603_div" class=""></div>
+              <div id="u2603_text" class="text ">
+                <p><span>＞</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2604" class="ax_default label">
+              <div id="u2604_div" class=""></div>
+              <div id="u2604_text" class="text ">
+                <p><span>＞</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2605" class="ax_default line">
+              <img id="u2605_img" class="img " src="images/我的/u2600.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2606" class="ax_default label">
+              <div id="u2606_div" class=""></div>
+              <div id="u2606_text" class="text ">
+                <p><span>课程与评价</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2607" class="ax_default label">
+              <div id="u2607_div" class=""></div>
+              <div id="u2607_text" class="text ">
+                <p><span>＞</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2608" class="ax_default line">
+              <img id="u2608_img" class="img " src="images/我的/u2600.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2609" class="ax_default label">
+              <div id="u2609_div" class=""></div>
+              <div id="u2609_text" class="text ">
+                <p><span>试听课程</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2610" class="ax_default label">
+              <div id="u2610_div" class=""></div>
+              <div id="u2610_text" class="text ">
+                <p><span>管理孩子信息</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2611" class="ax_default label">
+              <div id="u2611_div" class=""></div>
+              <div id="u2611_text" class="text ">
+                <p><span>查看课程安排</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2612" class="ax_default">
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2613" class="ax_default">
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2614" class="ax_default">
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2615" class="ax_default">
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2616" class="ax_default line">
+              <img id="u2616_img" class="img " src="images/我的/u2616.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2617" class="ax_default label">
+              <div id="u2617_div" class=""></div>
+              <div id="u2617_text" class="text ">
+                <p><span>电子发票</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2618" class="ax_default label">
+              <div id="u2618_div" class=""></div>
+              <div id="u2618_text" class="text ">
+                <p><span>＞</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2619" class="ax_default label">
+              <div id="u2619_div" class=""></div>
+              <div id="u2619_text" class="text ">
+                <p><span>评价管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2620" class="ax_default line">
+              <img id="u2620_img" class="img " src="images/我的/u2600.png"/>
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2621" class="ax_default">
+            </div>
+
+            <!-- Unnamed (图片) -->
+            <div id="u2622" class="ax_default image">
+              <img id="u2622_img" class="img " src="images/我的/u2622.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2623" class="ax_default box_1">
+              <div id="u2623_div" class=""></div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2624" class="ax_default _文本段落">
+              <div id="u2624_div" class=""></div>
+              <div id="u2624_text" class="text ">
+                <p><span>购物车</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2625" class="ax_default _文本段落">
+              <div id="u2625_div" class=""></div>
+              <div id="u2625_text" class="text ">
+                <p><span>查看购物车&gt;</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2626" class="ax_default">
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2627" class="ax_default line">
+              <img id="u2627_img" class="img " src="images/我的/u2600.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2628" class="ax_default label">
+              <div id="u2628_div" class=""></div>
+              <div id="u2628_text" class="text ">
+                <p><span>课表</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2629" class="ax_default label">
+              <div id="u2629_div" class=""></div>
+              <div id="u2629_text" class="text ">
+                <p><span>＞</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2630" class="ax_default label">
+              <div id="u2630_div" class=""></div>
+              <div id="u2630_text" class="text ">
+                <p><span>评价管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2631" class="ax_default line">
+              <img id="u2631_img" class="img " src="images/我的/u2600.png"/>
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2632" class="ax_default">
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2633" class="ax_default line">
+              <img id="u2633_img" class="img " src="images/我的/u2600.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2634" class="ax_default label">
+              <div id="u2634_div" class=""></div>
+              <div id="u2634_text" class="text ">
+                <p><span>我的试听</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2635" class="ax_default label">
+              <div id="u2635_div" class=""></div>
+              <div id="u2635_text" class="text ">
+                <p><span>＞</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2636" class="ax_default label">
+              <div id="u2636_div" class=""></div>
+              <div id="u2636_text" class="text ">
+                <p><span>评价管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2637" class="ax_default">
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2638" class="ax_default line">
+              <img id="u2638_img" class="img " src="images/我的/u2600.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2639" class="ax_default label">
+              <div id="u2639_div" class=""></div>
+              <div id="u2639_text" class="text ">
+                <p><span>退班</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2640" class="ax_default label">
+              <div id="u2640_div" class=""></div>
+              <div id="u2640_text" class="text ">
+                <p><span>＞</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2641" class="ax_default label">
+              <div id="u2641_div" class=""></div>
+              <div id="u2641_text" class="text ">
+                <p><span>申请退班</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2642" class="ax_default">
+            </div>
+
+            <!-- Unnamed (水平线) -->
+            <div id="u2643" class="ax_default line">
+              <img id="u2643_img" class="img " src="images/我的/u2600.png"/>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2644" class="ax_default label">
+              <div id="u2644_div" class=""></div>
+              <div id="u2644_text" class="text ">
+                <p><span>孩子作业</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2645" class="ax_default label">
+              <div id="u2645_div" class=""></div>
+              <div id="u2645_text" class="text ">
+                <p><span>＞</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2646" class="ax_default label">
+              <div id="u2646_div" class=""></div>
+              <div id="u2646_text" class="text ">
+                <p><span>评价管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u2647" class="ax_default">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (topbar) -->
+
+      <!-- Unnamed (图片) -->
+      <div id="u2649" class="ax_default">
+        <img id="u2649_img" class="img " src="images/登录/u213.png"/>
+      </div>
+
+      <!-- Unnamed (动态面板) -->
+      <div id="u2650" class="ax_default">
+        <div id="u2650_state0" class="panel_state" data-label="State1" style="">
+          <div id="u2650_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2651" class="ax_default box_3">
+              <div id="u2651_div" class=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 首页 (动态面板) -->
+      <div id="u2652" class="ax_default" data-label="首页">
+        <div id="u2652_state0" class="panel_state" data-label="未选中" style="">
+          <div id="u2652_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u2653" class="ax_default" data-left="0" data-top="0" data-width="28" data-height="39">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2654" class="ax_default label">
+                <div id="u2654_div" class=""></div>
+                <div id="u2654_text" class="text ">
+                  <p><span>首页</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u2655" class="ax_default" data-left="0" data-top="0" data-width="28" data-height="23">
+
+                <!-- Unnamed (三角形) -->
+                <div id="u2656" class="ax_default box_1">
+                  <img id="u2656_img" class="img " src="images/登录/u245.png"/>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u2657" class="ax_default box_1">
+                  <div id="u2657_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u2658" class="ax_default box_1">
+                  <div id="u2658_div" class=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="u2652_state1" class="panel_state" data-label="选中" style="visibility: hidden;">
+          <div id="u2652_state1_content" class="panel_state_content">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u2659" class="ax_default" data-left="0" data-top="0" data-width="28" data-height="39">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2660" class="ax_default label">
+                <div id="u2660_div" class=""></div>
+                <div id="u2660_text" class="text ">
+                  <p><span>首页</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u2661" class="ax_default" data-left="0" data-top="0" data-width="28" data-height="23">
+
+                <!-- Unnamed (三角形) -->
+                <div id="u2662" class="ax_default box_1">
+                  <img id="u2662_img" class="img " src="images/登录/u251.png"/>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u2663" class="ax_default box_1">
+                  <div id="u2663_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (矩形) -->
+                <div id="u2664" class="ax_default box_1">
+                  <div id="u2664_div" class=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 我的 (动态面板) -->
+      <div id="u2665" class="ax_default" data-label="我的">
+        <div id="u2665_state0" class="panel_state" data-label="选中" style="">
+          <div id="u2665_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u2666" class="ax_default" data-left="0" data-top="0" data-width="21" data-height="39">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2667" class="ax_default label">
+                <div id="u2667_div" class=""></div>
+                <div id="u2667_text" class="text ">
+                  <p><span>我的</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u2668" class="ax_default" data-left="0" data-top="0" data-width="20" data-height="23">
+
+                <!-- Unnamed (椭圆形) -->
+                <div id="u2669" class="ax_default box_1">
+                  <img id="u2669_img" class="img " src="images/登录/u258.png"/>
+                </div>
+
+                <!-- Unnamed (半圆形) -->
+                <div id="u2670" class="ax_default box_1">
+                  <img id="u2670_img" class="img " src="images/登录/u259.png"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="u2665_state1" class="panel_state" data-label="未选中" style="visibility: hidden;">
+          <div id="u2665_state1_content" class="panel_state_content">
+
+            <!-- Unnamed (组 合) -->
+            <div id="u2671" class="ax_default" data-left="0" data-top="0" data-width="21" data-height="39">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u2672" class="ax_default label">
+                <div id="u2672_div" class=""></div>
+                <div id="u2672_text" class="text ">
+                  <p><span>我的</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (组 合) -->
+              <div id="u2673" class="ax_default" data-left="0" data-top="0" data-width="20" data-height="23">
+
+                <!-- Unnamed (椭圆形) -->
+                <div id="u2674" class="ax_default box_1">
+                  <img id="u2674_img" class="img " src="images/登录/u263.png"/>
+                </div>
+
+                <!-- Unnamed (半圆形) -->
+                <div id="u2675" class="ax_default box_1">
+                  <img id="u2675_img" class="img " src="images/登录/u264.png"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2676" class="ax_default label">
+        <div id="u2676_div" class=""></div>
+        <div id="u2676_text" class="text ">
+          <p><span>无登录状态</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u2677" class="ax_default line">
+        <img id="u2677_img" class="img " src="images/我的/u2600.png"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2678" class="ax_default label">
+        <div id="u2678_div" class=""></div>
+        <div id="u2678_text" class="text ">
+          <p><span>二、显示所有杰睿学校的数据</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2679" class="ax_default label">
+        <div id="u2679_div" class=""></div>
+        <div id="u2679_text" class="text ">
+          <p><span>四、删除意见反馈、我的钱包、我的优惠券</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2680" class="ax_default label">
+        <div id="u2680_div" class=""></div>
+        <div id="u2680_text" class="text ">
+          <p><span>一、个人资料（头像与昵称）和报哪好同步，若更改全部更改</span></p><p><span>无昵称显示手机号</span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2681" class="ax_default label">
+        <div id="u2681_div" class=""></div>
+        <div id="u2681_text" class="text ">
+          <p><span>三、增加“购物车”模块</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u2682" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u2683" class="ax_default">
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u2684" class="ax_default">
+      </div>
+    </div>
+  </body>
+</html>
