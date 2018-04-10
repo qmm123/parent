@@ -4,25 +4,18 @@ define([
 ], function (ajax) {
 	var Service = {};
 
-	// 获取课程列表（班课）
-	// 参数一 请求参数	参数二 请求成功的回调	参数三 请求失败的回调
-	Service.getClassList = function(param, successCall, failCall){
-		var option = {
-			project_id: localStorage.project_id,
-			conditions: {
-				merchant_id: localStorage.merchant_id
-			},
-			page_infos: {
-				page_size: 10
-			}
-		};
+	// 公共方法
+	// 参数1 接口配置项	参数2 接口基础参数	参数3 请求参数	参数4 请求成功的回调	参数5 请求失败的回调
+	Service.commonLogic = function(apiConfig, basicOption, param, successCall, failCall){
+		var option = basicOption ? basicOption : {};
 		if(param){
 			$.extend(true, option, param);
 		}
 		ajax({
-			url: "/app/goods/Goods/getGoodsList",
+			url: apiConfig.url,
+			isShowLoading: !apiConfig.isShowLoading ? apiConfig.isShowLoading : true,
 			data: {
-				api_name: "",
+				api_name: apiConfig.apiName,
 				data: option
 			}
 		}, function(data){
@@ -30,6 +23,109 @@ define([
 		}, function(jqXhr, statusTxt, data){
 			failCall && failCall(statusTxt, data);
 		});
+	}
+
+	// 接口封装统一说明
+	// 参数1 接口配置项 参数2 接口参数 参数3 成功回调 参数4 失败回调
+
+	// 获取课程列表（班课）
+	Service.getClassList = function(apiConfig, param, successCall, failCall){
+		var option = {
+			apiName: "",
+			url: "/app/goods/Goods/getGoodsList"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			project_id: localStorage.project_id,
+			conditions: {
+				merchant_id: localStorage.merchant_id
+			},
+			page_infos: {
+				page_size: 10
+			}
+		}, param, successCall, failCall);
+	}
+
+	// 获取年部年级
+	Service.getGoodsGrade = function(apiConfig, param, successCall, failCall){
+		var option = {
+			url: "/GoodsBasicdata/getGoodsGrade"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			project_id: localStorage.project_id,
+			merchant_id: localStorage.merchant_id,
+			version: localStorage.version
+		}, param, successCall, failCall);
+	}
+
+	// 首页消息显示
+	Service.getMessageList = function(apiConfig, param, successCall, failCall){
+		var option = {
+			apiName: "",
+			url: "/app/message/MessageManagement/getMessageList"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			conditions: {
+				user_id: localStorage.parent_id,
+				merchant_id: localStorage.merchant_id,
+				app_type: localStorage.app_type,
+				app_key: localStorage.app_key
+			}
+		}, param, successCall, failCall);
+	}
+
+	// 课表-获取课表全部日期
+	Service.getScheduleCourseListOpenDate = function(apiConfig, param, successCall, failCall){
+		var option = {
+			apiName: "",
+			url: "/app/goods/Goods/getCourseListOpenDate"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			conditions: {
+				parent_id: localStorage.parent_id
+			}
+		}, param, successCall, failCall);
+	}
+
+	// 课表-获取课表
+	Service.getScheduleCourseListOpenDate = function(apiConfig, param, successCall, failCall){
+		var option = {
+			apiName: "",
+			url: "/app/goods/Goods/getCourseList"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			conditions: {
+				parent_id: localStorage.parent_id
+			}
+		}, param, successCall, failCall);
+	}
+
+	// 课表-学员列表
+	Service.getScheduleStudentList = function(apiConfig, param, successCall, failCall){
+		var option = {
+			apiName: "",
+			url: "/app/goods/Goods/getStudentList"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			merchant_id: localStorage.merchant_id
+		}, param, successCall, failCall);
 	}
 
 	return Service;

@@ -12,7 +12,7 @@ define([
 			var _this = this;
 			this.configer(opt);
 			// 首次渲染列表
-			this.renderListInit({}, function(data){
+			this.renderListInit(null, {}, function(data){
 				// 滚动加载初始化
 				_this.initScrollLoad();
 			});
@@ -37,11 +37,11 @@ define([
 			this.totalPageScroll = 0;//默认是0页
 		},
 		// 渲染列表-初始渲染
-		// 参数一 接口参数	参数二 成功回调
-		renderListInit: function(param, successCall){
+		// 参数一 接口配置项	参数二 接口参数	参数三 成功回调
+		renderListInit: function(apiConfig, param, successCall){
 			var _this = this;
 			// 接口测试
-			Service.getClassList(param, function(data){
+			Service.getClassList(apiConfig, param, function(data){
 				if(data.result.data && data.result.data.length){
 					Method.artRender(_this.listFolder, _this.config.classTpl, data.result);
 					_this.curPageScroll = 1;
@@ -64,7 +64,7 @@ define([
 			};
 			var param = $.extend(true, defaults, param);
 			// 接口测试
-			Service.getClassList(param, function(data){
+			Service.getClassList(null, param, function(data){
 				Method.artRender(_this.listFolder, _this.config.classTpl, data.result, true);
 				successCall && successCall(data);
 			}, function(){

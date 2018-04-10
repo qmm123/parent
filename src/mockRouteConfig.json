@@ -3,27 +3,50 @@
     {
       "path": "/app/goods/Goods/getGoodsList",
       "commons": "家长端_获取课程列表",
-      "to": "http://api.baonahao.com.cn/app/goods/Goods/getGoodsList"
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/getGoodsList"
     },
     {
       "path": "/app/goods/Categories/getCategoriesList",
       "commons": "家长端_获取商品类别列表",
-      "to": "http://api.baonahao.com.cn/app/goods/Categories/getCategoriesList"
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Categories/getCategoriesList"
     },
     {
       "path": "/GoodsBasicdata/getGoodsGrade",
       "commons": "家长端_获取年部年级",
-      "to": "http://apiparent.xiaohe.com.cn/GoodsBasicdata/getGoodsGrade"
+      "to": "http://apiparentfz.xiaohe.com/GoodsBasicdata/getGoodsGrade"
     },
     {
       "path": "/app/goods/Campus/getGoodsTeacherList",
       "commons": "家长端_获取排课老师列表",
-      "to": "http://api.baonahao.com.cn/app/goods/Campus/getGoodsTeacherList"
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Campus/getGoodsTeacherList"
     },
     {
       "path": "/app/goods/Campus/getRegionCampusGoodsNumber",
       "commons": "家长端_获取所在区域课程和校区数",
-      "to": "http://api.baonahao.com.cn/app/goods/Campus/getRegionCampusGoodsNumber"
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Campus/getRegionCampusGoodsNumber"
+    },
+
+
+    {
+      "path": "/app/message/MessageManagement/getMessageList",
+      "commons": "首页消息显示",
+      "to": "http://api.fangzhen.baonahao.com/app/message/MessageManagement/getMessageList"
+    },
+    
+    {
+      "path": "/app/goods/Goods/getCourseListOpenDate",
+      "commons": "课表-获取课表全部日期",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/getCourseListOpenDate"
+    },
+    {
+      "path": "/app/goods/Goods/getCourseList",
+      "commons": "课表-获取课表",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/getCourseList"
+    },
+    {
+      "path": "/app/goods/Goods/getStudentList",
+      "commons": "课表-学员列表",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/getStudentList"
     }
   ]
 }

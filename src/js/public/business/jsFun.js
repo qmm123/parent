@@ -9,21 +9,14 @@ define([
 	};
 
 	// 参数一（flag）方法标识
-	// 参数二（param）原生传给js 的数据
-	// 参数三（call）js 的回调（回调参数可传给原生）
-	function jsFun(flag, param, call){
+	// 参数二（paramNative）原生传给js 的数据
+	// 参数三（paramH5）js传给原生的数据
+	// 参数四（call）js 的回调（参数是原生传给js的数据）
+	function jsFun(flag, paramNative, paramH5, call){
 		Bridge(function(bridge) {
-      bridge.registerHandler(jsFunConfig[flag], param, function(res){
-      	if(res && call){
-      		call(res);
-      	}
-      });
-      bridge.registerHandler(jsFunConfig[flag], function(param, responseCallback) {
-        alert(data);
-        // document.getElementById("box").style.backgroundColor = "red";
-        // log("Get user information from ObjC: ", data);
-        responseCallback({'userId': '1234567890', 'blog': '标哥的技术博客'})
-        // responseCallback(data);
+      bridge.registerHandler(jsFunConfig[flag], function(paramNative, responseCallback) {
+        responseCallback(paramH5);
+        call && call(paramNative);
       })
     })
 	}

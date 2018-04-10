@@ -51,4 +51,5 @@ define([
 			// new ClassList();
 			// ClassList.init();
 		}
+
 });

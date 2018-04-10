@@ -32,6 +32,7 @@ requirejs.config({
     "photoswipe"        : "../lib/js/photoswipe/photoswipe.min", //图片预览插件
     "photoswipeUi"        : "../lib/js/photoswipe/photoswipe-ui-default.min", //图片预览插件
     "iScroll"        : "../lib/js/iscroll/iscroll", //iscroll4.2版本
+    "BScroll"        : "../lib/js/bscroll/bscroll.min", // better-scroll 1.9.1版本
 
     // 第三方服务
     "wexinSdk"        : "http://res.wx.qq.com/open/js/jweixin-1.2.0", //微信sdk

@@ -4,36 +4,71 @@ require(["../lib/js/zepto-1.2.0.min"], function () {
     "public/business/headAndFoot",
     "public/business/pageRoute"
   ], function (headAndFoot, pageRoute) {
-    loginIn();
+    getBasciParams();
     headAndFoot(function () {
       route(pageRoute);
     });
   });
 });
 
-// 登录时获取各个信息
-function loginIn() {
+// 获取接口用的基本信息
+function getBasciParams() {
   var _search = window.location.search.substring(1);
   if (!_search.length) return;
+  // if (localStorage.member_id && localStorage.token)return;
   _search = _search.split("&");
 
   $.each(_search, function (i, e) {
     var _e = e.split("=");
 
-    if (_e[0] == "member_id") {
-      localStorage.member_id = _e[1];
-      return true;
-    }
-
-    if (_e[0] == "token") {
-      localStorage.token = _e[1];
-      return true;
-    }
-
+    // 商家id
     if (_e[0] == "merchant_id") {
       localStorage.merchant_id = _e[1];
       return true;
     }
+
+    // 家长id
+    if (_e[0] == "parent_id") {
+      localStorage.parent_id = _e[1];
+      return true;
+    }
+
+    // 工程id
+    if (_e[0] == "project_id") {
+      localStorage.project_id = _e[1];
+      return true;
+    }
+
+    // 版本
+    if (_e[0] == "version") {
+      localStorage.version = _e[1];
+      return true;
+    }
+
+    // token 键
+    if (_e[0] == "token_key") {
+      localStorage.token_key = _e[1];
+      return true;
+    }
+
+    // token 值
+    if (_e[0] == "token_val") {
+      localStorage.token_val = _e[1];
+      return true;
+    }
+
+    // 消息推送-key
+    if (_e[0] == "app_key") {
+      localStorage.app_key = _e[1];
+      return true;
+    }
+
+    // 模板配置-值要求为对象
+    if (_e[0] == "tpl_config") {
+      localStorage.tpl_config = _e[1];
+      return true;
+    }
+
   });
 }
 
@@ -59,6 +94,13 @@ function route(pageRoute) {
   // =zepto-animate动画
   if (pathname.match("/DemoShow/zeptoAnimate.html")) {
     requirejs(["page-DemoShow/entry-zeptoAnimate"], function (init) {
+      init();
+    });
+    return;
+  }
+  // =接口调用测试
+  if (pathname.match("/DemoShow/apiService.html")) {
+    requirejs(["page-DemoShow/entry-apiService"], function (init) {
       init();
     });
     return;

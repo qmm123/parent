@@ -15,8 +15,8 @@ define([
       data: {
         "api_name": "api_parent", //请求接口api名称（一个项目可能调用多个域名的接口）eg:api_join 为加盟中心的接口名称
         "keys": {
-          "token_key": localStorage.member_id,
-          'token_val': localStorage.token
+          "token_key": localStorage.token_key,
+          'token_val': localStorage.token_val
         },
         "data": {}
       }
@@ -28,9 +28,17 @@ define([
 
     // 判断是否进行反向代理
     if(window.IsProxy == "false"){//不开启反向代理
-      options.url = '/agent/index.php?func=api';
       if(!options.data.uri){
         options.data.uri = options.url;
+      }
+      options.url = '/agent/index.php?func=api';
+    }else if(window.IsProxy == "true"){
+      if(options.data.api_name == ""){
+        options.data.keys.packey = "f7a3d19f52d6c5ab7841c7b82f03805a";
+        options.data.keys.security_code = "t2)H)@g]R]&[VhG&CJCB?QxdFJH#j)LUIU#VyO^grY[ZjQ)wMz%qxUD6aG8EUFv[";
+      }else{
+        options.data.keys.packey = "d2eef03584d44ae0b6344d4c54731211";
+        options.data.keys.security_code = "v1YDrA19KqLn5khsko8db6]4eR3(qS3[7fdew$c^XMh$6g6x)R.GaNHBmb86n%qV";
       }
     }
 

@@ -1,0 +1,91 @@
+/* iscroll滚动加载 */
+
+/* 外层大容器 */
+#wrapper {
+	width:100%;
+	position:absolute;
+	z-index:10;
+	top:0;
+	bottom: 0;
+	left:0;
+}
+
+/* 上拉下拉 */
+.pullDown,.pullUp {
+	color: #666;
+	height:40px;
+	line-height:40px;
+	position: relative;
+	padding:5px 10px;
+}
+/* 直接子级div */
+.pullDown >div,.pullUp >div{
+	position: absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate(-50%);
+	-o-transform: translate(-50%);
+	-ms-transform: translate(-50%);
+	transform: translate(-50%);
+	margin-top:-20px;
+}
+
+/* 上拉下拉-显示隐藏 */
+.pullDown.hide,.pullUp.hide{
+	display: none;
+}
+.pullDown.show,.pullUp.show{
+	display: block;
+}
+.pullDown.vis_hide,.pullUp.vis_hide{
+	visibility: hidden;
+}
+.pullDown.vis_show,.pullUp.vis_show{
+	visibility: visible;
+}
+
+/* 上拉-加载图标 */
+.pullDown .pullDownIcon{
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+/* 上拉-滑动 */
+.pullDown.flip .pullDownIcon{
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+/* 下拉-加载图标 */
+.pullUp .pullUpIcon{
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+/* 下拉-滑动 */
+.pullUp.flip .pullUpIcon{
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+/* 滑动 */
+.pullDown .pullDownIcon,.pullUp .pullUpIcon{
+	display:block; 
+	float:left;
+	width:40px; 
+	height:40px;
+	background:url("./img/icon_pull.png") 0 0 no-repeat;
+	-webkit-background-size:40px 80px; 
+	background-size:40px 80px;
+}
+
+/* 加载 */
+.pullDown.loading .pullDownIcon,.pullUp.loading .pullUpIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+.pullDown.loading .pullDownIcon,.pullUp.loading .pullUpIcon{
+	background: url("./img/load_page.gif")no-repeat center center;
+	background-size:30px 30px;
+}
+
+/* 无图标 */
+.pullUp.no_bgc .pullUpIcon{
+	display: none !important;
+}
+

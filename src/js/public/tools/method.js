@@ -135,12 +135,18 @@ define([
    * @param     {[isAppend]}    是否是向后追加元素 true -> 向后追加 false(默认值) -> 直接覆盖
    * @return    {[null]}        null
    */
-  methods.artRender = function(listEle, tplId, data, isAppend){
+  methods.artRender = function(listEle, tplId, data, isAppend, callback){
     var sTpl = template(tplId, data);
     if(isAppend){
       listEle.append(sTpl);
+      setTimeout(function(){
+        callback && callback();
+      }, 20)
     }else{
-      listEle.html(sTpl);  
+      listEle.html(sTpl);
+      setTimeout(function(){
+        callback && callback();
+      }, 20)
     }
   }
 

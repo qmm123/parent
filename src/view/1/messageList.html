@@ -1,0 +1,117 @@
+@@include('../../include/header-common.html', {
+  "subtitle": "-消息列表",
+  "css": "page-1/entry-messageList"
+})
+<!-- 1-消息列表 -->
+<body class="header">
+	<!-- 头部 -->
+	<header>
+		<div class="back"></div>
+		消息
+	</header><!-- /header -->
+	<!-- /头部 -->
+	<!-- 消息列表 -->
+	<div class="messageList" id="wrapper">
+		<div>
+			<div class="pullDown">
+				<div>
+					<span class="pullDownIcon"></span>
+					<span class="pullDownLabel">下拉刷新</span>
+				</div>
+			</div>
+			<ul id="listContainer">
+				<!-- <li class="item">
+					<div class="time"></div>
+					<div class="message">
+						<h3 class="title">出勤<span class="circle"></span></h3>
+						<div class="content">
+							<div class="img">
+								<img src="" alt="">
+							</div>
+							<p class="text">您的孩子小仙女已于13点30分完成钢琴课第三节的考勤，课程教学进行中，点击查看。<span class="right-arrow"></span></p>
+						</div>
+					</div>
+				</li>
+				<li class="item">
+					<div class="time"></div>
+					<div class="message">
+						<h3 class="title">出勤<span class="circle"></span></h3>
+						<div class="content">
+							<div class="img">
+								<img src="" alt="">
+							</div>
+							<p class="text">您的孩子小仙女已于13点30分完成钢琴课第三节的考勤，课程教学进行中，点击查看。<span class="right-arrow"></span></p>
+						</div>
+					</div>
+				</li>
+				<li class="item">
+					<div class="time"></div>
+					<div class="message">
+						<h3 class="title">出勤<span class="circle"></span></h3>
+						<div class="content">
+							<div class="img">
+								<img src="" alt="">
+							</div>
+							<p class="text">您的孩子小仙女已于13点30分完成钢琴课第三节的考勤，课程教学进行中，点击查看。<span class="right-arrow"></span></p>
+						</div>
+					</div>
+				</li>
+				<li class="item">
+					<div class="time"></div>
+					<div class="message">
+						<h3 class="title">出勤<span class="circle"></span></h3>
+						<div class="content">
+							<div class="img">
+								<img src="" alt="">
+							</div>
+							<p class="text">您的孩子小仙女已于13点30分完成钢琴课第三节的考勤，课程教学进行中，点击查看。
+								课第三节的考勤，课程教学进行中，点击查看<span class="right-arrow"></span></p>
+						</div>
+					</div>
+				</li> -->
+			</ul>
+			<div class="pullUp">
+				<div>
+					<span class="pullUpIcon"></span>
+					<span class="pullUpLabel">上拉加载</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /消息列表 -->
+	<!-- 暂无数据-->
+	<div class="empty hide">
+		<p class="text">
+			暂无相关数据
+		</p>
+	</div>
+	<!-- /暂无数据 -->
+	<!-- 模板-消息列表 -->
+	<script type="text/html" id="TplClass">
+		{{each data value i}}
+			<li class="item" data-goodsid="{{value.goods_id}}">
+				<div class="time">{{value.created}}</div>
+				<div class="message">
+					<h3 class="title">{{value.push_title}}
+						{{if value.push_type == 2}}
+							<span class="circle"></span>
+						{{/if}}
+					</h3>
+					<div class="content">
+						<div class="img">
+							{{if value.studnet_photo}}
+								<img src="{{value.studnet_photo}}" alt="">
+							{{else}}
+								<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
+							{{/if}}
+						</div>
+						{{if value.push_content}}
+							<p class="text">{{value.push_content}}<span class="right-arrow"></span></p>
+						{{/if}}
+					</div>
+				</div>
+			</li>
+		{{/each}}
+	</script>
+	<!-- /模板-消息列表 -->
+</body>

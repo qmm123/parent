@@ -1,4 +1,4 @@
-// js原生交互-调用原生定义方法
+// js原生交互-原生注册方法供h5调用
 define([
 	"publicTool/bridgeScript"
 ], function (Bridge) {
@@ -14,9 +14,7 @@ define([
 	function nativeFun(flag, param, call){
 		Bridge(function(bridge) {
       bridge.callHandler(nativeFunConfig[flag], param, function(res){
-      	if(res && call){
-      		call(res);
-      	}
+      	call && call(res);
       });
     })
 	}
