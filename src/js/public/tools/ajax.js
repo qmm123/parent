@@ -2,8 +2,8 @@
 define([
   "public/business/layerFz",
   "public/business/backEndStatusCode",
-  "publicTool/bridgeScript"
-], function(layer, StatusCode, Bridge) {
+  "public/business/nativeFun"
+], function(layer, StatusCode, nativeFun) {
   function ajax(obj, successcallback, failcallback) {
     var options = {
       // url: '/agent/index.php?func=api',
@@ -69,9 +69,7 @@ define([
           // 清楚本地存储
           localStorage.clear();
           // 通知原生跳转到登录页
-          Bridge(function(bridge) {
-            bridge.callHandler("logout");
-          })
+          nativeFun("logout");
         } else {
           layer.close(loadingIndex);
           window.boxErrorIndex && layer.close(window.boxErrorIndex);

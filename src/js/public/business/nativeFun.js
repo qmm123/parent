@@ -1,11 +1,28 @@
-// js原生交互-原生注册方法供h5调用
+// js原生交互-原生注册方法供h5调用(方法名取键名)
 define([
 	"publicTool/bridgeScript"
 ], function (Bridge) {
 	var nativeFunConfig = {
+		// 功能性部分
+		logout: "logout",//登出
+		goBack: "goBack",//返回上一页
+		// H5部分(页面由H5做)
+		toMessageList: "toMessageList",//去消息列表页
+		toSearchPage: "toSearchPage",//去搜索页
+		toSchedule: "toSchedule",//去课表页
+		toClassEvaluationMyClass: "toClassEvaluationMyClass",//去课程&评价-我的课程页
+		toClassEvaluationReceive: "toClassEvaluationReceive",//去课程&评价-收到评价页
+		toClassEvaluationRecord: "toClassEvaluationRecord",//去课程&评价-评价记录页
+		toClassEvaluationEvaluation: "toClassEvaluationEvaluation",//去课程&评价-我要评价页
+		toClassEvaluationWriteEvaluation: "toClassEvaluationWriteEvaluation",//去课程&评价-写评价页
+		toClassEvaluationAttendance: "toClassEvaluationAttendance",//去课程&评价-考勤情况页
+
+		toClassList: "toClassList",//去课程(班课)列表页
+		toClassDetail: "toClassDetail",//去课程(班课)详情页
+
+		// 原生部分(页面由原生做)
 		toIndex: "toIndex",//去首页
-		toSearchClass: "toSearchClass",//去搜索页（课程）
-		toClassDetail: "toClassDetail",//去课程详情页
+		toHomework: "toHomework",//去孩子作业页
 	};
 
 	// 参数一（flag）方法标识

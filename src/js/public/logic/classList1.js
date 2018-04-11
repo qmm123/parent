@@ -18,7 +18,7 @@ define([
 			this.scroll = null; // 滚动对象
 			this.listFolder = $("#" + this.options.listFolder);
 			this.listWrapper = $('#' + this.options.listWrapper);
-			this.emptyEle = $("#" + this.options.emptyEle);
+			this.emptyEle = $("." + this.options.emptyEle);
 			this.pageSize = 10; // 每条页数
 			this.currentPage = 0; // 当前页
 			this.totalPage = 0; // 总页数

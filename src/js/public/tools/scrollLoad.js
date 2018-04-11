@@ -12,11 +12,12 @@ define([
 	bScroll.prototype.initScroll = function (config) {
 		var options = { // 初始化参数
 			click: config.click || true,
+			probeType: config.probeType || 0,
 			scrollX: config.scrollX || false, // 横向滚动
 			scrollY: config.scrollY || true,  // 竖向滚动 (默认)
 			pullDownRefresh: config.pullDownRefresh || null, // 下拉刷新
 			pullUpLoad: config.pullUpLoad || null, // 上拉加载
-			momentumLimitDistance: this.momentumLimitDistance || 20
+			momentumLimitDistance: config.momentumLimitDistance || 20
 		}
 
 		this.config = config;
