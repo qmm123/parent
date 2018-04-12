@@ -92,6 +92,7 @@ define([
 			$.extend(true, option, apiConfig);
 		}
 		Service.commonLogic(option, {
+			version: localStorage.version,
 			conditions: {
 				parent_id: localStorage.parent_id
 			}
@@ -99,7 +100,7 @@ define([
 	}
 
 	// 课表-获取课表
-	Service.getScheduleCourseListOpenDate = function(apiConfig, param, successCall, failCall){
+	Service.getScheduleCourseList = function(apiConfig, param, successCall, failCall){
 		var option = {
 			apiName: "",
 			url: "/app/goods/Goods/getCourseList"

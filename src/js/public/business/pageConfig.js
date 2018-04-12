@@ -9,10 +9,9 @@ define([
 		"index": "index.html",
 		// 消息列表页
 		"messageList": "messageList.html",
-		// 搜索内容页
-		"searchPage": "searchPage.html",
 		// 课表页
 		"schedule": "schedule.html",
+
 		// 课程&评价-我的课程页
 		"classEvaluationMyClass": "classEvaluationMyClass.html",
 		// 课程&评价-收到评价页
@@ -26,11 +25,50 @@ define([
 		// 课程&评价-考勤情况页
 		"classEvaluationAttendance": "classEvaluationAttendance.html",
 
-		
+		// 校区-列表页
+		"schoolList": "schoolList.html",
+		// 校区-详情-主页
+		"schoolDetailMain": "schoolDetailMain.html",
+		// 校区-详情-课程页
+		"schoolDetailClass": "schoolDetailClass.html",
+		// 校区-详情-老师页
+		"schoolDetailTeacher": "schoolDetailTeacher.html",
+		// 校区-详情-评价页
+		"schoolDetailEvaluation": "schoolDetailEvaluation.html",
+
 		// 课程(班课)列表页
 		"classList": "classList.html",
 		// 课程(班课)详情页
 		"classDetail": "classDetail.html",
+
+		// 一对一-列表页
+		"oneToOneList": "oneToOneList.html",
+		// 一对一-详情页
+		"oneToOneDetail": "oneToOneDetail.html",
+
+		// 我的试听-全部页
+		"myListenAll": "myListenAll.html",
+		// 我的试听-待试听页
+		"myListenWait": "myListenWait.html",
+
+		// 老师-列表页
+		"teacherList": "teacherList.html",
+		// 老师详情-简介页
+		"teacherDetailIntroduce": "teacherDetailIntroduce.html",
+		// 老师详情-课程页
+		"teacherDetailClass": "teacherDetailClass.html",
+		// 老师详情-评论页
+		"teacherDetailEvaluation": "teacherDetailEvaluation.html",
+
+		// 滚动班-列表页
+		"scrollClassList": "scrollClassList.html",
+		// 滚动班-详情页
+		"scrollClassDetail": "scrollClassDetail.html",
+
+		// 系统设置-常见问题页
+		"systemQuestion": "systemQuestion.html",
+		// 系统设置-关于我们页
+		"systemAboutUs": "systemAboutUs.html"
 	};
 
 	return pageConfig;

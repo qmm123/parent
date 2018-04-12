@@ -1,0 +1,22 @@
+<!-- c-(意思是组件的意思) -->
+<!-- 组件-头部 -->
+<!-- 参数type 0->普通 1->带单个搜索框 2->搜索框+筛选 -->
+<header>
+	@@if(context.type == "0"){
+	<a href="javascript:;" id="headerBack" class="back"></a>
+	<div class="text" id="headerTxt">@@txt</div>
+	}
+	@@if(context.type == "1"){
+	<a href="javascript:;" id="headerBack" class="back"></a>
+	<div class="search long">
+		<input type="text" id="headerSearch" placeholder="搜索课程/机构" readonly />
+	</div>
+	}
+	@@if(context.type == "2"){
+	<a href="javascript:;" id="headerBack" class="back"></a>
+	<div class="shai"></div>
+	<div class="search">
+		<input type="text" id="headerSearch" placeholder="搜索课程/机构" readonly />
+	</div>
+	}
+</header>

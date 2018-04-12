@@ -1,4 +1,4 @@
-define([], function() {
+define(["publicTool/requestSchedule"], function(RequestSchedule) {
 	var oDiv = document.getElementById('datepicker');		//日历总体容器
 	var oH3 = oDiv.getElementsByTagName('h3')[0];	//显示年月的容器
 	var oPrev = oDiv.getElementsByTagName('a')[0];	//上一月按钮
@@ -21,11 +21,11 @@ define([], function() {
 		oH3.innerHTML=oDate.getFullYear()+'年'+(oDate.getMonth()+1)+'月';
 		oUl.innerHTML='';
 		//插空格
-		var oDate = new Date();
+		var _oDate = new Date();
 		
-		oDate.setMonth(oDate.getMonth()+iNow,1);
-		oDate.setDate(1);
-		var w = oDate.getDay()+1;
+		_oDate.setMonth(_oDate.getMonth()+iNow,1);
+		_oDate.setDate(1);
+		var w = _oDate.getDay()+1;
 		if(w==0){w=7};
 		w--;
 		var curDate = new Date();
@@ -42,13 +42,15 @@ define([], function() {
 		}
 		
 		//插入日期
-		var oDate = new Date();
-		oDate.setMonth(oDate.getMonth()+iNow,1);
-		oDate.setMonth(oDate.getMonth()+1,0);
-		var n = oDate.getDate();
+		var _oDate = new Date();
+		_oDate.setMonth(_oDate.getMonth()+iNow,1);
+		_oDate.setMonth(_oDate.getMonth()+1,0);
+		var n = _oDate.getDate();
 		for(var i=0;i<n;i++){
 			var oLi = document.createElement('li');
+
 			oLi.innerHTML=i+1;
+			$(oLi).addClass('_current')
 			oUl.appendChild(oLi);
 			// oLi.onmouseout=function(){
 			// 	this.style.background='';
@@ -65,13 +67,13 @@ define([], function() {
 			oUl.appendChild(oLi);
 		}
 		if(iNow==0){
-			var oDate = new Date();
-			var today = oDate.getDate();
+			var _oDate = new Date();
+			var today = _oDate.getDate();
 			for(var i=0;i<aLi.length;i++){
 				if(aLi[i].innerHTML<today){
-					aLi[i].className='past';
+					aLi[i].className+=' past';
 				}else if(aLi[i].innerHTML==today){
-					aLi[i].className='today';
+					aLi[i].className+=' today';
 				}
 				// if(aLi[i].innerHTML==current){
 				// 	alert(aLi[i].innerHTML)
@@ -80,10 +82,9 @@ define([], function() {
 			}
 		}else if(iNow<0){
 			for(var i=0;i<aLi.length;i++){
-				aLi[i].className='past';
+				aLi[i].className+=' past';
 			}
 		}
-		console.log(index_show+ '!!!!!!!!!!!!!!!!!!!!')
 		if(!index_show) {
 			return
 		}
@@ -92,6 +93,15 @@ define([], function() {
 			$(oDiv).find('.date_list li').slice(index_show, index_show+7).addClass('date_top');
 			$(oDiv).find('.date_list li').slice(index_show+7).hide();
 		}
+		var years = oDate.getFullYear();
+		var month = oDate.getMonth() + 1;
+		if(parseInt(month) < 10){
+			month = '0'+month;
+		}
+		var day = oDate.getDate();
+		var date_time = years +"-" +month + '-' + day;
+		var current_month = years +"-" + month;
+		RequestSchedule.getSche(current_month);
 	}
 	
 	//上个月

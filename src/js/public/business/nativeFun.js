@@ -7,9 +7,8 @@ define([
 		logout: "logout",//登出
 		goBack: "goBack",//返回上一页
 		// H5部分(页面由H5做)
-		toMessageList: "toMessageList",//去消息列表页
-		toSearchPage: "toSearchPage",//去搜索页
 		toSchedule: "toSchedule",//去课表页
+
 		toClassEvaluationMyClass: "toClassEvaluationMyClass",//去课程&评价-我的课程页
 		toClassEvaluationReceive: "toClassEvaluationReceive",//去课程&评价-收到评价页
 		toClassEvaluationRecord: "toClassEvaluationRecord",//去课程&评价-评价记录页
@@ -17,12 +16,26 @@ define([
 		toClassEvaluationWriteEvaluation: "toClassEvaluationWriteEvaluation",//去课程&评价-写评价页
 		toClassEvaluationAttendance: "toClassEvaluationAttendance",//去课程&评价-考勤情况页
 
-		toClassList: "toClassList",//去课程(班课)列表页
+		toSchoolDetailMain: "toSchoolDetailMain",//去校区-详情-主页
+		toschoolDetailEvaluation: "toschoolDetailEvaluation",//去校区-详情-评价页
+
 		toClassDetail: "toClassDetail",//去课程(班课)详情页
 
+		toOneToOneDetail: "toOneToOneDetail",//去一对一-详情页
+
+		toTeacherDetailIntroduce: "toTeacherDetailIntroduce",//去老师详情-简介页
+
+		toScrollClassDetail: "toScrollClassDetail",//去滚动班-详情页
+
+		toSystemQuestion: "toSystemQuestion",//去系统设置-常见问题页
+		toSystemAboutUs: "toSystemAboutUs",//去系统设置-关于我们页
+
 		// 原生部分(页面由原生做)
-		toIndex: "toIndex",//去首页
+		toSearchPage: "toSearchPage",//去搜索页
 		toHomework: "toHomework",//去孩子作业页
+
+		// 逻辑代码部分(调用原生的逻辑代码)
+		lgChaBan: "lgChaBan"//插班
 	};
 
 	// 参数一（flag）方法标识

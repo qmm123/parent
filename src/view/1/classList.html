@@ -5,13 +5,9 @@
 <!-- 1-课程列表页 -->
 <body class="header">
 	<!-- 头部 -->
-	<header>
-		<a href="javascript:;" class="back"></a>
-		<div class="shai"></div>
-		<div class="search">
-			<input type="text" placeholder="搜索课程/机构" readonly />
-		</div>
-	</header>
+	@@include('./c-header.html', {
+		"type": "2"
+	})
 	<!-- 列表 -->
 	<div class="container full">
 		<!-- 筛选条件-顶部 -->

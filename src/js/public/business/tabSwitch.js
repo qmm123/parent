@@ -1,7 +1,6 @@
 // 列表-顶部筛选条件-选项卡切换
 define([
-  "public/tools/ajax",
-], function(ajax) {
+], function() {
   var tabSwitchs = {};
 
   /**

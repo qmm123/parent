@@ -80,6 +80,7 @@
 			padding: 1rem 0;
 			li{
 				width: 14.28%;
+				position: relative;
 				padding-top: 0.8rem;
 				padding-bottom: 0.8rem;
 				float: left;
@@ -90,6 +91,17 @@
 				&[date="no_pass"] {
 					color: #ccc;
 					font-weight: normal;
+				}
+				&.has:after{
+					content: '';
+					position: absolute;
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background: #f80808;
+					bottom: 3px;
+					left: 50%;
+					margin-left: -2px;
 				}
 				&.today{
 					color: #fff;
