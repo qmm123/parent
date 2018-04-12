@@ -1,4 +1,6 @@
-define(["publicTool/requestSchedule"], function(RequestSchedule) {
+define(["publicTool/requestSchedule",
+		"publicLogic/scheduleList"
+	], function(RequestSchedule, bScroll) {
 	var oDiv = document.getElementById('datepicker');		//日历总体容器
 	var oH3 = oDiv.getElementsByTagName('h3')[0];	//显示年月的容器
 	var oPrev = oDiv.getElementsByTagName('a')[0];	//上一月按钮
@@ -6,12 +8,25 @@ define(["publicTool/requestSchedule"], function(RequestSchedule) {
 	var oUl = oDiv.getElementsByTagName('ul')[0];	//日历内容容器
 	var aLi = oUl.children;							//日历内容单体
 	var iNow = 0;
+	var isFirst = true;
 	var datepicker = {
 		// 初始化
 		init: function() {
 			calendar();
 			getDate();
 			setStyle();
+			var time = new Date();
+			var years = time.getFullYear();
+			var month = time.getMonth() + 1;
+			bScroll.init();
+			if(parseInt(month) < 10) {
+				month = "0"+month
+			}
+			var day = time.getDate();
+			var date_time = years + '-' + month + '-' + day;
+			RequestSchedule.getList(date_time, function() {
+				bScroll.refresh();
+			});
 		}
 	}
 	function calendar(){
@@ -153,6 +168,10 @@ define(["publicTool/requestSchedule"], function(RequestSchedule) {
 				else{
 					var iMonth = sYearM.substring(5,7);
 				}
+				var date_time = iYear + '-' + iMonth + '-' + iDate;
+				RequestSchedule.getList(date_time, function() {
+					bScroll.refresh();
+				});
 			}
 		});
 	}
@@ -167,5 +186,6 @@ define(["publicTool/requestSchedule"], function(RequestSchedule) {
 			}
 		})
 	}
+	datepicker.init();
 	return datepicker;
 })

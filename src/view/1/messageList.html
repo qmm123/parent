@@ -90,27 +90,27 @@
 	<script type="text/html" id="TplClass">
 		{{each data value i}}
 			<li class="item" data-goodsid="{{value.goods_id}}">
-				<div class="time">{{value.created}}</div>
-				<div class="message">
-					<h3 class="title">{{value.push_title}}
-						{{if value.push_type == 2}}
-							<span class="circle"></span>
-						{{/if}}
-					</h3>
-					<div class="content">
-						<div class="img">
-							{{if value.studnet_photo}}
-								<img src="{{value.studnet_photo}}" alt="">
-							{{else}}
-								<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
-							{{/if}}
-						</div>
-						{{if value.push_content}}
-							<p class="text">{{value.push_content}}<span class="right-arrow"></span></p>
-						{{/if}}
-					</div>
-				</div>
-			</li>
+							<div class="time">{{value.created}}</div>
+							<div class="message">
+								<h3 class="title">{{value.push_title}}
+									{{if value.push_type == 2}}
+										<span class="circle"></span>
+									{{/if}}
+								</h3>
+								<div class="content">
+									<div class="img">
+										{{if value.studnet_photo}}
+											<img src="{{value.studnet_photo}}" alt="">
+										{{else}}
+											<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
+										{{/if}}
+									</div>
+									{{if value.push_content}}
+										<p class="text">{{value.push_content}}<span class="right-arrow"></span></p>
+									{{/if}}
+								</div>
+							</div>
+						</li>
 		{{/each}}
 	</script>
 	<!-- /模板-消息列表 -->

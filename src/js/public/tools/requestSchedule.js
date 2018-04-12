@@ -1,10 +1,11 @@
 define([
 	"publicService/service",
-	"publicTool/method",
+	"publicTool/method"
 	], function(Service, Method) {
 		var requestSchedule = {
 
 		}
+		// 获取课表 (全部日期)
 		requestSchedule.getSche = function(current_month, successCallback, errorCallback) {
 			Service.getScheduleCourseListOpenDate(null, {
 			}, function(data) {
@@ -18,6 +19,28 @@ define([
 				// console.log(err, data);
 			})
 		}
+		// 获取课表(列表)
+		requestSchedule.getList = function(date_time, successCallback, errorCallback){
+			Service.getScheduleCourseList(null, {
+				conditions: {
+					open_date: date_time
+				}
+			}, function(data) {
+				if(data.status) {
+					var _data = {}
+					var data = data.result;
+					if(data && data.length > 0) {
+						_data.data = data;
+						setRender(_data, function() {
+							successCallback && successCallback();
+						})
+					}
+				}
+			}, function() {
+				console.log(22222)
+			})
+		}
+		// 显示哪一天有课
 		function addClass(_data, current_month) {
 			for(var i=0;i <_data.length;i++){
 				(function(j){
@@ -31,6 +54,14 @@ define([
 					}
 				})(i)
 			}
+		}
+		// 模板
+		function setRender(_data, successCallback) {
+			var wrapper = $('#listContainer');
+			var tpl = "TplClass";
+			Method.artRender(wrapper, tpl, _data, false, function() {
+				successCallback && successCallback();
+			});
 		}
 		return requestSchedule;
 	})

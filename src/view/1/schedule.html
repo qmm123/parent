@@ -28,23 +28,39 @@
 		<div class="list" id="wrapper">
 			<div>
 				<ul id="listContainer">
-					<li class="item">
-						<div class="left">
-							<img src="/img/tpl1/ic_default_teacher.png" alt="">
-							<p>张三</p>
-						</div>
-						<div class="right">
-							<h3 class="title">钢琴精品课程</h3>
-							<p class="time">时间: 15:00-16:30</p>
-							<p class="teacher">主讲：王红</p>
-							<p class="roo hide">教室：五楼504</p>
-							<p class="address hide">地址：上海市浦东新区</p>
-						</div>
-						<span class="right-arrow"></span>
-					</li>
-					
+							
 				</ul>
 			</div>
 		</div>
 	</div>
 </body>
+<script type="text/html" id="TplClass">
+	{{each data value i}}
+		<li class="item">
+			<div class="left">
+				{{if value.avatar}}
+					<img src="{{value.avatar}}" alt="">
+				{{else}}
+					<img src="/img/tpl1/ic_default_teacher.png" alt="">
+				{{/if}}
+				<p>{{value.name}}</p>
+			</div>
+			<div class="right">
+				<h3 class="title">{{value.goods_name}}</h3>
+				<p class="time">时间: {{value.start_time}}-{{value.end_time}}</p>
+				{{if value.teacher_name}}
+					<p class="teacher">主讲：{{value.teacher_name}}</p>
+				{{else}}
+					<p class="teacher">主讲：待定</p>
+				{{/if}}
+				{{if value.classroom_name}}
+					<p class="roo hide">教室：{{value.classroom_name}}</p>
+				{{else}}
+					<p class="roo hide">教室：未定</p>
+				{{/if}}
+				<p class="address hide">地址：{{value.address}}</p>
+			</div>
+			<span class="right-arrow"></span>
+		</li>
+	{{/each}}
+</script>
