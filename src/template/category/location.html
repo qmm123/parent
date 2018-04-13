@@ -1,0 +1,30 @@
+<script type="text/html">
+	<div class="left_area">
+		<a href="javascript:;" class="switch_a area_d_a on">附近</a>
+		{{each region val i}}
+		<a href="javascript:;" class="switch_a area_d_a">{{val.district_name}}</a>
+		{{/each}}
+	</div>
+	<div class="right_area">
+		<div class="right_area_d on">
+			<div class="rigth_third">
+				<a href="javascript:;" class="switch_a area_r on">全部</a>
+			</div>
+			{{each nearby val i}}
+			<div class="rigth_third">
+				<a href="javascript:;" class="switch_a area_r">{{val.name}}</a>
+			</div>
+			{{/each}}
+		</div>
+		{{each region val i}}
+		<div class="right_area_d">
+			<div class="rigth_third">
+				<a href="javascript:;" class="switch_a area_r">全部</a>
+			</div>
+			<div class="rigth_third">
+				<a href="javascript:;" class="switch_a area_r">{{val.district_name | parseTxtToTxt:"区":"校区"}}</a>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</script>

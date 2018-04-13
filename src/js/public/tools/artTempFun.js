@@ -37,5 +37,22 @@ define([
 	  }
 	}
 
+	/**
+	 * @Author    高同檩
+	 * @DateTime  2018-4-12
+	 * @copyright [arttemplate-helper 将最后指定字变为指定字]
+	 * @param     {[str]}    原始文本
+	 * @param     {[strBefore]}    被转换文字
+	 * @param     {[strAfter]}      转换文字
+	 * @return    {[]}      转换后的文字
+	 */
+	methods.parseTxtToTxt = function(str, strBefore, strAfter){
+	  template.defaults.imports.parseTxtToTxt = function(str, strBefore, strAfter){
+	  	var rReg = new RegExp("$" + strBefore, "g");
+	  	console.log(str.replace(rReg, strAfter), rReg, strAfter, str);
+	    return str.replace(rReg, strAfter);
+	  }
+	}
+
 	return methods;
 })

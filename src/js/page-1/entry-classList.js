@@ -4,7 +4,7 @@ define([
 	"publicBusiness/layerFz",
 	"publicLogic/classList",
 	"publicLogic/header",
-	"publicBusiness/topCategory",
+	"publicBusiness/topCategory"
 ], function (ajax, layer, ClassList, Header, TopCategory) {
 	return function(){
 		// 头部
@@ -12,7 +12,7 @@ define([
 		Header.goSearchPage();
 
 		// 顶部筛选tab
-		
+		TopCategory.init();
 		
 		// 点击标签添加样式
 		$('.search_tabs .search_tab .sidebar .main .qujian_zone:not(.unit_price) ul li span').on('tap',function(){

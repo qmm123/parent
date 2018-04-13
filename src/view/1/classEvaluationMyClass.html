@@ -1,17 +1,24 @@
 @@include('../../include/header-common.html', {
-  "subtitle": "-消息列表",
-  "css": "page-1/entry-messageList"
+  "subtitle": "-我的课程页",
+  "css": "page-1/entry-classEvaluationMyClass"
 })
-<!-- 1-消息列表 -->
+<!-- 1-课程&评价 我的课程页 -->
 <body class="header">
 	<!-- 头部 -->
-	<header>
-		<div class="back"></div>
-		消息
-	</header><!-- /header -->
+		@@include('./c-header.html', {
+			"type": "0",
+			"txt": "课程&评价",
+			"rightText": "评价记录"
+		})
 	<!-- /头部 -->
-	<!-- 消息列表 -->
-	<div class="messageList" id="wrapper">
+	<!-- tab -->
+	<div class="tab">
+		<a href="javascript:;">我的课程</a>
+		<a href="javascript:;">收到评价</a>
+	</div>
+	<!-- /tab -->
+	<!-- 列表 -->
+	<div id="wrapper">
 		<div>
 			<div class="pullDown">
 				<div>
@@ -20,55 +27,63 @@
 				</div>
 			</div>
 			<ul id="listContainer">
+				<!-- 我的课程 -->
 				<!-- <li class="item">
-					<div class="time"></div>
-					<div class="message">
-						<h3 class="title">出勤<span class="circle"></span></h3>
-						<div class="content">
-							<div class="img">
-								<img src="" alt="">
-							</div>
-							<p class="text">您的孩子小仙女已于13点30分完成钢琴课第三节的考勤，课程教学进行中，点击查看。<span class="right-arrow"></span></p>
-						</div>
+					<div class="left">
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<p>张三</p>
 					</div>
-				</li>
-				<li class="item">
-					<div class="time"></div>
-					<div class="message">
-						<h3 class="title">出勤<span class="circle"></span></h3>
-						<div class="content">
-							<div class="img">
-								<img src="" alt="">
-							</div>
-							<p class="text">您的孩子小仙女已于13点30分完成钢琴课第三节的考勤，课程教学进行中，点击查看。<span class="right-arrow"></span></p>
-						</div>
+					<div class="right">
+						<h3 class="title">钢琴精品课程</h3>
+						<p class="address">地址：中关村大厦705</p>
+						<p class="roo">教室：滚动A班</p>
+						<p class="time">下节：2015-11-30 周五 15:00-16:30</p>
 					</div>
-				</li>
-				<li class="item">
-					<div class="time"></div>
-					<div class="message">
-						<h3 class="title">出勤<span class="circle"></span></h3>
-						<div class="content">
-							<div class="img">
-								<img src="" alt="">
-							</div>
-							<p class="text">您的孩子小仙女已于13点30分完成钢琴课第三节的考勤，课程教学进行中，点击查看。<span class="right-arrow"></span></p>
-						</div>
+					<div class="inner">
+						<a href="javascript:;">评价</a>
+						<a href="javascript:;" class="kao">考勤</a>
 					</div>
-				</li>
-				<li class="item">
-					<div class="time"></div>
-					<div class="message">
-						<h3 class="title">出勤<span class="circle"></span></h3>
-						<div class="content">
-							<div class="img">
-								<img src="" alt="">
-							</div>
-							<p class="text">您的孩子小仙女已于13点30分完成钢琴课第三节的考勤，课程教学进行中，点击查看。
-								课第三节的考勤，课程教学进行中，点击查看<span class="right-arrow"></span></p>
-						</div>
-					</div>
+					<div class="tag">正常开课</div>
 				</li> -->
+				<!-- /我的课程 -->
+				<!-- 收到评价 -->
+				<li class="othitem">
+					<div class="title">
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<span class="name">张晓雅</span>
+					</div>
+					<p class="yello">表现极好</p>
+					<p class="line">评分：<span class="star"></span><span class="star"></span><span class="star"></span><span class="star star1"></span><span class="star star2"></span><span class="num">70.0</span></p>
+					<p class="line">亮点：<span class="gray">积极思考;举手问答;注意力集中</span></p>
+					<p class="line">待改进: <span class="gray">上课走神</span></p>
+					<p class="line">评语：</p>
+					<div class="student">
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<div class="text">
+							<p class="name">孩子：王勇</p>
+							<p class="desc">小学数学A班</p>
+						</div>
+					</div>
+				</li>
+				<li class="othitem">
+					<div class="title">
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<span class="name">张晓雅</span>
+					</div>
+					<p class="yello">表现极好</p>
+					<p class="line">评分：<span class="star"></span><span class="star"></span><span class="star"></span><span class="star star1"></span><span class="star star2"></span><span class="num">70.0</span></p>
+					<p class="line">亮点：<span class="gray">积极思考;举手问答;注意力集中</span></p>
+					<p class="line">待改进: <span class="gray">上课走神</span></p>
+					<p class="line">评语：</p>
+					<div class="student">
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<div class="text">
+							<p class="name">孩子：王勇</p>
+							<p class="desc">小学数学A班</p>
+						</div>
+					</div>
+				</li>
+				<!-- /收到评价 -->
 			</ul>
 			<div class="pullUp">
 				<div>
@@ -78,40 +93,5 @@
 			</div>
 		</div>
 	</div>
-	<!-- /消息列表 -->
-	<!-- 暂无数据-->
-	<div class="empty hide">
-		<p class="text">
-			暂无相关数据
-		</p>
-	</div>
-	<!-- /暂无数据 -->
-	<!-- 模板-消息列表 -->
-	<script type="text/html" id="TplClass">
-		{{each data value i}}
-			<li class="item" data-goodsid="{{value.goods_id}}" data-goodname="{{value.goods_id}}" data-studentid="{{value.student_id}}" data-pushtype="{{value.push_type}}">
-							<div class="time">{{value.created}}</div>
-							<div class="message">
-								<h3 class="title">{{value.push_title}}
-									{{if value.push_type == 2}}
-										<span class="circle"></span>
-									{{/if}}
-								</h3>
-								<div class="content">
-									<div class="img">
-										{{if value.studnet_photo}}
-											<img src="{{value.studnet_photo}}" alt="">
-										{{else}}
-											<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
-										{{/if}}
-									</div>
-									{{if value.push_content}}
-										<p class="text">{{value.push_content}}<span class="right-arrow"></span></p>
-									{{/if}}
-								</div>
-							</div>
-						</li>
-		{{/each}}
-	</script>
-	<!-- /模板-消息列表 -->
+	<!-- /列表 -->
 </body>

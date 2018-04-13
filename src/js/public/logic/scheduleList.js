@@ -36,6 +36,7 @@ define([
 					isTouchStart = true;
 					return;
 				}
+				
 				if(this.movingDirectionY == 1) {
 					if(isY) {
 						isY = false;

@@ -1,11 +1,6 @@
 {
   "routes": [
     {
-      "path": "/app/goods/Goods/getGoodsList",
-      "commons": "家长端_获取课程列表",
-      "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/getGoodsList"
-    },
-    {
       "path": "/app/goods/Categories/getCategoriesList",
       "commons": "家长端_获取商品类别列表",
       "to": "http://api.fangzhen.baonahao.com/app/goods/Categories/getCategoriesList"
@@ -47,6 +42,139 @@
       "path": "/app/goods/Goods/getStudentList",
       "commons": "课表-学员列表",
       "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/getStudentList"
+    },
+
+    {
+      "path": "/app/goods/Goods/getStudentCourse",
+      "commons": "课程&评价-我的课程",
+      "to": "http://apiparentfz.xiaohe.com/app/goods/Goods/getStudentCourse"
+    },
+    {
+      "path": "/app/communion/UcComment/getComment",
+      "commons": "课程&评价-收到评价",
+      "to": "http://api.fangzhen.baonahao.com/app/communion/UcComment/getComment"
+    },
+    {
+      "path": "/app/communion/GcComment/getComment",
+      "commons": "课程&评价-评价记录页",
+      "to": "http://api.fangzhen.baonahao.com/app/communion/GcComment/getComment"
+    },
+    {
+      "path": "/app/communion/GcComment/getParentGoodsCommunionShowContent",
+      "commons": "课程&评价-我要评价页",
+      "to": "http://api.fangzhen.baonahao.com/app/communion/GcComment/getParentGoodsCommunionShowContent"
+    },
+    {
+      "path": "/app/communion/GcComment/addComment",
+      "commons": "课程&评价-写评价页",
+      "to": "http://api.fangzhen.baonahao.com/app/communion/GcComment/addComment"
+    },
+    {
+      "path": "/app/teaching/Attendance/getAttendanceStatusList",
+      "commons": "课程&评价-考勤情况页",
+      "to": "http://api.fangzhen.baonahao.com/app/teaching/Attendance/getAttendanceStatusList"
+    },
+
+    {
+      "path": "/app/goods/Campus/getCampusList",
+      "commons": "校区列表",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Campus/getCampusList"
+    },
+    {
+      "path": "/app/goods/Campus/getCampusDetails",
+      "commons": "校区详情-主页",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Campus/getCampusDetails"
+    },
+    {
+      "path": "/app/goods/Goods/getGoodsList",
+      "commons": "校区详情-课程",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/getGoodsList"
+    },
+    {
+      "path": "/app/goods/Campus/getCampusTeacherList",
+      "commons": "校区详情-老师",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Campus/getCampusTeacherList"
+    },
+    {
+      "path": "/app/goods/Comment/getGoodsCommentList",
+      "commons": "校区详情-评价",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Comment/getGoodsCommentList"
+    },
+
+    {
+      "path": "/app/goods/Goods/getGoodsList",
+      "commons": "家长端_获取课程列表",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/getGoodsList"
+    },
+    {
+      "path": "/app/goods/Goods/getGoodsDetailInformation",
+      "commons": "班课详情-课程信息",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/getGoodsDetailInformation"
+    },
+    {
+      "path": "/app/goods/Comment/getGoodsCommentList",
+      "commons": "班课详情-评论信息",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Comment/getGoodsCommentList"
+    },
+
+    {
+      "path": "/app/goods/GoodsOto/getOtoGoodsList",
+      "commons": "获取一对一课程列表",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/GoodsOto/getOtoGoodsList"
+    },
+    {
+      "path": "/app/goods/GoodsOto/getBaseData",
+      "commons": "获取一对一基础信息",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/GoodsOto/getBaseData"
+    },
+    {
+      "path": "/app/goods/GoodsOto/getOtoGoodsDetails",
+      "commons": "获取一对一详情",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/GoodsOto/getOtoGoodsDetails"
+    },
+
+    {
+      "path": "/app/clue/ClueParentAudition/getParentAudition",
+      "commons": "我的试听-全部",
+      "to": "http://api.fangzhen.baonahao.com/app/clue/ClueParentAudition/getParentAudition"
+    },
+    {
+      "path": "/app/clue/ClueParentAudition/getParentAudition",
+      "commons": "我的试听-待试听",
+      "to": "http://api.fangzhen.baonahao.com/app/clue/ClueParentAudition/getParentAudition"
+    },
+
+    {
+      "path": "/app/goods/Campus/getCampusTeacherList",
+      "commons": "老师列表",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Campus/getCampusTeacherList"
+    },
+    {
+      "path": "/app/member/Employee/getTeacherDetail",
+      "commons": "老师详情-简介",
+      "to": "http://api.fangzhen.baonahao.com/app/member/Employee/getTeacherDetail"
+    },
+    {
+      "path": "/app/goods/Goods/getGoodsList",
+      "commons": "老师详情-课程",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/getGoodsList"
+    },
+    {
+      "path": "/app/goods/Comment/getGoodsCommentList",
+      "commons": "老师详情-评论",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Comment/getGoodsCommentList"
+    },
+
+    {
+      "path": "/CourseRoll/getCourseRollList",
+      "commons": "滚动班列表",
+      "to": "http://apiparentfz.xiaohe.com/CourseRoll/getCourseRollList"
+    },
+    {
+      "path": "/CourseRoll/getCourseRollDetails",
+      "commons": "滚动班详情",
+      "to": "http://apiparentfz.xiaohe.com/CourseRoll/getCourseRollDetails"
     }
+
   ]
 }

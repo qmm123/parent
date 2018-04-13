@@ -1,0 +1,69 @@
+/* 1-课程&评论-考勤情况页 */
+@import "../public";
+@import "./variable";
+@import "./search-shai";
+
+#wrapper{
+	& > div{
+
+	}
+	#listContainer {
+		.item{
+			display: table;
+			margin: 10px 10px 0 10px;
+			background: #fff;
+			.bg{
+				display: table-cell;
+				width: 100px;
+				height: 80px;
+				text-align: center;
+				vertical-align: middle;
+				color: #fff;
+				border-radius: 2px;
+				background: #FF6166;
+				font-size: 1.5rem;
+			}
+			.text{
+				display: table-cell;
+				vertical-align: middle;
+				padding-left: 10px;
+				p{
+					font-size: 1.3rem;
+					line-height: 1.8rem;
+					color: #666;
+				}
+			}
+			.tagWrapper{
+				display: table-cell;
+				text-align: center;
+				vertical-align: middle;
+				width: 70px;
+				.tag{
+					color: #fff;
+					line-height: 1.8rem;
+					padding: 5px 15px;
+					font-size: 1.3rem;
+					border-radius: 46px;
+				}
+				.tag1{
+					background: #ff6166;
+				}
+				.tag2{
+					background: #50c65f;
+				}
+				.tag3{
+					background: #ddd;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+.pullDown, .pullUp{
+	display: none;
+}
