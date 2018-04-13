@@ -42,7 +42,10 @@ define([
 			Server.getMessageList(apiConfid, param, function(data) {
 				if(data.result.data && data.result.data.length > 0) {
 					Method.artRender(_this.listWrapper, _this.options.classTpl, data.result, false, function() {
+						console.log(data.result.data);
 						_this.totalPage = data.result.total_page;
+						$('.pullDown').show();
+						$('.pullUp').show();
 						successCallback && successCallback(data);
 					});
 				}else {

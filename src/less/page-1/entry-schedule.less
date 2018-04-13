@@ -30,7 +30,7 @@
 				-webkit-tap-highlight-color: transparent;
 				line-height: @header-h;
 				font-size: 1.5rem;
-				color: #ef4040;
+				color: @col-main;
 				position: absolute;
 				left: 0;
 			}
@@ -47,7 +47,7 @@
 				background-size: 8px 15px;
 				margin-right: 15px;
 				-webkit-tap-highlight-color: transparent;
-				color: #ef4040;
+				color: @col-main;
 				line-height: @header-h;
 				font-size: 1.5rem;
 				position: absolute;
@@ -98,7 +98,7 @@
 					width: 5px;
 					height: 5px;
 					border-radius: 50%;
-					background: #f80808;
+					background: @col-main;
 					bottom: 3px;
 					left: 50%;
 					margin-left: -2px;
@@ -188,8 +188,9 @@
 						}
 						p{
 							padding-bottom: 3px;
+							transition: all 1s;
 							&.hide{
-								display: none;
+								
 							}
 						}
 						.time{
@@ -199,12 +200,22 @@
 							line-height: 2.2rem;
 						}
 						.roo{
-							padding-top: 3px;
-							border-top: 1px dashed #ddd;
 							line-height: 2.2rem;
+							max-height: 0;
+							overflow: hidden;
+							&.active{
+								padding-top: 3px;
+								border-top: 1px dashed #ddd;
+								max-height: 70px;
+							}
 						}
 						.address{
 							line-height: 2.2rem;
+							overflow: hidden;
+							max-height: 0;
+							&.active{
+								max-height: 70px;
+							}
 						}
 					}
 					.right-arrow{
