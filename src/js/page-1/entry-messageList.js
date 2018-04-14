@@ -3,6 +3,8 @@ define([
 	"publicLogic/messageList"
 ], function (messageList) {
 	return function() {
-		messageList.init({});
+		messageList.init({
+			name: 'getClassPingWritePing'
+		});
 	}
 });

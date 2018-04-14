@@ -47,7 +47,7 @@
     {
       "path": "/app/goods/Goods/getStudentCourse",
       "commons": "课程&评价-我的课程",
-      "to": "http://apiparentfz.xiaohe.com/app/goods/Goods/getStudentCourse"
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/getStudentCourse"
     },
     {
       "path": "/app/communion/UcComment/getComment",

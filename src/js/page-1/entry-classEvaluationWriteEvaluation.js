@@ -6,8 +6,12 @@ define([], function() {
 			var len = val.length;
 			console.log(len);
 		})
+		// 评星效果
 		$('.star').on('tap', function() {
-			$(this).toggleClass('active');
+			var parent = $(this).parent();
+			var index = $(this).index();
+			parent.find('.star').removeClass('active');
+			parent.find('.star').slice(0, index + 1).addClass('active');
 		})
 	}
 })

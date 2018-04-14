@@ -13,7 +13,7 @@
 	<!-- /头部 -->
 	<!-- tab -->
 	<div class="tab">
-		<a href="javascript:;">我的课程</a>
+		<a href="javascript:;" class="active">我的课程</a>
 		<a href="javascript:;">收到评价</a>
 	</div>
 	<!-- /tab -->
@@ -65,24 +65,6 @@
 						</div>
 					</div>
 				</li>
-				<li class="othitem">
-					<div class="title">
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
-						<span class="name">张晓雅</span>
-					</div>
-					<p class="yello">表现极好</p>
-					<p class="line">评分：<span class="star"></span><span class="star"></span><span class="star"></span><span class="star star1"></span><span class="star star2"></span><span class="num">70.0</span></p>
-					<p class="line">亮点：<span class="gray">积极思考;举手问答;注意力集中</span></p>
-					<p class="line">待改进: <span class="gray">上课走神</span></p>
-					<p class="line">评语：</p>
-					<div class="student">
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
-						<div class="text">
-							<p class="name">孩子：王勇</p>
-							<p class="desc">小学数学A班</p>
-						</div>
-					</div>
-				</li>
 				<!-- /收到评价 -->
 			</ul>
 			<div class="pullUp">
@@ -94,4 +76,150 @@
 		</div>
 	</div>
 	<!-- /列表 -->
+	<!-- 模板 -->
+	<script type="text/html" id="TplClass">
+		{{if data[0].type == "ClassPingMyClass"}}
+			{{each data value i}}
+				{{if value.order_type == 1}}
+					<li class="item">
+						<div class="left">
+							{{if value.avatar}}
+								<img src="{{value.avatar}}" alt="">
+							{{else}}
+								<img src="/img/tpl1/ic_default_teacher.png" alt="">
+							{{/if}}
+							<p>{{value.student_name}}</p>
+						</div>
+						<div class="right">
+							<h3 class="title">{{value.course_name}}</h3>
+							<p class="address">地址：{{value.address}}</p>
+							{{if value.classroom_name}}
+								<p class="roo">教室：{{value.classroom_name}}</p>
+							{{else}}
+								<p class="roo">教室：待定</p>
+							{{/if}}
+							{{if value.next_lesson.open_date}}
+								<p class="time">下节：{{value.next_lesson.open_date}} 
+								{{if value.next_lesson.week == 1}}
+								星期一
+								{{else if value.next_lesson.week == 2}}
+								星期二
+								{{else if value.next_lesson.week == 3}}
+								星期三 
+								{{else if value.next_lesson.week == 4}}
+								星期四
+								{{else if value.next_lesson.week == 5}}
+								星期五 
+								{{else if value.next_lesson.week == 6}}
+								星期六
+								{{else if value.next_lesson.week == 7}}
+								星期日
+								{{/if}}  
+								{{value.next_lesson.class_time}}</p>
+							{{else}}
+								<p class="time">下节：已结课</p>
+							{{/if}}
+						</div>
+						<div class="inner">
+							<a href="javascript:;">评价</a>
+							<a href="javascript:;" class="kao">考勤</a>
+						</div>
+						{{if value.is_enforce ==1}}
+							<div class="tag">正常开课</div>
+						{{else if value.is_enforce == 2}}
+							<div class="tag">停课</div>
+						{{else if value.is_enforce == 3}}
+							<div class="tag">已结课</div>
+						{{else}}
+							<div class="tag">未开班</div>
+						{{/if}}
+					  </li>
+				{{else}}
+					<li class="item other">
+						<div class="left">
+							{{if value.avatar}}
+								<img src="{{value.avatar}}" alt="">
+							{{else}}
+								<img src="/img/tpl1/ic_default_teacher.png" alt="">
+							{{/if}}
+							<p>{{value.student_name}}</p>
+						</div>
+						<div class="right">
+							<h3 class="title">{{value.course_name}}</h3>
+							<p>校区：{{value.campus_name}}</p>
+							<p>下节：{{value.next_lesson.open_date}}
+								{{if value.next_lesson.week == 1}}
+								星期一
+								{{else if value.next_lesson.week == 2}}
+								星期二
+								{{else if value.next_lesson.week == 3}}
+								星期三 
+								{{else if value.next_lesson.week == 4}}
+								星期四
+								{{else if value.next_lesson.week == 5}}
+								星期五 
+								{{else if value.next_lesson.week == 6}}
+								星期六
+								{{else if value.next_lesson.week == 7}}
+								星期日
+								{{/if}}  
+								{{value.next_lesson.class_time}}
+							</p>
+							<p>课时：总{{value.buy_lesson}}节,用{{value.finish_lesson}}节,转出{{value.turn_out_lesson}}节,剩余{{value.surplus_lesson}}节</p>
+							<p>结课时间：{{value.end_class_time}}</p>
+							{{if value.order_type == 2}}
+								<div class="btnWrapper">
+									<div class="btn">评价</div>
+								</div>
+							{{/if}}
+						</div>
+					</li>
+				{{/if}}
+			{{/each}}
+		{{else}}
+			{{each data value i}}
+				<li class="othitem">
+					<div class="title">
+						{{if value.teacher_photo}}
+							<img src="{{value.teacher_photo}}" alt="">
+						{{else}}
+							<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						{{/if}}
+						<span class="name">{{value.teacher_name}}</span>
+					</div>
+					<p class="yello">{{value.score_title}}</p>
+					<p class="line">评分：
+						{{if value.scoreNum}}
+							{{each value.scoreNum.star1 item i}}
+								<span class="star"></span>
+							{{/each}}
+							{{each value.scoreNum.star2 item i}}
+								<span class="star star1"></span>
+							{{/each}}
+							{{each value.scoreNum.star3 item i}}
+								<span class="star star2"></span>
+							{{/each}}
+							<span class="num">{{value.scoreCount}}分</span>
+						{{/if}}
+					</p>
+					<p class="line">亮点：<span class="gray">
+						{{value.advantage}}
+					</span></p>
+					<p class="line">待改进: <span class="gray">{{value.comment_shortcoming}}</span></p>
+					<p class="line">评语：<span class="gray">{{value.class_evaluation}}</span></p>
+					<div class="student">
+						{{if value.student_photo}}
+							<img src="{{value.student_photo}}" alt="">
+						{{else}}
+							<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						{{/if}}
+						<div class="text">
+							<p class="name">孩子：{{value.student_name}}</p>
+							<p class="desc">{{value.goods_name}}</p>
+						</div>
+					</div>
+				</li>
+			{{/each}}
+		{{/if}}
+	</script>
 </body>

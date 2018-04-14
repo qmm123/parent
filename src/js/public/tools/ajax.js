@@ -94,6 +94,7 @@ define([
 
     // 接口请求失败
     jqXHR.fail(function(jqXHR, textStatus, errorThrown) {
+      console.log('请求失败===============')
       layer.close(loadingIndex);
       if (jqXHR.status == 404) {
         alertmodel("接口不存在");

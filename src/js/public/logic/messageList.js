@@ -4,6 +4,46 @@ define([
 	"publicTool/method",
 	"public/tools/scrollLoad"
 ], function (Server, Method, BScroll) {
+	// 计算star个数
+	function setStar(data) {
+		for(var i=0;i<data.length;i++) {
+			var item = data[i];
+			if((item.score || item.score == 0) || (item.class_effect_score || item.class_effect_score == 0)) {
+				item.scoreNum = item.scoreNum || {star1: [],star2: [], star3: []}
+				if(item.score <= 5 || item.class_effect_score <= 5) {
+					var num1 = Number(item.score) || Number(item.class_effect_score);
+					item.scoreCount = num1 * 20 + '.0';
+					for(var j=0;j<parseInt(num1);j++) {
+						item.scoreNum.star1.push('star1');
+					}
+					for(var j=0;j<(Math.ceil(num1) - parseInt(num1));j++){
+						item.scoreNum.star2.push('star2');
+					}
+					for(var j=0;j<(5-Math.ceil(num1));j++){
+						item.scoreNum.star3.push('star3');
+					}
+				}
+			}
+		}
+		return data;
+	}
+	// 优点
+	function setAdvantage(data) {
+		var arr = ["遵守纪律","积极思考","举手问答","团结友爱","注意力集中"];
+		for(var i=0;i<data.length;i++) {
+			var item = data[i];
+			if(item.advantage) {
+				//item.advantageArr = item.advantageArr || [];
+				var str = "";
+				var advantage = item.advantage.split(',');
+				for(var j=0; j<advantage.length;j++) {
+					var index = advantage[j] - 1;
+					str+=arr[index] + ';';
+				}
+				item.advantage = str.slice(0,-1);
+			}
+		}
+	}
 	var ClassList = {
 
 		// 配置参数
@@ -25,7 +65,7 @@ define([
 		},
 
 		//初始化
-		init: function(opt) {
+		init: function(opt, conf) {
 			var _this = this;
 			this.setOptions(opt);
 			this.renderList(null, {}, function() {
@@ -39,13 +79,16 @@ define([
 		renderList: function(apiConfid, param, successCallback, errorCallback) {
 			var _this = this;
 			// 请求数据
-			Server.getMessageList(apiConfid, param, function(data) {
+			Server[this.options.name](apiConfid, param, function(data) {
 				if(data.result.data && data.result.data.length > 0) {
+					// console.log(data.result.data)
+					data.result.data[0].type = _this.options.type;
+					setStar(data.result.data);
+					setAdvantage(data.result.data);
+					console.log(data);
 					Method.artRender(_this.listWrapper, _this.options.classTpl, data.result, false, function() {
-						console.log(data.result.data);
-						_this.totalPage = data.result.total_page;
-						$('.pullDown').show();
-						$('.pullUp').show();
+						_this.totalPage = data.result.total_page || data.result.page_size;
+						console.log(data)
 						successCallback && successCallback(data);
 					});
 				}else {
@@ -68,7 +111,10 @@ define([
 			var param = $.extend(true, options, param);
 
 			// 请求数据
-			Server.getMessageList(null, param, function(data) {
+			Server[this.options.name](null, param, function(data) {
+				console.log(_this.totalPage+'!!!!!!!!!!!!!!!!!!!!!!!')
+				data.result.data[0].type = _this.options.type;
+				console.log(_this.options.type)
 				Method.artRender(_this.listWrapper, _this.options.classTpl, data.result, true, function() {
 					successCallback && successCallback(data);
 				})
@@ -93,6 +139,16 @@ define([
 					threshold: 50
 				}
 			})
+			setTimeout(function() {
+				_this.scroll.scrollTo(0,0,0);
+			}, 20)
+			// 滑动
+			/*setTimeout(function() {
+				_this.scroll._scroll(function() {
+					$('.pullDown').css("visibility" , 'visible');
+					$('.pullUp').css("visibility" , 'visible');
+				})
+			}, 20)*/
 
 			// 下拉刷新
 			this.listFolder.on('pullingDown', function() {

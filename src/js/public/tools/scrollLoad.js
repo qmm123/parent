@@ -133,7 +133,13 @@ define([
 			_this.scroll && _this.scroll.refresh();
 		}, 20)
 	}
-
+	bScroll.prototype.scrollTo = function () {
+		var _this = this;
+		setTimeout(function() {
+			_this.scroll && _this.scroll.scrollTo(0,0,0);
+			_this.refresh();
+		}, 20)
+	}
 	bScroll.prototype._initPullUpLoad = function (){
 		var _this = this;
 		this.scroll.on('pullingUp', function() {
@@ -148,5 +154,10 @@ define([
 		})
 	}	
 
+	bScroll.prototype._scroll = function(cb) {
+		this.scroll.on('scroll', function(pos) {
+			cb && cb();
+		})
+	}
 	return bScroll
 })

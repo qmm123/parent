@@ -169,7 +169,7 @@ define([
 		}, param, successCall, failCall);
 	}
 
-	// 课程&评价-收到评价
+	// 课程&评价-收到评价 (有)
 	Service.getClassPingReceive = function(apiConfig, param, successCall, failCall){
 		var option = {
 			apiName: "",
@@ -186,7 +186,7 @@ define([
 		}, param, successCall, failCall);
 	}
 
-	// 课程&评价-评价记录页
+	// 课程&评价-评价记录页 (you)
 	Service.getClassPingRecord = function(apiConfig, param, successCall, failCall){
 		var option = {
 			apiName: "",
