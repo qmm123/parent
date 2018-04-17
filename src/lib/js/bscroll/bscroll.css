@@ -23,9 +23,6 @@
 	position: absolute;
 	top:50%;
 	left:50%;
-	-webkit-transform: translate(-50%);
-	-o-transform: translate(-50%);
-	-ms-transform: translate(-50%);
 	transform: translate(-50%);
 	margin-top:-20px;
 }
@@ -46,20 +43,21 @@
 
 /* 上拉-加载图标 */
 .pullDown .pullDownIcon{
-	-webkit-transform:rotate(0deg) translateZ(0);
+	transform:rotate(0deg) translateZ(0);
 }
 /* 上拉-滑动 */
 .pullDown.flip .pullDownIcon{
-	-webkit-transform:rotate(-180deg) translateZ(0);
+	transform:rotate(-180deg) translateZ(0);
+	color: red;
 }
 
 /* 下拉-加载图标 */
 .pullUp .pullUpIcon{
-	-webkit-transform:rotate(-180deg) translateZ(0);
+	transform:rotate(-180deg) translateZ(0);
 }
 /* 下拉-滑动 */
 .pullUp.flip .pullUpIcon{
-	-webkit-transform:rotate(0deg) translateZ(0);
+	transform:rotate(0deg) translateZ(0);
 }
 
 /* 滑动 */
@@ -69,18 +67,17 @@
 	width:40px; 
 	height:40px;
 	background:url("./img/icon_pull.png") 0 0 no-repeat;
-	-webkit-background-size:40px 80px; 
-	background-size:40px 80px;
+	background-size:40px 80px; 
 }
 
 /* 加载 */
 .pullDown.loading .pullDownIcon,.pullUp.loading .pullUpIcon {
 	background-position:0 100%;
-	-webkit-transform:rotate(0deg) translateZ(0);
+	transform:rotate(0deg) translateZ(0);
 }
 
 .pullDown.loading .pullDownIcon,.pullUp.loading .pullUpIcon{
-	background: url("./img/load_page.gif")no-repeat center center;
+	background: url("./img/load_page.gif") no-repeat center center;
 	background-size:30px 30px;
 }
 

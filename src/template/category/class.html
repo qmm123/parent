@@ -1,0 +1,40 @@
+<script type="text/html">
+	<!-- 课程分类一级 -->
+	<div class="left_area">
+		<a href="javascript:;" class="switch_a area_d_a on">全部</a>
+		{{each category val i}}
+		<a href="javascript:;" class="switch_a area_d_a" data-id={{val.id}}>{{val.name}}</a>
+		{{/each}}
+	</div>
+	<div class="right_area">
+		<div class="right_area_d on" style="min-height:351px;">
+			<div class="rigth_third">
+				<a href="javascript:;" class="switch_a area_r mar_l" data-role="category" data-name="全部" data-level="">全部</a>
+			</div>
+		</div>
+		{{each category value i}}
+		<div class="right_area_d" data-id={{value.id}} style="min-height:351px;">
+			<div class="rigth_third">
+				<a href="javascript:;" class="switch_a area_r mar_l" data-role="category" data-name={{value.name}} data-id={{value.id}} data-level={{value.level}}>全部</a>
+			</div>
+			{{if value.child.length}}
+				{{each value.child v j}}
+				<div class="right_third">
+					<a href="javascript:;" class="switch_a area_r mar_l third_menu" data-id={{v.id}} data-level={{v.level}}>{{v.name}}</a>
+					<div class="third_menu_con" data-id={{v.id}}>
+						<ul>
+							<li><a href="javascript:;" data-id={{v.id}} data-level={{v.level}} data-name={{v.name}} data-role="category">全部</a></li>
+							{{if v.length}}
+								{{each v val k}}
+									<li><a href="javascript:;" data-id={{val.id}} data-level={{val.level}} data-name={{val.name}} data-role="category">{{val.name}}</a></li>
+								{{/each}}
+							{{/if}}
+						</ul>
+					</div>
+				</div>
+				{{/each}}
+			{{/if}}
+		</div>
+		{{/each}}
+	</div>
+</script>

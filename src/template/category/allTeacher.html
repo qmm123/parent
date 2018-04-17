@@ -1,0 +1,11 @@
+<script type="text/html">
+	<!-- 全部老师 -->
+	<div class="all_teacher_list">
+		<div class="all" data-teacher-id="" data-role="selectTeacher">全部老师</div>
+		<ul class="teacher_list">
+			{{each data val i}}
+			<li data-role="selectTeacher" data-teacher-id={{val.teacher_id}}>{{val.teacher_name}}</li>
+			{{/each}}
+		</ul>
+	</div>
+</script>

@@ -62,14 +62,21 @@ define([
 			this.pageSize = 10; // 每条页数
 			this.currentPage = 0; // 当前页
 			this.totalPage = 0; // 总页数
+			this.$data = {data: null}
 		},
 
 		//初始化
 		init: function(opt, conf) {
 			var _this = this;
 			this.setOptions(opt);
-			this.renderList(null, {}, function() {
-				_this.initScroll();
+			this.renderList(null, {
+				conditions: opt.conditions,
+				goods_id: opt.goods_id,
+				student_id: opt.student_id,
+				parent_id: opt.parent_id,
+				sub_order_id: opt.sub_order_id
+			}, function() {
+				_this.initScroll({isPullUp: opt.isPullUp});
 			}, function() {
 			})
 		},
@@ -80,21 +87,45 @@ define([
 			var _this = this;
 			// 请求数据
 			Server[this.options.name](apiConfid, param, function(data) {
-				if(data.result.data && data.result.data.length > 0) {
-					// console.log(data.result.data)
+				console.log(data.result)
+				if(data.result && data.result.data && data.result.data.length > 0) {
+					if(_this.listFolder.hasClass('hide')){
+						_this.listFolder.removeClass('hide');
+						_this.emptyEle.addClass('hide');
+					}
 					data.result.data[0].type = _this.options.type;
 					setStar(data.result.data);
 					setAdvantage(data.result.data);
-					console.log(data);
-					Method.artRender(_this.listWrapper, _this.options.classTpl, data.result, false, function() {
+					
+					if(_this.options.fn){
+						_this.$data.data = _this.options.fn(data.result.data);
+					}else{
+						_this.$data = data.result;
+					}
+					if(_this.options.templateFn){ //进行切换
+						var count = Number(data.result.good_comment) + Number(data.result.middle_comment) + Number(data.result.bad)
+						_this.options.templateFn({
+							count: count,
+							good_comment: data.result.good_comment,
+							middle_comment: data.result.middle_comment,
+							bad: data.result.bad
+						})
+					}
+					console.log(_this.$data);
+					Method.artRender(_this.listWrapper, _this.options.classTpl, _this.$data, false, function() {
 						_this.totalPage = data.result.total_page || data.result.page_size;
-						console.log(data)
 						successCallback && successCallback(data);
 					});
-				}else {
+				}else if (data.result && data.result.data == null){
+					Method.artRender(_this.listWrapper, _this.options.classTpl, data.result, false, function() {
+						successCallback && successCallback(data);
+					});
+				}else{
+					console.log('无数据')
 					_this.renderEmpty(_this.listFolder, _this.emptyEle);
 				}
 			}, function() {
+				console.log('错误')
 				errorCallback && errorCallback();
 			})
 		},
@@ -114,8 +145,13 @@ define([
 			Server[this.options.name](null, param, function(data) {
 				console.log(_this.totalPage+'!!!!!!!!!!!!!!!!!!!!!!!')
 				data.result.data[0].type = _this.options.type;
-				console.log(_this.options.type)
-				Method.artRender(_this.listWrapper, _this.options.classTpl, data.result, true, function() {
+				console.log(_this.options.type);
+				if(_this.options.fn){
+					_this.$data.data = _this.options.fn(data.result.data);
+				}else{
+					_this.$data = data.result;
+				}
+				Method.artRender(_this.listWrapper, _this.options.classTpl, _this.$data, true, function() {
 					successCallback && successCallback(data);
 				})
 			}, function() {
@@ -125,9 +161,17 @@ define([
 		},
 
 		// 初始化滚动加载对象
-		initScroll: function() {
+		initScroll: function(opt) {
 			var _this = this;
 			var wrapper = this.listFolder[0];
+			var pullUpLoad = null;
+			if(opt.isPullUp) { // 禁止上拉刷新
+				pullUpLoad = null
+			}else{
+				pullUpLoad = {
+					threshold: 50
+				}
+			}
 			this.scroll = new BScroll({
 				el: wrapper,
 				pullDownRefresh: {
@@ -135,23 +179,17 @@ define([
 				  	stop: 50
 				},
 				momentumLimitDistance: 30,
-				pullUpLoad: {
-					threshold: 50
-				}
+				pullUpLoad: pullUpLoad
 			})
 			setTimeout(function() {
 				_this.scroll.scrollTo(0,0,0);
 			}, 20)
 			// 滑动
-			/*setTimeout(function() {
-				_this.scroll._scroll(function() {
-					$('.pullDown').css("visibility" , 'visible');
-					$('.pullUp').css("visibility" , 'visible');
-				})
-			}, 20)*/
+			
 
 			// 下拉刷新
 			this.listFolder.on('pullingDown', function() {
+				//$('.pullDown').css("visibility" , 'visible');
 				_this.renderList(null, {}, function(data) {
 					if(data.status){
 						_this.scroll.forceUpdate({success: true});
@@ -166,6 +204,7 @@ define([
 			})
 			// 上拉加载
 			this.listFolder.on('pullingUp', function() {
+				//$('.pullUp').css("visibility" , 'visible');
 				console.log(_this.currentPage+ '====='+ _this.totalPage)
 				if(_this.currentPage >= Number(_this.totalPage) - 1) {
 					_this.scroll.forceUpdate({success: true, data: false})
@@ -194,7 +233,7 @@ define([
 		},
 		// 暂无数据
 		renderEmpty: function(listEle, emptyEle){
-			listEle.html("");
+			listEle.addClass('hide');
 			emptyEle.removeClass("hide");
 		}
 	}

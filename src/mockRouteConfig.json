@@ -20,6 +20,11 @@
       "commons": "家长端_获取所在区域课程和校区数",
       "to": "http://api.fangzhen.baonahao.com/app/goods/Campus/getRegionCampusGoodsNumber"
     },
+    {
+      "path": "/app/goods/Campus/getCampusListEasy",
+      "commons": "获取分校校区",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Campus/getCampusListEasy"
+    },
 
 
     {

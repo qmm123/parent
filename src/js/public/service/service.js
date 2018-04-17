@@ -150,6 +150,57 @@ define([
 		}, param, successCall, failCall);
 	}
 
+	// 家长端_获取分校校区
+	Service.getZoneCampus = function(apiConfig, param, successCall, failCall){
+		var option = {
+			apiName: "",
+			url: "/app/goods/Campus/getCampusListEasy"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			merchant_id: localStorage.merchant_id,
+			version: localStorage.version,
+			project_id: localStorage.project_id,
+			type: 1//1->校区 2->课程 3->教师
+		}, param, successCall, failCall);
+	}
+
+	// 家长端_获取课程分类
+	Service.getCategoriesList = function(apiConfig, param, successCall, failCall){
+		var option = {
+			apiName: "",
+			url: "/app/goods/Categories/getCategoriesList"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			merchant_id: localStorage.merchant_id,
+			version: localStorage.version,
+			project_id: localStorage.project_id,
+			platform_id: backEndStatusCode.platform_id
+		}, param, successCall, failCall);
+	}
+
+	// 家长端_获取排课老师列表
+	Service.getGoodsTeacherList = function(apiConfig, param, successCall, failCall){
+		var option = {
+			apiName: "",
+			url: "/app/goods/Campus/getGoodsTeacherList"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			merchant_id: localStorage.merchant_id,
+			version: localStorage.version,
+			project_id: localStorage.project_id,
+			platform_id: backEndStatusCode.platform_id
+		}, param, successCall, failCall);
+	}
+
 	// 课程&评价-我的课程
 	Service.getClassPingMyClass = function(apiConfig, param, successCall, failCall){
 		var option = {

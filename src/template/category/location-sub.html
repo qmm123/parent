@@ -1,0 +1,11 @@
+<script type="text/html">
+	<!-- 位置-校区 -->
+	{{each data val i}}
+	<div class="rigth_third">
+		<a href="javascript:;" class="switch_a area_r" data-name={{campusName}} data-id={{id}} data-type="all">全部</a>
+	</div>
+	<div class="rigth_third">
+		<a href="javascript:;" class="switch_a area_r" data-name={{val.campus_name}} data-id={{val.campus_id}} data-pid={{id}}>{{val.campus_name}}</a>
+	</div>
+	{{/each}}
+</script>

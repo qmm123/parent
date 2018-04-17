@@ -20,12 +20,6 @@
 	<!-- 列表 -->
 	<div id="wrapper">
 		<div>
-			<div class="pullDown">
-				<div>
-					<span class="pullDownIcon"></span>
-					<span class="pullDownLabel">下拉刷新</span>
-				</div>
-			</div>
 			<ul id="listContainer">
 				<!-- 我的课程 -->
 				<!-- <li class="item">
@@ -67,12 +61,7 @@
 				</li>
 				<!-- /收到评价 -->
 			</ul>
-			<div class="pullUp">
-				<div>
-					<span class="pullUpIcon"></span>
-					<span class="pullUpLabel">上拉加载</span>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 	<!-- /列表 -->
@@ -98,24 +87,28 @@
 							{{else}}
 								<p class="roo">教室：待定</p>
 							{{/if}}
-							{{if value.next_lesson.open_date}}
-								<p class="time">下节：{{value.next_lesson.open_date}} 
-								{{if value.next_lesson.week == 1}}
-								星期一
-								{{else if value.next_lesson.week == 2}}
-								星期二
-								{{else if value.next_lesson.week == 3}}
-								星期三 
-								{{else if value.next_lesson.week == 4}}
-								星期四
-								{{else if value.next_lesson.week == 5}}
-								星期五 
-								{{else if value.next_lesson.week == 6}}
-								星期六
-								{{else if value.next_lesson.week == 7}}
-								星期日
-								{{/if}}  
-								{{value.next_lesson.class_time}}</p>
+							{{if value.next_lesson}}
+								{{if value.next_lesson.open_date}}
+									<p class="time">下节：{{value.next_lesson.open_date}} 
+									{{if value.next_lesson.week == 1}}
+										星期一
+									{{else if value.next_lesson.week == 2}}
+										星期二
+									{{else if value.next_lesson.week == 3}}
+										星期三 
+									{{else if value.next_lesson.week == 4}}
+										星期四
+									{{else if value.next_lesson.week == 5}}
+										星期五 
+									{{else if value.next_lesson.week == 6}}
+										星期六
+									{{else if value.next_lesson.week == 7}}
+										星期日
+									{{/if}}  
+									{{value.next_lesson.class_time}}</p>
+								{{else}}
+									<p class="time">下节：已结课</p>
+								{{/if}}
 							{{else}}
 								<p class="time">下节：已结课</p>
 							{{/if}}

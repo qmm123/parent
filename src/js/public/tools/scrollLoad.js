@@ -1,6 +1,6 @@
 define([
 	'BScroll',
-	"style!lib/js/iscroll/iscroll"
+	"style!lib/js/bscroll/bscroll"
 	], function(BScroll){
 	var bScroll = function (config) {
 		var _this = this;
@@ -66,6 +66,11 @@ define([
 	}
 
 	bScroll.prototype._initPullDownRefresh = function() { 
+		if(!$('.pullDown').length) {
+			var str = '<div class="pullDown"><div><span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新</span></div></div>';
+			$(this.config.el).find('>div').prepend(str)
+		}
+		$('.pullDown').css("visibility" , 'visible');
 		var _this = this;
 		this.scroll.on('pullingDown', function() { // 松手
 			_this.obj.beforePullDown = false;
@@ -85,7 +90,7 @@ define([
 				// console.log('下拉', + top);
 				
 			}
-			if(pos.y > 20){ // 下拉加载
+			if(pos.y > 50){ // 下拉加载
 				$('.pullDown').addClass('flip');
 			}else{
 				$('.pullDown').removeClass('flip')
@@ -142,6 +147,11 @@ define([
 	}
 	bScroll.prototype._initPullUpLoad = function (){
 		var _this = this;
+		if(!$('.pullUp').length && (Number($(this.config.el).height()) < Number($(this.config.el).find('>div').height())) ) {
+			var str = '<div class="pullUp e"><div><span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载</span></div></div>';
+			$(this.config.el).find(">div").append(str);
+			_this.refresh();
+		}
 		this.scroll.on('pullingUp', function() {
 			if(!_this.obj.isData){
 			}else {
@@ -151,6 +161,14 @@ define([
 				console.log('到底了');
 			}
 			
+		})
+		this.scroll.on('scroll', function(pos) {
+			if(!_this.obj.isData) {
+				return
+			}
+			if(Number(pos.y) > (Number(this.maxScrollY) + 50)) {
+				$('.pullUp').addClass('filp')
+			}
 		})
 	}	
 

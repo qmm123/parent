@@ -1,0 +1,30 @@
+<script type="text/html">
+	<!-- 年部年级 -->
+	<div class="left_area">
+		<a href="javascript:;" class="switch_a area_d_a on">全部</a>
+		{{each grade val i}}
+		<a href="javascript:;" class="switch_a area_d_a" data-grade-id={{val.id}}>{{val.grade_name}}</a>
+		{{/each}}
+	</div>
+	<div class="right_area">
+		<div class="right_area_d on" style="min-height:351px;">
+			<div class="rigth_third">
+				<a href="javascript:;" class="switch_a area_r mar_l" data-role="grade" data-name="全部" data-grade-id="">全部</a>
+			</div>
+		</div>
+		{{each grade value i}}
+		<div class="right_area_d" style="min-height:351px;">
+			<div class="rigth_third">
+				<a href="javascript:;" class="switch_a area_r mar_l" data-role="grade" data-name={{value.grade_name}} data-grade-id={{value.id}}>全部</a>
+			</div>
+			{{if value.sub.length}}
+				{{each value.sub v j}}
+				<div class="right_third">
+					<a href="javascript:;" class="switch_a area_r mar_l" data-role="grade" data-name={{v.grade_name}} data-grade-id="{{value.id}}-{{v.id}}">{{v.grade_name}}</a>
+				</div>
+				{{/each}}
+			{{/if}}
+		</div>
+		{{/each}}
+	</div>
+</script>

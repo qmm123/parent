@@ -66,4 +66,40 @@
 		</div>
 	</div>
 	<!-- /列表 -->
+	<!-- 暂无数据 -->
+	<div class="empty hide">
+		<p class="text">
+			暂无相关数据
+		</p>
+	</div>
+	<!-- /暂无数据 -->
+	<script type="text/html" id="TplClass">
+		{{each data value i}}
+			<li class="item">
+				<div class="bg">
+					{{value.open_date}}
+				</div>
+				<div class="text">
+					<p>{{value.title}}{{value.class_time}}</p>
+					<p>主讲：{{value.teacher_name}}</p>
+					<p>教室：{{value.classroom_name}}</p>
+				</div>
+				<div class="tagWrapper">
+					{{if value.status == 1}}
+						<span class="tag tag3">未出勤</span>
+					{{else if value.status == 2}}
+						<span class="tag tag2">考勤</span>
+					{{else if value.status == 3}}
+						<span class="tag tag1">缺勤</span>
+					{{else if value.status == 4}}
+						<span class="tag tag1">退班</span>
+					{{else if value.status == 5}}
+						<span class="tag tag1">转班</span>
+					{{else}}
+						<span class="tag tag1">退费中</span>
+					{{/if}}
+				</div>
+			</li>
+		{{/each}}
+	</script>
 </body>

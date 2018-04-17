@@ -1,22 +1,11 @@
-// 1-课程列表页-入口
+// 1-校区详情主页-入口
 define([
 	"public/tools/ajax",
 	"publicBusiness/layerFz",
-	"publicLogic/classList",
 	"publicLogic/header",
-	"publicBusiness/categoryLocation",
-  "publicBusiness/categoryClass",
-  "publicBusiness/categoryGrade",
-  "publicBusiness/categoryAllTeacher",
-  "publicBusiness/tabSwitch",
   "public/tools/method",
-  // "publicBusiness/categoryAiSort",
-  // "publicBusiness/categoryTeachMode",
-  // "publicBusiness/categorySelectSelect",
 ], function (
-	ajax, layer, ClassList, Header, categoryLocation, 
-	categoryClass, categoryGrade, categoryAllTeacher, tabSwitchs, Method,
-	// categoryAiSort, categoryTeachMode, categorySelectSelect
+	ajax, layer, Header, Method,
 ) {
 	return function(){
 		// 头部

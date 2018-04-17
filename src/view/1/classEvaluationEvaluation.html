@@ -16,12 +16,6 @@
 	<!-- 列表 -->
 	<div id="wrapper">
 		<div>
-			<div class="pullDown">
-				<div>
-					<span class="pullDownIcon"></span>
-					<span class="pullDownLabel">下拉刷新</span>
-				</div>
-			</div>
 			<ul id="listContainer">
 				<li class="item">
 					<div class="itemInner">
@@ -72,4 +66,32 @@
 		</div>
 	</div>
 	<!-- /列表 -->
+	<!-- 暂无数据-->
+	<div class="empty hide">
+		<p class="text">
+			暂无相关数据
+		</p>
+	</div>
+	<!-- /暂无数据 -->
+	<script type="text/html" id="TplClass">
+			<li class="item">
+				<div class="itemInner">
+					{{if teacher_photo}}
+						<img src="{{teacher_photo}}" alt="">
+					{{else}}
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+					{{/if}}
+					<div class="text">
+						<h3 class="title">{{goods_name}}</h3>
+						<p>所属校区：{{campus_name}}</p>
+						<p>主讲老师：{{teacher_name}}</p>
+					</div>
+				</div>
+				{{each lessons value i}}
+					<div class="line">
+						{{value.lesson_num}} {{value.open_date}} {{value.class_time}} <span>待评价</span>
+					</div>
+				{{/each}}
+			</li>
+	</script>
 </body>

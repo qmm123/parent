@@ -2,7 +2,7 @@ define(["publicLogic/messageList"], function(messageList) {
 	return function() {
 		messageList.init({
 			name: 'getClassPingMyClass',
-			type: 'ClassPingMyClass'
+			type: 'ClassPingMyClass',
 		});
 		// tab选项卡
 		$('.tab a').on('tap', function() {

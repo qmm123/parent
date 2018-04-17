@@ -4,11 +4,6 @@ define([
 ], function(layer) {
   var layerCopy = {};
 
-  var defaultOps = {
-    iconPath: "lib/skin/jigou/",    // 自定义icon路径
-    time: 2000                      // 若提示自动关闭时间
-  };
-
   layerCopy.open = function(ops){
     var ags = [].slice.call(arguments);
     return layer.open.apply(this, ags);
@@ -30,7 +25,20 @@ define([
     var defaults = {
       type: 2,
       content: "加载中",
-      shadeClose: false
+      shadeClose: false,
+      shade: 'background-color: rgba(0,0,0,.0)',
+      // shade: false,
+      className: "define_loading"
+    }
+    var opt = $.extend({}, defaults, ops);
+    return layer.open(opt);
+  }
+
+  layerCopy.msg = function(ops){
+    var defaults = {
+      content: "操作失败",
+      skin: "msg",
+      time: 3
     }
     var opt = $.extend({}, defaults, ops);
     return layer.open(opt);
@@ -46,11 +54,11 @@ define([
     return layer.open(opt);
   }
 
-  layerCopy.msg = function(ops){
+  layerCopy.confirm = function(ops){
     var defaults = {
       content: "操作失败",
-      skin: "msg",
-      time: 3
+      shadeClose: false,
+      btn: ["要", "不要"]
     }
     var opt = $.extend({}, defaults, ops);
     return layer.open(opt);
