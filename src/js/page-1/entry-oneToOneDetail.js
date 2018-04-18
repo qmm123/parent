@@ -84,7 +84,7 @@ define(["publicService/service",
 				num = Math.min(999, num);
 				$(this).prev('.count').html(num);
 				var price = Number($('.container .body .price .num').text());
-				var priceAll = '￥' + num * price;
+				var priceAll = '￥' +  num * price;
 				$('.container .footer .left span').text(priceAll);
 			}
 		})

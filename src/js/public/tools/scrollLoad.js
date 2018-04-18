@@ -27,7 +27,8 @@ define([
 			isPullingDown: false,
 			isRebounding: false,
 			isPullUpload: false,
-			isData: true
+			isData: true,
+			isPullDowning: false
 		}
 		this.scroll = new BScroll(this.config.el, options);
 
@@ -75,6 +76,7 @@ define([
 		this.scroll.on('pullingDown', function() { // 松手
 			_this.obj.beforePullDown = false;
 			_this.obj.isPullingDown = true;
+			_this.obj.isPullDowning = true;
 			$(_this.config.el).trigger('pullingDown'); // 派发事件 请求数据
 			$('.pullDown').addClass('loading');
 			$('.pullDown .pullDownLabel').html('刷新中,请稍后');
@@ -84,16 +86,20 @@ define([
 			if(!_this.config.pullDownRefresh) {
 				return
 			}
+			var isDown = true;
 			if(_this.obj.beforePullDown) { // 下拉前
 				var top = Math.max(Math.min(pos.y - _this.obj.pullDownInitTop , 10), -50);
 				//$(".pullDown").css({top: top + "px"});
 				// console.log('下拉', + top);
 				
 			}
-			if(pos.y > 50){ // 下拉加载
+			if(pos.y > 50 && isDown && !_this.obj.isPullDowning){ // 下拉加载
+				isDown = false;
 				$('.pullDown').addClass('flip');
-			}else{
-				$('.pullDown').removeClass('flip')
+				$('.pullDown .pullDownLabel').html('释放刷新');
+			}else if(pos.y <= 5){
+				//$('.pullDown').removeClass('flip');
+				//$('.pullDown .pullDownLabel').html('下拉刷新');
 			}
 			if(_this.obj.isRebounding) {
 				var top = 10 - (_this.config.pullDownRefresh.stop - pos.y);
@@ -120,9 +126,10 @@ define([
 			 var top = - _this.obj.pullDownInitTop;
 			// $(".pullDown").css({top: top + "px"})
 			 $(".pullDown").removeClass('flip loading');
-			 $('.pullDown .pullDownLabel').html('释放刷新');
-			 _this.obj.beforePullDown = true
-			 _this.obj.isRebounding = false
+			 $('.pullDown .pullDownLabel').html('下拉刷新');
+			 _this.obj.beforePullDown = true;
+			 _this.obj.isRebounding = false;
+			 _this.obj.isPullDowning = false;
 			 _this.refresh()
 			 if(_this.config.pullUpLoad && dirty.success && !_this.obj.isData) {
 			 	_this.obj.isData = true;

@@ -53,6 +53,7 @@ define([
 				listWrapper: "listContainer", // 列表id
 				classTpl: "TplClass", // 模板id
 				emptyEle: "empty", // 空元素id
+				type: ""
 			}
 			this.options = $.extend(true, defaults, opt);
 			this.scroll = null; // 滚动对象
@@ -69,13 +70,18 @@ define([
 		init: function(opt, conf) {
 			var _this = this;
 			this.setOptions(opt);
-			this.renderList(null, {
-				conditions: opt.conditions,
-				goods_id: opt.goods_id,
-				student_id: opt.student_id,
-				parent_id: opt.parent_id,
-				sub_order_id: opt.sub_order_id
-			}, function() {
+			var _opt = {}
+			if("conditions" in opt) {
+				_opt.conditions = opt.conditions;
+			}
+			console.log(opt)
+			if("data" in opt) {
+				for(var item in opt.data) {
+					_opt[item] = opt.data[item];
+				}
+			}
+			console.log(_opt)
+			this.renderList(null, _opt, function() {
 				_this.initScroll({isPullUp: opt.isPullUp});
 			}, function() {
 			})
