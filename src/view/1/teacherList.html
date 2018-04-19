@@ -1,0 +1,96 @@
+@@include('../../include/header-common.html', {
+  "subtitle": "-老师列表页",
+  "css": "page-1/entry-teacherList"
+})
+<!-- 1-全部试听 -->
+<body class="header">
+	<!-- 头部 -->
+		@@include('./c-header.html', {
+			"type": "0",
+			"txt": "我的试听",
+			"rightText": ""
+		})
+	<!-- /头部 -->
+	<!-- tab -->
+	<div class="tab">
+		<a href="javascript:;" class="active">全部</a>
+		<a href="javascript:;">待试听</a>
+	</div>
+	<!-- /tab -->
+	<!-- 列表 -->
+	<div id="wrapper">
+		<div>
+			<ul id="listContainer">
+				<li class="item">
+					<div class="img">
+						<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
+					</div>
+					<div class="text">
+						<h3 class="title">待定<i class="icon icon1"></i></h3>
+						<p class="tag">
+							<span>0年教龄</span>
+						</p>
+						<p class="line"><i class="icon icon2"></i>朝阳校区、海淀校区</p>
+						<p class="line"><i class="icon icon3"></i>英语 一级语文</p>
+					</div>
+				</li>
+				<li class="item">
+					<div class="img">
+						<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
+					</div>
+					<div class="text">
+						<h3 class="title">待定<i class="icon icon4"></i></h3>
+						<p class="tag">
+							<span>0年教龄</span>
+							<span>0年教龄</span>
+						</p>
+						<p class="line"><i class="icon icon2"></i>朝阳校区、海淀校区</p>
+						<p class="line"><i class="icon icon3"></i>英语 一级语文</p>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+	<!-- /列表 -->
+	<!-- 暂无数据-->
+	@@include('../../include/no-content.html', {
+		"id": "emptyContentClass",
+		"style": "margin-top:30px;",
+		"className": "",
+		"txt": ""
+	})
+	<!-- /暂无数据 -->
+	<!-- 模板 -->
+	<script type="text/html" id="TplClass">
+		{{each data value i}}
+			<li class="item">
+				<div class="img">
+					{{if value.photo}}
+						<img src="{{value.photo}}" alt="">
+					{{else}}
+						<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
+					{{/if}}
+				</div>
+				<div class="text">
+					<h3 class="title">{{value.realname}}
+						{{if value.sex == 1}}
+							<i class="icon icon1"></i>
+						{{else}}
+							<i class="icon icon4"></i>
+						{{/if}}
+					</h3>
+					<p class="tag">
+						{{if value.seniority}}
+							<span>{{value.seniority}}年教龄</span>
+						{{else}}
+							<span>0年教龄</span>
+						{{/if}}
+					</p>
+					<p class="line"><i class="icon icon2"></i>{{value.campus_name}}</p>
+					<p class="line"><i class="icon icon3"></i>英语 一级语文</p>
+				</div>
+			</li>
+		{{/each}}
+	</script>
+</body>

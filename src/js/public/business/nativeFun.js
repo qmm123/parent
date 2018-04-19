@@ -1,7 +1,6 @@
 // js原生交互-原生注册方法供h5调用(方法名取键名)
 define([
-	"publicTool/bridgeScript"
-], function (Bridge) {
+], function () {
 	var nativeFunConfig = {
 		// 功能性部分
 		logout: "logout",//登出
@@ -17,7 +16,7 @@ define([
 		toClassEvaluationAttendance: "toClassEvaluationAttendance",//去课程&评价-考勤情况页
 
 		toSchoolDetailMain: "toSchoolDetailMain",//去校区-详情-主页
-		toschoolDetailEvaluation: "toschoolDetailEvaluation",//去校区-详情-评价页
+		toSchoolDetailEvaluation: "toSchoolDetailEvaluation",//去校区-详情-评价页
 
 		toClassDetail: "toClassDetail",//去课程(班课)详情页
 
@@ -31,6 +30,7 @@ define([
 		toSystemAboutUs: "toSystemAboutUs",//去系统设置-关于我们页
 
 		// 原生部分(页面由原生做)
+		toSchoolPhotoVideo: "toSchoolPhotoVideo",//去校区相册视频页
 		toSearchPage: "toSearchPage",//去搜索页
 		toHomework: "toHomework",//去孩子作业页
 
@@ -42,11 +42,14 @@ define([
 	// 参数二（param）传给原生的参数
 	// 参数三（call）原生给js的回调（参数是原生给js传递的参数）
 	function nativeFun(flag, param, call){
-		Bridge(function(bridge) {
-      bridge.callHandler(nativeFunConfig[flag], param, function(res){
-      	call && call(res);
-      });
-    })
+		try{
+			WebViewJavascriptBridge.callHandler(nativeFunConfig[flag], param, function(res){
+				call && call(res);
+			});
+		}catch(e){
+			console.log("WebViewJavascriptBridge对象没有被加载进来，这个交互只有到原生App里面调用才会执行！");
+		}
+    
 	}
 
 	return nativeFun;

@@ -34,6 +34,22 @@ define([
 		});
 	});
 
+	btnEvent("schoolList", function(){
+		Service.getSchoolList({
+			isShowLoading: false
+		}, {
+			conditions:{
+				city_id:35
+			}
+		},
+		function(data){
+			console.log(data);
+		}, 
+		function(txt, data){
+			console.log("失败", data);
+		});
+	});
+
 	return function(){
 		
 	}

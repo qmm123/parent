@@ -52,18 +52,19 @@ define([
 				listFolder: "wrapper", // 滚动容器id
 				listWrapper: "listContainer", // 列表id
 				classTpl: "TplClass", // 模板id
-				emptyEle: "empty", // 空元素id
+				emptyEle: "#emptyContentClass", // 空元素id
 				type: ""
 			}
 			this.options = $.extend(true, defaults, opt);
 			this.scroll = null; // 滚动对象
 			this.listFolder = $("#" + this.options.listFolder);
 			this.listWrapper = $('#' + this.options.listWrapper);
-			this.emptyEle = $("." + this.options.emptyEle);
+			this.emptyEle = $(this.options.emptyEle);
 			this.pageSize = 10; // 每条页数
 			this.currentPage = 0; // 当前页
 			this.totalPage = 0; // 总页数
 			this.$data = {data: null}
+			this._opt = null
 		},
 
 		//初始化
@@ -74,13 +75,12 @@ define([
 			if("conditions" in opt) {
 				_opt.conditions = opt.conditions;
 			}
-			console.log(opt)
 			if("data" in opt) {
 				for(var item in opt.data) {
 					_opt[item] = opt.data[item];
 				}
 			}
-			console.log(_opt)
+			_this._opt = _opt;
 			this.renderList(null, _opt, function() {
 				_this.initScroll({isPullUp: opt.isPullUp});
 			}, function() {
@@ -123,9 +123,20 @@ define([
 						successCallback && successCallback(data);
 					});
 				}else if (data.result && data.result.data == null){
+					if(_this.options.type) {
+						data.result.type = _this.options.type;
+					}
 					Method.artRender(_this.listWrapper, _this.options.classTpl, data.result, false, function() {
 						successCallback && successCallback(data);
 					});
+					if(_this.options.avaFn) {
+						_this.options.avaFn({
+							realname: data.result.realname,
+							sex: data.result.sex,
+							number: data.result.seniority,
+							fn: _this.scroll ? _this.scroll.refresh : null
+						})
+					}
 				}else{
 					console.log('无数据')
 					_this.renderEmpty(_this.listFolder, _this.emptyEle);
@@ -196,7 +207,7 @@ define([
 			// 下拉刷新
 			this.listFolder.on('pullingDown', function() {
 				//$('.pullDown').css("visibility" , 'visible');
-				_this.renderList(null, {}, function(data) {
+				_this.renderList(null, _this._opt, function(data) {
 					if(data.status){
 						_this.scroll.forceUpdate({success: true});
 						_this.currentPage = 0;

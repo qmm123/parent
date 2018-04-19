@@ -92,9 +92,9 @@ define([
 				}
 				// if(isQQIn()){
 					// 下拉加载更多上移一定距离后强制刷新
-					if((_this.client_height - _this.pullUpEle.offset().top) > _this.client_top_refresh){
-						_this.iScroll.refresh();
-					}
+					// if((_this.client_height - _this.pullUpEle.offset().top) > _this.client_top_refresh){
+					// 	_this.iScroll.refresh();
+					// }
 				// }
 				// 解决卡顿
 				if(_this.controlerVar){

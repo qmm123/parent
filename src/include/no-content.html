@@ -1,0 +1,19 @@
+@@if(style){
+<div id=@@id class="no_content hide" style=@@style>
+}
+@@if(!style){
+<div id=@@id class="no_content hide">
+}
+  @@if(className){
+  <span class="pic @@className"></span>
+  }
+  @@if(!className){
+  <span class="pic common"></span>
+  }
+  @@if(txt){
+  <p class="txt">@@txt</p>
+  }
+  @@if(!txt){
+  <p class="txt">暂无相关数据~</p>
+  }
+</div>

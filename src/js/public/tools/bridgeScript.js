@@ -1,8 +1,7 @@
-// webviewJavascriptBridge 封装
+// webviewJavascriptBridge 封装-用于注册事件
 define([
   
 ], function(){
-	// webViewJavascriptBridge 桥接-用于注册事件
 	function setupWebViewJavascriptBridge(callback) {
 		//Android使用
 		if (window.WebViewJavascriptBridge) {

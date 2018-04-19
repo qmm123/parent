@@ -1,0 +1,21 @@
+/* 模板公共部分 */
+.stars_zone{
+	@w: 15px;
+	@h: 12px;
+	@mar: 3px;
+	width: @w*5;
+	height: @h;
+	background: url("@{img_url_tpl}/icon/star_normal.png") repeat-x 0 0;
+	background-size: @w @h;
+	margin: 5px 0 0 0;
+	position: relative;
+	.stars{
+		width: 0;
+		height: @h;
+		background: url("@{img_url_tpl}/icon/star_select.png") repeat-x 0 0;
+		background-size: @w @h;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}

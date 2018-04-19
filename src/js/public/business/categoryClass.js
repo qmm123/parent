@@ -10,6 +10,7 @@ define([
     // 初始化
     init: function(opt){
       this.configer(opt);
+      this.getInitCategory();
       this.renderClass();
       this.eleClick();
     },
@@ -17,13 +18,22 @@ define([
     configer: function(opt){
       var defaults = {
         initCategoryName: "",//初始化分类名称(顶部显示)
-        initCategoryOneId: "",//初始化一级分类id【fef84b6e75a949cb9a71d1af1b2be3af】语文
-        initCategoryTwoId: "",//初始化二级分类id【d7a3c95affc741e593236293904f8d3b】二级语文
+        initCategoryLevel: "",//课程分类level 一级分类id【fef84b6e75a949cb9a71d1af1b2be3af】语文 二级分类id【d7a3c95affc741e593236293904f8d3b】二级语文
         callClick: ""//点击回调
       };
       this.config = $.extend(true, defaults, opt);
       this.topTabEle = $("#classTab");//顶部课程分类元素
       this.tabEle = $("#classify");//选项卡整体
+    },
+    // 获取初始分类
+    getInitCategory: function(){
+      if(this.config.initCategoryLevel){
+        var aCategory = this.config.initCategoryLevel.split("-");
+        this.config.initCategoryOneId = aCategory[0];
+        if(aCategory.length >= 2){
+          this.config.initCategoryTwoId = aCategory[1];
+        }
+      }
     },
     // 初始化状态
     // 参数一 分类名称 参数二 1级分类id 参数3 2级分类id
@@ -31,7 +41,12 @@ define([
       if(name){
         // 设置名称及分类
         this.topTabEle.html(name);
-        this.topTabEle.attr("data-level", oneId + "-" + twoId);
+        if(oneId && twoId){
+          this.topTabEle.attr("data-level", oneId + "-" + twoId);
+        }else if(oneId){
+          this.topTabEle.attr("data-level", oneId);
+        }
+        
         // 设置一级分类状态
         this.tabEle.find(".left_area .switch_a.area_d_a").removeClass("on");
         this.tabEle.find(".left_area .switch_a.area_d_a[data-id="+ oneId +"]").addClass("on");

@@ -7,7 +7,9 @@ define(["publicLogic/messageList",
 		messageList.init({
 			name: 'getClassPingWantPing',
 			type: 'ClassPingWantPing',
-			sub_order_id: sub_order_id,
+			data: {
+				sub_order_id: sub_order_id
+			},
 			isPullUp: true
 		});
 	}

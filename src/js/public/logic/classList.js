@@ -2,7 +2,7 @@
 define([
 	"publicService/service",
 	"publicTool/method",
-	"public/tools/scrollLoad",
+	"public/tools/oldScrollLoad",
 ], function (Service, Method, scrollLoad) {
 	// 对象写法（避免出现new改变this指向问题）
 	var ClassList = {

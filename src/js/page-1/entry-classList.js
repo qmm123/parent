@@ -2,7 +2,7 @@
 define([
 	"public/tools/ajax",
 	"publicBusiness/layerFz",
-	"publicLogic/classList",
+	"publicLogic/messageList",
 	"publicLogic/header",
 	"publicBusiness/categoryLocation",
   "publicBusiness/categoryClass",
@@ -10,18 +10,22 @@ define([
   "publicBusiness/categoryAllTeacher",
   "publicBusiness/tabSwitch",
   "public/tools/method",
-  // "publicBusiness/categoryAiSort",
-  // "publicBusiness/categoryTeachMode",
-  // "publicBusiness/categorySelectSelect",
+  "public/business/jsFun",
+  "public/business/nativeFun",
 ], function (
-	ajax, layer, ClassList, Header, categoryLocation, 
-	categoryClass, categoryGrade, categoryAllTeacher, tabSwitchs, Method,
-	// categoryAiSort, categoryTeachMode, categorySelectSelect
+	ajax, layer, messageList, Header, categoryLocation, 
+	categoryClass, categoryGrade, categoryAllTeacher, tabSwitchs, Method, jsFun, nativeFun
 ) {
 	return function(){
 		// 头部
 		Header.init();
-		Header.goSearchPage();
+		Header.goSearchPage({a: 123}, function(paramNative, $this){
+			console.log(paramNative, $this.html());
+		});
+		// 执行搜索的交互
+		jsFun("wbClassList", function(paramNative){
+			console.log(paramNative);
+		});
 
 		// 顶部筛选tab
 		// =顶部一级和下面一级
@@ -33,8 +37,7 @@ define([
 		// =课程分类
 		categoryClass.init({
 			initCategoryName: Method.getUrlParam("category_class_name"),
-			initCategoryOneId: Method.getUrlParam("category_class_one_id"),
-			initCategoryTwoId: Method.getUrlParam("category_class_two_id"),
+			initCategoryLevel: Method.getUrlParam("category_class_level"),
 		  callClick: callClass
 		});
 		// =年部年级点击回调函数
@@ -45,18 +48,6 @@ define([
 		categoryAllTeacher.init({
 		  callClick: callAllTeacher
 		});
-		// =智能排序
-		// categoryAiSort.init({
-		// 	callClick: callAiSort
-		// });
-		// =授课模式
-		// categoryTeachMode.init({
-		// 	callClick: callTeachMode
-		// });
-		// =筛选(老师)
-		// categorySelectSelect.init({
-		// 	callClick: callSelectSelect
-		// });
 		function callLocation(id){
 			console.log(id)
 		}
@@ -66,22 +57,18 @@ define([
 		function callGrade(gradeId){
 			console.log(gradeId)
 		}
-		function callAiSort(id){
-			console.log(id)
-		}
-		function callTeachMode(id){
-			console.log(id)
-		}
-		function callSelectSelect(val){
-			console.log(val)
-		}
 		function callAllTeacher(id){
 			console.log(id)
 		}
 
 		// 列表渲染
-		// new ClassList();
-		// ClassList.init();
+		messageList.init({
+			name: "getClassList"
+		});
+		// 跳转课程详情
+		$(document).on("click", ".class_list_folder li", function(){
+			nativeFun("toClassDetail", {"goods_id": $(this).data("goodsid")});
+		})
 	}
 
 });

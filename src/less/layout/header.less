@@ -7,6 +7,10 @@ header{
 	top: 0;
 	left: 0;
 	z-index: 1000;
+	// 透明
+	&.opacity{
+		background-color: rgba(@header-bgc-r, @header-bgc-g, @header-bgc-b, 0.9);
+	}
 	// 返回按钮
 	.back{
 		width: @back-w;
@@ -63,5 +67,19 @@ header{
 		background: url("@{img_url_tpl}/header/shai.png") no-repeat center center;
 		background-size: 19px 22px;
 		margin: 2px 5px 0 0;
+	}
+	// 右侧图标区
+	.icon{
+		width: 21px;
+		height: 20px;
+		float: right;
+		background-position: center center;
+		background-repeat: no-repeat;
+		margin: 2px 5px 0 0;
+		&.phone{
+			background-image: url("@{img_url_tpl}/header/consult_black.png");
+			background-size: 21px 20px;
+			margin-top: (@header-h - 20)/2;
+		}
 	}
 }

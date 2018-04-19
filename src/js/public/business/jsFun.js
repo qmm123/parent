@@ -3,16 +3,13 @@ define([
 	"publicTool/bridgeScript"
 ], function (Bridge) {
 	var jsFunConfig = {
-		toIndex: "toIndex",//去首页
-		toSearchClass: "toSearchClass",//去搜索页（课程）
-		toClassDetail: "toClassDetail",//去课程详情页
+		wbClassList: "wbClassList",//获取班课列表
 	};
 
 	// 参数一（flag）方法标识
-	// 参数二（paramNative）原生传给js 的数据
+	// 参数二（call）js 的回调（参数是原生传给js的数据）
 	// 参数三（paramH5）js传给原生的数据
-	// 参数四（call）js 的回调（参数是原生传给js的数据）
-	function jsFun(flag, paramNative, paramH5, call){
+	function jsFun(flag, call, paramH5){
 		Bridge(function(bridge) {
       bridge.registerHandler(jsFunConfig[flag], function(paramNative, responseCallback) {
         responseCallback(paramH5);

@@ -1,0 +1,368 @@
+// 机构主页
+
+/* 大容器 */
+.container{
+	overflow: hidden;
+	padding: 0;
+}
+
+// 校区环境部分
+.school_env{
+	img{
+		width: 100%;
+	}	
+}
+
+/* tab切换区域 */
+.tab_lik{
+	height: 42px;
+	overflow: hidden;
+	text-align: center;
+	.bor-b(@color:#e6e6e6);
+	background: #fff;
+	padding: 0;
+	margin: 5px 0 10px 0;
+	// 四个按钮
+	&.four{
+		li{
+			width: 25%;
+		}
+	}
+	li{
+		width: 33.3%;
+		height: 42px;
+		.fl();
+		a{
+			font-size: 1.4rem;
+			height: 41px;
+			line-height: 41px;
+			display: block;
+			color: #666;
+			&.on{
+				color: @col-main;
+				border-bottom: 1px solid @col-main;
+			}
+		}
+	}
+}
+
+// tab内容区
+.tab_content{
+	> li{
+		min-height: 100px;
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+/* 具体详情 */
+.detail_content{
+	background: transparent;
+	.box-s(@ver:0px;@fou:0px);
+	// 标题
+	.tit{
+		height: 44px;
+		font-size: 1.5rem;
+		color: #484848;
+		line-height: 44px;
+		// .bor-b(@color:#eee);
+	}
+}
+
+.agent_jie{
+	.bor-t(@color:#dcdcdc);
+	// .bor-b(@color:#dcdcdc);
+	background: #fff;
+	padding: 0 0 0 15px;
+	.school_phone{
+		color: @col-main;
+		display: inline-block;
+		padding: 0 0 10px 0;
+	}
+}
+
+/* 相册和视频 */
+.pho_vedio{
+	border-top: 1px solid #dcdcdc;
+	background: #fff;
+	box-shadow: none;
+	margin: 10px 0 0 0;
+	.title{
+		// .bor-b(@color:#eee);
+		display: block;
+		padding: 12px 0 0 0;
+		margin: 0 0 0 15px;
+		span{
+			font-size: 1.5rem;
+		}
+		em{
+			font-size: 1.2rem;
+			color: #828181;
+		}
+		i{
+			font-style: normal;
+		}
+	}
+}
+/*图片区域*/
+.pho_ved_list{
+	overflow: hidden;
+	// padding-right: 6px;
+	padding: 0 9px 0 9px;
+	margin: 10px -3px 0 0;
+	li{
+		width: 33.33%;
+		// height: 100%;
+		.fl();
+		padding-right: 3px;
+		margin-bottom: 3px;
+		&.video{
+			position: relative;
+		}
+		a{
+			display: block;
+			padding-top: 62.5%;
+			position: relative;
+		}
+		.vid_img{
+			width: auto;
+			height: auto;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top: -4px;
+			margin-left: -4px;
+		}
+		img,.ele,.mask{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.mask{
+			background-color: rgba(0, 0, 0, .1);
+		}
+	}
+}
+
+/*分校信息*/
+.school_fen{
+	display: block;
+	background: #fff;
+	.bor-b(@color:#dcdcdc);
+	padding: 0 0 10px 15px;
+	// margin: 10px 0 0 0;
+	.title{
+		overflow: hidden;
+		.name{
+			font-size: 1.5rem;
+			color: #484848;
+			display: block;
+			margin: 0 130px 0 0;
+		}
+		.distance{
+			.fr();
+			margin: 2px 15px 0 0;
+			span{
+				.fl();
+			}
+			.dis{
+				height: 17px;
+				font-size: 1.2rem;
+				color: #fff;
+				background: #63b673;
+				.bor-t-l-rad(@radius:2px);
+				.bor-b-l-rad(@radius:2px);
+				padding: 0 3px;
+			}
+			.dis_dis{
+				height: 17px;
+				font-size: 1.2rem;
+				color: #63b673;
+				.bor-t-r-rad(@radius:2px);
+				.bor-b-r-rad(@radius:2px);
+				.border(@color:#63b673);
+				border-left: none;
+				padding: 0 3px;
+			}
+		}
+	}
+	.con{
+		font-size: 1.2rem;
+		color: #999;
+		// .bor-b(@color:#eee);
+		padding: 8px 15px 0 0;
+	}
+}
+// 箭头链接
+.link_list{
+	.bor-b(@color:#dcdcdc);
+	padding-left: 15px;
+	padding-bottom: 5px;
+	li{
+		border:none;
+		padding-left: 0;
+		&.pic_vedio{
+			.bor-t(@color:#eee);
+			margin: 15px 0 0 0;
+		}
+	}
+	a{
+		background-position: right center;
+		background-repeat: no-repeat;
+		background-image: url("@{img_url}/agent_arrow.png");
+		background-size: 6px 10px;
+		display: block;
+		margin: 5px 15px 5px 0;
+		&.fen_add{
+			color: @col-main;
+		}
+	}
+}
+
+/* 评价区域 */
+.cls_evel_zone{
+	.bor-t(@color:#dcdcdc);
+	// .bor-b(@color:#dcdcdc);
+	border-bottom: none;
+	.box-s(@ver:0px;@fou:0px);
+	background: #fff;
+	margin: 10px 0 10px 0;
+	.tit{
+		height: 44px;
+		margin: 0 0 0 15px;
+		.h1{
+			font-size: 1.5rem;
+			color: #484848;
+			line-height: 44px;
+			display: block;
+			float: none;
+			span{
+				font-size: 1.2rem;
+				color: #999;
+				padding: 0 0 0 3px;
+			}
+		}
+	}
+	// 评论正文
+	.ping_content{
+		.bor-b(@color:#eee);
+		display: block;
+		padding: 6px 0 6px 0;
+		margin: 0 0 0 15px;
+		.ping_img{
+			.fl();
+			.bor-rad(@radius:50%);
+		}
+		.ping_txt{
+			margin: 0 0 0 33px;
+			.ping_tit{
+				overflow: hidden;
+				padding: 0 15px 0 0;
+				.tit_r{
+					color: #999;
+					.fr();
+					margin: 7px 0 0 0;
+				}
+				.tit_l{
+					overflow: hidden;
+					.name{
+						font-size: 1.5rem;
+						color: #484848;
+						display: block;
+					}
+				}
+			}
+			.ping_str{
+				font-size: 1.3rem;
+				line-height: 20px;
+				color: #666;
+				padding: 0 12px 0 0;
+				margin: 7px 0 0 0;
+			}
+		}
+	}
+}
+
+/* 机构老师页面 */
+.agent_cls_list{
+	&.teacher{
+		background: #fff;
+		.bor-b(@color:#dcdcdc);
+		.bor-t(@color:#dcdcdc);
+		// margin: 0 0 10px 0;
+		.cls_tit{
+			.bor-b(@color:#eee);
+		}
+	}
+}
+.cls_single{
+	&.teacher{
+		display: block;
+		// border-bottom: 1px dashed #e5e5e5;
+		border-top: none;
+		padding: 10px 0 15px 15px;
+		&.last{
+			border-bottom: none;
+		}
+		.teacher_l{
+			img{
+				.bor-rad(@radius:50%);
+			}
+			.fl();
+		}
+		.teacher_r{
+			margin: 0 11px 0 70px;
+			// 教龄和姓名
+			.name_age{
+				.name{
+					width: 120px;
+					font-size: 1.4rem;
+					display: inline-block;
+					color: #484848;
+					padding: 0 5px 0 0;
+				}
+				.age{
+					font-size: 1.3rem;
+					color: #999;
+				}
+			}
+			// 评价
+			.ping{
+				overflow: hidden;
+				margin: 5px 0 0 0;
+				.ping_num{
+					font-size: 1.2rem;
+					color: #999;
+					float: left;
+					padding: 0 0 0 13px;
+				}
+				.stars_zone{
+					float: left;
+					margin-top: 3px;
+				}
+			}
+			// 教授课程
+			.cls{
+				margin: 5px 0 0 0;
+				overflow: hidden;
+				.name,.cls_name{
+					font-size: 1.3rem;
+					color: #999;
+				}
+				.name{
+					.fl();
+				}
+				.cls_name{
+					&.textflow{
+						height: 18px;
+						.text-overflow();
+					}
+					margin: 0 0 0 68px;
+				}
+			}
+
+		}
+	}
+}

@@ -78,7 +78,7 @@ function route(pageRoute) {
 
   // 测试页入口相关
   // =js原生桥接
-  if (pathname.match("/DemoShow/webviewBridge.html")) {
+  if (pathname.match("/DemoShow/demo-webview.html")) {
     requirejs(["page-DemoShow/entry-webviewBridge"], function (init) {
       init();
     });

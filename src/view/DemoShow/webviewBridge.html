@@ -1,10 +1,110 @@
-@@include('../../include/header-common.html', {
-  "subtitle": "-js桥接",
-  "css": "page-DemoShow/entry-webviewBridge"
-})
-<!-- js桥接页 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script>
+  // 固定的 webviewjs 方法
+  function setupWebViewJavascriptBridge(callback) {
+    //Android使用
+    if (window.WebViewJavascriptBridge) {
+        callback(WebViewJavascriptBridge)
+    } else {
+      document.addEventListener(
+          'WebViewJavascriptBridgeReady'
+          , function() {
+              callback(WebViewJavascriptBridge)
+          },
+          false
+      );
+    }
+
+    //iOS使用
+    if (window.WebViewJavascriptBridge) {
+      return callback(WebViewJavascriptBridge);
+    }
+    if (window.WVJBCallbacks) {
+      return window.WVJBCallbacks.push(callback); 
+    }
+    window.WVJBCallbacks = [callback];
+    var WVJBIframe = document.createElement('iframe');
+    WVJBIframe.style.display = 'none';
+    WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+    document.documentElement.appendChild(WVJBIframe);
+    setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0);
+  }
+  // 注册事件-用于原生调用js
+  setupWebViewJavascriptBridge(function(bridge) {
+    //注册原生调起方法
+    //参数1： test2 注册flag 供原生使用，要和原生统一
+    //参数2： data  是原生传给js 的数据
+    //参数3： responseCallback 是js 的回调，可以通过该方法给原生传数据
+    bridge.registerHandler('test2', function(data, responseCallback) {
+      alert('标哥的技术博客');
+      document.getElementById("box").style.backgroundColor = "red";
+      // log("Get user information from ObjC: ", data);
+      responseCallback({'userId': '1234567890', 'blog': '标哥的技术博客'})
+    })
+  })
+  // js 调用原生方法
+  function test() {
+    //参数1： toSearchPage 注册flag 供原生使用，要和原生统一
+    //参数2： 是调起原生时向原生传递的参数
+    //参数3： 原生调用回调返回的数据
+    WebViewJavascriptBridge.callHandler('toSearchPage', {'number': 'len'}, function(response) {
+      document.getElementById("returnValuweiboe").innerHTML = response;
+      document.getElementById("box").style.backgroundColor = "blue";
+      alert('交互成功');
+    });
+  }
+</script>
+<style>
+  div{
+    width: 100px;
+    height: 35px;
+    background: rgb(63, 158, 247);
+    color: #fff;
+    border: 0;
+    outline: none;
+    text-align: center;
+    line-height: 35px;
+  }
+  div:hover {
+    background: rgb(47, 138, 223);
+  }
+  p{
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: black;
+  }
+</style>
 <body>
-	<!-- js与原生交互测试 -->
-	<div id="returnValuweiboe" class="test_btn">js调原生</div>
+  <div id="returnValuweiboe" onclick="test()">
+    click me
+  </div>
+  <p id="box"></p>
 </body>
+<script>
+  // 测试js原生中给的获取url
+  // alert(window.location.href);
+
+  function test2() {
+    alert('are you java？');
+  }
+  function hasParams (str) {
+    console.log(str);
+    // alert(str)
+    window.android.showDialog(str);
+  }
+  function hasParams1 (str) {
+    return {
+      a: '123'
+    };
+  }
+  
+</script>
 </html>

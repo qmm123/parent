@@ -3,14 +3,261 @@
   "css": "page-1/entry-schoolDetailMain"
 })
 <!-- 1-校区详情主页 -->
-<body class="header">
+<body>
 	<!-- 头部 -->
 	@@include('./c-header.html', {
-		"type": "2"
+		"type": "3"
 	})
-	<!-- 内容 -->
-	<div class="container full">
-		
+	<!-- 校区图片 -->
+	<div id="slideBox" class="school_env">
+		<div class="bd">
+			<ul id="schoolEnv">
+				<li><img src="/img/tpl1/default/bg_campus_detail.png" alt="" /></li>
+			</ul>
+		</div>
 	</div>
+
+	<!-- 内容区域 -->
+	<div id="tabZone">
+		<!-- tab切换标题 -->
+		<ul class="tab_lik">
+		  <li><a href="javascript:;" class="on">主页</a></li>
+		  <li><a href="javascript:;">课程</a></li>
+		  <li><a href="javascript:;">老师</a></li>
+		</ul>
+		<!-- tab切换内容 -->
+		<ul class="tab_content">
+			<li>
+				<!-- 基础详情 -->
+				<div class="detail_content">
+					<!-- 校区电话 -->
+			    <div class="agent_jie">
+			      <div class="tit">校区电话</div>
+			      <a href="javascript:;" class="school_phone vis_hide" data-role='school_phone'>暂未开通电话咨询</a>
+			    </div>
+			    <!-- 分校信息 -->
+			    <a href="javascript:;" class="school_fen">
+			      <div class="title">
+			        <div class="distance">
+			          <span class="dis">离我最近</span>
+			          <span class="dis_dis" data-role='distance'></span>
+			        </div>
+			         <span class="name">校区地址</span>
+			      </div>
+			      <p class="con" data-role='address'></p>
+			    </a>
+			    <!-- 相册/视频 -->
+			    <div class="pho_vedio">
+			      <!-- 标题 -->
+			      <a href="javascript:;" class="title">
+			        <span>相册/视频</span>
+			        <em><i data-role='pic_num'></i>张照片</em>
+			        <em><i data-role='video_num'></i>个视频</em>
+			      </a>
+			      <!-- 相册/视频 -->
+			      <ul class="pho_ved_list" id="photoVideo"></ul>
+			      <ul class="link_list hide" id="photoVideoMore">
+			        <li class="pic_vedio"><a href="javascript:;" class="fen_add">查看全部视频/照片</a></li>
+			      </ul>
+			    </div>
+				</div>
+				<!-- 课程评价 -->
+				<div class="cls_evel_zone">
+			    <!-- 标题 -->
+			    <div class="tit">
+			      <a href="javascript:;" class="h1">
+			        课程评价
+			        <span>共<em data-role='ping_num'></em>条评价</span>
+			      </a>
+			    </div>
+			    <div id="pingList"></div>
+				</div>
+			</li>
+			<li class="hide">
+				<div id="wrapperClass" class="scrollWrapper">
+					<div style="width: 100%;">
+						<ul class="class_list_folder" id="classList"></ul>
+					</div>
+				</div>
+				<!-- 暂无数据 -->
+				@@include('../../include/no-content.html', {
+					"id": "emptyContentClass",
+					"style": "margin-top:30px;",
+					"className": "",
+					"txt": ""
+				})
+			</li>
+			<li class="hide">
+				<div id="wrapper" class="scrollWrapper">
+					<div style="width: 100%;">
+						<ul class="class_list_folder pad_0" id="teacherList"></ul>
+					</div>
+				</div>
+				<!-- 暂无数据 -->
+				@@include('../../include/no-content.html', {
+					"id": "emptyContent",
+					"style": "margin-top:30px;",
+					"className": "",
+					"txt": ""
+				})
+			</li>
+		</ul>
+	</div>
+	<!-- 模板区域 -->
+	<!-- 相册/视频 -->
+	<script type="text/html" id="tplPicVideo">
+		{{each goods_img_videos val i}}
+			{{if val.type == 2}}
+			<li data-role="video">
+			  <a href="javascript:;">
+			    <video src={{val.url}} class="ele"></video>
+			    <span class="mask"></span>
+			  	<img src="/img/tpl1/agent_video_img.png" width="8" height="8" alt="" class="vid_img">
+			  </a>
+			</li>
+			{{else if val.type== 1}}
+			<li data-role="pic">
+			  <a href="javascript:;">
+			     <img src={{val.url}} alt="" class="pic" />
+			  </a>
+			</li>
+			{{/if}}
+		{{/each}}
+	</script>
+	<!-- 课程评价 -->
+	<script type="text/html" id="tplPing">
+		{{each data val i}}
+		{{if i<=1}}
+	    <a href="javascript:;" class="ping_content">
+	    	{{if val.avatar}}
+	      <img src={{val.avatar}} width="25" height="25" alt="头像" class="ping_img" />
+	      {{else}}
+	      <img src="/img/tpl1/default/ic_default_user_avatar.png" width="25" height="" alt="25" class="ping_img" />
+	      {{/if}}
+	      <div class="ping_txt">
+	        <div class="ping_tit">
+	          <div class="tit_r">{{val.modified}}</div>
+	          <div class="tit_l">
+	            <span class="name">{{val.phone}}</span>
+	            <div class="stars_zone">
+	            	<div class="stars" style="width:{{val.comment_score | calculateStar}}px;"></div>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="ping_str">{{val.curriculum_evaluation}}</div>
+	      </div>
+	    </a>
+	  {{/if}}
+	  {{/each}}
+    <ul class="link_list" data-role="goToPing">
+       <li><a href="javascript:;" class="fen_add">查看全部<em data-role='ping_num'>{{total}}</em>条评论</a></li>
+    </ul>
+	</script>
+	<!-- 老师 -->
+	<script type="text/html" id="tplTeacher">
+		{{each data val i}}
+		<li data-member_id={{val.member_id}}>
+			<div class="agent_cls_list teacher">
+		    <a href="javascript:;" class="cls_single teacher">
+	        <div class="teacher_l">
+	        {{if val.photo}}
+	        	<img src={{val.photo}} width="60" height="60" alt="" />
+	        {{else}}
+	        	<img src="/img/tpl1/default/ic_default_teacher.png" width="60" height="60" alt="" />
+	        {{/if}}
+	        </div>
+	        <div class="teacher_r">
+	          <div class="name_age">
+	            <span class="name">{{val.realname}}</span>
+	            <span class="age">{{val.seniority}}年教龄</span>
+	          </div>
+	          <div class="ping">
+	            <div class="stars_zone">
+	            	<div class="stars" style="width:{{val.comment_score | calculateStar}}px;"></div>
+	            </div>
+	            <span class="ping_num">{{val.comment_sum}}人评价</span>
+	          </div>
+	          <div class="cls">
+	            <div class="name">教授课程：</div>
+	            <div class="cls_name">
+	            	{{each val.goods_label v j}}
+	              <span>{{v}}</span>
+	              {{/each}}
+	            </div>
+	          </div>
+	          <div class="cls">
+	            <div class="name">个人简介：</div>
+	            <div class="cls_name">
+	              {{val.intro ? val.intro : "暂无简介"}}
+	            </div>
+	          </div>
+	        </div>
+		    </a>
+			</div>
+		</li>
+		{{/each}}
+	</script>
+	<!-- 模板-课程 -->
+	<script type="text/html" id="TplClass">
+		{{each data value i}}
+			<li data-goodsid="{{value.goods_id}}" data-courseid="{{value.course_id}}">
+				<div class="up">
+					<div class="u">
+						{{if value.teacher_photo}}
+						<img src={{value.teacher_photo}} alt="" class="img" />
+						{{else}}
+						<img src="/img/tpl3/default/teacher.png" alt="" class="img" />
+						{{/if}}
+						<span class="name">{{value.teacher_name}}<img src="/img/tpl3/name_arrow.png" alt="" class="arrow" /></span>
+						<div class="money">
+							{{if value.privileges && value.privileges.length}}
+								{{if value.privilege_price_tag}}
+								<span class="money_status">{{value.privilege_price_tag.name}}</span>
+								{{/if}}
+							￥{{value.mall_cost}}
+							<div class="money_yuan">{{value.cost}}</div>
+							{{else}}
+							￥{{value.mall_cost}}
+							{{/if}}
+						</div>
+					</div>
+					<div class="d">
+						{{if value.retreat_rule == 1}}
+						<span class="mark">随时退班</span>
+						{{/if}}
+						{{if value.is_transfer == 1}}
+						<span class="mark">随时插班</span>
+						{{/if}}
+						{{if value.is_audition == 1}}
+						<span class="mark">免费试听</span>
+						{{/if}}
+						<div class="bao">
+							已报<span>{{value.saled}}</span>/<span>{{value.total}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="down">
+					<div class="class_infor">
+						<span class="name">{{value.name}}</span>
+						<div class="hui">
+							{{if value.privileges}}
+								{{each value.privileges val j}}
+								<span class="hui" style="background:{{val.bkg_color}};">{{val.name}}</span>
+								{{/each}}
+							{{/if}}
+						</div>
+					</div>
+					<p class="campus">{{value.campus_name}}</p>
+					<p class="time"><span>{{value.open_date}}</span>至<span>{{value.end_date}}</span></p>
+					<p class="date">{{value.goods_week}}</p>
+					<p class="position">{{value.districtinfo}}</p>
+				</div>
+				<!-- 班级状态 -->
+				{{if value.is_full_class == 1}}
+					<div class="class_status man"></div>
+				{{/if}}
+			</li>
+		{{/each}}
+	</script>
 </body>
 </html>

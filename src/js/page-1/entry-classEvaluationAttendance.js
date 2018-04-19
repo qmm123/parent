@@ -13,9 +13,11 @@ define(["publicLogic/messageList",
 		messageList.init({
 			name: 'getClassPingQin',
 			type: 'ClassPingQin',
-			goods_id: goods_id,
-			parent_id: parent_id,
-			student_id: student_id
+			data: {
+				goods_id: goods_id,
+				parent_id: parent_id,
+				student_id: student_id
+			}
 		});
 		/*messageList.init({
 			name: 'getClassPingReceive'
