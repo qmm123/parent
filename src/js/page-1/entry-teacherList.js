@@ -4,12 +4,13 @@ define(["publicLogic/messageList",
 	return function() {
 
 		// 教师id
-		var teacher_id = Method.getUrlParam('teachers_id') ? Method.getUrlParam('teachers_id') : "3943962a88474f0d9f34db9651466301";
+		var city_id = Method.getUrlParam('city_id') ? Method.getUrlParam('city_id') : "35";
 		messageList.init({
 			name: 'getSchoolDetailTeacher',
 			type: 'SchoolDetailTeacher',
-			data: {
-				
+			conditions: {
+				city_id: city_id,
+				merchant_id: localStorage.merchant_id
 			}
 		});
 		

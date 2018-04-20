@@ -43,6 +43,7 @@ header{
 		padding: 7px 0 0 0;
 		// margin: 0 45px 0 50px;
 		margin: 0 10px 0 50px;
+		position: relative;
 		&.long{
 			margin-right: 20px;
 		}
@@ -57,6 +58,16 @@ header{
 			background: url("@{img_url_tpl}/header/search.png") no-repeat 5px center;
 			background-size: 14px 14px;
 			padding: 0 0 0 25px;
+		}
+		// 清空文字按钮
+		.shut_btn{
+			width: @header-h;
+			height: @header-h;
+			background: url("@{img_url_tpl}/header/shut.png") no-repeat center center;
+			background-size: 14px 14px;
+			position: absolute;
+			right: 0;
+			top: 0;
 		}
 	}
 	// 筛选条件

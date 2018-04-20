@@ -63,7 +63,7 @@ define([
 			this.pageSize = 10; // 每条页数
 			this.currentPage = 0; // 当前页
 			this.totalPage = 0; // 总页数
-			this.$data = {data: null}
+			this.$data = {}
 			this._opt = null
 		},
 
@@ -104,7 +104,7 @@ define([
 					setAdvantage(data.result.data);
 					
 					if(_this.options.fn){
-						_this.$data.data = _this.options.fn(data.result.data);
+						_this.$data = _this.options.fn(data.result);
 					}else{
 						_this.$data = data.result;
 					}

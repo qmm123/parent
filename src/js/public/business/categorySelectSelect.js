@@ -65,6 +65,7 @@ define([
     hideTab: function(){
       this.topTabEle.removeClass("on");
       this.tabEle.removeClass("on");
+      $(".marsk_opcity").remove();
     }
   };
 

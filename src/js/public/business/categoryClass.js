@@ -33,6 +33,8 @@ define([
         if(aCategory.length >= 2){
           this.config.initCategoryTwoId = aCategory[1];
         }
+        // 初始化选项卡状态
+        this.setStatus(this.config.initCategoryName, this.config.initCategoryOneId, this.config.initCategoryTwoId);
       }
     },
     // 初始化状态
@@ -49,13 +51,13 @@ define([
         
         // 设置一级分类状态
         this.tabEle.find(".left_area .switch_a.area_d_a").removeClass("on");
-        this.tabEle.find(".left_area .switch_a.area_d_a[data-id="+ oneId +"]").addClass("on");
+        this.tabEle.find(".left_area .switch_a.area_d_a[data-id='"+ oneId +"']").addClass("on");
         // 设置二级分类显示
         this.tabEle.find(".right_area .right_area_d").removeClass("on");
-        this.tabEle.find(".right_area .right_area_d[data-id="+ oneId +"]").addClass("on");
+        this.tabEle.find(".right_area .right_area_d[data-id='"+ oneId +"']").addClass("on");
         // 设置二级分类状态
         if(twoId){
-          this.tabEle.find(".right_area .right_area_d .third_menu_con[data-id="+ twoId +"]").addClass("current");
+          this.tabEle.find(".right_area .right_area_d .third_menu_con[data-id='"+ twoId +"']").addClass("current");
         }
       }
     },
@@ -71,8 +73,6 @@ define([
         tabSwitchs.secondSwitch("#classify .left_area .switch_a.area_d_a", "#classify .right_area_d");
         // 二级选项卡
         tabSwitchs.thirdSwitch("#classify .switch_a.area_r.third_menu");
-        // 初始化选项卡状态
-        _this.setStatus(_this.config.initCategoryName, _this.config.initCategoryOneId, _this.config.initCategoryTwoId);
       });
     },
     // 元素点击切换
@@ -94,6 +94,7 @@ define([
     hideTab: function(){
       this.topTabEle.removeClass("on");
       this.tabEle.removeClass("on");
+      $(".marsk_opcity").remove();
     }
   };
 

@@ -19,52 +19,72 @@ define([
 	return function(){
 		// 头部
 		Header.init();
-		Header.goSearchPage({a: 123}, function(paramNative, $this){
-			console.log(paramNative, $this.html());
+		Header.goSearchPage({"name": Header.searchEle.data("value") ? Header.searchEle.data("value") : ""});
+		Header.clearSearchValue(function(){
+			requeseDataList();
 		});
 		// 执行搜索的交互
 		jsFun("wbClassList", function(paramNative){
-			console.log(paramNative);
+			var oParam = JSON.parse(paramNative);
+			Header.searchEle.html(oParam.name).data("value", oParam.name);
+			Header.searchShutEle.show();
+			requeseDataList();
 		});
+		
+		// 获取搜索条件
+		function getSearchConditons(){
+			// 搜索条件
+			var oConditions = {
+				lng: Method.getUrlParam("lng"),
+				lat: Method.getUrlParam("lat")
+			};
+			var oLocation = categoryLocation.getValue();
+			var sClassLevel = categoryClass.getValue();
+			var sGradeLevel = categoryGrade.getValue();
+			var sTeacherVal = categoryAllTeacher.getValue();
+			var sSearchVal = Header.searchEle.data("value");
+			$.extend(true, oConditions, oLocation);
+			oConditions.category = sClassLevel;
+			oConditions.grade_id = sGradeLevel;
+			oConditions.teacher_id = sTeacherVal;
+			if(sSearchVal){
+				oConditions.goods_name = sSearchVal;
+			}
+			return oConditions;
+		}
 
 		// 顶部筛选tab
 		// =顶部一级和下面一级
 		tabSwitchs.tabSwitch(".order_sort_u a.tab_swi_a", ".search_tab");
 		// =位置
 		categoryLocation.init({
-		  callClick: callLocation
+		  callClick: requeseDataList
 		});
 		// =课程分类
+		console.log(window.location.href);
 		categoryClass.init({
-			initCategoryName: Method.getUrlParam("category_class_name"),
+			initCategoryName: Method.getUrlParam("name"),
 			initCategoryLevel: Method.getUrlParam("category_class_level"),
-		  callClick: callClass
+		  callClick: requeseDataList
 		});
 		// =年部年级点击回调函数
 		categoryGrade.init({
-		  callClick: callGrade
+		  callClick: requeseDataList
 		});
 		// =全部老师点击回调函数
 		categoryAllTeacher.init({
-		  callClick: callAllTeacher
+		  callClick: requeseDataList
 		});
-		function callLocation(id){
-			console.log(id)
-		}
-		function callClass(level){
-			console.log(level)
-		}
-		function callGrade(gradeId){
-			console.log(gradeId)
-		}
-		function callAllTeacher(id){
-			console.log(id)
-		}
 
 		// 列表渲染
-		messageList.init({
-			name: "getClassList"
-		});
+		function requeseDataList(){
+			messageList.init({
+				name: "getClassList",
+				emptyEle: "emptyContent",
+				conditions: getSearchConditons()
+			});
+		}
+		requeseDataList();
 		// 跳转课程详情
 		$(document).on("click", ".class_list_folder li", function(){
 			nativeFun("toClassDetail", {"goods_id": $(this).data("goodsid")});

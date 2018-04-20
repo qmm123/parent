@@ -369,6 +369,7 @@ define([
 			$.extend(true, option, apiConfig);
 		}
 		Service.commonLogic(option, {
+			merchant_id: localStorage.merchant_id,
 			project_id: localStorage.project_id,
 			version: localStorage.version,
 		}, param, successCall, failCall);

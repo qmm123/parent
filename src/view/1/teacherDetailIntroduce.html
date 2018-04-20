@@ -111,7 +111,13 @@
 		</ul>
 	</div>
 </div>
-
+<!-- 数据为空 -->
+@@include('../../include/no-content.html', {
+	"id": "emptyContent",
+	"style": "margin-top:50px;",
+	"className": "",
+	"txt": ""
+})
 <script type="text/html" id="avator">
 	<img src="/img/tpl1/art01.png" alt="">
 	<div class="text">
@@ -128,6 +134,7 @@
 	</div>
 	<span class="back"></span>
 	<span class="tel"></span>
+
 </script>
 
 <script type="text/html" id="TplClass">
@@ -138,7 +145,138 @@
 			<p class="tag"><span class="gray">教授课程：</span><span class="inner">朝阳校区</span><span class="inner">朝阳校区</span><span class="inner">朝阳校区</span><span class="inner">朝阳校区</span><span class="inner">朝阳校区</span><span class="inner">朝阳校区</span></p>
 			<p><span class="gray">教师简介：</span><span>朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区</span></p>
 		</li>
-	{{else}}
-		222
+	{{else if data[0].type == "ClassList"}}
+		{{each data value i}}
+			<li class="item item2" data-goods_id="{{value.goods_id}}">
+				<h3 class="title">{{value.name}}</h3>
+				<p class="line"><span class="icon icon1"></span>{{value.campus_name}}</p>
+				<p class="line"><span class="icon icon2"></span>{{value.open_date}}至{{value.end_date}}</p>
+				<p class="line"><span class="icon icon3"></span>{{value.goods_week}}</p>
+				<p class="time"><span class="red">￥</span>{{value.mall_cost}}<span>{{value.cost}}</span></p>
+				<p class="already">已报<span>{{value.saled}}</span>/{{value.total}}人</p>
+				<p class="tag">
+					{{if value.retreat_rule == 1}}
+						<span>随时退班</span>
+					{{else}}
+						<span>不能退班</span>
+					{{/if}}
+					{{if value.is_transfer == 1}}
+						<span>随时插班</span>
+					{{else}}
+						<span>不能插班</span>
+					{{/if}}
+					{{if value.is_audition == 2}}
+						<span>免费试听</span>
+					{{/if}}
+					</p>
+				<div class="care">
+					{{each value.privileges item index}}
+						<span style="background: {{bkg_color}}">{{item.name}}</span>
+					{{/each}}
+				</div>
+				<div class="address">海淀区{{value.nearest}}km</div>
+			</li>
+		{{/each}}
+	{{else if data[0].type == "ClassDetailPing"}}
+			<li class="item item3">
+				<div class="item_top">
+					<div class="lf">
+						<h3 class="title">{{comment_score_sum}}<span>分</span></h3>
+						<p class="starWrapper">
+							{{each scoreNum4.star1 item1 i1}}
+								<span class="star"></span>
+							{{/each}}
+							{{each scoreNum4.star2 item2 i2}}
+								<span class="star star2"></span>
+							{{/each}}
+							{{each scoreNum4.star3 item3 i3}}
+								<span class="star star3"></span>
+							{{/each}}
+						</p>
+						<p>共{{comment_parent_num}}人评论</p>
+					</div>
+					<div class="rf">
+						<p class="line">
+							<span>上课效果 </span>
+							{{each scoreNum1.star1 item1}}
+								<span class="star"></span>
+							{{/each}}
+							{{each scoreNum1.star2 item2}}
+								<span class="star star1"></span>
+							{{/each}}
+							{{each scoreNum1.star3 item3}}
+								<span class="star star2"></span>
+							{{/each}}
+							<span>{{class_effect_score}}分</span>
+						</p>
+						<p class="line">
+							<span>服务态度 </span> 
+							{{each scoreNum2.star1 item1}}
+								<span class="star"></span>
+							{{/each}}
+							{{each scoreNum2.star2 item2}}
+								<span class="star star1"></span>
+							{{/each}}
+							{{each scoreNum2.star3 item3}}
+								<span class="star star2"></span>
+							{{/each}}
+							<span>{{service_attitude_score}}分</span>
+						</p>
+						<p class="line">
+							<span>教学态度 </span>
+							{{each scoreNum3.star1 item1}}
+								<span class="star"></span>
+							{{/each}}
+							{{each scoreNum3.star2 item2}}
+								<span class="star star1"></span>
+							{{/each}}
+							{{each scoreNum3.star3 item3}}
+								<span class="star star2"></span>
+							{{/each}}
+							<span>{{teaching_environment_score}}分</span>
+						</p>
+					</div>
+				</div>
+				<div class="item_tab_w">
+					<div class="item_tab">
+						<a href="javascript:;" class="active">全部</a>
+						<a href="javascript:;" class="center">好评({{good_comment}})</a>
+						<a href="javascript:;" class="center">中评({{middle_comment}})</a>
+						<a href="javascript:;" class="last">差评({{bad}})</a>
+					</div>
+				</div>
+				<div class="item_content">
+					{{each data value}}
+						<div class="inner">
+							<div class="header">
+								{{if value.avatar}}
+									<img src="{{value.avatar}}" alt="">
+								{{else}}
+									<img src="/img/tpl1/ic_default_teacher.png" alt="">
+								{{/if}}
+								<div class="tel">{{value.phone}}</div>
+								<div class="time">{{value.modified}}</div>
+							</div>
+							<div class="body">
+								<p>{{value.goods_name}}</p>
+								<p class="starWrapper">
+									{{each value.scoreNum.star1 item1 i1}}
+										<span class="star"></span>
+									{{/each}}
+									{{each value.scoreNum.star2 item2 i2}}
+										<span class="star star2"></span>
+									{{/each}}
+									{{each value.scoreNum.star3 item3 i3}}
+										<span class="star star3"></span>
+									{{/each}}
+								</p>
+								<p class="more">
+									{{value.curriculum_evaluation}}
+								</p>
+							</div>
+						</div>
+					{{/each}}
+				</div>
+			</li>
 	{{/if}}
 </script>

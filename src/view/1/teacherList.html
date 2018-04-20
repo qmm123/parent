@@ -5,18 +5,56 @@
 <!-- 1-全部试听 -->
 <body class="header">
 	<!-- 头部 -->
-		@@include('./c-header.html', {
-			"type": "0",
-			"txt": "我的试听",
-			"rightText": ""
-		})
-	<!-- /头部 -->
-	<!-- tab -->
-	<div class="tab">
-		<a href="javascript:;" class="active">全部</a>
-		<a href="javascript:;">待试听</a>
+	@@include('./c-header.html', {
+		"type": "2"
+	})
+	<!-- 筛选条件-顶部 -->
+	<div class="order_sort">
+		<!-- 选项卡头部 -->
+		<ul class="order_sort_u clearfix">
+			<li>
+				<a href="javascript:;" class="tab_swi_a" id="locationTab">位置</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="tab_swi_a" id="classTab">课程分类</a>
+			</li>
+			<!-- <li>
+				<a href="javascript:;" class="tab_swi_a" id="aiSortTab">智能排序</a>
+			</li> -->
+			<!-- <li>
+				<a href="javascript:;" class="tab_swi_a" id="teachModeTab">授课模式</a>
+			</li> -->
+			<li>
+				<a href="javascript:;" class="tab_swi_a" id="selectSelectTab">筛选</a>
+			</li>
+			<!-- <li>
+				<a href="javascript:;" class="tab_swi_a" id="gradeTab">年部年级</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="tab_swi_a" id="allTeacherTab">全部老师</a>
+			</li> -->
+		</ul>
+		<!-- 搜索选项卡 -->
+		<div class="search_tabs">
+			<!-- 选项卡-位置 -->
+			<div class="search_tab location_fu" id="location_fu">
+				<div class="left_area"></div>
+				<div class="right_area"></div>
+			</div>
+			<!-- 选项卡-课程分类 -->
+			<div class="search_tab" id="classify"></div>
+			<!-- 选项卡-智能排序 -->
+			<!-- <div class="search_tab min_hieght" id="aiSort" data-sort="1"></div> -->
+			<!-- 选项卡-授课模式 -->
+			<!-- <div class="search_tab teachMode" id="teachMode"></div> -->
+			<!-- 选项卡-筛选(老师) -->
+			<div class="search_tab" id="selectSelect"></div>
+			<!-- 选项卡-年部年级 -->
+			<!-- <div class="search_tab min_hieght" id="gradeJi"></div> -->
+			<!-- 选项卡-全部老师 -->
+			<!-- <div class="search_tab" id="allTeacher"></div> -->
+		</div>
 	</div>
-	<!-- /tab -->
 	<!-- 列表 -->
 	<div id="wrapper">
 		<div>

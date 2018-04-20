@@ -1,0 +1,40 @@
+/* 单选多选按钮 */
+
+// 按钮类
+.btn_list{
+	overflow: hidden;
+	li{
+		float: left;
+		padding: 0 5px 5px 0;
+		&.on{
+			span{
+				color: @col-main;
+				border-color: @col-main;
+			}
+		}
+		&.pad_r_0{
+			padding-right: 0;
+		}
+		span{
+			width: 25%;
+			height: 30px;
+			font-size: 1.2rem;
+			color: #333;
+			text-align: center;
+			line-height: 30px;
+			background: @btn-normal;
+			border: 1px solid @btn-normal;
+			border-radius: 3px;
+		}
+	}
+}
+
+// checkbox类
+.normal_checkbox{
+	li{
+		font-size: 1.5rem;
+		color: #333;
+		background: url("@{img_url_tpl}/tpl1/radioCheckbox/checbox.png") no-repeat right center;
+		background-size: 20px 20px;
+	}
+}

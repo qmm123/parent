@@ -19,11 +19,14 @@ define([
 			var defaults = {
 				backEle: "headerBack",//返回按钮id
 				searchEle: "headerSearch",//搜索框id
+				searchShutEle: "headerSearchShut",//搜索框清空id
+				searchDefaultTxt: "搜索课程/机构",//搜索框默认的文字
 				headerTxt: "headerTxt",//头部标题元素id
 			};
 			this.config = $.extend(true, defaults, opt);
 			this.backEle = $("#" + this.config.backEle);// 返回元素
 			this.searchEle = $("#" + this.config.searchEle);// 搜索框元素
+			this.searchShutEle = $("#" + this.config.searchShutEle);// 搜索框清空元素
 			this.headerTxt = $("#" + this.config.headerTxt);// 头部标题元素
 		},
 		// 返回方法
@@ -40,6 +43,15 @@ define([
 					call && call(paramNative, $this);
 				});
 			});
+		},
+		// 搜索框清空
+		clearSearchValue: function(call){
+			var _this = this;
+			this.searchShutEle.click(function(){
+				$(this).hide();
+				_this.searchEle.html(_this.config.searchDefaultTxt).data("value", "");
+				call && call();
+			})
 		}
 	}
 	
