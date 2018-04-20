@@ -6,7 +6,7 @@
 <body class="header">
 	<!-- 头部 -->
 	@@include('./c-header.html', {
-		"type": "2"
+		"type": "1"
 	})
 	<!-- 筛选条件-顶部 -->
 	<div class="order_sort">
@@ -102,7 +102,7 @@
 	<!-- 模板 -->
 	<script type="text/html" id="TplClass">
 		{{each data value i}}
-			<li class="item">
+			<li class="item" data-id="{{value.id}}">
 				<div class="img">
 					{{if value.photo}}
 						<img src="{{value.photo}}" alt="">

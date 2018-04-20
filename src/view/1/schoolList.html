@@ -20,12 +20,12 @@
 				<li>
 					<a href="javascript:;" class="tab_swi_a" id="classTab">课程分类</a>
 				</li>
-				<!-- <li>
-					<a href="javascript:;" class="tab_swi_a" id="aiSortTab">智能排序</a>
-				</li> -->
 				<li>
-					<a href="javascript:;" class="tab_swi_a" id="teachModeTab">授课模式</a>
+					<a href="javascript:;" class="tab_swi_a" id="aiSortTab">智能排序</a>
 				</li>
+				<!-- <li>
+					<a href="javascript:;" class="tab_swi_a" id="teachModeTab">授课模式</a>
+				</li> -->
 				<!-- <li>
 					<a href="javascript:;" class="tab_swi_a" id="selectSelectTab">筛选</a>
 				</li>
@@ -60,37 +60,23 @@
 		<!-- 校区列表 -->
 		<div id="wrapper">
 			<div>
-				<div class="pullDown">
-					<div>
-						<span class="pullDownIcon"></span>
-						<span class="pullDownLabel">下拉刷新</span>
-					</div>
-				</div>
 				<ul id="listContainer">
-					<li class="item">
-						<div class="img">
-							<img src="/img/tpl1/ic_default_teacher.png" alt="">
-						</div>
-						<div class="text">
-							<h3 class="title">中关村校区</h3>
-							<p>北京市海淀区中关村大厦</p>
-							<p>3021次浏览<span class="distance">3km</span></p>
-						</div>
-						<div class="hot"><span>热门校区</span></div>
-					</li>
+					
 				</ul>
-				<div class="pullUp">
-					<div>
-						<span class="pullUpIcon"></span>
-						<span class="pullUpLabel">上拉加载</span>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
+	<!-- 暂无数据-->
+	@@include('../../include/no-content.html', {
+		"id": "emptyContentClass",
+		"style": "margin-top:30px;",
+		"className": "",
+		"txt": ""
+	})
+	<!-- /暂无数据 -->
 	<script type="text/html" id="TplClass">
 		{{each data value i}}
-			<li class="item">
+			<li class="item" data-id="{{value.id}}">
 				<div class="img">
 					{{if value.merchant_logo}}
 						<img src="{{value.merchant_logo}}" alt="">

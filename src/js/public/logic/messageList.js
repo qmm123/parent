@@ -93,7 +93,6 @@ define([
 			var _this = this;
 			// 请求数据
 			Server[this.options.name](apiConfid, param, function(data) {
-				console.log(data.result)
 				if(data.result && data.result.data && data.result.data.length > 0) {
 					if(_this.listFolder.hasClass('hide')){
 						_this.listFolder.removeClass('hide');
@@ -123,6 +122,7 @@ define([
 						successCallback && successCallback(data);
 					});
 				}else if (data.result && data.result.data == null){
+					console.log(data.result)
 					if(_this.options.type) {
 						data.result.type = _this.options.type;
 					}

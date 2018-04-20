@@ -2,7 +2,7 @@
 define([
 	"public/tools/ajax",
 	"publicBusiness/layerFz",
-	"publicLogic/classList",
+	"publicLogic/messageList",
 	"publicLogic/header",
 	"publicBusiness/categoryLocation",
   "publicBusiness/categoryClass",
@@ -10,85 +10,85 @@ define([
   "publicBusiness/categoryAllTeacher",
   "publicBusiness/tabSwitch",
   "public/tools/method",
-  "publicBusiness/categoryAiSort",
-  // "publicBusiness/categoryTeachMode",
-  // "publicBusiness/categorySelectSelect",
-  "publicLogic/messageList"
-
+  "public/business/jsFun",
+  "public/business/nativeFun",
+  "public/business/categoryAiSort"
 ], function (
-	ajax, layer, ClassList, Header, categoryLocation, 
-	categoryClass, categoryGrade, categoryAllTeacher, tabSwitchs, Method,
-	categoryAiSort, 
-	// categoryTeachMode, categorySelectSelect
-	messageList
+	ajax, layer, messageList, Header, categoryLocation, 
+	categoryClass, categoryGrade, categoryAllTeacher, tabSwitchs, Method, jsFun, nativeFun, categoryAiSort
 ) {
 	return function(){
 		// 头部
 		Header.init();
-		Header.goSearchPage();
+		Header.goSearchPage({"name": Header.searchEle.data("value") ? Header.searchEle.data("value") : ""});
+		Header.clearSearchValue(function(){
+			requeseDataList();
+		});
+
+		// 城市id
+		var city_id = Method.getUrlParam('city_id') ? Method.getUrlParam('city_id') : '35';
+
+		// 执行搜索的交互
+		jsFun("wbClassList", function(paramNative){
+			var oParam = JSON.parse(paramNative);
+			Header.searchEle.html(oParam.name).data("value", oParam.name);
+			Header.searchShutEle.show();
+			requeseDataList();
+		});
+		
+		// 获取搜索条件
+		function getSearchConditons(){
+			// 搜索条件
+			var oConditions = {
+				lng: Method.getUrlParam("lng"),
+				lat: Method.getUrlParam("lat"),
+				city_id: city_id
+			};
+			var oLocation = categoryLocation.getValue();
+			var sClassLevel = categoryClass.getValue();
+			var sGradeLevel = categoryGrade.getValue();
+			var sTeacherVal = categoryAllTeacher.getValue();
+			var sAiSort = categoryAiSort.getValue();
+			var sSearchVal = Header.searchEle.data("value");
+			$.extend(true, oConditions, oLocation, sAiSort);
+			oConditions.category = sClassLevel;
+			oConditions.grade_id = sGradeLevel;
+			oConditions.teacher_id = sTeacherVal;
+			if(sSearchVal){
+				oConditions.goods_name = sSearchVal;
+			}
+			return oConditions;
+		}
 
 		// 顶部筛选tab
 		// =顶部一级和下面一级
 		tabSwitchs.tabSwitch(".order_sort_u a.tab_swi_a", ".search_tab");
 		// =位置
-		//categoryLocation.init({
-		 // callClick: callLocation
-		//});
+		categoryLocation.init({
+		  callClick: requeseDataList
+		});
 		// =课程分类
-		//categoryClass.init({
-			//initCategoryName: Method.getUrlParam("category_class_name"),
-			//initCategoryOneId: Method.getUrlParam("category_class_one_id"),
-			//initCategoryTwoId: Method.getUrlParam("category_class_two_id"),
-		  //callClick: callClass
-		//});
+		console.log(window.location.href);
+		categoryClass.init({
+			initCategoryName: Method.getUrlParam("name"),
+			initCategoryLevel: Method.getUrlParam("category_class_level"),
+		  callClick: requeseDataList
+		});
 		// =年部年级点击回调函数
-		/*categoryGrade.init({
-		  callClick: callGrade
-		});*/
+		categoryGrade.init({
+		  callClick: requeseDataList
+		});
 		// =全部老师点击回调函数
-		/*categoryAllTeacher.init({
-		  callClick: callAllTeacher
-		});*/
-		// =智能排序
-		//categoryAiSort.init({
-			//callClick: callAiSort
-		//});
-		// =授课模式
-		// categoryTeachMode.init({
-		// 	callClick: callTeachMode
-		// });
-		// =筛选(老师)
-		// categorySelectSelect.init({
-		// 	callClick: callSelectSelect
-		// });
-		function callLocation(id){
-			console.log(id)
-		}
-		function callClass(level){
-			console.log(level)
-		}
-		function callGrade(gradeId){
-			console.log(gradeId)
-		}
-		function callAiSort(id){
-			console.log(id)
-		}
-		function callTeachMode(id){
-			console.log(id)
-		}
-		function callSelectSelect(val){
-			console.log(val)
-		}
-		function callAllTeacher(id){
-			console.log(id)
-		}
-
-		// 列表渲染
-		// new ClassList();
-		// ClassList.init();
-
+		categoryAllTeacher.init({
+		  callClick: requeseDataList
+		});
+		// 智能排序
+		categoryAiSort.init({
+			callClick: requeseDataList
+		})
 		// 数据预处理
-		function fn(data) {
+		function fn(result) {
+			var data = result.data;
 			var arr1 = [];
 			var arr2 = [];
 			for(var i = 0;i < data.length;i++) {
@@ -102,17 +102,24 @@ define([
 			arr1 = arr1.sort(function(a, b) {
 				return b.recommend_sort - a.recommend_sort;
 			})
-			return arr1.concat(arr2)
+			result.data = arr1.concat(arr2)
+			return result;
 		}
-		// 城市id
-		var city_id = Method.getUrlParam('city_id') ? Method.getUrlParam('city_id') : '35';
-		messageList.init({
-			name: 'getSchoolList', // 请求接口
-			type: 'SchoolList',	// 用于tab选项卡切换
-			conditions: {
-				city_id: city_id
-			},
-			fn: fn
+
+		// 列表渲染
+		function requeseDataList(){
+			messageList.init({
+				name: 'getSchoolList', // 请求接口
+				type: 'SchoolList',	// 用于tab选项卡切换
+				fn: fn,
+				conditions: getSearchConditons()
+			})
+		}
+		requeseDataList();
+		// 跳转校区详情
+		$("#wrapper").on("click", ".item", function(){
+			nativeFun("toSchoolDetailMain", {"campus_id": $(this).data("id")});
 		})
 	}
+
 });
