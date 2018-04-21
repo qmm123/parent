@@ -65,6 +65,14 @@
 		</div>
 	</div>
 	<!-- /列表 -->
+	<!-- 暂无数据-->
+	@@include('../../include/no-content.html', {
+		"id": "emptyContentClass",
+		"style": "margin-top:30px;",
+		"className": "",
+		"txt": ""
+	})
+	<!-- /暂无数据 -->
 	<!-- 模板 -->
 	<script type="text/html" id="TplClass">
 		{{if data[0].type == "ClassPingMyClass"}}
@@ -115,7 +123,9 @@
 						</div>
 						<div class="inner">
 							{{if value.order_type == 1 || value.order_type == 2}}
-								<a href="javascript:;" class="ping" data-sub_order_id="{{value.sub_order_id}}">评价</a>
+								{{if value.is_allow_comment == 1}}
+									<a href="javascript:;" class="ping" data-sub_order_id="{{value.sub_order_id}}">评价</a>
+								{{/if}}
 							{{/if}}
 							{{if value.order_type == 1}}
 								<a href="javascript:;" class="kao" data-goods_id="{{value.goods_id}}" data-parent_id="{{value.parent_id}}" data-student_id="{{value.student_id}}">考勤情况</a>
@@ -166,7 +176,9 @@
 							<p>结课时间：{{value.end_class_time}}</p>
 							{{if value.order_type == 2}}
 								<div class="inner">
-									<a href="javascript:;" class="ping" data-sub_order_id="{{value.sub_order_id}}">评价</a>
+									{{if value.is_allow_comment == 1}}
+										<a href="javascript:;" class="ping" data-sub_order_id="{{value.sub_order_id}}">评价</a>
+									{{/if}}
 								</div>
 							{{/if}}
 						</div>

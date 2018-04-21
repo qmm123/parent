@@ -80,12 +80,13 @@
 	</div>
 	<!-- /消息列表 -->
 	<!-- 暂无数据-->
-	<div class="empty hide">
-		<p class="text">
-			暂无相关数据
-		</p>
-	</div>
-	<!-- /暂无数据 -->
+		@@include('../../include/no-content.html', {
+			"id": "emptyContentClass",
+			"style": "margin-top:30px;",
+			"className": "",
+			"txt": ""
+		})
+		<!-- /暂无数据 -->
 	<!-- 模板-消息列表 -->
 	<script type="text/html" id="TplClass">
 		{{each data value i}}

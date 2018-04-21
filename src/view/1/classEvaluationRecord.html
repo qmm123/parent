@@ -16,104 +16,20 @@
 	<!-- 列表 -->
 	<div class="" id="wrapper">
 		<div>
-			<div class="pullDown">
-				<div>
-					<span class="pullDownIcon"></span>
-					<span class="pullDownLabel">下拉刷新</span>
-				</div>
-			</div>
 			<ul id="listContainer">
-				<li class="item">
-					<div class="title">
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
-						<span class="name">呵呵</span>
-					</div>
-					<div class="starWrapper">
-						<span class="star"></span>
-						<span class="star"></span>
-						<span class="star"></span>
-						<span class="star"></span>
-						<span class="star"></span>
-					</div>
-					<div class="paro">老刘测试评价老刘测试评价老刘测试评价老刘测试评价老刘测试评价老刘测试评价老刘测试评价</div>
-					<div class="desc">
-						<div class="img">
-							<img src="/img/tpl1/ic_default_teacher.png" alt="">
-						</div>
-						<div class="text">
-							<h3 class="title">初二语文AA</h3>
-							<p>第3节 2018-02-05 13:20-13:30</p>
-							<p>主讲教师：美美</p>
-							<p>上课孩子：乐乐</p>
-						</div>
-					</div>
-					<div class="btnWrapper"><div class="btn">修改评价</div></div>
-					<div class="time">2018-03-06</div>
-				</li>
-				<li class="item">
-					<div class="title">
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
-						<span class="name">呵呵</span>
-					</div>
-					<div class="starWrapper">
-						<span class="star"></span>
-						<span class="star"></span>
-						<span class="star"></span>
-						<span class="star"></span>
-						<span class="star"></span>
-					</div>
-					<div class="paro">老刘测试评价老刘测试评价老刘测试评价老刘测试评价老刘测试评价老刘测试评价老刘测试评价</div>
-					<div class="desc">
-						<div class="img">
-							<img src="/img/tpl1/ic_default_teacher.png" alt="">
-						</div>
-						<div class="text">
-							<h3 class="title">初二语文AA</h3>
-							<p>第3节 2018-02-05 13:20-13:30</p>
-							<p>主讲教师：美美</p>
-							<p>上课孩子：乐乐</p>
-						</div>
-					</div>
-					<div class="btnWrapper"><div class="btn">修改评价</div></div>
-					<div class="time">2018-03-06</div>
-				</li>
-				<li class="item">
-					<div class="title">
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
-						<span class="name">呵呵</span>
-					</div>
-					<div class="starWrapper">
-						<span class="star"></span>
-						<span class="star"></span>
-						<span class="star"></span>
-						<span class="star"></span>
-						<span class="star"></span>
-					</div>
-					<div class="paro">老刘测试评价老刘测试评价老刘测试评价老刘测试评价老刘测试评价老刘测试评价老刘测试评价</div>
-					<div class="desc">
-						<div class="img">
-							<img src="/img/tpl1/ic_default_teacher.png" alt="">
-						</div>
-						<div class="text">
-							<h3 class="title">初二语文AA</h3>
-							<p>第3节 2018-02-05 13:20-13:30</p>
-							<p>主讲教师：美美</p>
-							<p>上课孩子：乐乐</p>
-						</div>
-					</div>
-					<div class="btnWrapper"><div class="btn">修改评价</div></div>
-					<div class="time">2018-03-06</div>
-				</li>
+				
 			</ul>
-			<div class="pullUp">
-				<div>
-					<span class="pullUpIcon"></span>
-					<span class="pullUpLabel">上拉加载</span>
-				</div>
-			</div>
 		</div>
 	</div>
 	<!-- /列表 -->
+	<!-- 暂无数据-->
+	@@include('../../include/no-content.html', {
+		"id": "emptyContentClass",
+		"style": "margin-top:30px;",
+		"className": "",
+		"txt": ""
+	})
+	<!-- /暂无数据 -->
 	<!-- 模板 -->
 	<script type="text/html" id="TplClass">
 		{{each data value i}}
@@ -155,7 +71,7 @@
 						<p>上课孩子：{{value.student_name}}</p>
 					</div>
 				</div>
-				<div class="btnWrapper"><div class="btn">修改评价</div></div>
+				<div class="btnWrapper"><div class="btn" data-student_id="{{value.student_id}}" data-goods_id="{{value.goods_id}}" data-campus_id="{{value.campus_id}}" data-class_effect_score="{{value.class_effect_score}}" data-curriculum_evaluation="{{value.curriculum_evaluation}}" data-order_id="{{value.order_id}}" data-service_attitude_score="{{value.service_attitude_score}}" data-teacher_id="{{value.teacher_id}}" data-teaching_environment_score="{{value.teaching_environment_score}}" data-is_anonymous="{{value.parent_name ? '2' : '1'}}">修改评价</div></div>
 				<div class="time">{{value.created}}</div>
 			</li>
 		{{/each}}

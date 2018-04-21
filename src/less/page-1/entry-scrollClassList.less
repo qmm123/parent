@@ -1,17 +1,7 @@
-/* 1-校区列表页 */
+/* 1-滚动表-列表页 */
 @import "../public";
 @import "./variable";
 @import "./search-shai";
-
-
-// tab选项卡
-.order_sort{
-	.order_sort_u{
-		li{
-			width: 33.3%;
-		}
-	}
-}
 
 .icon{
 	display: inline-block;
@@ -21,16 +11,8 @@
 		content: '\3000';
 	}
 }
-
-// 校区列表
 #wrapper{
-	width: 100%;
-    overflow: auto;
-    position: absolute;
-    z-index: 10;
-    top: 45px !important;
-    bottom: 0;
-    left: 0;
+	top: @header-h !important;
 	#listContainer{
 		.item{
 			position: relative;
@@ -63,6 +45,13 @@
 						background: url("@{img_url_tpl}/class_address.png") no-repeat left center;
 						background-size: 10px 13px;
 					}
+					&.price{
+						margin-top: 4px;
+					}
+					.red{
+						color: #f84848;
+						font-size: 1.5rem;
+					}
 					.distance{
 						position: absolute;
 						top: 0;
@@ -72,28 +61,10 @@
 					}
 				}
 			}
-			.hot{
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 0;
-				height: 0;
-				border-top: 40px solid #f84848;
-				border-right: 80px solid transparent;
-				span{
-					position: absolute;
-					left: 0;
-					top: -38px;
-					width: 70px;
-					line-height: 14px;
-					font-size: 1.2rem;
-					color: #fff;
-				}
-			}
 		}
 	}
 }
 
-.pullDown, .pullUp{
-	visibility: hidden;
+.order_sort .order_sort_u li{
+	width: 50%;
 }

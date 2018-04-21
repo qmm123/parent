@@ -1,4 +1,4 @@
-// 1-一对一列表页-
+// 1-滚动班列表页-入口
 define([
 	"public/tools/ajax",
 	"publicBusiness/layerFz",
@@ -12,10 +12,9 @@ define([
   "public/tools/method",
   "public/business/jsFun",
   "public/business/nativeFun",
-  "publicBusiness/categoryTeachMode"
 ], function (
 	ajax, layer, messageList, Header, categoryLocation, 
-	categoryClass, categoryGrade, categoryAllTeacher, tabSwitchs, Method, jsFun, nativeFun, categoryTeachMode
+	categoryClass, categoryGrade, categoryAllTeacher, tabSwitchs, Method, jsFun, nativeFun
 ) {
 	return function(){
 		// 头部
@@ -42,10 +41,9 @@ define([
 			var oLocation = categoryLocation.getValue();
 			var sClassLevel = categoryClass.getValue();
 			var sGradeLevel = categoryGrade.getValue();
-			var sTeachMode = categoryTeachMode.getValue();
 			var sTeacherVal = categoryAllTeacher.getValue();
 			var sSearchVal = Header.searchEle.data("value");
-			$.extend(true, oConditions, oLocation, sTeachMode);
+			$.extend(true, oConditions, oLocation);
 			oConditions.category = sClassLevel;
 			oConditions.grade_id = sGradeLevel;
 			oConditions.teacher_id = sTeacherVal;
@@ -77,23 +75,18 @@ define([
 		categoryAllTeacher.init({
 		  callClick: requeseDataList
 		});
-		//授课模式
-		categoryTeachMode.init({
-			callClick: requeseDataList
-		})
+
 		// 列表渲染
 		function requeseDataList(){
 			messageList.init({
-				name: 'getOneToOneList',
-				type: 'OneToOneList',
+				name: "getScrollList",
 				conditions: getSearchConditons()
 			});
 		}
 		requeseDataList();
-		// 跳转课程详情
-
+		// 跳转滚动班详情
 		$("#wrapper").on("click", ".item", function(){
-			nativeFun("toOneToOneDetail", {"oto_id": $(this).data("oto_id")});
+			nativeFun("toScrollClassDetail", {"course_id": $(this).data("course_id")});
 		})
 	}
 

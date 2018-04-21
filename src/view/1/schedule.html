@@ -33,6 +33,14 @@
 			</div>
 		</div>
 	</div>
+	<!-- 暂无数据-->
+	@@include('../../include/no-content.html', {
+		"id": "emptyContentClass",
+		"style": "margin-top:30px;",
+		"className": "",
+		"txt": ""
+	})
+	<!-- /暂无数据 -->
 </body>
 <script type="text/html" id="TplClass">
 	{{each data value i}}

@@ -3,34 +3,14 @@ define(["publicService/service",
 	], function(Server, Method) {
 	return function() {
 		var page_param = Method.getUrlParam("page_param");
-		var oto_id = page_param ? JSON.parse(page_param)['oto_id'] : "3be24a6b3df9444f96482b9674e713fe";
-		Server.getOneToOneDetail(null, {
-			oto_id: oto_id
+		var course_id = page_param ? JSON.parse(page_param)['course_id'] : "0f40142622964999853a421a8fe74705";
+		Server.getScrollDetail(null, {
+			course_id: course_id
 		}, function(data) {
 			console.log(data);
 			Method.artRender($('.content'), 'TplClass', data.result, false, function() {
 
 			})
-		})
-
-		// 授课模式
-		$('.content').on('tap', '.category.mode .list>span', function() {
-			var index = $(this).index();
-			$('.category .list .special .num').find('.count').html('1');
-			$('.category .list .special .num').addClass('hide');
-			$('.category.mode span').removeClass('active');
-			$(this).addClass('active');
-			$('.category.lesson').find('.normal').removeClass('active');
-			$('.category.lesson').find('.normal').eq(index).addClass('active');
-			$('.category.lesson span').removeClass('active');
-			$('.category.lesson .normal.active').find('span').eq(0).addClass('active');
-			var price = $('.category.lesson .normal.active').find('span').eq(0).data('unit_price');
-			price = Number(price);
-			var num = $('.category.lesson .normal.active').find('span').eq(0).html();
-			num = Number(num);
-			$('.container .body .price .num').text(price);
-			var priceAll = '￥' + price * num;
-			$('.container .footer .left span').text(priceAll);
 		})
 
 		// 选择课时

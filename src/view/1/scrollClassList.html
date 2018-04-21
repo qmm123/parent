@@ -1,6 +1,6 @@
 @@include('../../include/header-common.html', {
-  "subtitle": "-一对一列表页",
-  "css": "page-1/entry-oneToOneList"
+  "subtitle": "-滚动班列表页",
+  "css": "page-1/entry-scrollClassList"
 })
 <!-- 1-校区列表页 -->
 <body class="header">
@@ -14,21 +14,21 @@
 		<div class="order_sort">
 			<!-- 选项卡头部 -->
 			<ul class="order_sort_u clearfix">
-				<!-- <li>
-					<a href="javascript:;" class="tab_swi_a" id="locationTab">位置</a>
-				</li> -->
 				<li>
-					<a href="javascript:;" class="tab_swi_a" id="gradeTab">年部年级</a>
+					<a href="javascript:;" class="tab_swi_a" id="locationTab">位置</a>
 				</li>
+				<!-- <li>
+					<a href="javascript:;" class="tab_swi_a" id="gradeTab">年部年级</a>
+				</li> -->
 				<li>
 					<a href="javascript:;" class="tab_swi_a" id="classTab">课程分类</a>
 				</li>
 				<!-- <li>
 					<a href="javascript:;" class="tab_swi_a" id="aiSortTab">智能排序</a>
 				</li> -->
-				<li>
+				<!-- <li>
 					<a href="javascript:;" class="tab_swi_a" id="teachModeTab">授课模式</a>
-				</li>
+				</li> -->
 				<!-- <li>
 					<a href="javascript:;" class="tab_swi_a" id="selectSelectTab">筛选</a>
 				</li>
@@ -40,18 +40,18 @@
 			<!-- 搜索选项卡 -->
 			<div class="search_tabs">
 				<!-- 选项卡-位置 -->
-				<!-- <div class="search_tab location_fu" id="location_fu">
+				<div class="search_tab location_fu" id="location_fu">
 					<div class="left_area"></div>
 					<div class="right_area"></div>
-				</div> -->
+				</div>
 				<!-- 选项卡-年部年级 -->
-				<div class="search_tab min_hieght" id="gradeJi"></div>
+				<!-- <div class="search_tab min_hieght" id="gradeJi"></div> -->
 				<!-- 选项卡-课程分类 -->
 				<div class="search_tab" id="classify"></div>
 				<!-- 选项卡-智能排序 -->
 				<!-- <div class="search_tab min_hieght" id="aiSort"></div> -->
 				<!-- 选项卡-授课模式 -->
-				<div class="search_tab teachMode" id="teachMode"></div>
+				<!-- <div class="search_tab teachMode" id="teachMode"></div> -->
 				<!-- 选项卡-筛选(老师) -->
 				<!-- <div class="search_tab" id="selectSelect"></div> -->
 				
@@ -78,22 +78,24 @@
 	<!-- /暂无数据 -->
 	<script type="text/html" id="TplClass">
 		{{each data value i}}
-			<li class="item" data-oto_id="{{value.oto_id}}">
-				<div class="top">
-					{{if value.small_photo}}
-						<img src="{{value.small_photo}}" alt="">
+			<li class="item" data-course_id="{{value.course_id}}">
+				<div class="img">
+					{{if value.course_imgs}}
+						<img src="{{value.course_imgs}}" alt="">
 					{{else}}
 						<img src="/img/tpl1/ic_default_teacher.png" alt="">
 					{{/if}}
-					<p>￥<span>{{value.floor_price}}</span>起/节</p>
 				</div>
-				<div class="bottom">
-					<h3 class="title">{{value.oto_name}}</h3>
-					<div class="line">
-						{{each value.lable item index}}
-							<span>{{item}}</span>
-						{{/each}}
-					</div>
+				<div class="text">
+					<h3 class="title">{{value.course_name}}</h3>
+					<p class="address"><span class="icon"></span>{{value.campus_name}}</p>
+					<p class="price"><span class="red">{{value.unit_price}}</span>起/节
+						{{if value.nearest}}
+							<span class="distance">{{value.nearest}}</span>
+						{{else}}
+							<span class="distance">0km</span>
+						{{if}}
+					</p>
 				</div>
 			</li>
 		{{/each}}

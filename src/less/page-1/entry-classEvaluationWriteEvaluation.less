@@ -17,6 +17,13 @@
         	}
 		}
 	}
+	.textareaT{
+		background: #fff;
+		text-align: right;
+		color: #666;
+		padding-right: 10px;
+		border-top: 1px dashed #ddd;
+	}
 	.starWrapper{
 		padding: 10px;
 		width: 100%;
@@ -28,7 +35,6 @@
 			padding: 4px;
 			&.first{
 				padding-top: 6px;
-				border-top: 1px dashed #ddd;
 			}
 			p{
 				float: right;
@@ -47,6 +53,45 @@
 					}
 				}
 			}
+		}
+	}
+	.submit{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1000;
+		.left{
+			width: 40%;
+			float: left;
+			line-height: 15px;
+			padding: 7px 0 8px 0;
+			font-size: 1.2rem;
+			text-align: center;
+			background: #fff;
+			&.active{
+				.circle{
+					background: @col-main;
+					border: 1px solid @col-main;
+				}
+			}
+			.circle{
+				display: inline-block;
+				height: 15px;
+				width: 15px;
+				border: 1px solid #ddd;
+				border-radius: 50%;
+				vertical-align: -3px;
+			}	
+		}
+		.right{
+			float: right;
+			width: 60%;
+			text-align: center;
+			color: #fff;
+			font-size: 1.2rem;
+			line-height: 30px;
+			background: @col-main;
 		}
 	}
 }

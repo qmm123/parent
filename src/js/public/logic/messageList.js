@@ -138,7 +138,6 @@ define([
 						})
 					}
 				}else{
-					console.log('无数据')
 					_this.renderEmpty(_this.listFolder, _this.emptyEle);
 				}
 			}, function() {
@@ -250,7 +249,9 @@ define([
 		},
 		// 暂无数据
 		renderEmpty: function(listEle, emptyEle){
-			listEle.addClass('hide');
+			listEle.find('.pullDown').remove();
+			listEle.find('.pullUp').remove();
+			listEle.find('#listContainer').html('');
 			emptyEle.removeClass("hide");
 		}
 	}

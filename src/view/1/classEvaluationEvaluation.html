@@ -57,22 +57,17 @@
 					</div>
 				</li>
 			</ul>
-			<div class="pullUp">
-				<div>
-					<span class="pullUpIcon"></span>
-					<span class="pullUpLabel">上拉加载</span>
-				</div>
-			</div>
 		</div>
 	</div>
 	<!-- /列表 -->
 	<!-- 暂无数据-->
-	<div class="empty hide">
-		<p class="text">
-			暂无相关数据
-		</p>
-	</div>
-	<!-- /暂无数据 -->
+		@@include('../../include/no-content.html', {
+			"id": "emptyContentClass",
+			"style": "margin-top:30px;",
+			"className": "",
+			"txt": ""
+		})
+		<!-- /暂无数据 -->
 	<script type="text/html" id="TplClass">
 			<li class="item">
 				<div class="itemInner">
@@ -88,7 +83,7 @@
 					</div>
 				</div>
 				{{each lessons value i}}
-					<div class="line">
+					<div class="line" data-goods_id="{{goods_id}}" data-student_id="{{student_id}}" data-order_id="{{order_id}}" data-campus_id="{{campus_id}}" data-teacher_id="{{teacher_id}}">
 						{{value.lesson_num}} {{value.open_date}} {{value.class_time}} <span>待评价</span>
 					</div>
 				{{/each}}
