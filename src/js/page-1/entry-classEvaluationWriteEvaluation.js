@@ -153,7 +153,7 @@ define([
 					curriculum_evaluation: result.curriculum_evaluation
 				} , function(data) {
 				if(data.result == true && data.status == true){
-					
+					nativeFun("toClassEvaluationSuccess");
 				}
 			}, function() {
 				console.log('错误')

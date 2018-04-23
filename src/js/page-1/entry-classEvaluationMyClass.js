@@ -1,9 +1,23 @@
-define(["publicLogic/messageList"], function(messageList) {
+define(["publicLogic/messageList",
+	"public/tools/method"
+	], function(messageList, Method) {
 	return function() {
-		messageList.init({
-			name: 'getClassPingMyClass',
-			type: 'ClassPingMyClass',
-		});
+
+		var page_param = Method.getUrlParam("page_param");
+		var _type = page_param ? JSON.parse(page_param)['type'] : "ClassPingMyClass";
+		if(_type == "ClassPingMyClass") {
+			messageList.init({
+				name: 'getClassPingMyClass',
+				type: 'ClassPingMyClass',
+			});
+		}else if(_type == 'ClassPingReceive') {
+			messageList.init({
+				name: 'getClassPingReceive',
+				type: 'ClassPingReceive'
+			});
+			$('.tab a').removeClass('active');
+			$('.tab a').eq(1).addClass('active');
+		}
 		// tab选项卡
 		$('.tab a').on('tap', function() {
 			var index = $(this).index();
@@ -25,7 +39,6 @@ define(["publicLogic/messageList"], function(messageList) {
 		$('#wrapper').on('click', '.item .kao', function() {
 			nativeFun("toClassEvaluationAttendance", {
 				"goods_id": $(this).data("goods_id"),
-				"parent_id": $(this).data("parent_id"),
 				"student_id": $(this).data("student_id")
 			});
 		})
@@ -35,13 +48,13 @@ define(["publicLogic/messageList"], function(messageList) {
 				"sub_order_id": $(this).data("sub_order_id")
 			});
 		})
-		// 跳转到我要评价页
+	/*	// 跳转到我要评价页
 		$('#wrapper').on('click', '.item .ping', function() {
 			nativeFun("toClassEvaluationEvaluation", {
 				"sub_order_id": $(this).data("sub_order_id")
 			});
 		})
-
+*/
 		//跳转到评价记录页
 		$('header .rightText').on('click', function() {
 			nativeFun("toClassEvaluationRecord", {

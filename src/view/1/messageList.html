@@ -13,12 +13,6 @@
 	<!-- 消息列表 -->
 	<div class="messageList" id="wrapper">
 		<div>
-			<div class="pullDown">
-				<div>
-					<span class="pullDownIcon"></span>
-					<span class="pullDownLabel">下拉刷新</span>
-				</div>
-			</div>
 			<ul id="listContainer">
 				<!-- <li class="item">
 					<div class="time"></div>
@@ -70,12 +64,6 @@
 					</div>
 				</li> -->
 			</ul>
-			<div class="pullUp">
-				<div>
-					<span class="pullUpIcon"></span>
-					<span class="pullUpLabel">上拉加载</span>
-				</div>
-			</div>
 		</div>
 	</div>
 	<!-- /消息列表 -->
@@ -90,7 +78,7 @@
 	<!-- 模板-消息列表 -->
 	<script type="text/html" id="TplClass">
 		{{each data value i}}
-			<li class="item" data-goodsid="{{value.goods_id}}" data-goodname="{{value.goods_id}}" data-studentid="{{value.student_id}}" data-pushtype="{{value.push_type}}">
+			<li class="item" data-goods_id="{{value.goods_id}}" data-student_id="{{value.student_id}}" data-pushtype="{{value.push_type}}" data-service_number="{{value.service_number}}" data-push_type_status="{{value.push_type_status}}">
 							<div class="time">{{value.created}}</div>
 							<div class="message">
 								<h3 class="title">{{value.push_title}}

@@ -59,6 +59,7 @@ define([
 		function setRender(_data, successCallback) {
 			var wrapper = $('#listContainer');
 			var tpl = "TplClass";
+			console.log(_data);
 			Method.artRender(wrapper, tpl, _data, false, function() {
 				successCallback && successCallback();
 			});

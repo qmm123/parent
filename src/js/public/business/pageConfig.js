@@ -24,6 +24,8 @@ define([
 		"classEvaluationWriteEvaluation": "classEvaluationWriteEvaluation.html",
 		// 课程&评价-考勤情况页
 		"classEvaluationAttendance": "classEvaluationAttendance.html",
+		// 课程&评价-评价成功页
+		"classEvaluationSuccess": "classEvaluationSuccess",
 
 		// 校区-列表页
 		"schoolList": "schoolList.html",

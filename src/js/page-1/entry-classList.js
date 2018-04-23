@@ -12,9 +12,11 @@ define([
   "public/tools/method",
   "public/business/jsFun",
   "public/business/nativeFun",
+  "publicLogic/classSideBar",
 ], function (
 	ajax, layer, messageList, Header, categoryLocation, 
-	categoryClass, categoryGrade, categoryAllTeacher, tabSwitchs, Method, jsFun, nativeFun
+	categoryClass, categoryGrade, categoryAllTeacher, tabSwitchs, Method, jsFun, nativeFun,
+	classSideBar
 ) {
 	return function(){
 		// 头部
@@ -31,6 +33,11 @@ define([
 			requeseDataList();
 		});
 		
+		// 侧边栏
+		classSideBar.init({
+			callConfirm: requeseDataList
+		});
+
 		// 获取搜索条件
 		function getSearchConditons(){
 			// 搜索条件
@@ -38,6 +45,7 @@ define([
 				lng: Method.getUrlParam("lng"),
 				lat: Method.getUrlParam("lat")
 			};
+			// 顶部分类
 			var oLocation = categoryLocation.getValue();
 			var sClassLevel = categoryClass.getValue();
 			var sGradeLevel = categoryGrade.getValue();
@@ -47,8 +55,16 @@ define([
 			oConditions.category = sClassLevel;
 			oConditions.grade_id = sGradeLevel;
 			oConditions.teacher_id = sTeacherVal;
+			// 顶部搜索框
 			if(sSearchVal){
 				oConditions.goods_name = sSearchVal;
+			}
+			// 侧边栏
+			var oSide = classSideBar.getValue();
+			oConditions.class_week = oSide.class_week;
+			oConditions.is_show = oSide.is_show;
+			if(oSide.class_time){
+				oConditions.class_time = oSide.class_time.split(",");
 			}
 			return oConditions;
 		}

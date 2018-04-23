@@ -28,7 +28,7 @@
 		<div class="list" id="wrapper">
 			<div>
 				<ul id="listContainer">
-							
+					<p class="_empty">今天没有课程,请选择日历查看有课程的日期</p>	
 				</ul>
 			</div>
 		</div>
@@ -43,32 +43,32 @@
 	<!-- /暂无数据 -->
 </body>
 <script type="text/html" id="TplClass">
-	{{each data value i}}
-		<li class="item">
-			<div class="left">
-				{{if value.avatar}}
-					<img src="{{value.avatar}}" alt="">
-				{{else}}
-					<img src="/img/tpl1/ic_default_teacher.png" alt="">
-				{{/if}}
-				<p>{{value.name}}</p>
-			</div>
-			<div class="right">
-				<h3 class="title">{{value.goods_name}}</h3>
-				<p class="time">时间: {{value.start_time}}-{{value.end_time}}</p>
-				{{if value.teacher_name}}
-					<p class="teacher">主讲：{{value.teacher_name}}</p>
-				{{else}}
-					<p class="teacher">主讲：待定</p>
-				{{/if}}
-				{{if value.classroom_name}}
-					<p class="roo">教室：{{value.classroom_name}}</p>
-				{{else}}
-					<p class="roo">教室：未定</p>
-				{{/if}}
-				<p class="address">地址：{{value.address}}</p>
-			</div>
-			<span class="right-arrow"></span>
-		</li>
-	{{/each}}
+		{{each data value i}}
+			<li class="item" data-goods_id="{{value.goods_id}}">
+				<div class="left">
+					{{if value.avatar}}
+						<img src="{{value.avatar}}" alt="">
+					{{else}}
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+					{{/if}}
+					<p>{{value.name}}</p>
+				</div>
+				<div class="right">
+					<h3 class="title">{{value.goods_name}}</h3>
+					<p class="time">时间: {{value.start_time}}-{{value.end_time}}</p>
+					{{if value.teacher_name}}
+						<p class="teacher">主讲：{{value.teacher_name}}</p>
+					{{else}}
+						<p class="teacher">主讲：待定</p>
+					{{/if}}
+					{{if value.classroom_name}}
+						<p class="roo">教室：{{value.classroom_name}}</p>
+					{{else}}
+						<p class="roo">教室：未定</p>
+					{{/if}}
+					<p class="address">地址：{{value.address}}</p>
+				</div>
+				<span class="right-arrow"></span>
+			</li>
+		{{/each}}
 </script>

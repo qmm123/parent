@@ -94,10 +94,7 @@ define([
 			// 请求数据
 			Server[this.options.name](apiConfid, param, function(data) {
 				if(data.result && data.result.data && data.result.data.length > 0) {
-					if(_this.listFolder.hasClass('hide')){
-						_this.listFolder.removeClass('hide');
-						_this.emptyEle.addClass('hide');
-					}
+					_this.emptyEle.addClass('hide');
 					data.result.data[0].type = _this.options.type;
 					setStar(data.result.data);
 					setAdvantage(data.result.data);

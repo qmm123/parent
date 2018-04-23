@@ -14,6 +14,7 @@ define([
 		toClassEvaluationEvaluation: "toClassEvaluationEvaluation",//去课程&评价-我要评价页
 		toClassEvaluationWriteEvaluation: "toClassEvaluationWriteEvaluation",//去课程&评价-写评价页
 		toClassEvaluationAttendance: "toClassEvaluationAttendance",//去课程&评价-考勤情况页
+		toClassEvaluationSuccess: "toClassEvaluationSuccess",//去课程&评价-评价成功页
 
 		toSchoolDetailMain: "toSchoolDetailMain",//去校区-详情-主页
 		toSchoolDetailEvaluation: "toSchoolDetailEvaluation",//去校区-详情-评价页
@@ -33,6 +34,8 @@ define([
 		toSchoolPhotoVideo: "toSchoolPhotoVideo",//去校区相册视频页
 		toSearchPage: "toSearchPage",//去搜索页
 		toHomework: "toHomework",//去孩子作业页
+		toRetire: "toRetire", //去退班页
+		toMyChild: "toMyChild", // 去我的孩子页 
 
 		// 逻辑代码部分(调用原生的逻辑代码)
 		lgChaBan: "lgChaBan"//插班

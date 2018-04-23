@@ -6,7 +6,14 @@ define(["publicLogic/messageList",
 		// 班级id
 		var goods_id = Method.getUrlParam('goods_id') ? Method.getUrlParam('goods_id') : 'ca9f26580dfb4656a2ebbca8456d5d4c';
 		// 家长id 
-		var parent_id = Method.getUrlParam('parent_id') ? Method.getUrlParam('parent_id') : '3c1b0646ce520407a0fedfd17f3a56b6';
+		var parent_id = Method.getUrlParam('parent_id');
+		if(!parent_id) {
+			if(localStorage.parent_id) {
+				parent_id = localStorage.parent_id;
+			}else{
+				parent_id = '3c1b0646ce520407a0fedfd17f3a56b6';
+			}
+		}
 		// 学员 id
 		var student_id = Method.getUrlParam('student_id') ? Method.getUrlParam('student_id') : '884621151aed45e98dbafb93588e7bbf';
 

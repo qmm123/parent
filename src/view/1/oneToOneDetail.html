@@ -14,12 +14,6 @@
 					
 				</div>
 			</div>
-			<div class="footer">
-				<div class="right">立即报名</div>
-				<div class="left">
-					总价：<span>￥50.00</span>
-				</div>
-			</div>
 	</div>
 	<script type="text/html" id="TplClass">
 		<div class="header">
@@ -30,7 +24,7 @@
 			{{/if}}
 			<span class="back"></span>
 		</div>
-		<div class="body">
+		<div class="body" data-oto_id="{{oto_id}}" data-end_class_hour_son="{{end_class_hour_son}}" data-real_amount="{{real_amount}}" data-oto_son_id="{{floor_price_son_id}}" data-student_num_son="{{student_num_son}}">
 			<h3 class="title">{{oto_name}}</h3>
 			<div class="line">
 				{{each lable value i}}
@@ -43,9 +37,9 @@
 				<div class="list">
 					{{each price_system item index}}
 							{{if item.is_minimum== 1}}
-								<span class="active">{{item.oto_teaching_mode}}</span>
+								<span class="active" data-student_num="{{item.student_num}}">{{item.oto_teaching_mode}}</span>
 							{{else}}
-								<span>{{item.oto_teaching_mode}}</span>
+								<span  data-student_num="{{item.student_num}}">{{item.oto_teaching_mode}}</span>
 							{{/if}}
 					{{/each}}
 				</div>
@@ -58,9 +52,9 @@
 							<div class="normal active">
 								{{each pV.price_system_sub pV1 p1}}
 									{{if pV1.id == floor_price_son_id}}
-										<span class="active" data-unit_price = "{{pV1.unit_price}}">{{pV1.end_class_hour}}</span>
+										<span class="active" data-unit_price = "{{pV1.unit_price}}" data-id="{{pV1.id}}" data-start_class_hour="{{pV1.start_class_hour}}" data-end_class_hour="{{pV1.end_class_hour}}">{{pV1.end_class_hour}}</span>
 									{{else}}
-										<span data-unit_price = "{{pV1.unit_price}}">{{pV1.end_class_hour}}</span>
+										<span data-unit_price = "{{pV1.unit_price}}" data-id="{{pV1.id}}" data-start_class_hour="{{pV1.start_class_hour}}"  data-end_class_hour="{{pV1.end_class_hour}}">{{pV1.end_class_hour}}</span>
 									{{/if}}
 								{{/each}}
 							</div>
@@ -68,9 +62,9 @@
 							<div class="normal">
 								{{each pV.price_system_sub pV1 p1}}
 									{{if pV1.id == floor_price_son_id}}
-										<span class="active" data-unit_price = "{{pV1.unit_price}}">{{pV1.end_class_hour}}</span>
+										<span class="active" data-unit_price = "{{pV1.unit_price}}" data-id="{{pV1.id}}" data-start_class_hour="{{pV1.start_class_hour}}"  data-end_class_hour="{{pV1.end_class_hour}}">{{pV1.end_class_hour}}</span>
 									{{else}}
-										<span data-unit_price = "{{pV1.unit_price}}">{{pV1.end_class_hour}}</span>
+										<span data-unit_price = "{{pV1.unit_price}}" data-id="{{pV1.id}}" data-start_class_hour="{{pV1.start_class_hour}}"  data-end_class_hour="{{pV1.end_class_hour}}">{{pV1.end_class_hour}}</span>
 									{{/if}}
 								{{/each}}
 							</div>
@@ -85,6 +79,12 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="right">立即报名</div>
+			<div class="left">
+				总价：<span>￥{{real_amount}}</span>
 			</div>
 		</div>
 	</script>
