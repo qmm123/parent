@@ -36,6 +36,7 @@ define([
 		toHomework: "toHomework",//去孩子作业页
 		toRetire: "toRetire", //去退班页
 		toMyChild: "toMyChild", // 去我的孩子页 
+		toOneToOneEnroll: "toOneToOneEnroll", // 去一对一报名页
 
 		// 逻辑代码部分(调用原生的逻辑代码)
 		lgChaBan: "lgChaBan"//插班

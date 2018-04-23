@@ -1,7 +1,8 @@
 define(["publicLogic/messageList",
 	"public/tools/method",
-	"public/business/nativeFun"
-	], function(messageList, Method, nativeFun) {
+	"public/business/nativeFun",
+	"publicLogic/header"
+	], function(messageList, Method, nativeFun, Header) {
 	return function() {
 		//头像数据
 		
@@ -189,7 +190,7 @@ define(["publicLogic/messageList",
 		})
 		// 返回上一页
 		$('#top').on('click', '.back', function() {
-			nativeFun("goBack");
-		})
+			nativeFun('goBack');
+		});
 	}
 })

@@ -1,6 +1,8 @@
 define(["publicService/service",
-		"public/tools/method"
-	], function(Server, Method) {
+		"public/tools/method",
+		"public/business/nativeFun",
+		"publicLogic/header"
+	], function(Server, Method, nativeFun, Header) {
 	return function() {
 		var page_param = Method.getUrlParam("page_param");
 		var oto_id = page_param ? JSON.parse(page_param)['oto_id'] : "3be24a6b3df9444f96482b9674e713fe";
@@ -212,7 +214,11 @@ define(["publicService/service",
 				"oto_son_id": oto_son_id,
 				"teaching_mode": teaching_mode
 			}
-			console.log(param);
+			nativeFun("toOneToOneEnroll", param);
+		})
+		// 返回上一页
+		$('.container').on('click', '.back', function() {
+			nativeFun('goBack');
 		})
 	}
 })

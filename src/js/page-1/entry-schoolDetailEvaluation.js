@@ -1,6 +1,7 @@
 define(["publicLogic/messageList",
-	"public/tools/method"
-	], function(messageList, Method) {
+	"public/tools/method",
+	"publicLogic/header"
+	], function(messageList, Method, Header) {
 	return function() {
 
 		// 校区id
@@ -84,5 +85,8 @@ define(["publicLogic/messageList",
 				})
 			}
 		})
+
+		// 返回上一页
+		Header.init();
 	}
 })

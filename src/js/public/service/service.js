@@ -530,5 +530,20 @@ define([
 		}, param, successCall, failCall);
 	}
 
+	// 取消预约
+	Service.cancelAudition = function(apiConfig, param, successCall, failCall){
+		var option = {
+			url: "/app/clue/ClueParentAudition/cancelAudition"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			merchant_id: localStorage.merchant_id,
+			project_id: localStorage.project_id,
+			version: localStorage.version
+		}, param, successCall, failCall);
+	}
+
 	return Service;
 })

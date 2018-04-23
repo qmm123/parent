@@ -1,7 +1,8 @@
 define(["publicLogic/messageList",
 	"public/tools/method",
-	"public/business/nativeFun"
-	], function(messageList, Method, nativeFun) {
+	"public/business/nativeFun",
+	"publicLogic/header"
+	], function(messageList, Method, nativeFun, Header) {
 	return function() {
 		// 子订单id
 		var sub_order_id = Method.getUrlParam('page_param') ? JSON.parse(Method.getUrlParam('page_param'))["sub_order_id"] : "cec4c90ae145442ab9c3b2853613331e";
@@ -31,5 +32,8 @@ define(["publicLogic/messageList",
 				"teacher_id": teacher_id
 			});
 		})
+
+		// 返回上一页
+		Header.init();
 	}
 })

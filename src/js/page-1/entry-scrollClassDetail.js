@@ -1,6 +1,7 @@
 define(["publicService/service",
-		"public/tools/method"
-	], function(Server, Method) {
+		"public/tools/method",
+		"publicLogic/header"
+	], function(Server, Method, Header) {
 	return function() {
 		var page_param = Method.getUrlParam("page_param");
 		var course_id = page_param ? JSON.parse(page_param)['course_id'] : "0f40142622964999853a421a8fe74705";
@@ -69,5 +70,10 @@ define(["publicService/service",
 				$('.container .footer .left span').text(priceAll);
 			}
 		})
+
+		// 返回上一页
+		$('.container').on('click', '.back', function() {
+			nativeFun('goBack');
+		});
 	}
 })

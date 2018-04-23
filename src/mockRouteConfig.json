@@ -179,7 +179,11 @@
       "path": "/CourseRoll/getCourseRollDetails",
       "commons": "滚动班详情",
       "to": "http://apiparentfz.xiaohe.com/CourseRoll/getCourseRollDetails"
+    },
+    {
+      "path": "/app/clue/ClueParentAudition/cancelAudition",
+      "commons": "取消预约",
+      "to": "http://api.fangzhen.baonahao.com/app/clue/ClueParentAudition/cancelAudition"
     }
-
   ]
 }

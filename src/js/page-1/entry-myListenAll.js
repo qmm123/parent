@@ -1,6 +1,8 @@
 define(["publicLogic/messageList",
-	"public/tools/method"
-	], function(messageList, Method) {
+	"public/tools/method",
+	"publicService/service",
+	"publicLogic/header"
+	], function(messageList, Method, Server, Header) {
 	return function() {
 
 		var parent_id = Method.getUrlParam('parent_id') ? Method.getUrlParam('parent_id') : "3c1b0646ce520407a0fedfd17f3a56b6";
@@ -47,5 +49,18 @@ define(["publicLogic/messageList",
 			$('.tab a').removeClass('active');
 			$(this).addClass('active');
 		})
+
+		// 取消试听
+		$('#wrapper').on('click', '.btn span', function() {
+			var id = $(this).data('goods_id');
+			var modifier_id = localStorage.parent_id;
+			Server.cancelAudition(null, {id: id, modifier_id: modifier_id}, function(data) {
+				console.log(data)
+			}, function(err) {
+				console.log(err);
+			})
+		})
+		// 返回上一页
+		Header.init();
 	}
 })

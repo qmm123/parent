@@ -93,6 +93,7 @@ define([
 			var _this = this;
 			// 请求数据
 			Server[this.options.name](apiConfid, param, function(data) {
+				console.log(data);
 				if(data.result && data.result.data && data.result.data.length > 0) {
 					_this.emptyEle.addClass('hide');
 					data.result.data[0].type = _this.options.type;

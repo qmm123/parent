@@ -1,8 +1,9 @@
 // 1-消息列表-入口
 define([
 	"publicLogic/messageList",
-	"public/business/nativeFun"
-], function (messageList, nativeFun) {
+	"public/business/nativeFun",
+	"publicLogic/header"
+], function (messageList, nativeFun, Header) {
 	return function() {
 		messageList.init({
 			name: 'getMessageList',
@@ -32,6 +33,12 @@ define([
 					"push_type_status": $(this).data("push_type_status")
 				})
 			}
+		})
+
+		// 返回上一页
+		Header.init();
+		$('.back').on('click', function() {
+			nativeFun('goBack');
 		})
 	}
 });

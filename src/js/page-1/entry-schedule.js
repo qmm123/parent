@@ -1,8 +1,9 @@
 define(["publicTool/datepicker",
 	"publicLogic/scheduleList",
 	"public/business/nativeFun",
-	"public/business/jsFun"
-	], function(datepicker, bScroll, nativeFun, jsFun) {
+	"public/business/jsFun",
+	"publicLogic/header"
+	], function(datepicker, bScroll, nativeFun, jsFun, Header) {
 	//console.log(scroll)
 	return function (){
 		var isShow = false;
@@ -46,5 +47,8 @@ define(["publicTool/datepicker",
 			$('.schedule .nav').data('student_id', student_id);
 			$('.schedule .nav').html(name + '<span class="right-arrow"></span>');
 		})
+
+		// 返回上一页
+		Header.init();
 	}
 })
