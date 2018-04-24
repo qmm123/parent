@@ -4,6 +4,7 @@ define([
 ], function (Bridge) {
 	var jsFunConfig = {
 		wbClassList: "wbClassList",//获取班课列表
+		webSchedule: "webSchedule" //返回课表页面
 	};
 
 	// 参数一（flag）方法标识

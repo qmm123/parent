@@ -1,6 +1,7 @@
 define(["publicLogic/messageList",
-	"public/business/nativeFun"
-	], function(messageList, nativeFun) {
+	"public/business/nativeFun",
+	"publicLogic/header"
+	], function(messageList, nativeFun, Header) {
 	return function() {
 		messageList.init({
 			name: 'getClassPingRecord',
@@ -34,5 +35,8 @@ define(["publicLogic/messageList",
 			}
 			nativeFun("toClassEvaluationWriteEvaluation", result);
 		})
+
+		// 返回上一页
+		Header.init();
 	}
 })

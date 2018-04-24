@@ -80,7 +80,11 @@ define([
 		function requeseDataList(){
 			messageList.init({
 				name: "getScrollList",
-				conditions: getSearchConditons()
+				conditions: getSearchConditons(),
+				page_infos: {
+					curr_page: 1,
+					page_size: 5
+				}
 			});
 		}
 		requeseDataList();

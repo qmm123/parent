@@ -71,7 +71,13 @@
 						<p>上课孩子：{{value.student_name}}</p>
 					</div>
 				</div>
-				<div class="btnWrapper"><div class="btn" data-student_id="{{value.student_id}}" data-goods_id="{{value.goods_id}}" data-campus_id="{{value.campus_id}}" data-class_effect_score="{{value.class_effect_score}}" data-curriculum_evaluation="{{value.curriculum_evaluation}}" data-order_id="{{value.order_id}}" data-service_attitude_score="{{value.service_attitude_score}}" data-teacher_id="{{value.teacher_id}}" data-teaching_environment_score="{{value.teaching_environment_score}}" data-is_anonymous="{{value.parent_name ? '2' : '1'}}">修改评价</div></div>
+				{{if value.is_edit == 1}}
+					<div class="btnWrapper">
+						<div class="btn" data-student_id="{{value.student_id}}" data-goods_id="{{value.goods_id}}" data-campus_id="{{value.campus_id}}" data-class_effect_score="{{value.class_effect_score}}" data-curriculum_evaluation="{{value.curriculum_evaluation}}" data-order_id="{{value.order_id}}" data-service_attitude_score="{{value.service_attitude_score}}" data-teacher_id="{{value.teacher_id}}" data-teaching_environment_score="{{value.teaching_environment_score}}" data-is_anonymous="{{value.parent_name ? '2' : '1'}}">
+							修改评价
+						</div>
+					</div>
+				{{/if}}
 				<div class="time">{{value.created}}</div>
 			</li>
 		{{/each}}

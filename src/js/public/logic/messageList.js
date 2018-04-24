@@ -69,11 +69,16 @@ define([
 
 		//初始化
 		init: function(opt, conf) {
+			this.scroll && this.scroll.destroy();
+			$('.pullDown').css("visibility" , 'hidden');
 			var _this = this;
 			this.setOptions(opt);
 			var _opt = {}
 			if("conditions" in opt) {
 				_opt.conditions = opt.conditions;
+			}
+			if("page_infos" in opt) {
+				_opt.page_infos = opt.page_infos;
 			}
 			if("data" in opt) {
 				for(var item in opt.data) {
@@ -82,7 +87,8 @@ define([
 			}
 			_this._opt = _opt;
 			this.renderList(null, _opt, function() {
-				_this.initScroll({isPullUp: opt.isPullUp});
+				_this.initScroll({isPullUp: opt.isPullUp, isPullDown: opt.isPullDown});
+				opt.FinialFn && opt.FinialFn();
 			}, function() {
 			})
 		},
@@ -93,7 +99,7 @@ define([
 			var _this = this;
 			// 请求数据
 			Server[this.options.name](apiConfid, param, function(data) {
-				console.log(data);
+				console.log(data)
 				if(data.result && data.result.data && data.result.data.length > 0) {
 					_this.emptyEle.addClass('hide');
 					data.result.data[0].type = _this.options.type;
@@ -114,13 +120,11 @@ define([
 							bad: data.result.bad
 						})
 					}
-					console.log(_this.$data);
 					Method.artRender(_this.listWrapper, _this.options.classTpl, _this.$data, false, function() {
 						_this.totalPage = data.result.total_page || data.result.page_size;
 						successCallback && successCallback(data);
 					});
 				}else if (data.result && data.result.data == null){
-					console.log(data.result)
 					if(_this.options.type) {
 						data.result.type = _this.options.type;
 					}
@@ -135,7 +139,31 @@ define([
 							fn: _this.scroll ? _this.scroll.refresh : null
 						})
 					}
+				}else if(_this.options.type =='ClassDetailPing' &&data.result && data.result.data && data.result.data.length == 0){
+					if(_this.options.type) {
+						data.result.type = _this.options.type;
+						data.result.data[0] = {}
+						data.result.data[0].type = 'ClassDetailPing'
+					}
+					if(_this.options.fn){
+						_this.$data = _this.options.fn(data.result);
+					}else{
+						_this.$data = data.result;
+					}
+					Method.artRender(_this.listWrapper, _this.options.classTpl, data.result, false, function() {
+						successCallback && successCallback(data);
+						$('#empty').removeClass('hide');
+					});
+					if(_this.options.avaFn) {
+						_this.options.avaFn({
+							realname: data.result.realname,
+							sex: data.result.sex,
+							number: data.result.seniority,
+							fn: _this.scroll ? _this.scroll.refresh : null
+						})
+					}
 				}else{
+					console.log('数据为空')
 					_this.renderEmpty(_this.listFolder, _this.emptyEle);
 				}
 			}, function() {
@@ -157,9 +185,7 @@ define([
 
 			// 请求数据
 			Server[this.options.name](null, param, function(data) {
-				console.log(_this.totalPage+'!!!!!!!!!!!!!!!!!!!!!!!')
 				data.result.data[0].type = _this.options.type;
-				console.log(_this.options.type);
 				if(_this.options.fn){
 					_this.$data.data = _this.options.fn(data.result.data);
 				}else{
@@ -179,6 +205,7 @@ define([
 			var _this = this;
 			var wrapper = this.listFolder[0];
 			var pullUpLoad = null;
+			var pullDownRefresh = null;
 			if(opt.isPullUp) { // 禁止上拉刷新
 				pullUpLoad = null
 			}else{
@@ -186,12 +213,18 @@ define([
 					threshold: 50
 				}
 			}
-			this.scroll = new BScroll({
-				el: wrapper,
-				pullDownRefresh: {
+			if(opt.isPullDown) {
+				pullDownRefresh = null;
+				this.listFolder.off('pullingDown');
+			}else{
+				pullDownRefresh= {
 				  	threshold: 50,
 				  	stop: 50
-				},
+				}
+			}
+			this.scroll = new BScroll({
+				el: wrapper,
+				pullDownRefresh: pullDownRefresh,
 				momentumLimitDistance: 30,
 				pullUpLoad: pullUpLoad
 			})
@@ -204,27 +237,30 @@ define([
 			// 下拉刷新
 			this.listFolder.on('pullingDown', function() {
 				//$('.pullDown').css("visibility" , 'visible');
-				_this.renderList(null, _this._opt, function(data) {
-					if(data.status){
-						_this.scroll.forceUpdate({success: true});
-						_this.currentPage = 0;
-						console.log('下拉刷新')
-					}else {
+				if(!pullDownRefresh) {
+				
+				}else{
+					_this.renderList(null, _this._opt, function(data) {
+						if(data.status){
+							_this.scroll.forceUpdate({success: true});
+							_this.currentPage = 0;
+							console.log('下拉刷新')
+						}else {
+							_this.scroll.forceUpdate({success: false});
+						}
+					}, function() {
 						_this.scroll.forceUpdate({success: false});
-					}
-				}, function() {
-					_this.scroll.forceUpdate({success: false});
-				})
+					})
+				}
 			})
 			// 上拉加载
 			this.listFolder.on('pullingUp', function() {
 				//$('.pullUp').css("visibility" , 'visible');
-				console.log(_this.currentPage+ '====='+ _this.totalPage)
 				if(_this.currentPage >= Number(_this.totalPage) - 1) {
 					_this.scroll.forceUpdate({success: true, data: false})
 					console.log('无数据')
 				}else {
-					_this.getListMore(null, function(data) {
+					_this.getListMore(_this._opt, function(data) {
 						if(data.status) {
 							if(data.result.data && data.result.data.length > 0){
 								console.log('请求成功，有数据'+_this.currentPage)

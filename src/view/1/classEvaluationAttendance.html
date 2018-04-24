@@ -70,7 +70,13 @@
 				</div>
 				<div class="text">
 					<p>{{value.title}}{{value.class_time}}</p>
-					<p>主讲：{{value.teacher_name}}</p>
+					<p>主讲：
+						{{if value.teacher_name}}
+							{{value.teacher_name}}
+						{{else}}
+							待定
+						{{/if}}
+					</p>
 					<p>教室：{{value.classroom_name}}</p>
 				</div>
 				<div class="tagWrapper">

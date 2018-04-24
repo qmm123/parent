@@ -25,7 +25,7 @@
 	"txt": ""
 })
 <script type="text/html" id="avator">
-	<img src="/img/tpl1/art01.png" alt="">
+	<img src="/img/tpl1/default/bg_teacher_detail.png" alt="">
 	<div class="text">
 		{{if sex == 1}}
 			<div class="avator avator1">
@@ -46,10 +46,28 @@
 <script type="text/html" id="TplClass">
 	{{if type == "TeacherIntroduce"}}
 		<li class="item item1">
-			<p><span class="gray">所属校区：</span><span>朝阳校区、海淀校区</span></p>
-			<p><span class="gray">教授课程：</span><span>朝阳校区、海淀校区</span></p>
-			<p class="tag"><span class="gray">教授课程：</span><span class="inner">朝阳校区</span><span class="inner">朝阳校区</span><span class="inner">朝阳校区</span><span class="inner">朝阳校区</span><span class="inner">朝阳校区</span><span class="inner">朝阳校区</span></p>
-			<p><span class="gray">教师简介：</span><span>朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区朝阳校区、海淀校区</span></p>
+			<p><span class="gray">所属校区：</span><span>{{campus_name}}</span></p>
+			<p><span class="gray">教授课程：</span>
+				{{each goods_label value i}}
+					<span>{{value}}</span>&nbsp;
+				{{/each}}
+			</p>
+			<p class="tag"><span class="gray">教授课程：</span>
+				{{if label.length > 0}}
+					{{each goods_label value i}}
+						<span class="inner">{{value}}</span>
+					{{/each}}
+				{{else}}
+					<span>无</span>
+				{{/if}}
+			</p>
+			<p><span class="gray">教师简介：</span><span>
+				{{if intro}}
+					{{intro}}
+				{{else}}
+					无
+				{{/if}}
+			</span></p>
 		</li>
 	{{else if data[0].type == "ClassList"}}
 		{{each data value i}}
@@ -83,7 +101,7 @@
 				<div class="address">海淀区{{value.nearest}}km</div>
 			</li>
 		{{/each}}
-	{{else if data[0].type == "ClassDetailPing"}}
+	{{else}}
 			<li class="item item3">
 				<div class="item_top">
 					<div class="lf">
@@ -152,36 +170,45 @@
 					</div>
 				</div>
 				<div class="item_content">
-					{{each data value}}
-						<div class="inner">
-							<div class="header">
-								{{if value.avatar}}
-									<img src="{{value.avatar}}" alt="">
-								{{else}}
-									<img src="/img/tpl1/ic_default_teacher.png" alt="">
-								{{/if}}
-								<div class="tel">{{value.phone}}</div>
-								<div class="time">{{value.modified}}</div>
+					{{if data[0].modified}}
+						{{each data value}}
+							<div class="inner">
+								<div class="header">
+									{{if value.avatar}}
+										<img src="{{value.avatar}}" alt="">
+									{{else}}
+										<img src="/img/tpl1/ic_default_teacher.png" alt="">
+									{{/if}}
+									<div class="tel">{{value.phone}}</div>
+									<div class="time">{{value.modified}}</div>
+								</div>
+								<div class="body">
+									<p>{{value.goods_name}}</p>
+									<p class="starWrapper">
+										{{each value.scoreNum.star1 item1 i1}}
+											<span class="star"></span>
+										{{/each}}
+										{{each value.scoreNum.star2 item2 i2}}
+											<span class="star star2"></span>
+										{{/each}}
+										{{each value.scoreNum.star3 item3 i3}}
+											<span class="star star3"></span>
+										{{/each}}
+									</p>
+									<p class="more">
+										{{value.curriculum_evaluation}}
+									</p>
+								</div>
 							</div>
-							<div class="body">
-								<p>{{value.goods_name}}</p>
-								<p class="starWrapper">
-									{{each value.scoreNum.star1 item1 i1}}
-										<span class="star"></span>
-									{{/each}}
-									{{each value.scoreNum.star2 item2 i2}}
-										<span class="star star2"></span>
-									{{/each}}
-									{{each value.scoreNum.star3 item3 i3}}
-										<span class="star star3"></span>
-									{{/each}}
-								</p>
-								<p class="more">
-									{{value.curriculum_evaluation}}
-								</p>
-							</div>
-						</div>
-					{{/each}}
+						{{/each}}
+					{{else}}
+						@@include('../../include/no-content.html', {
+							"id": "empty",
+							"style": "margin-top:50px;",
+							"className": "",
+							"txt": ""
+						})
+					{{/if}}
 				</div>
 			</li>
 	{{/if}}

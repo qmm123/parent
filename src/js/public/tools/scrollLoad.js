@@ -19,7 +19,6 @@ define([
 			pullUpLoad: config.pullUpLoad || null, // 上拉加载
 			momentumLimitDistance: config.momentumLimitDistance || 20
 		}
-
 		this.config = config;
 		this.obj = { // 下拉刷新和上拉刷新一系列过程
 			pullDownInitTop: 50, // 下拉元素初始位置
@@ -30,10 +29,12 @@ define([
 			isData: true,
 			isPullDowning: false
 		}
+		this.scroll = null;
 		this.scroll = new BScroll(this.config.el, options);
-
 		if(this.config.pullDownRefresh) { // 下拉刷新
 			this._initPullDownRefresh();
+		}else{
+			
 		}
 		if(this.config.pullUpLoad) {
 			this._initPullUpLoad();
@@ -67,6 +68,7 @@ define([
 	}
 
 	bScroll.prototype._initPullDownRefresh = function() { 
+		$('.pullDown').remove();
 		if(!$('.pullDown').length) {
 			var str = '<div class="pullDown"><div><span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新</span></div></div>';
 			$(this.config.el).find('>div').prepend(str)
@@ -74,6 +76,7 @@ define([
 		$('.pullDown').css("visibility" , 'visible');
 		var _this = this;
 		this.scroll.on('pullingDown', function() { // 松手
+
 			_this.obj.beforePullDown = false;
 			_this.obj.isPullingDown = true;
 			_this.obj.isPullDowning = true;
@@ -98,8 +101,8 @@ define([
 				$('.pullDown').addClass('flip');
 				$('.pullDown .pullDownLabel').html('释放刷新');
 			}else if(pos.y <= 5){
-				//$('.pullDown').removeClass('flip');
-				//$('.pullDown .pullDownLabel').html('下拉刷新');
+				$('.pullDown').removeClass('flip');
+				$('.pullDown .pullDownLabel').html('下拉刷新');
 			}
 			if(_this.obj.isRebounding) {
 				var top = 10 - (_this.config.pullDownRefresh.stop - pos.y);
@@ -154,6 +157,7 @@ define([
 	}
 	bScroll.prototype._initPullUpLoad = function (){
 		var _this = this;
+		$('.pullUp').remove();
 		if(!$('.pullUp').length && (Number($(this.config.el).height()) < Number($(this.config.el).find('>div').height())) ) {
 			var str = '<div class="pullUp e"><div><span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载</span></div></div>';
 			$(this.config.el).find(">div").append(str);
@@ -178,7 +182,9 @@ define([
 			}
 		})
 	}	
-
+	bScroll.prototype.destroy = function() {
+		this.scroll && this.scroll.destroy();
+	}
 	bScroll.prototype._scroll = function(cb) {
 		this.scroll.on('scroll', function(pos) {
 			cb && cb();

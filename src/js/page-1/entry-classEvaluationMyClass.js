@@ -1,6 +1,7 @@
 define(["publicLogic/messageList",
-	"public/tools/method"
-	], function(messageList, Method) {
+	"public/tools/method",
+	"publicLogic/header"
+	], function(messageList, Method, Header) {
 	return function() {
 
 		var page_param = Method.getUrlParam("page_param");
@@ -60,5 +61,8 @@ define(["publicLogic/messageList",
 			nativeFun("toClassEvaluationRecord", {
 			});
 		})
+
+		// 返回上一页
+		Header.init();
 	}
 })

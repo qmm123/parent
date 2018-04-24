@@ -59,7 +59,7 @@
 	<div id="wrapper">
 		<div>
 			<ul id="listContainer">
-				<li class="item">
+				<!-- <li class="item">
 					<div class="img">
 						<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
 					</div>
@@ -85,7 +85,7 @@
 						<p class="line"><i class="icon icon2"></i>朝阳校区、海淀校区</p>
 						<p class="line"><i class="icon icon3"></i>英语 一级语文</p>
 					</div>
-				</li>
+				</li> -->
 			</ul>
 			
 		</div>
@@ -126,7 +126,11 @@
 						{{/if}}
 					</p>
 					<p class="line"><i class="icon icon2"></i>{{value.campus_name}}</p>
-					<p class="line"><i class="icon icon3"></i>英语 一级语文</p>
+					<p class="line"><i class="icon icon3"></i>
+						{{each value.goods_label item index}}
+							{{item}}
+						{{/each}}
+					</p>
 				</div>
 			</li>
 		{{/each}}

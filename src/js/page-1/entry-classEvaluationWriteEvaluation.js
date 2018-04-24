@@ -156,8 +156,7 @@ define([
 					nativeFun("toClassEvaluationSuccess");
 				}
 			}, function() {
-				console.log('错误')
-				errorCallback && errorCallback();
+				console.log('错误');
 			})
 		})
 	}

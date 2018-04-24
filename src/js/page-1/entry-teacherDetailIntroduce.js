@@ -21,24 +21,27 @@ define(["publicLogic/messageList",
 
 		// 学生评分
 		function setStar(result) {
-			for(var i=0;i<result.data.length;i++) {
-				var item = result.data[i];
-				// 学生评分
-				if(item.comment_score || item.comment_score == 0) {
-					item.scoreNum = item.scoreNum || {star1: [],star2: [], star3: []}
-					if(item.comment_score <= 5) {
-						var num1 = Number(item.comment_score);
-						for(var j=0;j<parseInt(num1);j++) {
-							item.scoreNum.star1.push('star1');
+			console.log(result)
+			if(result.data.length > 0) {
+				for(var i=0;i<result.data.length;i++) {
+					var item = result.data[i];
+					// 学生评分
+					if(item.comment_score || item.comment_score == 0) {
+						item.scoreNum = item.scoreNum || {star1: [],star2: [], star3: []}
+						if(item.comment_score <= 5) {
+							var num1 = Number(item.comment_score);
+							for(var j=0;j<parseInt(num1);j++) {
+								item.scoreNum.star1.push('star1');
+							}
+							for(var j=0;j<(Math.ceil(num1) - parseInt(num1));j++){
+								item.scoreNum.star2.push('star2');
+							}
+							for(var j=0;j<(5-Math.ceil(num1));j++){
+								item.scoreNum.star3.push('star3');
+							}
 						}
-						for(var j=0;j<(Math.ceil(num1) - parseInt(num1));j++){
-							item.scoreNum.star2.push('star2');
-						}
-						for(var j=0;j<(5-Math.ceil(num1));j++){
-							item.scoreNum.star3.push('star3');
-						}
-					}
-				}		
+					}		
+				}
 			}
 			// 上课效果评分
 			if(result.class_effect_score <= 5) {
@@ -160,6 +163,7 @@ define(["publicLogic/messageList",
 					conditions: {
 						teacher_id: teacher_id
 					},
+					isPullDown: true,
 					fn: setStar
 				});
 			}
@@ -168,19 +172,23 @@ define(["publicLogic/messageList",
 		var $index = 0;
 		$('#wrapper').on('tap', '.item_tab a', function() {
 			var _index = $(this).index();
-			alert(_index);
 			if($index == _index){
 				return
 			}
-			$('#wrapper .item_tab a').removeClass('active');
-			$(this).addClass('active');
+			$index = _index;
 			messageList.init({
 				name: 'getClassDetailPing',
 				type: 'ClassDetailPing',
 				conditions: {
-					teacher_id: teacher_id
+					teacher_id: teacher_id,
+					type: _index
 				},
-				fn: setStar
+				isPullDown: true,
+				fn: setStar,
+				FinialFn: function() {
+					$('#wrapper .item_tab a').removeClass('active');
+					$('#wrapper .item_tab a').eq(_index).addClass('active');
+				}
 			});
 		})
 		// 课程跳转到 课程详情

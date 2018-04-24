@@ -57,7 +57,6 @@ define([
     // 接口请求成功
     jqXHR.done(function(json, textStatus, jqXHR) {
       // 接口请求成功--请求结果失败
-      console.log(json)
       if (json.status == false) {
 
         // 接口的提示信息

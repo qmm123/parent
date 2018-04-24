@@ -1,10 +1,11 @@
 define(["publicService/service",
 		"public/tools/method",
-		"publicLogic/header"
-	], function(Server, Method, Header) {
+		"publicLogic/header",
+		"public/business/nativeFun"
+	], function(Server, Method, Header, nativeFun) {
 	return function() {
 		var page_param = Method.getUrlParam("page_param");
-		var course_id = page_param ? JSON.parse(page_param)['course_id'] : "0f40142622964999853a421a8fe74705";
+		var course_id = page_param ? JSON.parse(page_param)['course_id'] : "881129c332474d669d54566534a44538";
 		Server.getScrollDetail(null, {
 			course_id: course_id
 		}, function(data) {
@@ -13,6 +14,9 @@ define(["publicService/service",
 
 			})
 		})
+		// 传递参数
+
+
 
 		// 选择课时
 		$('.content').on('tap', '.category.lesson .normal span', function(e) {
@@ -20,23 +24,20 @@ define(["publicService/service",
 			$('.category .list .special .num').addClass('hide');
 			$('.category.lesson span').removeClass('active');
 			$(this).addClass('active');
-			var price = $(this).data('unit_price');
+			var price = $(".container .body .price .num").data('unit_price');
 			price = parseFloat(price);
-			var num = $(this).html();
+			var num = $(this).data('value');
 			num = parseFloat(num);
-			$('.container .body .price .num').text(price);
-			//$('.container .body .category .list .special span').data("price", price);
-			var priceAll = '￥' + price * num;
-			$('.container .footer .left span').text(priceAll);
+			var priceAll = Number(price * num).toFixed(2);
+			$('.container .footer .left span').text('￥' +priceAll);
 		})
 
 		// 自定义
 		$('.content').on('tap', '.category .list .special>span', function(e) {
 			//price = Number(price);
-			var price = $('.container .body .price .num').text();
-			price = Number(price)
-			//$('.container .body .price .num').data("price", price);
-			$('.container .footer .left span').text(price);
+			var price = $('.container .body .price .num').data('unit_price');
+			price = Number(price).toFixed(2);
+			$('.container .footer .left span').text('￥'+price);
 			$('.category .list .special .num').removeClass('hide');
 			$('.category.lesson span').removeClass('active');
 			$(this).addClass('active');
@@ -50,9 +51,9 @@ define(["publicService/service",
 				num = num - 1;
 				num = Math.max(1, num);
 				$(this).next('.count').html(num)
-				var price = Number($('.container .body .price .num').text());
-				var priceAll = num * price;
-				$('.container .footer .left span').text(priceAll);
+				var price = Number($('.container .body .price .num').data('unit_price'));
+				var priceAll = Number(num * price).toFixed(2);
+				$('.container .footer .left span').text('￥'+priceAll);
 			}
 		})
 
@@ -65,9 +66,9 @@ define(["publicService/service",
 				num = num + 1;
 				num = Math.min(999, num);
 				$(this).prev('.count').html(num);
-				var price = Number($('.container .body .price .num').text());
-				var priceAll = '￥' +  num * price;
-				$('.container .footer .left span').text(priceAll);
+				var price = Number($('.container .body .price .num').data('unit_price'));
+				var priceAll = Number(num * price).toFixed(2);
+				$('.container .footer .left span').text('￥'+priceAll);
 			}
 		})
 
@@ -75,5 +76,10 @@ define(["publicService/service",
 		$('.container').on('click', '.back', function() {
 			nativeFun('goBack');
 		});
+
+		// 报名
+		$('.content').on('tap', '.footer .right', function() {
+			alert(111)
+		})
 	}
 })
