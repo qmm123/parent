@@ -1,0 +1,61 @@
+/* 按钮 */
+
+// 底部操作按钮
+.btn_bottom{
+	width: 100%;
+	height: @btn-b-h;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	&.three{
+		li{
+			width: 33.33%;
+		}
+	}
+	li{
+		width: 50%;
+		height: @btn-b-h;
+		font-size: 1.4rem;
+		color: #999;
+		line-height: @btn-b-h;
+		text-align: center;
+		background-color: #fff;
+		float: left;
+		span{
+			display: inline-block;
+		}
+		// 黄色
+		&.yellow{
+			color: #fff;
+			background-color: #eab629;
+		}
+		// 主题色
+		&.theme{
+			color: #fff;
+			background-color: @col-main;
+		}
+		// 禁用颜色
+		&.disable{
+			background-color: @btn-disable;
+		}
+		// 禁用颜色-深
+		&.disable_deep{
+			background-color: @btn-disable-deep;
+		}
+		// 带图标
+		&.icon{
+			span{
+				background-repeat: no-repeat;
+				background-position: left center;
+			}
+			&.phone{
+				@pad-l: 19px;
+				span{
+					background-image: url("@{img_url_tpl}/call_phone.png");
+					background-size: @pad-l 23px;
+					padding: 0 0 0 @pad-l + 2;
+				}
+			}
+		}
+	}
+}

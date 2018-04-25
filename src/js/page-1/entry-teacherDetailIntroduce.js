@@ -4,9 +4,10 @@ define(["publicLogic/messageList",
 	"publicLogic/header"
 	], function(messageList, Method, nativeFun, Header) {
 	return function() {
+		var tel = '15637846585';
 		//头像数据
-		
 		function avaFn(data){
+			data.tel = tel;
 			Method.artRender($('#top'), "avator", data, false, function() {
 				setTimeout(function(){
 					var topH = $('#top').css('height');
@@ -14,7 +15,9 @@ define(["publicLogic/messageList",
 					console.log(topH)
 					$('#wrapper').css("top",height+ 'px');
 					$('.tab').css("top",height+ 'px');
-					data.fn && data.fn();
+					Method.artRender($('.tab'), 'tabClass', {isShow: isShow}, false, function() {
+						data.fn && data.fn();
+					})
 				}, 20)
 			})
 		}
@@ -106,6 +109,7 @@ define(["publicLogic/messageList",
 		param = JSON.parse(param)
 		// 教师id
 		var teacher_id = param ? param.teacher_id : "44a917708a964607a4bb50eb8acd2f16";
+		
 		messageList.init({
 			name: 'getTeacherIntroduce',
 			type: 'TeacherIntroduce',
@@ -114,6 +118,17 @@ define(["publicLogic/messageList",
 			},
 			avaFn: avaFn
 		});
+
+
+		//是否显示评论页面
+		var tpl_config = localStorage.tpl_config;
+		var isShow = false;
+		if(tpl_config) {
+			tpl_config = JSON.parse(tpl_config);
+			var isShow = tpl_config.isShow;
+			Method.artRender($('.tab'), 'tabClass', {isShow: isShow}, false, function() {})
+		}
+		
 		/*messageList.init({
 			name: 'getClassList',
 			type: 'ClassList',
@@ -131,7 +146,7 @@ define(["publicLogic/messageList",
 		});*/
 		//tab 切换
 		var index = 0;
-		$('.tab span').on('tap', function() {
+		$('.tab').on('tap', 'span',function() {
 			var _index = $(this).parent().index();
 			if(index == _index){
 				return
@@ -156,7 +171,7 @@ define(["publicLogic/messageList",
 						teacher_id: teacher_id
 					}
 				});
-			}else{
+			}else if(index == 2){
 				messageList.init({
 					name: 'getClassDetailPing',
 					type: 'ClassDetailPing',

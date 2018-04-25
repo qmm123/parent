@@ -9,7 +9,7 @@ define(["publicLogic/messageList",
 		// 班级id
 		var goods_id = Method.getUrlParam('goods_id') ? Method.getUrlParam('goods_id') : '';
 		// 教师id
-		var teachers_id = Method.getUrlParam('teachers_id') ? Method.getUrlParam('teachers_id') : '';
+		var teacher_id = Method.getUrlParam('teacher_id') ? Method.getUrlParam('teacher_id') : '';
 
 		// 计算star个数
 		function setStar(data) {
@@ -41,7 +41,7 @@ define(["publicLogic/messageList",
 			conditions: {
 				campus_id: campus_id,
 				goods_id: goods_id,
-				teachers_id: teachers_id
+				teacher_id: teacher_id
 			},
 			fn: setStar,
 			templateFn: templateFn
@@ -66,7 +66,7 @@ define(["publicLogic/messageList",
 					conditions: {
 						campus_id: campus_id,
 						goods_id: goods_id,
-						teachers_id: teachers_id
+						teacher_id: teacher_id
 					},
 					fn: setStar
 				})
@@ -78,7 +78,7 @@ define(["publicLogic/messageList",
 					conditions: {
 						campus_id: campus_id,
 						goods_id: goods_id,
-						teachers_id: teachers_id,
+						teacher_id: teacher_id,
 						type: index
 					},
 					fn: setStar

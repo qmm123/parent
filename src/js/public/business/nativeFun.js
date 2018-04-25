@@ -9,7 +9,6 @@ define([
 		toSchedule: "toSchedule",//去课表页
 
 		toClassEvaluationMyClass: "toClassEvaluationMyClass",//去课程&评价-我的课程页
-		toClassEvaluationReceive: "toClassEvaluationReceive",//去课程&评价-收到评价页
 		toClassEvaluationRecord: "toClassEvaluationRecord",//去课程&评价-评价记录页
 		toClassEvaluationEvaluation: "toClassEvaluationEvaluation",//去课程&评价-我要评价页
 		toClassEvaluationWriteEvaluation: "toClassEvaluationWriteEvaluation",//去课程&评价-写评价页
@@ -33,13 +32,21 @@ define([
 		// 原生部分(页面由原生做)
 		toSchoolPhotoVideo: "toSchoolPhotoVideo",//去校区相册视频页
 		toSearchPage: "toSearchPage",//去搜索页
+		toClassDetailZhang: "toClassDetailZhang",//去课程详情-招生简章页
+		toClassDetailGang: "toClassDetailGang",//去课程详情-课程大纲页
+		toClassDetailTao: "toClassDetailTao",//去课程详情-课程套餐页
+		toCart: "toCart",//去购物车页
+		toAudition: "toAudition",//去预约试听页
+		toSubmitOrder: "toSubmitOrder",//去提交订单页
 		toHomework: "toHomework",//去孩子作业页
 		toRetire: "toRetire", //去退班页
 		toMyChild: "toMyChild", // 去我的孩子页 
 		toOneToOneEnroll: "toOneToOneEnroll", // 去一对一报名页
+		toCourseRollPurchaseDetails: "getCourseRollPurchaseDetails", // 去滚动班报名页
 
 		// 逻辑代码部分(调用原生的逻辑代码)
-		lgChaBan: "lgChaBan"//插班
+		lgChaBan: "lgChaBan",//插班
+		lgSignClass: "lgSignClass"//立即报名
 	};
 
 	// 参数一（flag）方法标识

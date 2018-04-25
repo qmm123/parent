@@ -1,0 +1,12 @@
+<script type="text/html">
+	<!-- 班课详情-优惠详情 -->
+	<ul class="hui_detail_list">
+	{{each discount_info val i}}
+		{{if !val.type}}
+			<li class="tip">{{val.msg.replace(/\\n/g, "")}}</li>
+		{{else}}
+			<li><span class="icon" style="background-color:{{val.colour}};">{{val.tag}}</span>{{val.msg}}</li>
+		{{/if}}
+	{{/each}}
+	</ul>
+</script>

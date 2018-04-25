@@ -1,0 +1,161 @@
+<script type="text/html">
+	<!-- 班课详情-1 -->
+	<!-- banner图部分 -->
+	<div class="banner_infor">
+		<div id="banner" class="banner">
+			{{if goods_imgs && goods_imgs.length}}
+				{{if goods_imgs[0].teaching_video == ""}}
+				<img src={{goods_imgs[0].url}} alt="" />
+				{{else}}
+					{{if goods_imgs.length >= 2}}
+						<img src={{goods_imgs[1].url}} alt="" />
+					{{else}}
+						<img src="/img/tpl1/default/bg_class_detail.png" alt="" />
+					{{/if}}
+				{{/if}}
+			{{else}}
+			<img src="/img/tpl1/default/bg_class_detail.png" alt="" />
+			{{/if}}
+		</div>
+		<div class="infor">
+			<span class="txt">剩余<em id="leftStudentNum">{{total-saled}}</em>个名额</span>
+			<span class="txt">浏览量<em id="lookNum">{{browse_number}}</em></span>
+		</div>
+	</div>
+	<!-- 课程信息 -->
+	<div class="class-content">
+		<h3 id="className" class="title">{{goods_name}}</h3>
+		<p class="price">
+			{{if privilege_price_tag && privilege_price_tag.length != 0}}
+			<span id="priceType" class="rq">{{privilege_price_tag.name}}</span>
+			<span id="mallCost" class="new"><i>￥</i>{{mall_cost}}</span>
+			<span id="oldPrice" class="old">{{cost}}</span>
+			{{else}}
+				{{if mall_cost < cost.replace(/^￥/g, "")}}
+				<span id="mallCost" class="new"><i>￥</i>{{mall_cost}}</span>
+				<span id="oldPrice" class="old">{{cost}}</span>
+				{{else}}
+				<span id="mallCost" class="new"><i>￥</i>{{mall_cost}}</span>
+				{{/if}}
+			{{/if}}
+		</p>
+		{{if privilege_price_tag && privilege_price_tag.length != 0}}
+		<p id="huiPagDetail" class="rqt-wrapper">
+			<span class="rqt">{{privilege_price_tag.sort_info}}</span>
+			<span class="time">{{privilege_price_tag.info}}</span>
+		</p>
+		{{/if}}
+		<p id="classMark" class="icon-wrapper">
+			{{if retreat_rule == 1}}
+			<span class="icon">随时退班</span>
+			{{/if}}
+			{{if is_transfer == 1}}
+			<span class="icon">随时插班</span>
+			{{/if}}
+			{{if is_audition == 1}}
+			<span class="icon">免费试听</span>
+			{{/if}}
+		</p>
+		{{if discount_info && discount_info.length}}
+		<div id="huiPagZone" class="fav">
+			<a href="javascript:;" id="lookHuiPag" class="point-click"></a>
+			<p class="icon">
+				<span style="background-color:{{discount_info[1].colour}};">{{discount_info[1].tag}}</span>
+				{{discount_info[1].msg}}
+		</div>
+		{{/if}}
+		<!-- 班级状态 -->
+		<div class="class_status 
+		{{if status == 4}}ing{{/if}}
+		{{if status == 5}}zhao{{/if}}
+		{{if status == 3}}man{{/if}}
+		{{if status == 2}}end{{/if}}
+		{{if status == 1}}off{{/if}}
+		"></div>
+	</div>
+	<!-- 课程信息 -->
+	<div class="class-message">
+		<h5 class="title">课程信息</h5>
+		<ul>
+			<li class="item">
+				<a href="javascript:;" id="lookTeacher" data-id={{teacher_id}}>
+					<p class="item-left">主讲老师：</p>
+					<div class="item-right">{{teacher_name}}</div>
+					<i class="arrow-right"></i>
+				</a>
+			</li>
+			<li class="item">
+				<p class="item-left">课程安排：</p>
+				<div id="classPlan" class="item-right">
+					{{if lessons.length}}
+					<p class="item-right-date">{{lessons[0].open_date}} 至 {{lessons[lessons.length-1].open_date}}</p>
+					<a href="javascript:;" id="lookClassPlan" class="point-click point-special"></a>
+					<div class="item-right-weak-wrapper">
+						{{each lession_arrange val i}}
+						<div class="time">
+							<p>{{val}}</p>
+						</div>
+						{{/each}}
+					</div>
+					{{else}}
+					太忙了，还没来得及录入~
+					{{/if}}
+				</div>
+			</li>
+			<li class="item">
+				<a href="javascript:;">
+					<p class="item-left">上课地点：</p>
+					<div id="classAddress" class="item-right">{{address}}</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 招生简章 -->
+	{{if admissions}}
+	<div id="classZhang" class="class-message">
+		<h5 class="title">
+			招生简章
+			<span id="lookClassZhang" class="text-arrow" data-id="{{goods_id}}">查看详情</span>
+		</h5>
+	</div>
+	{{/if}}
+	<!-- /招生简章 -->
+	<!-- 课程大纲 -->
+	{{if teaching_program}}
+	<div id="classGang" class="class-message">
+		<a href="javascript:;">
+			<h5 class="title">
+				课程大纲
+				<span id="lookClassGang" class="text-arrow" data-id="{{goods_id}}">查看详情</span>
+			</h5>
+		</a>
+	</div>
+	{{/if}}
+	<!-- /课程信息 -->
+	<!-- 课程概述 -->
+	<div class="class-message">
+		<h5 class="title">课程概述</h5>
+		<ul>
+			<li class="item">
+				<a href="javascript:;">
+					<p class="item-left">所属校区：</p>
+					<p id="lookSchool" class="item-right" data-id={{campus_id}}>{{campus_name}}</p>
+					<i class="arrow-right"></i>
+				</a>
+			</li>
+			<li class="item">
+				<p class="item-left">适学人群：</p>
+				<p id="classToPeople" class="item-right">{{adaptive_population ? adaptive_population : "太忙了，还没来得及录入~"}}</p>
+			</li>
+			<li class="item">
+				<p class="item-left">教学目标：</p>
+				<p id="classGoal" class="item-right">{{teaching_target ? teaching_target : "太忙了，还没来得及录入~"}}</p>
+			</li>
+			<li class="item">
+				<p class="item-left">课程亮点：</p>
+				<p id="classLiang" class="item-right">{{course_highlight ? course_highlight : "太忙了，还没来得及录入~"}}</p>
+			</li>
+		</ul>
+	</div>
+	<!-- /课程概述 -->
+</script>

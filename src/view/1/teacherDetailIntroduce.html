@@ -6,9 +6,7 @@
 	
 </div>
 <div class="tab">
-	<div><span class="active">简介</span></div>
-	<div><span>课程</span></div>
-	<div><span>评论</span></div>
+	
 </div>
 <div id="wrapper">
 	<div>
@@ -24,6 +22,16 @@
 	"className": "",
 	"txt": ""
 })
+<script type="text/html" id="tabClass">
+	{{if isShow}}
+		<div><span class="active">简介</span></div>
+		<div><span>课程</span></div>
+		<div><span>评论</span></div>
+	{{else}}
+		<div class="special"><span class="active">简介</span></div>
+		<div class="special"><span>课程</span></div>
+	{{/if}}
+</script>
 <script type="text/html" id="avator">
 	<img src="/img/tpl1/default/bg_teacher_detail.png" alt="">
 	<div class="text">
@@ -39,8 +47,7 @@
 		<p>{{realname}}<span>({{number}}年教龄)</span></p>
 	</div>
 	<span class="back"></span>
-	<span class="tel"></span>
-
+	<a class="tel" href="tel:{{tel}}"></a>
 </script>
 
 <script type="text/html" id="TplClass">

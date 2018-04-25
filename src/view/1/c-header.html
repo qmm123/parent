@@ -6,14 +6,16 @@
 <header>
 	<a href="javascript:;" id="headerBack" class="back"></a>
 	<div class="text" id="headerTxt">@@txt</div>
-	<div class="rightText">@@rightText</div>
+	@@if(context.rightText){
+		<div class="rightText">@@rightText</div>
+	}
 </header>
 }
 @@if(context.type == "1"){
 <header>
 	<a href="javascript:;" id="headerBack" class="back"></a>
 	<div class="search long">
-		<p id="headerSearch" class="input_ele">搜索课程/机构</p>
+		<p id="headerSearch" class="input_ele">@@searchTxt</p>
 		<i id="headerSearchShut" class="shut_btn hide"></i>
 	</div>
 </header>
@@ -23,7 +25,7 @@
 	<a href="javascript:;" id="headerBack" class="back"></a>
 	<div class="shai" id="classSidebar"></div>
 	<div class="search">
-		<p id="headerSearch" class="input_ele">搜索课程/机构</p>
+		<p id="headerSearch" class="input_ele">@@searchTxt</p>
 		<i id="headerSearchShut" class="shut_btn hide"></i>
 	</div>
 </header>
@@ -33,5 +35,16 @@
 	<a href="javascript:;" id="headerBack" class="back"></a>
 	<a href="javascript:;" class="icon phone"></a>
 	<div class="text" id="headerTxt">校区主页</div>
+</header>
+}
+@@if(context.type == "4"){
+<header class="opacity">
+	<a href="javascript:;" id="headerBack" class="back"></a>
+	<a href="javascript:;" id="headerTel" class="icon phone"></a>
+	<div id="cartZone" class="cart_zone">
+		<a href="javascript:;" class="icon cart"></a>
+		<span class="cart_num hide" id="cartNum">0</span>
+	</div>
+	<div class="text" id="headerTxt">课程详情</div>
 </header>
 }

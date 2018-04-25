@@ -64,5 +64,26 @@ define([
     return layer.open(opt);
   }
 
+  layerCopy.pageUp = function(ops){
+    var defaults = {
+      type: 1,
+      content: "页面内容",
+      shadeClose: false,
+      anim: 'up',
+      className: "define_title",
+      style: 'position:fixed; left:0; bottom:0; width:100%; border: none; -webkit-animation-duration: .5s; animation-duration: .5s;',
+      success: function(ele){
+        var iIdx = $(ele).attr("index");
+        $("body").on("click", ".layui-m-layercont .layer_shut", function(){
+          layer.close(iIdx);
+        })
+      }
+    }
+    var opt = $.extend({}, defaults, ops);
+    opt.content += "<span class='layer_shut'></span>";
+    opt.style += defaults.style;
+    return layer.open(opt);
+  }
+
   return layerCopy;
 });

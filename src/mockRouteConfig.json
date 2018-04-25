@@ -121,6 +121,11 @@
       "commons": "班课详情-评论信息",
       "to": "http://api.fangzhen.baonahao.com/app/goods/Comment/getGoodsCommentList"
     },
+    {
+      "path": "/app/goods/Goods/addParentShoppingCart",
+      "commons": "班课详情-加入购物车",
+      "to": "http://api.fangzhen.baonahao.com/app/goods/Goods/addParentShoppingCart"
+    },
 
     {
       "path": "/app/goods/GoodsOto/getOtoGoodsList",

@@ -20,8 +20,10 @@ define([
 				data: option
 			}
 		}, function(data){
+			console.log(data);
 			successCall && successCall(data);
 		}, function(jqXhr, statusTxt, data){
+			console.log(data)
 			failCall && failCall(statusTxt, data);
 		});
 	}
@@ -180,7 +182,7 @@ define([
 			merchant_id: localStorage.merchant_id,
 			version: localStorage.version,
 			project_id: localStorage.project_id,
-			platform_id: backEndStatusCode.platform_id
+			platform_id: backEndStatusCode.platform_id // 老接口 有的需要传
 		}, param, successCall, failCall);
 	}
 
@@ -421,6 +423,24 @@ define([
 		}, param, successCall, failCall);
 	}
 
+	// 班课详情-加入购物车
+	Service.addParentShoppingCart = function(apiConfig, param, successCall, failCall){
+		var option = {
+			apiName: "",
+			url: "/app/goods/Goods/addParentShoppingCart"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			merchant_id: localStorage.merchant_id,
+			parent_id: localStorage.parent_id,
+			platform_id: backEndStatusCode.platform_id,
+			project_id: localStorage.project_id,
+			version: localStorage.version
+		}, param, successCall, failCall);
+	}
+
 	// 一对一-课程列表
 	Service.getOneToOneList = function(apiConfig, param, successCall, failCall){
 		var option = {
@@ -533,6 +553,7 @@ define([
 	// 取消预约
 	Service.cancelAudition = function(apiConfig, param, successCall, failCall){
 		var option = {
+			apiName: "",
 			url: "/app/clue/ClueParentAudition/cancelAudition"
 		};
 		if(apiConfig){

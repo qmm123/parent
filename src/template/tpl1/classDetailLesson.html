@@ -1,0 +1,22 @@
+<script type="text/html">
+	<!-- 班课详情-课时安排 -->
+	<div class="class-plan-shadow">
+		<div class="class-plan">
+			<div class="content">
+				<ul>
+					{{each lessons val i}}
+					<li class="item {{(val.is_finished == 1) ? 'disabled' : ''}}">
+						<div class="left">
+							<span>{{val.lesson_num}}</span>
+						</div>
+						<div class="right">
+							<p>第{{val.lesson_num}}课时</p>
+							<p class="time">{{val.open_date}} 周{{val.goods_week}} {{val.class_time}}</p>
+						</div>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>
+</script>

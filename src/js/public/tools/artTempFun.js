@@ -51,6 +51,25 @@ define([
     }, 20);
   }
 
+  /**
+   * @Author    高同檩
+   * @DateTime  2018-4-23
+   * @copyright [获取artTemplate模板字符串]
+   * @param     {[tpl]}         模板内容，及模板字符串
+   * @param     {[data]}        渲染数据源
+   * @param     {[type]}        默认通过id获取，true->通用过模板字符获取
+   * @return    {[string]}      模板字符
+   */
+  methods.getArtString = function(tpl, data, type){
+    var sTpl = "";
+    if(type){
+      sTpl = template.render(tpl, data);
+    }else{
+      sTpl = template(tpl, data);
+    }
+    return sTpl;
+  }
+
 	/**
 	 * @Author    高同檩
 	 * @DateTime  2017-11-29

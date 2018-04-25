@@ -359,6 +359,7 @@ body .layui-m-layer .layui-m-layer-msg {
 
 // 自定义样式
 .layui-m-layerchild{
+	// loading层
 	&.define_loading{
 		background-color: rgba(0,0,0,.7);
 		padding: 15px 15px 20px 15px;
@@ -366,6 +367,32 @@ body .layui-m-layer .layui-m-layer-msg {
 			p{
 				font-size: 13px;
 			}
+		}
+	}
+	// 带title的层
+	&.define_title{
+		@h: 45px;
+		h3{
+			height: @h;
+			line-height: @h;
+			background: #f0f0f0;
+			color: #000;
+			position: relative;
+		}
+		.layer_shut{
+			position: absolute;
+			width: 35px;
+			height: @h;
+			right: 0;
+			top: 0;
+			background: url("@{img_url}/layer/shut.png") no-repeat center center;
+			background-size: 12px 12px;
+		}
+		.font_12{
+			font-size: 1.2rem;
+		}
+		.font_gray{
+			color: #666;
 		}
 	}
 }

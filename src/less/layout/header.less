@@ -79,6 +79,23 @@ header{
 		background-size: 19px 22px;
 		margin: 2px 5px 0 0;
 	}
+	// 购物车
+	.cart_zone{
+		float: right;
+		margin-right: 10px;
+		position: relative;
+		.cart_num{
+			font-size: 1.2rem;
+			line-height: 1;
+			color: #fff;
+			border-radius: 30%;
+			background: #f84844;
+			padding: 1px 5px;
+			position: absolute;
+			right: -2px;
+			top: 2px;
+		}
+	}
 	// 右侧图标区
 	.icon{
 		width: 21px;
@@ -91,6 +108,12 @@ header{
 			background-image: url("@{img_url_tpl}/header/consult_black.png");
 			background-size: 21px 20px;
 			margin-top: (@header-h - 20)/2;
+		}
+		&.cart{
+			background-image: url("@{img_url_tpl}/header/shopcar_black_icon.png");
+			background-size: 20px 20px;
+			margin-top: (@header-h - 20)/2 - 1;
+			margin-right: 5px;
 		}
 	}
 }

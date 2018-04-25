@@ -54,7 +54,9 @@ define([
 				mainCell: "#tabZone .tab_content >li",//选项卡内容包裹层
 			}
 			this.config = $.extend(true, defaults, opt);
-			this.campus_id = Method.getUrlParam("campus_id");//校区id
+			// 通过桥接传递过来的参数
+			this.wbParam = JSON.parse( Method.getUrlParam("page_param") );
+			this.campus_id = this.wbParam.campus_id;//校区id
 			this.lng = Method.getUrlParam("lng") ? Method.getUrlParam("lng") : "";//经度
 			this.lat = Method.getUrlParam("lat") ? Method.getUrlParam("lat") : "";//纬度
 			this.winHei = Method.getViewPortSize().height;
@@ -137,7 +139,6 @@ define([
 				}
 			}, function(data){
 				console.log(data);
-				// 渲染相册
 				if(data.result.data && data.result.data.length){
 					artTempFun.artRender($("#" + _this.config.pingList), _this.config.tplPing, data.result);
 					$(_this.config.pingNum).html(data.result.total);

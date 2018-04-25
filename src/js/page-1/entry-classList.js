@@ -26,7 +26,7 @@ define([
 			requeseDataList();
 		});
 		// 执行搜索的交互
-		jsFun("wbClassList", function(paramNative){
+		jsFun("wbSearchList", function(paramNative){
 			var oParam = JSON.parse(paramNative);
 			Header.searchEle.html(oParam.name).data("value", oParam.name);
 			Header.searchShutEle.show();
@@ -103,7 +103,7 @@ define([
 		requeseDataList();
 		// 跳转课程详情
 		$(document).on("click", ".class_list_folder li", function(){
-			nativeFun("toClassDetail", {"goods_id": $(this).data("goodsid")});
+			nativeFun("toClassDetail", {"goods_id": $(this).data("goodsid"), "campus_id": $(this).data("campus_id")});
 		})
 	}
 

@@ -14,8 +14,6 @@ define([
 
 		// 课程&评价-我的课程页
 		"classEvaluationMyClass": "classEvaluationMyClass.html",
-		// 课程&评价-收到评价页
-		"classEvaluationReceive": "classEvaluationReceive.html",
 		// 课程&评价-评价记录页
 		"classEvaluationRecord": "classEvaluationRecord.html",
 		// 课程&评价-我要评价页
@@ -31,10 +29,6 @@ define([
 		"schoolList": "schoolList.html",
 		// 校区-详情-主页
 		"schoolDetailMain": "schoolDetailMain.html",
-		// 校区-详情-课程页
-		"schoolDetailClass": "schoolDetailClass.html",
-		// 校区-详情-老师页
-		"schoolDetailTeacher": "schoolDetailTeacher.html",
 		// 校区-详情-评价页
 		"schoolDetailEvaluation": "schoolDetailEvaluation.html",
 
@@ -50,17 +44,11 @@ define([
 
 		// 我的试听-全部页
 		"myListenAll": "myListenAll.html",
-		// 我的试听-待试听页
-		"myListenWait": "myListenWait.html",
 
 		// 老师-列表页
 		"teacherList": "teacherList.html",
 		// 老师详情-简介页
 		"teacherDetailIntroduce": "teacherDetailIntroduce.html",
-		// 老师详情-课程页
-		"teacherDetailClass": "teacherDetailClass.html",
-		// 老师详情-评论页
-		"teacherDetailEvaluation": "teacherDetailEvaluation.html",
 
 		// 滚动班-列表页
 		"scrollClassList": "scrollClassList.html",

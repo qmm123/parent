@@ -4,17 +4,12 @@ define(["publicLogic/messageList",
 	"publicLogic/header"
 	], function(messageList, Method, Server, Header) {
 	return function() {
-
-		var parent_id = Method.getUrlParam('parent_id') ? Method.getUrlParam('parent_id') : "3c1b0646ce520407a0fedfd17f3a56b6";
+		var parent_id = localStorage.parent_id ? localStorage.parent_id : "3c1b0646ce520407a0fedfd17f3a56b6";
 		messageList.init({
 			name: 'getMyListenAll',
 			type: 'MyListenAll',
 			conditions: {
-				parent_id: parent_id,
-				name: 'world'
-			},
-			data: {
-				name: 'hello'
+				parent_id: parent_id
 			}
 		});
 		// tab
@@ -55,7 +50,7 @@ define(["publicLogic/messageList",
 			var id = $(this).data('goods_id');
 			var modifier_id = localStorage.parent_id;
 			Server.cancelAudition(null, {id: id, modifier_id: modifier_id}, function(data) {
-				console.log(data)
+				console.log('成功')
 			}, function(err) {
 				console.log(err);
 			})

@@ -1,7 +1,8 @@
 define(["publicLogic/messageList",
 	"public/tools/method",
-	"publicLogic/header"
-	], function(messageList, Method, Header) {
+	"publicLogic/header",
+	"public/business/nativeFun"
+	], function(messageList, Method, Header, nativeFun) {
 	return function() {
 
 		var page_param = Method.getUrlParam("page_param");

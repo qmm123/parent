@@ -7,6 +7,7 @@ define(["publicLogic/messageList",
 		
 		var param = Method.getUrlParam('page_param');
 		// 班级id
+		console.log(param);
 		var goods_id = param ? JSON.parse(param).goods_id : 'ca9f26580dfb4656a2ebbca8456d5d4c';
 		// 家长id 
 		var parent_id

@@ -24,13 +24,13 @@ define([
 			requeseDataList();
 		});
 		// 执行搜索的交互
-		jsFun("wbClassList", function(paramNative){
+		jsFun("wbSearchList", function(paramNative){
 			var oParam = JSON.parse(paramNative);
 			Header.searchEle.html(oParam.name).data("value", oParam.name);
 			Header.searchShutEle.show();
 			requeseDataList();
 		});
-		// 教师id
+		// 城市id
 		var city_id = Method.getUrlParam('city_id') ? Method.getUrlParam('city_id') : "35";
 		// 获取搜索条件
 		function getSearchConditons(){
