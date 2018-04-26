@@ -566,5 +566,21 @@ define([
 		}, param, successCall, failCall);
 	}
 
+	// 系统设置-关于我们
+	Service.getMerchantInfo = function(apiConfig, param, successCall, failCall){
+		var option = {
+			apiName: "",
+			url: "/app/merchant/Merchant/getMerchantInfo"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			merchant_id: localStorage.merchant_id,
+			project_id: localStorage.project_id,
+			version: localStorage.version
+		}, param, successCall, failCall);
+	}
+
 	return Service;
 })

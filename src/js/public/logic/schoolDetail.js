@@ -152,7 +152,7 @@ define([
 				listFolder: "wrapperClass",
 				listWrapper: _this.config.classList,
 				classTpl: "TplClass",
-				emptyEle: "emptyContentClass",
+				emptyEle: "#emptyContentClass",
 				name: 'getSchoolDetailClass',
 				conditions:{
 					campus_id: _this.campus_id
@@ -165,7 +165,7 @@ define([
 			messageList.init({
 				listWrapper: _this.config.teacherList,
 				classTpl: "tplTeacher",
-				emptyEle: "emptyContent",
+				emptyEle: "#emptyContent",
 				name: 'getSchoolDetailTeacher',
 				conditions:{
 					campus_id: _this.campus_id

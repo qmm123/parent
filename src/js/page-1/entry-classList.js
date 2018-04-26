@@ -96,7 +96,7 @@ define([
 		function requeseDataList(){
 			messageList.init({
 				name: "getClassList",
-				emptyEle: "emptyContent",
+				emptyEle: "#emptyContent",
 				conditions: getSearchConditons()
 			});
 		}

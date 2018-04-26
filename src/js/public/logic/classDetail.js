@@ -132,7 +132,7 @@ define([
 			})
 			// 查看家长评价
 			$("body").on("click", "#" + this.config.lookParentPing, function(){
-				nativeFun("toSchoolDetailEvaluation", {campus_id: _this.wbParam.campus_id});
+				nativeFun("toSchoolDetailEvaluation", {campus_id: _this.wbParam.campus_id, goods_id: _this.wbParam.goods_id, teacher_id: _this.dataInfor.teacher_id});
 			})
 		},
 		// 设置头部信息
@@ -216,9 +216,9 @@ define([
 					return;
 				}
 				if(_this.dataInfor.status == 4){//插班
-					nativeFun("lgChaBan");
+					nativeFun("lgSignClass");
 				}else{
-					nativeFun("toSubmitOrder");
+					nativeFun("lgSignClass");
 				}
 			})
 		},

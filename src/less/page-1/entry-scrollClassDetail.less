@@ -13,14 +13,16 @@
 		}
 		.back{
 			position: absolute;
-			top: 5px;
-			left: 5px;
+			top: 0;
+			left: 0;
 			width: 30px;
 			height: 30px;
 			background: url("@{img_url_tpl}/org_back.png") no-repeat center center;
 			background-size: cover;
-			margin: 2px 0 0 0;
+			box-sizing: content-box;
+			padding: 10px;
 			border-radius: 50%;
+			background-size: 30px 30px;
 		}
 		.tel{
 			position: absolute;
@@ -172,6 +174,7 @@
 			margin-right: 94px;
 			color: #333;
 			line-height: 40px;
+			text-align: left;
 			padding-left: 10px;
 			border-top: 1px solid #eee;
 			font-size: 1.3rem;

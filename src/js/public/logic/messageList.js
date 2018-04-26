@@ -136,6 +136,7 @@ define([
 							realname: data.result.realname,
 							sex: data.result.sex,
 							number: data.result.seniority,
+							photo: data.result.photo,
 							fn: _this.scroll ? _this.scroll.refresh : null
 						})
 					}

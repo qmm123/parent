@@ -1,8 +1,7 @@
 define(["publicService/service",
 		"public/tools/method",
-		"publicLogic/header",
 		"public/business/nativeFun"
-	], function(Server, Method, Header, nativeFun) {
+	], function(Server, Method, nativeFun) {
 	return function() {
 		var tel = '15637846585';
 		var page_param = Method.getUrlParam("page_param");
@@ -78,8 +77,9 @@ define(["publicService/service",
 		})
 
 		// 返回上一页
-		$('.container').on('click', '.back', function() {
-			nativeFun('goBack');
+		$('.content').on('click', '.header .back', function() {
+			console.log(nativeFun)
+			nativeFun("goBack");
 		});
 
 		// 报名

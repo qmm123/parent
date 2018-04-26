@@ -5,10 +5,18 @@
 <!-- 1-消息列表 -->
 <body class="header">
 	<!-- 头部 -->
-	<header>
+	<!-- 头部 -->
+		@@include('./c-header.html', {
+			"type": "0",
+			"txt": "消息",
+			"rightText": ""
+		})
+	<!-- /头部 -->
+
+	<!-- <header>
 		<div class="back"></div>
 		消息
-	</header><!-- /header -->
+	</header>/header -->
 	<!-- /头部 -->
 	<!-- 消息列表 -->
 	<div class="messageList" id="wrapper">

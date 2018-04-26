@@ -36,12 +36,17 @@
 	<img src="/img/tpl1/default/bg_teacher_detail.png" alt="">
 	<div class="text">
 		{{if sex == 1}}
-			<div class="avator avator1">
-				<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
+			<div class="avator avator2">
+				{{if photo}}
+					<img src="{{photo}}" alt="">
+				{{else}}
+					<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
+				{{/if}}
 			</div>
 		{{else}}
 			<div class="avator avator1">
-				<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
+				<img src="{{photo}}" alt="">
+				
 			</div>
 		{{/if}}
 		<p>{{realname}}<span>({{number}}年教龄)</span></p>
@@ -59,7 +64,7 @@
 					<span>{{value}}</span>&nbsp;
 				{{/each}}
 			</p>
-			<p class="tag"><span class="gray">教授课程：</span>
+			<p class="tag"><span class="gray">教授标签：</span>
 				{{if label.length > 0}}
 					{{each goods_label value i}}
 						<span class="inner">{{value}}</span>

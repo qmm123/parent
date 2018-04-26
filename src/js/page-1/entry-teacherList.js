@@ -95,8 +95,8 @@ define([
 		requeseDataList();
 		// 跳转课程详情
 		$("#wrapper").on("click", ".item", function(){
-			alert($(this).data("id"))
-			//nativeFun("toTeacherDetailIntroduce", {"teacher_id": $(this).data("id")});
+			//alert($(this).data("id"))
+			nativeFun("toTeacherDetailIntroduce", {"teacher_id": $(this).data("id")});
 		})
 	}
 

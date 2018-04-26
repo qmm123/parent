@@ -5,22 +5,48 @@ define(["publicLogic/messageList",
 	], function(messageList, Method, nativeFun, Header) {
 	return function() {
 		var tel = '15637846585';
+		var isLoad = true;
 		//头像数据
 		function avaFn(data){
 			data.tel = tel;
 			Method.artRender($('#top'), "avator", data, false, function() {
-				setTimeout(function(){
-					var topH = $('#top').css('height');
-					var height = parseFloat(topH);
-					console.log(topH)
-					$('#wrapper').css("top",height+ 'px');
-					$('.tab').css("top",height+ 'px');
-					Method.artRender($('.tab'), 'tabClass', {isShow: isShow}, false, function() {
-						data.fn && data.fn();
-					})
-				}, 20)
+				$('#top>img')[0].onload = function() {
+					isLoad = false;
+					setTimeout(function(){
+										
+						var topH = $('#top').css('height');
+						var height = parseFloat(topH);
+						console.log(topH)
+						$('#wrapper').css("top",height+ 'px');
+						$('.tab').css("top",height+ 'px');
+						setTimeout(function() {
+							Method.artRender($('.tab'), 'tabClass', {isShow: isShow}, false, function() {
+								data.fn && data.fn();
+							})
+						}, 20)
+					}, 20)
+				}
+				$('#top>img')[0].onerror = function() {
+					alert(333)
+				}
+				if(isLoad) {
+					setTimeout(function(){
+						
+						var topH = $('#top').css('height');
+						var height = parseFloat(topH);
+						console.log(topH)
+						$('#wrapper').css("top",height+ 'px');
+						$('.tab').css("top",height+ 'px');
+						setTimeout(function() {
+							Method.artRender($('.tab'), 'tabClass', {isShow: isShow}, false, function() {
+								data.fn && data.fn();
+							})
+						}, 20)
+					}, 20)
+				}
 			})
 		}
+		
 
 		// 学生评分
 		function setStar(result) {
@@ -122,7 +148,7 @@ define(["publicLogic/messageList",
 
 		//是否显示评论页面
 		var tpl_config = localStorage.tpl_config;
-		var isShow = false;
+		var isShow = true;
 		if(tpl_config) {
 			tpl_config = JSON.parse(tpl_config);
 			var isShow = tpl_config.isShow;
