@@ -61,10 +61,12 @@ define([
 			this.listWrapper = $('#' + this.options.listWrapper);
 			this.emptyEle = $(this.options.emptyEle);
 			this.pageSize = 10; // 每条页数
-			this.currentPage = 0; // 当前页
+			this.currentPage = 1; // 当前页
 			this.totalPage = 0; // 总页数
-			this.$data = {}
-			this._opt = null
+			this.$data = {};
+			this._opt = null;
+			this.isPullUpMoreRequest = false;
+			this._isEmpty = false;
 		},
 
 		//初始化
@@ -87,7 +89,8 @@ define([
 			}
 			_this._opt = _opt;
 			this.renderList(null, _opt, function() {
-				_this.initScroll({isPullUp: opt.isPullUp, isPullDown: opt.isPullDown});
+				console.log('你到底真还是假'+_this._isEmpty)
+				_this.initScroll({isPullUp: opt.isPullUp, isPullDown: opt.isPullDown, _isEmpty: _this._isEmpty});
 				opt.FinialFn && opt.FinialFn();
 			}, function() {
 			})
@@ -152,7 +155,9 @@ define([
 						_this.$data = data.result;
 					}
 					Method.artRender(_this.listWrapper, _this.options.classTpl, data.result, false, function() {
+						_this._isEmpty = true;
 						successCallback && successCallback(data);
+						$('.pullUp').remove();
 						$('#empty').removeClass('hide');
 					});
 					if(_this.options.avaFn) {
@@ -175,8 +180,13 @@ define([
 		// 加载跟多 
 		// 参数一 接口参数 参数二 成功回调
 		getListMore: function(param, successCallback, errorCallback) {
+			if(this.isPullUpMoreRequest) {
+				return
+			}
 			var _this = this;
 			_this.currentPage++;
+			_this.isPullUpMoreRequest = true;
+			console.log(_this.currentPage)
 			var options = {
 				page_infos: {
 					curr_page: _this.currentPage
@@ -186,6 +196,7 @@ define([
 
 			// 请求数据
 			Server[this.options.name](null, param, function(data) {
+				_this.isPullUpMoreRequest = false;
 				data.result.data[0].type = _this.options.type;
 				if(_this.options.fn){
 					_this.$data.data = _this.options.fn(data.result.data);
@@ -197,6 +208,8 @@ define([
 				})
 			}, function() {
 				_this.currentPage--;
+				console.log(_this.currentPage+'------------------')
+				_this.isPullUpMoreRequest = false;
 				errorCallback && errorCallback();
 			})
 		},
@@ -227,7 +240,8 @@ define([
 				el: wrapper,
 				pullDownRefresh: pullDownRefresh,
 				momentumLimitDistance: 30,
-				pullUpLoad: pullUpLoad
+				pullUpLoad: pullUpLoad,
+				_isEmpty: opt._isEmpty
 			})
 			setTimeout(function() {
 				_this.scroll.scrollTo(0,0,0);
@@ -257,9 +271,9 @@ define([
 			// 上拉加载
 			this.listFolder.on('pullingUp', function() {
 				//$('.pullUp').css("visibility" , 'visible');
-				if(_this.currentPage >= Number(_this.totalPage) - 1) {
+				if((_this.currentPage >= Number(_this.totalPage)) && !_this.isPullUpMoreRequest) {
 					_this.scroll.forceUpdate({success: true, data: false})
-					console.log('无数据')
+					console.log(_this.currentPage+'!!!!!!!!!!!')
 				}else {
 					_this.getListMore(_this._opt, function(data) {
 						if(data.status) {

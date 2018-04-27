@@ -48,7 +48,7 @@ define([
 			oConditions.grade_id = sGradeLevel;
 			oConditions.teacher_id = sTeacherVal;
 			if(sSearchVal){
-				oConditions.goods_name = sSearchVal;
+				oConditions.course_name = sSearchVal;
 			}
 			return oConditions;
 		}

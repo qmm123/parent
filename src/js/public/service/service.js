@@ -20,7 +20,6 @@ define([
 				data: option
 			}
 		}, function(data){
-			console.log(data);
 			successCall && successCall(data);
 		}, function(jqXhr, statusTxt, data){
 			console.log(data)

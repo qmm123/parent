@@ -20,6 +20,8 @@ define([
 			momentumLimitDistance: config.momentumLimitDistance || 20
 		}
 		this.config = config;
+		console.log(config);
+		console.log('开始')
 		this.obj = { // 下拉刷新和上拉刷新一系列过程
 			pullDownInitTop: 50, // 下拉元素初始位置
 			beforePullDown: true,
@@ -52,10 +54,8 @@ define([
 			this.obj.isPullUpload = false;
 			if(dirty.success){
 				if(!dirty.data){
-					console.log($('.pullUp'))
 					$('.pullUp').removeClass('loading').addClass('no_bgc').find('.pullUpLabel').text("没有数据了");
 					_this.obj.isData = false;
-					console.log('呵呵呵呵')
 				}else{
 					this.scroll.finishPullUp();
 					$('.pullUp').removeClass('loading').find('.pullUpLabel').text("上拉刷新");
@@ -158,7 +158,7 @@ define([
 	bScroll.prototype._initPullUpLoad = function (){
 		var _this = this;
 		$('.pullUp').remove();
-		if(!$('.pullUp').length && (Number($(this.config.el).height()) < Number($(this.config.el).find('>div').height())) ) {
+		if(!_this.config._isEmpty && !$('.pullUp').length && (Number($(this.config.el).height()) < Number($(this.config.el).find('>div').height())) ) {
 			var str = '<div class="pullUp e"><div><span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载</span></div></div>';
 			$(this.config.el).find(">div").append(str);
 			_this.refresh();

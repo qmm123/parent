@@ -18,7 +18,7 @@ define([
     localStorage.version = "1.6.0";
     // 验证token
     localStorage.token_key = "3c1b0646ce520407a0fedfd17f3a56b6";
-    localStorage.token_val = "d0a249f8bfa44570b69b76d0bc625298";
+    localStorage.token_val = "91ce51cc8b274fa0ae154fafd603b2f1";
     // 消息推送-值
     localStorage.app_key = "0bdfd821e3432cc04d262152";
   }
