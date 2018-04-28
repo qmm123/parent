@@ -132,7 +132,7 @@ define(["publicLogic/messageList",
 		}
 
 		var param = Method.getUrlParam('page_param');
-		param = JSON.parse(param)
+		param = param && JSON.parse(param)
 		// 教师id
 		var teacher_id = param ? param.teacher_id : "44a917708a964607a4bb50eb8acd2f16";
 		

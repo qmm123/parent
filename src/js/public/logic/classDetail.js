@@ -6,6 +6,7 @@ define([
 	"publicBusiness/nativeFun",
 	"publicBusiness/layerFz"
 ], function (Service, Method, artTempFun, nativeFun, layer) {
+	console.log(window.location.href)
 	// arttemplate 助手
 	artTempFun.calculateStar();
 	// 对象写法（避免出现new改变this指向问题）
@@ -15,7 +16,11 @@ define([
 		init: function(opt){
 			this.configer(opt);
 			this.renderClassInfor();
-			this.renderClassPing();
+			this.pageConfig.is_show_goods_details_comment = true;
+			if(this.pageConfig.is_show_goods_details_comment){
+				this.renderClassPing();
+				this.pingZone.removeClass("hide");
+			}
 			this.gotoEvent();
 			this.bottomBtnEvent();
 		},
@@ -43,6 +48,7 @@ define([
 
 				lookTao: "lookTao",//查看课程套餐id
 
+				pingZone: "pingZone",//家长评价区域id
 				pingList: "pingList",//家长评价列表id
 
 				tplPing: "tplPing",//家长评价列表模板id
@@ -54,12 +60,12 @@ define([
 				yueTing: "yueTing",//按钮-预约试听id
 				joinCart: "joinCart",//按钮-加入购物车id
 				signClass: "signClass",//按钮-立即报名id
-
 			};
 			this.config = $.extend(true, defaults, opt);
 			// 通过桥接传递过来的参数
 			this.wbParam = JSON.parse( Method.getUrlParam("page_param") );
-			console.log(this.wbParam)
+			this.pageConfig = JSON.parse( Method.getUrlParam("tpl_config") ) ? JSON.parse( Method.getUrlParam("tpl_config") ) : {};//模板页面配置信息
+			console.log(this.wbParam, this.pageConfig)
 			this.dataInfor = {};//课程详情基础数据
 			// 获取元素
 			this.classDetailBasic = $("#" + this.config.classDetailBasic);//课程详情基本信息部分
@@ -70,6 +76,7 @@ define([
 			this.headerTel = $("#" + this.config.headerTel);
 
 			this.pingList = $("#" + this.config.pingList);
+			this.pingZone = $("#" + this.config.pingZone);
 			this.pingNum = $("#" + this.config.pingNum);//评论数量
 
 			this.yueTing = $("#" + this.config.yueTing);
@@ -80,7 +87,6 @@ define([
 		renderClassInfor:function(){
 			var _this = this;
 			Service.getClassDetailClass(null, {goods_id: this.wbParam.goods_id}, function(data){
-				console.log(data);
 				// 遗留非法调用问题？？？暂时这么解决
 				data.result.goods_name = data.result.name;
 				artTempFun.artRender(_this.classDetailBasic, _this.config.tplClassDetail, data.result);
@@ -89,6 +95,7 @@ define([
 				_this.renderHeaderInfor(data);
 				_this.lookDetailEvent(data);
 				_this.dataInfor = data.result;
+				console.log(_this.dataInfor);
 				_this.setBottomStatus(data);
 			});
 		},
@@ -97,7 +104,7 @@ define([
 			var _this = this;
 			Service.getSchoolDetailPing({isShowLoading: false}, {
 				conditions:{
-					campus_id: _this.wbParam.campus_id,
+					goods_id: _this.wbParam.goods_id,
 				}
 			}, function(data){
 				console.log(data)
@@ -116,11 +123,11 @@ define([
 			})
 			// 查看招生简章
 			this.classDetailBasic.on("click", "#" + this.config.lookClassZhang, function(){
-				nativeFun("toClassDetailZhang", {"goods_id": $(this).data("id")});
+				nativeFun("toClassDetailZhang", {"admissions": _this.dataInfor.admissions});
 			})
 			// 查看课程大纲
 			this.classDetailBasic.on("click", "#" + this.config.lookClassGang, function(){
-				nativeFun("toClassDetailGang", {"goods_id": $(this).data("id")});
+				nativeFun("toClassDetailGang", {"admissions": _this.dataInfor.admissions});
 			})
 			// 查看校区
 			this.classDetailBasic.on("click", "#" + this.config.lookSchool, function(){
@@ -128,7 +135,7 @@ define([
 			})
 			// 查看购物车
 			$("header").on("click", "#" + this.config.headerCart, function(){
-				nativeFun("toCart", {"parent_id": localStorage.parent_id});
+				nativeFun("toCart");
 			})
 			// 查看家长评价
 			$("body").on("click", "#" + this.config.lookParentPing, function(){
@@ -145,11 +152,14 @@ define([
 			}
 			// 设置校区电话
 			if(data.result.telephone){
-				this.headerTel.attr("href", "tel:" + data.result.telephone);
+				this.headerTel.click(function(){
+					nativeFun("callPhone", {"phone":data.result.telephone});
+				})
 			}else{
 				this.headerTel.click(function(){
 					layer.msg({
-						content: "暂未开通校区电话!"
+						content: "暂未开通校区电话!",
+						shadeClose: true
 					});
 				});
 			}
@@ -163,8 +173,13 @@ define([
 					layer.pageUp({
 						style: "height:200px;",
 						title: "优惠详情",
+						shadeClose: true,
 						content: artTempFun.getArtString( $("#" + _this.config.tplClassDetailHui).html(), data.result, true )
 					});
+					// 查看套餐
+					$("#" + _this.config.lookTao).click(function(){
+						nativeFun("toClassDetailTao", {goods_id: _this.dataInfor.goods_id});
+					})
 				})
 			}
 			// 查看课程安排
@@ -177,10 +192,11 @@ define([
 					});
 				})
 			}
-			// 查看套餐
-			$("body").on("click", "#" + this.config.lookTao, function(){
-				nativeFun("toClassDetailTao", {parent_id: localStorage.parent_id});
-			})
+			// 查看套餐--后动态生成的元素不能用事件代理！！！
+			// $(document).on("click", "#" + this.config.lookTao, function(){
+			// 	console.log("tao")
+			// 	nativeFun("toClassDetailTao", {goods_id: _this.dataInfor.goods_id});
+			// })
 		},
 		// 底部操作按钮交互
 		bottomBtnEvent: function(){
@@ -191,7 +207,7 @@ define([
 				if( $this.hasClass("disable") ){
 					return;
 				}
-				nativeFun("toAudition");
+				nativeFun("toAudition", {goods_id: _this.dataInfor.goods_id, name: _this.dataInfor.name});
 			})
 			// 加入购物车
 			this.joinCart.click(function(){
@@ -215,10 +231,11 @@ define([
 				if( $this.hasClass("disable") ){
 					return;
 				}
+				console.log(_this.dataInfor.goods_id)
 				if(_this.dataInfor.status == 4){//插班
-					nativeFun("lgSignClass");
+					nativeFun("lgSignClass", {goods_id: _this.dataInfor.goods_id});
 				}else{
-					nativeFun("lgSignClass");
+					nativeFun("lgSignClass", {goods_id: _this.dataInfor.goods_id});
 				}
 			})
 		},
@@ -242,6 +259,10 @@ define([
 			}
 			// 立即报名-按钮状态
 			if(data.result.status == "4" && data.result.is_transfer == "1"){
+				this.signClass.removeClass("disable");
+			}
+			// 立即报名-按钮状态
+			if(data.result.status == "5"){
 				this.signClass.removeClass("disable");
 			}
 		}

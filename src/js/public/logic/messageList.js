@@ -71,7 +71,7 @@ define([
 
 		//初始化
 		init: function(opt, conf) {
-			this.scroll && this.scroll.destroy();
+			//this.scroll && this.scroll.destroy();
 			$('.pullDown').css("visibility" , 'hidden');
 			var _this = this;
 			this.setOptions(opt);
@@ -89,7 +89,6 @@ define([
 			}
 			_this._opt = _opt;
 			this.renderList(null, _opt, function() {
-				console.log('你到底真还是假'+_this._isEmpty)
 				_this.initScroll({isPullUp: opt.isPullUp, isPullDown: opt.isPullDown, _isEmpty: _this._isEmpty});
 				opt.FinialFn && opt.FinialFn();
 			}, function() {

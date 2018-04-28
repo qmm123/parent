@@ -1,6 +1,7 @@
 <script type="text/html">
 	<!-- 课程列表页-侧边栏 -->
 	<div class="class_list_sidebar">
+		{{if is_show_classtime}}
 		<h1 class="tit">上课时间</h1>
 		<ul class="btn_list" data-role="checkbox" data-input-key="class_week">
 			<li data-input-value="1"><span>周一</span></li>
@@ -11,6 +12,7 @@
 			<li data-input-value="6"><span>周六</span></li>
 			<li data-input-value="7"><span>周日</span></li>
 		</ul>
+		{{/if}}
 		<h1 class="tit">具体时间</h1>
 		<ul class="btn_list" data-role="checkbox" data-input-key="class_time">
 			<li data-input-value="06:00-12:00"><span>上午</span></li>

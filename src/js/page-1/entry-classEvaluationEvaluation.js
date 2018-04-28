@@ -1,8 +1,9 @@
 define(["publicLogic/messageList",
 	"public/tools/method",
 	"public/business/nativeFun",
-	"publicLogic/header"
-	], function(messageList, Method, nativeFun, Header) {
+	"publicLogic/header",
+	"public/business/jsFun"
+	], function(messageList, Method, nativeFun, Header, jsFun) {
 	return function() {
 		// 子订单id
 		var sub_order_id = Method.getUrlParam('page_param') ? JSON.parse(Method.getUrlParam('page_param'))["sub_order_id"] : "cec4c90ae145442ab9c3b2853613331e";
@@ -14,11 +15,15 @@ define(["publicLogic/messageList",
 			},
 			isPullUp: true
 		});
-
+		// 执行刷新的交互
+		jsFun("wbReload", function(){
+			window.location.reload();
+		});
+		
 
 		// 跳转到写评价页
 
-		$('.item .line').on('click', function() {
+		$('#wrapper').on('click', '.item .line',function() {
 			var student_id = $(this).data('student_id');
 			var goods_id = $(this).data('goods_id');
 			var order_id = $(this).data('order_id');

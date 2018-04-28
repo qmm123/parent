@@ -62,7 +62,7 @@
 			    </div>
 				</div>
 				<!-- 课程评价 -->
-				<div class="cls_evel_zone">
+				<div id="pingClassZone" class="cls_evel_zone hide">
 			    <!-- 标题 -->
 			    <div class="tit">
 			      <a href="javascript:;" class="h1">
@@ -156,7 +156,7 @@
 	<!-- 老师 -->
 	<script type="text/html" id="tplTeacher">
 		{{each data val i}}
-		<li data-member_id={{val.member_id}}>
+		<li data-id={{val.id}}>
 			<div class="agent_cls_list teacher">
 		    <a href="javascript:;" class="cls_single teacher">
 	        <div class="teacher_l">

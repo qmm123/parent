@@ -169,5 +169,26 @@ define([
     }
   }
 
+  /**
+   * @Author    高同檩
+   * @DateTime  2018-04-28
+   * @copyright [获取图片的原始宽和高]
+   * @param     {[imgEle]}     img对象(js原生对象)
+   * @return    {[object]}        图片的原始宽度和高度
+   */
+  methods.getImgNaturalSize = function(imgEle){
+    var natureSize = {};
+     if(window.naturalWidth && window.naturalHeight) {
+      natureSize.width = imgEle.naturalWidth;
+      natureSize.height = imgEle.naturalHeight;
+     } else {
+      var img = new Image();
+      img.src = imgEle.src;
+      natureSize.width = img.width;
+      natureSize.height = img.height;
+     }
+     return natureSize;
+  }
+
   return methods;
 });

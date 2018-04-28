@@ -18,6 +18,10 @@
 	position: relative;
 	padding:5px 10px;
 }
+.pullUp{
+	position: absolute;
+	width: 100%;
+}
 /* 直接子级div */
 .pullDown >div,.pullUp >div{
 	position: absolute;

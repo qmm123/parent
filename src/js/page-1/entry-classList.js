@@ -19,6 +19,7 @@ define([
 	classSideBar
 ) {
 	return function(){
+		console.log(window.location.href)
 		// 头部
 		Header.init();
 		Header.goSearchPage({"name": Header.searchEle.data("value") ? Header.searchEle.data("value") : ""});
@@ -77,9 +78,8 @@ define([
 		  callClick: requeseDataList
 		});
 		// =课程分类
-		console.log(window.location.href);
 		categoryClass.init({
-			initCategoryName: Method.getUrlParam("name"),
+			initCategoryName: Method.getUrlParam("category_name"),
 			initCategoryLevel: Method.getUrlParam("category_class_level"),
 		  callClick: requeseDataList
 		});

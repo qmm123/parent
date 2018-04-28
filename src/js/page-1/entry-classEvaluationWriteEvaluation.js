@@ -40,11 +40,18 @@ define([
 		var  student_id = page_param ? JSON.parse(page_param)["student_id"] : "2d53c54bbd994aa4a45b08949858e55a";
 		var  campus_id = page_param ? JSON.parse(page_param)["campus_id"] : "441a0ebd14324d3b8f8fd3d8b1f45787";
 		var  teacher_id = page_param ? JSON.parse(page_param)["teacher_id"] : "02afda9e75344b5c967af5506b605546";
-		var  class_effect_score = page_param ? JSON.parse(page_param)["class_effect_score"] : "5.0"; //上课效果评分
-		var  teaching_environment_score = page_param ? JSON.parse(page_param)["teaching_environment_score"] : "5.0"; //教学环境评分
-		var  service_attitude_score = page_param ? JSON.parse(page_param)["service_attitude_score"] : "5.0"; // 服务态度评分
-		var  curriculum_evaluation = page_param ? JSON.parse(page_param)["curriculum_evaluation"] : ""; // 课程评价
-		var  is_anonymous = page_param ? JSON.parse(page_param)["is_anonymous"] : "2"; //是否匿名
+		var  class_effect_score = '5.0';
+		var  teaching_environment_score = '5.0';
+		var  service_attitude_score = '5.0';
+		var  curriculum_evaluation = '';
+		var  is_anonymous = '2';
+		if(page_param) {
+			class_effect_score = JSON.parse(page_param)["class_effect_score"] || "5.0"; //上课效果评分
+			teaching_environment_score = JSON.parse(page_param)["teaching_environment_score"] || "5.0"; //教学环境评分
+			service_attitude_score = JSON.parse(page_param)["service_attitude_score"] || "5.0"; // 服务态度评分
+			curriculum_evaluation = JSON.parse(page_param)["curriculum_evaluation"] || ""; // 课程评价
+			is_anonymous = JSON.parse(page_param)["is_anonymous"] || "2"; //是否匿名
+		}
 		var  parent_id = localStorage.parent_id;
 		var num = allNum - parseInt(curriculum_evaluation.length);
 		var result = {
@@ -102,6 +109,7 @@ define([
 			return result;
 		}
 		setStar(result);
+		console.log(result)
 		Method.artRender($('.evaluation'), 'TplClass', result, false, function() {
 			// 评星效果
 			$('.star').on('tap', function() {

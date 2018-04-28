@@ -71,7 +71,12 @@
 		<div class="footer">
 			<div class="right">立即报名</div>
 			<div class="left">
-				总价：<span>￥{{lessons[0]*unit_price}}</span>
+				总价：
+				{{if unit_price == 0}}
+					<span>￥0.00</span>
+				{{else}}
+					<span>￥{{lessons[0]*unit_price}}</span>
+				{{/if}}
 			</div>
 		</div>
 	</script>

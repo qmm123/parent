@@ -25,11 +25,12 @@ define([
 				sideEle: "#classSidebar",//侧边栏触发元素
 				sideBarEle: ".class_list_sidebar",//侧边栏
 				speed: 300,//侧边栏运动时间
-				paramKey: "goods_otm",//侧边栏配置参数（从url获取）
+				paramKey: "tpl_config",//侧边栏配置参数（从url获取）
 				callConfirm: ""//确定按钮的回调
 			};
 			this.config = $.extend(true, defaults, opt);
 			this.sideBar = null;//侧边栏对象
+			this.getConfigData();//模块配置
 		},
 		// 获取配置参数
 		getConfigData: function(){

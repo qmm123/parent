@@ -6,17 +6,18 @@ define(["publicService/service",
 		var tel = '15637846585';
 		var page_param = Method.getUrlParam("page_param");
 		var course_id = page_param ? JSON.parse(page_param)['course_id'] : "881129c332474d669d54566534a44538";
+		var purchase_number = 0;
 		Server.getScrollDetail(null, {
 			course_id: course_id
 		}, function(data) {
 			console.log(data);
 			data.result.tel = tel;
 			Method.artRender($('.content'), 'TplClass', data.result, false, function() {
-
+				purchase_number = data.result.lessons[0];
+				console.log(purchase_number)
 			})
 		})
 		// 传递参数
-		var purchase_number = 0;
 		var parent_id = localStorage.parent_id;
 
 		// 选择课时
@@ -86,9 +87,10 @@ define(["publicService/service",
 		$('.container').on('click','.footer .right', function() {
 			var param = {
 				"parent_id": parent_id,
-				"purchase_number": purchase_number,
+				"purchase_number": String(purchase_number),
 				"course_id": course_id
 			}
+			console.log(param);
 			nativeFun("toCourseRollPurchaseDetails", param);
 		})
 	}

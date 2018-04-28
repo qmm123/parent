@@ -1,7 +1,8 @@
 // 公共逻辑-头部
 define([
 	"public/business/nativeFun",
-], function (nativeFun) {
+	"public/tools/method",
+], function (nativeFun, Method) {
 	// 对象写法（避免出现new改变this指向问题）
 	var Header = {
 		// 初始化
@@ -12,6 +13,8 @@ define([
 			this.configer(opt);
 			// 返回事件
 			this.goBack();
+			// 设置初始状态
+			this.initStatus();
 		},
 		// 配置项
 		// 参数一 配置对象
@@ -32,7 +35,7 @@ define([
 		// 返回方法
 		goBack: function(){
 			this.backEle.click(function(){
-				nativeFun("goBack");
+				nativeFun("goBack", );
 			});
 		},
 		// 去搜索页
@@ -52,6 +55,14 @@ define([
 				_this.searchEle.html(_this.config.searchDefaultTxt).data("value", "");
 				call && call();
 			})
+		},
+		// 设置初始状态
+		initStatus: function(){
+			if( Method.getUrlParam("name") ){
+				var sName = Method.getUrlParam("name");
+				this.searchEle.data("value",sName).html(sName);
+				this.searchShutEle.show();
+			}
 		}
 	}
 	

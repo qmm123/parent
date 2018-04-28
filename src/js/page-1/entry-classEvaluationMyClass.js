@@ -1,10 +1,14 @@
 define(["publicLogic/messageList",
 	"public/tools/method",
 	"publicLogic/header",
-	"public/business/nativeFun"
-	], function(messageList, Method, Header, nativeFun) {
+	"public/business/nativeFun",
+	"public/business/jsFun"
+	], function(messageList, Method, Header, nativeFun, jsFun) {
 	return function() {
-
+		// 执行刷新的交互
+		jsFun("wbReload", function(){
+			window.location.reload();
+		});
 		var page_param = Method.getUrlParam("page_param");
 		var _type = page_param ? JSON.parse(page_param)['type'] : "ClassPingMyClass";
 		if(_type == "ClassPingMyClass") {

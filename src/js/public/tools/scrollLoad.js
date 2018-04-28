@@ -20,8 +20,6 @@ define([
 			momentumLimitDistance: config.momentumLimitDistance || 20
 		}
 		this.config = config;
-		console.log(config);
-		console.log('开始')
 		this.obj = { // 下拉刷新和上拉刷新一系列过程
 			pullDownInitTop: 50, // 下拉元素初始位置
 			beforePullDown: true,

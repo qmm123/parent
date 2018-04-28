@@ -209,10 +209,10 @@ define(["publicService/service",
 			var param = {
 				"parent_id": parent_id,
 				"oto_id": oto_id,
-				"class_hour": class_hour,
-				"money": money,
+				"class_hour": String(class_hour),
+				"money": String(money),
 				"oto_son_id": oto_son_id,
-				"teaching_mode": teaching_mode
+				"teaching_mode": String(teaching_mode)
 			}
 			nativeFun("toOneToOneEnroll", param);
 		})

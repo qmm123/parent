@@ -6,6 +6,7 @@ define([
 		// 功能性部分
 		logout: "logout",//登出
 		goBack: "goBack",//返回上一页
+		callPhone: "callPhone",//拨打电话
 		// H5部分(页面由H5做)
 		toSchedule: "toSchedule",//去课表页
 
@@ -43,7 +44,7 @@ define([
 		toRetire: "toRetire", //去退班页
 		toMyChild: "toMyChild", // 去我的孩子页 
 		toOneToOneEnroll: "toOneToOneEnroll", // 去一对一报名页
-		toCourseRollPurchaseDetails: "getCourseRollPurchaseDetails", // 去滚动班报名页
+		toCourseRollPurchaseDetails: "toCourseRollPurchaseDetails", // 去滚动班报名页
 
 		// 逻辑代码部分(调用原生的逻辑代码)
 		lgSignClass: "lgSignClass"//立即报名&插班

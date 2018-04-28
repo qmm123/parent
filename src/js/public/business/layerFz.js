@@ -74,7 +74,7 @@ define([
       style: 'position:fixed; left:0; bottom:0; width:100%; border: none; -webkit-animation-duration: .5s; animation-duration: .5s;',
       success: function(ele){
         var iIdx = $(ele).attr("index");
-        $("body").on("click", ".layui-m-layercont .layer_shut", function(){
+        $(".layui-m-layercont .layer_shut").click(function(){
           layer.close(iIdx);
         })
       }

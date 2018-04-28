@@ -23,7 +23,11 @@ define([
 			// tab切换
 			this.slideSwitch();
 			this.renderMain();
-			this.renderPing();
+			this.pageConfig.is_show_campus_comment = true;
+			if(this.pageConfig.is_show_campus_comment){
+				this.renderPing();
+				this.pingClassZone.removeClass(this.config.hide_class);
+			}
 			this.switchPage();
 		},
 		configer: function(opt){
@@ -39,6 +43,7 @@ define([
 				picVideoList: "photoVideo",//校区相册视频列表id
 				picVideoMore: "photoVideoMore",//校区相册视频列表id
 				pingNum: "[data-role='ping_num']",//课程评价数量
+				pingClassZone: "pingClassZone",//课程评价列表区域id
 				pingList: "pingList",//课程评价列表id
 				tplPicVideo: "tplPicVideo",//相册/视频模板id
 				tplPing: "tplPing",//课程评价模板id
@@ -56,6 +61,9 @@ define([
 			this.config = $.extend(true, defaults, opt);
 			// 通过桥接传递过来的参数
 			this.wbParam = JSON.parse( Method.getUrlParam("page_param") );
+			this.pageConfig = JSON.parse( Method.getUrlParam("tpl_config") ) ? JSON.parse( Method.getUrlParam("tpl_config") ) : {};//模板页面配置信息
+			console.log(this.wbParam, this.pageConfig)
+			this.dataInfor = null;//基本信息
 			this.campus_id = this.wbParam.campus_id;//校区id
 			this.lng = Method.getUrlParam("lng") ? Method.getUrlParam("lng") : "";//经度
 			this.lat = Method.getUrlParam("lat") ? Method.getUrlParam("lat") : "";//纬度
@@ -74,11 +82,14 @@ define([
 			this.picVideoMore = $("#" + this.config.picVideoMore);
 			this.pingNum = $(this.config.pingNum);
 			this.pingList = $("#" + this.config.pingList);
+			this.pingClassZone = $("#" + this.config.pingClassZone);
 			this.teacherList = $("#" + this.config.teacherList);
 			this.schoolEnv = $("#" + this.config.schoolEnv);
 			// 设置属性值
 			if( Method.getUrlParam("merchant_phone") ){
-				this.merchantPhoneEle.attr("href", "tel:" + Method.getUrlParam("merchant_phone"));
+				this.merchantPhoneEle.click(function(){
+					nativeFun("callPhone", {"phone":Method.getUrlParam("merchant_phone")});
+				})
 			}
 		},
 		// tab切换
@@ -96,7 +107,8 @@ define([
 				lng: _this.lng,
 				lat: _this.lat
 			}, function(data){
-				console.log(data);
+				_this.dataInfor = data.result;
+				console.log(_this.dataInfor);
 				_this.config.headerTxtEle.html(data.result.name + "主页");
 				// 设置校区环境图片
 				if(data.result.campus_imgs.length){
@@ -110,15 +122,18 @@ define([
 						_this.setContentHeight();
 					});
 				}
+				_this.setContentHeight();
 				if(data.result.candial == 1){
 					_this.campusPhoneEle.html(data.result.telephone);
-					_this.campusPhoneEle.attr("href", "tel:" + data.result.telephone);
+					_this.campusPhoneEle.click(function(){
+						nativeFun("callPhone", {"phone":data.result.telephone});
+					})
 				}
 				_this.campusPhoneEle.removeClass(_this.config.visClass);
 				_this.addressEle.html(data.result.campus_address);
 				_this.distanceEle.html(data.result.distance);
-				_this.picNum.html(data.result.img_count);
-				_this.videoNum.html(data.result.video_count);
+				_this.picNum.html(data.result.img_count ? data.result.img_count : 0);
+				_this.videoNum.html(data.result.video_count ? data.result.video_count : 0);
 				// 渲染相册
 				if(data.result.goods_img_videos && data.result.goods_img_videos.length){
 					artTempFun.artRender($("#" + _this.config.picVideoList), _this.config.tplPicVideo, data.result);
@@ -138,11 +153,11 @@ define([
 					campus_id: _this.campus_id,
 				}
 			}, function(data){
-				console.log(data);
+				console.log(data, 123);
 				if(data.result.data && data.result.data.length){
 					artTempFun.artRender($("#" + _this.config.pingList), _this.config.tplPing, data.result);
-					$(_this.config.pingNum).html(data.result.total);
 				}
+				_this.pingNum.html(data.result.total);
 			});
 		},
 		// 渲染校区课程
@@ -189,7 +204,7 @@ define([
 			})
 			// 去老师详情页
 			$(this.config.slideCell).on("click", "#teacherList >li", function(){
-				nativeFun("toTeacherDetailIntroduce", {"campus_id": _this.campus_id, "member_id": $(this).data("member_id")});
+				nativeFun("toTeacherDetailIntroduce", {"campus_id": _this.campus_id, "teacher_id": $(this).data("id")});
 			})
 		},
 		// 设置课程和老师列表的高度
@@ -232,14 +247,14 @@ define([
 			var _this = this;
 			this.picVideoList.on("click", "li[data-role='pic']", function(){
 				var aImg = $(this).parent().find("img.pic");
-				var oCurImg = $(this).find("img");
-				var iIdx = aImg.index( oCurImg );
+				var aCurImg = $(this).find("img");
+				var iIdx = aImg.index( aCurImg );
 				var items = [];
 				aImg.each(function(){
 					var obj = {};
 					obj.src = $(this).attr("src");
-					obj.w = $(this).width();
-					obj.h = $(this).height();
+					obj.w = Method.getImgNaturalSize( $(this).get(0) ).width;
+					obj.h = Method.getImgNaturalSize( $(this).get(0) ).height;
 					items.push(obj);
 				})
 				_this.PhotoSwiper.init(iIdx, items);

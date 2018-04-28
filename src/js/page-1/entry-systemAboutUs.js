@@ -1,15 +1,20 @@
 // 1-关于我们页-入口
 define([
 	"publicLogic/header",
-	"publicService/service"
-], function (Header, Service) {
+	"publicService/service",
+	"publicTool/method",
+	"publicBusiness/nativeFun",
+], function (Header, Service, Method, nativeFun) {
 	return function(){
 		// 头部
 		Header.init();
 		// 获取详情
 		Service.getMerchantInfo({}, {}, function (data) {
 			$("#version").html(localStorage.version);
-			// $("#phone").html("<a href='tel:"+ data.result.addr.telephone +"'>"+ data.result.addr.telephone +"</a>");
+			$("#phone").html(Method.getUrlParam("merchant_phone"))
+			$("#phone").click(function(){
+				nativeFun("callPhone", {"phone":Method.getUrlParam("merchant_phone")});
+			})
 			$("#address").html(data.result.addr.address);
 		});
 	}
