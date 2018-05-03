@@ -4,8 +4,8 @@ define([
 ], function (Bridge) {
 	var jsFunConfig = {
 		wbSearchList: "wbSearchList",//获取班课、校区、一对一、老师、滚动班列表
-		webSchedule: "webSchedule", //返回课表页面
-		wbReload: "wbReload"
+		wbSchedule: "wbSchedule", //返回课表页面
+		wbReload: "wbReload" // 刷新
 	};
 
 	// 参数一（flag）方法标识

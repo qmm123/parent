@@ -3,7 +3,6 @@ define(["publicService/service",
 		"public/business/nativeFun"
 	], function(Server, Method, nativeFun) {
 	return function() {
-		var tel = '15637846585';
 		var page_param = Method.getUrlParam("page_param");
 		var course_id = page_param ? JSON.parse(page_param)['course_id'] : "881129c332474d669d54566534a44538";
 		var purchase_number = 0;
@@ -11,7 +10,6 @@ define(["publicService/service",
 			course_id: course_id
 		}, function(data) {
 			console.log(data);
-			data.result.tel = tel;
 			Method.artRender($('.content'), 'TplClass', data.result, false, function() {
 				purchase_number = data.result.lessons[0];
 				console.log(purchase_number)
@@ -92,6 +90,11 @@ define(["publicService/service",
 			}
 			console.log(param);
 			nativeFun("toCourseRollPurchaseDetails", param);
+		})
+
+		// 打电话
+		$('.content').on('click', '.tel', function() {
+			nativeFun('callPhone');
 		})
 	}
 })

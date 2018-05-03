@@ -16,9 +16,17 @@ define(["publicLogic/messageList",
 			isPullUp: true
 		});
 		// 执行刷新的交互
-		jsFun("wbReload", function(){
-			window.location.reload();
-		});
+		/*jsFun("wbReload", function(){
+			console.log('jjjjjj')
+			messageList.init({
+				name: 'getClassPingWantPing',
+				type: 'ClassPingWantPing',
+				data: {
+					sub_order_id: sub_order_id
+				},
+				isPullUp: true
+			});
+		});*/
 		
 
 		// 跳转到写评价页

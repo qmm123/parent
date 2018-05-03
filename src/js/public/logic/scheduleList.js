@@ -84,7 +84,7 @@ define([
 				//console.log($contain - _delayH)
 				if($contain < _delayH) {
 					//this.disable();
-					$('#wrapper').trigger('touchstart')
+					//$('#wrapper').trigger('touchstart')
 					this.scrollTo(0,0,0);
 					return;
 				}
@@ -103,8 +103,10 @@ define([
 				if(!isTouchMove) {
 					return
 				}
+				console.log(e.originEvent)
 				this.delay = e.targetTouches[0].pageY - this.y;
 				//console.log(this.delay)
+				console.log(this.delay)
 				if(this.delay < 0) {
 					$('.calendar .date_list').find('li').slice(0,index - 3).hide();
 					$('.calendar .date_list').find('li').slice(index + 4).hide();

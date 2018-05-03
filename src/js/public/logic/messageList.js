@@ -101,7 +101,6 @@ define([
 			var _this = this;
 			// 请求数据
 			Server[this.options.name](apiConfid, param, function(data) {
-				console.log(data)
 				if(data.result && data.result.data && data.result.data.length > 0) {
 					_this.emptyEle.addClass('hide');
 					data.result.data[0].type = _this.options.type;
@@ -198,7 +197,7 @@ define([
 				_this.isPullUpMoreRequest = false;
 				data.result.data[0].type = _this.options.type;
 				if(_this.options.fn){
-					_this.$data.data = _this.options.fn(data.result.data);
+					_this.$data.data = _this.options.fn(data.result);
 				}else{
 					_this.$data = data.result;
 				}
@@ -257,7 +256,7 @@ define([
 					_this.renderList(null, _this._opt, function(data) {
 						if(data.status){
 							_this.scroll.forceUpdate({success: true});
-							_this.currentPage = 0;
+							_this.currentPage = 1;
 							console.log('下拉刷新')
 						}else {
 							_this.scroll.forceUpdate({success: false});

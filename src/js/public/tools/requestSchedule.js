@@ -20,12 +20,15 @@ define([
 			})
 		}
 		// 获取课表(列表)
-		requestSchedule.getList = function(date_time, successCallback, errorCallback){
+		requestSchedule.getList = function(opt, successCallback, errorCallback){
+			console.log(opt.student_id)
 			Service.getScheduleCourseList(null, {
 				conditions: {
-					open_date: date_time
+					open_date: opt.date_time,
+					student_id: opt.student_id
 				}
 			}, function(data) {
+				console.log(opt.isEmpty)
 				if(data.status) {
 					var _data = {}
 					var data = data.result;
@@ -34,6 +37,9 @@ define([
 						setRender(_data, function() {
 							successCallback && successCallback();
 						})
+					}else if(opt.student_id){
+						var html = '<p class="_empty">今天没有课程,请选择日历查看有课程的日期</p>';
+						$('#listContainer').html(html);
 					}
 				}
 			}, function() {

@@ -29,8 +29,7 @@
 					<span class="not">待试听</span>
 					<div class="btn"><span>取消试听</span></div>
 				</li> -->
-			</ul>
-			
+			</ul>		
 		</div>
 	</div>
 	<!-- /列表 -->
@@ -51,7 +50,7 @@
 				<p>上课地点：{{value.campus_address}}</p>
 				<p>预约时间：{{value.audition_date}} {{value.audition_time}}</p>
 				{{if value.status == 1}}
-					<span class="not">未联系/已预约</span>
+					<span class="not">未试听</span>
 				{{else if value.status == 2}}
 					<span class="not">已试听</span>
 				{{else if value.status == 3}}
@@ -59,10 +58,20 @@
 				{{else if value.status == 4}}
 					<span class="not">已取消</span>
 				{{else if value.status == 5}}
-					<span class="not">未试听</span>
+					{{if value.isStatus}}
+						<span class="not">待试听</span>
+					{{else}}
+						<span class="not">已过期</span>
+					{{/if}}
 				{{/if}}
-				{{if value.status == 5}}
-					<div class="btn"><span data-goods_id="{{value.goods_id}}">取消试听</span></div>
+				{{if value.status == 1}}
+					<div class="btn" data-tab="1" data-show="{{value.status}}"><span data-goods_id="{{value.id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">取消试听</span></div>
+				{{else if value.status == 4}}
+					<div class="btn" data-tab="2" ><span data-goods_id="{{value.id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">重新预约</span></div>
+				{{else if value.status == 5}}
+					{{if value.isStatus}}
+						<div class="btn" data-tab="1" data-show="{{value.status}}"><span data-goods_id="{{value.id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">取消试听</span></div>
+					{{/if}}
 				{{/if}}
 			</li>
 		{{/each}}

@@ -2,8 +2,9 @@ define(["publicTool/datepicker",
 	"publicLogic/scheduleList",
 	"public/business/nativeFun",
 	"public/business/jsFun",
-	"publicLogic/header"
-	], function(datepicker, bScroll, nativeFun, jsFun, Header) {
+	"publicLogic/header",
+	"publicTool/requestSchedule"
+	], function(datepicker, bScroll, nativeFun, jsFun, Header, RequestSchedule) {
 	//console.log(scroll)
 	return function (){
 		var isShow = false;
@@ -29,23 +30,45 @@ define(["publicTool/datepicker",
 		// 跳转到孩子页面
 
 		$('.schedule .nav').on('click', function() {
-			var student_id = $(this).data('student_id');
+			/*var student_id = $(this).data('student_id');
 			if(student_id) {
 				nativeFun('toMyChild', {
 					"student_id": student_id
 				})
-			}else{
+			}else{*/
 				nativeFun('toMyChild');
-			}
+			/*}*/
 		})
 
+
 		// 原生调h5
-		jsFun('webSchedule', function(param) {
-			var _param = JSON.parse(param);
+		jsFun('wbSchedule', function(param) { 
+			/*var _param = JSON.parse(param);
 			var student_id = _param.student_id;
 			var name = $('#wrapper .item[data-goods_id="'+student_id+'"]').find('.left p').text();
 			$('.schedule .nav').data('student_id', student_id);
-			$('.schedule .nav').html(name + '<span class="right-arrow"></span>');
+			$('.schedule .nav').html(name + '<span class="right-arrow"></span>');*/
+			var param = JSON.parse(param);
+			//console.log(RequestSchedule)
+			$('.schedule .nav').html(param.student_name + '<span class="right-arrow"></span>');
+			$('.schedule .nav').data('id',param.student_id);
+			$('.schedule .date_list li').removeClass('active');
+			var time = new Date();
+			var years = time.getFullYear();
+			var month = time.getMonth() + 1;
+			if(parseInt(month) < 10) {
+				month = "0"+month
+			}
+			var day = time.getDate();
+			var date_time = years + '-' + month + '-' + day;
+			
+			RequestSchedule.getList({
+				date_time: date_time,
+				student_id: param.student_id
+			}, function() {
+				console.log('成')
+				bScroll.refresh();
+			});
 		})
 
 		// 返回上一页

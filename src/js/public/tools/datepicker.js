@@ -24,13 +24,14 @@ define(["publicTool/requestSchedule",
 			}
 			var day = time.getDate();
 			var date_time = years + '-' + month + '-' + day;
-			RequestSchedule.getList(date_time, function() {
+			RequestSchedule.getList({date_time: date_time}, function() {
 				bScroll.refresh();
 			});
 		}
 	}
 	function calendar(){
 		var index_show = $(oDiv).find('.date_list li.date_top').eq(0).index();
+		console.log(index_show)
 		var oDate = new Date();
 		oDate.setMonth(oDate.getMonth()+iNow,1);
 		oH3.innerHTML=oDate.getFullYear()+'年'+(oDate.getMonth()+1)+'月';
@@ -100,13 +101,14 @@ define(["publicTool/requestSchedule",
 				aLi[i].className+=' past';
 			}
 		}
-		if(!index_show) {
+		if(!index_show && index_show!=0) {
 			return
 		}
 		if(index_show >= 0) {
 			$(oDiv).find('.date_list li').slice(0,index_show).hide();
 			$(oDiv).find('.date_list li').slice(index_show, index_show+7).addClass('date_top');
 			$(oDiv).find('.date_list li').slice(index_show+7).hide();
+			console.lo('切换', index_show)
 		}
 		var years = oDate.getFullYear();
 		var month = oDate.getMonth() + 1;
@@ -154,7 +156,7 @@ define(["publicTool/requestSchedule",
 	/* 获取选中日期 */
 	function getDate(){
 		var oLis = $("#datepicker .date_list li");
-		oLis.on("tap", function(){
+		$("#datepicker .date_list").on("tap","li" ,function(){
 			if($(this).attr("date") !== "no_pass"){
 				var sYearM = oH3.innerHTML;
 				var iYear = sYearM.substring(0, 4);	//获取的年
@@ -169,7 +171,8 @@ define(["publicTool/requestSchedule",
 					var iMonth = sYearM.substring(5,7);
 				}
 				var date_time = iYear + '-' + iMonth + '-' + iDate;
-				RequestSchedule.getList(date_time, function() {
+				var student_id = $('.schedule .nav').data('id');
+				RequestSchedule.getList({date_time: date_time, student_id: student_id}, function() {
 					bScroll.refresh();
 				});
 			}
@@ -179,7 +182,7 @@ define(["publicTool/requestSchedule",
 
 	/* 设置点击的样式 */
 	function setStyle(){
-		$("#datepicker ul li").on("tap",function (){
+		$("#datepicker ul").on("tap","li",function (){
 			if($(this).attr("date") !== "no_pass"){
 				$(this).addClass('active').siblings().removeClass('active');
 				$(".today").css("background-repeat","no-repeat");

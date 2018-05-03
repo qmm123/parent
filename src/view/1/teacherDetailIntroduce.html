@@ -52,7 +52,7 @@
 		<p>{{realname}}<span>({{number}}年教龄)</span></p>
 	</div>
 	<span class="back"></span>
-	<a class="tel" href="tel:{{tel}}"></a>
+	<a class="tel" href="javascript:;"></a>
 </script>
 
 <script type="text/html" id="TplClass">
@@ -83,7 +83,7 @@
 		</li>
 	{{else if data[0].type == "ClassList"}}
 		{{each data value i}}
-			<li class="item item2" data-goods_id="{{value.goods_id}}">
+			<li class="item item2 _item2" data-goods_id="{{value.goods_id}}">
 				<h3 class="title">{{value.name}}</h3>
 				<p class="line"><span class="icon icon1"></span>{{value.campus_name}}</p>
 				<p class="line"><span class="icon icon2"></span>{{value.open_date}}至{{value.end_date}}</p>
@@ -114,7 +114,7 @@
 			</li>
 		{{/each}}
 	{{else}}
-			<li class="item item3">
+		<li class="item item3">
 				<div class="item_top">
 					<div class="lf">
 						<h3 class="title">{{comment_score_sum}}<span>分</span></h3>
@@ -222,6 +222,6 @@
 						})
 					{{/if}}
 				</div>
-			</li>
+		</li>
 	{{/if}}
 </script>

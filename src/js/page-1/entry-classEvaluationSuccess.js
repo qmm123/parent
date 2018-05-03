@@ -12,7 +12,7 @@ define([
 		})
 		// 完成
 		$('.success_ok').on('click', function() {
-			nativeFun("goBack");
+			nativeFun("destroyPage");
 		})
 	}
 })

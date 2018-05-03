@@ -16,6 +16,7 @@ define([
 		toClassEvaluationWriteEvaluation: "toClassEvaluationWriteEvaluation",//去课程&评价-写评价页
 		toClassEvaluationAttendance: "toClassEvaluationAttendance",//去课程&评价-考勤情况页
 		toClassEvaluationSuccess: "toClassEvaluationSuccess",//去课程&评价-评价成功页
+		destroyPage: "destroyPage", // 评价完成后跳转
 
 		toSchoolDetailMain: "toSchoolDetailMain",//去校区-详情-主页
 		toSchoolDetailEvaluation: "toSchoolDetailEvaluation",//去校区-详情-评价页
@@ -27,6 +28,8 @@ define([
 		toTeacherDetailIntroduce: "toTeacherDetailIntroduce",//去老师详情-简介页
 
 		toScrollClassDetail: "toScrollClassDetail",//去滚动班-详情页
+
+		toRescheduling: "Rescheduling", // 去重新预约-我的预约
 
 		toSystemQuestion: "toSystemQuestion",//去系统设置-常见问题页
 		toSystemAboutUs: "toSystemAboutUs",//去系统设置-关于我们页

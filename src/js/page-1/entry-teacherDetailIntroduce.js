@@ -4,11 +4,9 @@ define(["publicLogic/messageList",
 	"publicLogic/header"
 	], function(messageList, Method, nativeFun, Header) {
 	return function() {
-		var tel = '15637846585';
 		var isLoad = true;
 		//头像数据
 		function avaFn(data){
-			data.tel = tel;
 			Method.artRender($('#top'), "avator", data, false, function() {
 				$('#top>img')[0].onload = function() {
 					isLoad = false;
@@ -132,9 +130,9 @@ define(["publicLogic/messageList",
 		}
 
 		var param = Method.getUrlParam('page_param');
-		param = param && JSON.parse(param)
+		param = JSON.parse(param)
 		// 教师id
-		var teacher_id = param ? param.teacher_id : "44a917708a964607a4bb50eb8acd2f16";
+		var teacher_id = "44a917708a964607a4bb50eb8acd2f16";
 		
 		messageList.init({
 			name: 'getTeacherIntroduce',
@@ -147,14 +145,12 @@ define(["publicLogic/messageList",
 
 
 		//是否显示评论页面
-		var tpl_config = localStorage.tpl_config;
-		var isShow = true;
-		if(tpl_config) {
-			tpl_config = JSON.parse(tpl_config);
-			var isShow = tpl_config.isShow;
+		var tpl_config = JSON.parse(Method.getUrlParam('tpl_config'));
+		if(tpl_config){
+			var isShow = tpl_config.teacher.config.is_show_campus_comment;
+			isShow = isShow == '1' ? true : false;
 			Method.artRender($('.tab'), 'tabClass', {isShow: isShow}, false, function() {})
 		}
-		
 		/*messageList.init({
 			name: 'getClassList',
 			type: 'ClassList',
@@ -233,13 +229,25 @@ define(["publicLogic/messageList",
 			});
 		})
 		// 课程跳转到 课程详情
-
-		$("#wrapper").on("click", ".item2", function(){
+		var isNum = true;
+		$("#wrapper").on("click", "._item2", function(e){
+			if(!isNum) {
+				return
+			}
+			isNum = false;
+			setTimeout(function() {
+				isNum = true;
+			}, 20)
 			nativeFun("toClassDetail", {"goods_id": $(this).data("goods_id")});
 		})
 		// 返回上一页
 		$('#top').on('click', '.back', function() {
 			nativeFun('goBack');
 		});
+
+		// 打电话
+		$('#top').on('click', '.tel', function() {
+			nativeFun('callPhone',{"phone": Method.getUrlParam("merchant_phone")});
+		})
 	}
 })

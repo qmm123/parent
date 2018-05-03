@@ -7,7 +7,7 @@ define(["publicLogic/messageList",
 		
 		var param = Method.getUrlParam('page_param');
 		// 班级id
-		console.log(param);
+		//console.log(param);
 		var goods_id = param ? JSON.parse(param).goods_id : 'ca9f26580dfb4656a2ebbca8456d5d4c';
 		// 家长id 
 		var parent_id
@@ -21,6 +21,8 @@ define(["publicLogic/messageList",
 				parent_id = '3c1b0646ce520407a0fedfd17f3a56b6';
 			}
 		}
+		var name = JSON.parse(param).name;
+		$('#headerTxt').text(name+'-考勤');
 		// 学员 id
 		var student_id = param ? JSON.parse(param).student_id : '884621151aed45e98dbafb93588e7bbf';
 		messageList.init({
