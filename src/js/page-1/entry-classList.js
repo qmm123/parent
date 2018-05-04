@@ -102,9 +102,10 @@ define([
 		}
 		requeseDataList();
 		// 跳转课程详情
-		$(document).on("click", ".class_list_folder li", function(){
+		$(document).on("tap", "li[data-role='clickLi']", function(e){
 			nativeFun("toClassDetail", {"goods_id": $(this).data("goodsid"), "campus_id": $(this).data("campus_id")});
 		})
+
 	}
 
 });

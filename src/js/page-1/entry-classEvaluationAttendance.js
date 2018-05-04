@@ -8,7 +8,7 @@ define(["publicLogic/messageList",
 		var param = Method.getUrlParam('page_param');
 		// 班级id
 		//console.log(param);
-		var goods_id = param ? JSON.parse(param).goods_id : 'ca9f26580dfb4656a2ebbca8456d5d4c';
+		var goods_id = JSON.parse(param).goods_id;
 		// 家长id 
 		var parent_id
 		if(param) {
@@ -17,14 +17,12 @@ define(["publicLogic/messageList",
 		if(!parent_id) {
 			if(localStorage.parent_id) {
 				parent_id = localStorage.parent_id;
-			}else{
-				parent_id = '3c1b0646ce520407a0fedfd17f3a56b6';
 			}
 		}
 		var name = JSON.parse(param).name;
 		$('#headerTxt').text(name+'-考勤');
 		// 学员 id
-		var student_id = param ? JSON.parse(param).student_id : '884621151aed45e98dbafb93588e7bbf';
+		var student_id = JSON.parse(param).student_id;
 		messageList.init({
 			name: 'getClassPingQin',
 			type: 'ClassPingQin',

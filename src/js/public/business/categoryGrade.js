@@ -37,7 +37,7 @@ define([
     eleClick: function(){
       var _this = this;
       // 附近点击事件
-      this.tabEle.on("click", "a[data-role='grade']", function(){
+      this.tabEle.on("tap", "a[data-role='grade']", function(){
         _this.topTabEle.html( $(this).data("name") );
         _this.topTabEle.attr("data-grade-id", $(this).data("grade-id") );
         _this.hideTab();

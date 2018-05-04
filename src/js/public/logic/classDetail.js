@@ -16,8 +16,7 @@ define([
 		init: function(opt){
 			this.configer(opt);
 			this.renderClassInfor();
-			this.pageConfig.is_show_goods_details_comment = true;
-			if(this.pageConfig.is_show_goods_details_comment){
+			if(this.pageConfig.course_comment && this.pageConfig.course_comment.is_show_goods_details_comment == 1){
 				this.renderClassPing();
 				this.pingZone.removeClass("hide");
 			}
@@ -118,27 +117,27 @@ define([
 		gotoEvent: function(){
 			var _this = this;
 			// 查看老师
-			this.classDetailBasic.on("click", "#" + this.config.lookTeacher, function(){
+			this.classDetailBasic.on("tap", "#" + this.config.lookTeacher, function(){
 				nativeFun("toTeacherDetailIntroduce", {"teacher_id": $(this).data("id")});
 			})
 			// 查看招生简章
-			this.classDetailBasic.on("click", "#" + this.config.lookClassZhang, function(){
+			this.classDetailBasic.on("tap", "#" + this.config.lookClassZhang, function(){
 				nativeFun("toClassDetailZhang", {"admissions": _this.dataInfor.admissions});
 			})
 			// 查看课程大纲
-			this.classDetailBasic.on("click", "#" + this.config.lookClassGang, function(){
+			this.classDetailBasic.on("tap", "#" + this.config.lookClassGang, function(){
 				nativeFun("toClassDetailGang", {"admissions": _this.dataInfor.admissions});
 			})
 			// 查看校区
-			this.classDetailBasic.on("click", "#" + this.config.lookSchool, function(){
+			this.classDetailBasic.on("tap", "#" + this.config.lookSchool, function(){
 				nativeFun("toSchoolDetailMain", {"campus_id": $(this).data("id")});
 			})
 			// 查看购物车
-			$("header").on("click", "#" + this.config.headerCart, function(){
+			$("header").on("tap", "#" + this.config.headerCart, function(){
 				nativeFun("toCart");
 			})
 			// 查看家长评价
-			$("body").on("click", "#" + this.config.lookParentPing, function(){
+			$("body").on("tap", "#" + this.config.lookParentPing, function(){
 				nativeFun("toSchoolDetailEvaluation", {campus_id: _this.wbParam.campus_id, goods_id: _this.wbParam.goods_id, teacher_id: _this.dataInfor.teacher_id});
 			})
 		},
@@ -169,7 +168,7 @@ define([
 			var _this = this;
 			// 查看优惠
 			if(data.result.discount_info && data.result.discount_info.length){
-				this.classDetailBasic.on("click", "#" + this.config.lookHuiPag, function(){
+				this.classDetailBasic.on("tap", "#" + this.config.lookHuiPag, function(){
 					layer.pageUp({
 						style: "height:200px;",
 						title: "优惠详情",
@@ -184,7 +183,7 @@ define([
 			}
 			// 查看课程安排
 			if(data.result.lessons && data.result.lessons.length){
-				this.classDetailBasic.on("click", "#" + this.config.lookClassPlan, function(){
+				this.classDetailBasic.on("tap", "#" + this.config.lookClassPlan, function(){
 					layer.pageUp({
 						style: "height:300px;",
 						title: "课时安排<span class='font_12 font_gray'>("+ data.result.lessons_minutes.lessons_count +","+ data.result.lessons_minutes.minutes +")</span>",
@@ -193,7 +192,7 @@ define([
 				})
 			}
 			// 查看套餐--后动态生成的元素不能用事件代理！！！
-			// $(document).on("click", "#" + this.config.lookTao, function(){
+			// $(document).on("tap", "#" + this.config.lookTao, function(){
 			// 	console.log("tao")
 			// 	nativeFun("toClassDetailTao", {goods_id: _this.dataInfor.goods_id});
 			// })

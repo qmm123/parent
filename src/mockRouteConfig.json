@@ -75,6 +75,11 @@
       "to": "http://api.fangzhen.baonahao.com/app/communion/GcComment/addComment"
     },
     {
+      "path": "/app/communion/GcComment/editComment",
+      "commons": "课程&评价-修改评价",
+      "to": "http://api.fangzhen.baonahao.com/app/communion/GcComment/editComment"
+    },
+    {
       "path": "/app/teaching/Attendance/getAttendanceStatusList",
       "commons": "课程&评价-考勤情况页",
       "to": "http://api.fangzhen.baonahao.com/app/teaching/Attendance/getAttendanceStatusList"

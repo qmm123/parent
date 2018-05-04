@@ -1,4 +1,4 @@
-// 公共逻辑-校区详情页
+ // 公共逻辑-校区详情页
 define([
 	"publicService/service",
 	"publicTool/method",
@@ -23,8 +23,7 @@ define([
 			// tab切换
 			this.slideSwitch();
 			this.renderMain();
-			this.pageConfig.is_show_campus_comment = true;
-			if(this.pageConfig.is_show_campus_comment){
+			if(this.pageConfig.course_comment && this.pageConfig.course_comment.is_show_campus_comment == 1){
 				this.renderPing();
 				this.pingClassZone.removeClass(this.config.hide_class);
 			}
@@ -97,6 +96,7 @@ define([
 			var _this = this;
 			Method.tabChange(this.config.titCell, this.config.mainCell, function(iIdx){
 				_this.initRender(iIdx);
+				messageList.refresh();
 			});
 		},
 		// 渲染主页
@@ -191,19 +191,19 @@ define([
 		switchPage: function(){
 			var _this = this;
 			// 去相册/视频页
-			$(this.config.slideCell).on("click", ".pic_vedio", function(){
+			$(this.config.slideCell).on("tap", ".pic_vedio", function(){
 				nativeFun("toSchoolPhotoVideo", {campus_id: _this.campus_id});
 			})
 			// 去课程评价页面
-			$(this.config.slideCell).on("click", "ul[data-role='goToPing']", function(){
+			$(this.config.slideCell).on("tap", "ul[data-role='goToPing']", function(){
 				nativeFun("toSchoolDetailEvaluation", {campus_id: _this.campus_id});
 			})
 			// 去课程详情页
-			$(this.config.slideCell).on("click", "#classList >li", function(){
+			$(this.config.slideCell).on("tap", "#classList >li", function(){
 				nativeFun("toClassDetail", {"campus_id": _this.campus_id, "goods_id": $(this).data("goodsid")});
 			})
 			// 去老师详情页
-			$(this.config.slideCell).on("click", "#teacherList >li", function(){
+			$(this.config.slideCell).on("tap", "#teacherList >li", function(){
 				nativeFun("toTeacherDetailIntroduce", {"campus_id": _this.campus_id, "teacher_id": $(this).data("id")});
 			})
 		},
@@ -227,7 +227,7 @@ define([
 		},
 		// 视频播放
 		playVideo: function(){
-			this.picVideoList.on("click", "li[data-role='video']", function(){
+			this.picVideoList.on("tap", "li[data-role='video']", function(){
 				var oVideo = $(this).find("video").get(0);
 				//播放当前
 		    oVideo.play();
@@ -245,7 +245,7 @@ define([
 		// 相册播放
 		playPhoto: function(){
 			var _this = this;
-			this.picVideoList.on("click", "li[data-role='pic']", function(){
+			this.picVideoList.on("tap", "li[data-role='pic']", function(){
 				var aImg = $(this).parent().find("img.pic");
 				var aCurImg = $(this).find("img");
 				var iIdx = aImg.index( aCurImg );

@@ -30,7 +30,7 @@ define([
     eleClick: function(){
       var _this = this;
       // 附近点击事件
-      this.tabEle.on("click", ".localtion_list li", function(){
+      this.tabEle.on("tap", ".localtion_list li", function(){
         _this.topTabEle.html( $(this).find("a").html() );
         _this.topTabEle.attr("data-mode", $(this).data("mode") );
         _this.hideTab();

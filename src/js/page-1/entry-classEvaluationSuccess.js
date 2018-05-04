@@ -5,14 +5,14 @@ define([
 	return function() {
 		
 		// 跳转到我的课程页
-		$('.sub_btn .submit').on('click',function() {
-			nativeFun("toClassEvaluationMyClass", {
-				"type": "ClassPingReceive"
+		$('.sub_btn .submit').on('tap',function() {
+			nativeFun("toClassEvaluationRecord", {
 			});
 		})
 		// 完成
 		$('.success_ok').on('click', function() {
 			nativeFun("destroyPage");
+			return false;
 		})
 	}
 })

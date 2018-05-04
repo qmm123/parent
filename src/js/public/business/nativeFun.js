@@ -29,7 +29,7 @@ define([
 
 		toScrollClassDetail: "toScrollClassDetail",//去滚动班-详情页
 
-		toRescheduling: "Rescheduling", // 去重新预约-我的预约
+		
 
 		toSystemQuestion: "toSystemQuestion",//去系统设置-常见问题页
 		toSystemAboutUs: "toSystemAboutUs",//去系统设置-关于我们页

@@ -109,5 +109,6 @@ define([
     }
   }
 
+
 	return methods;
 })

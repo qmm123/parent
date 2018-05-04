@@ -5,11 +5,11 @@ define(["publicLogic/messageList",
 	return function() {
 
 		// 校区id
-		var campus_id = Method.getUrlParam('campus_id') ? Method.getUrlParam('campus_id') : '9709f332e4a148439ab29d1a2618c9fd';
+		var campus_id = Method.getUrlParam('campus_id');
 		// 班级id
-		var goods_id = Method.getUrlParam('goods_id') ? Method.getUrlParam('goods_id') : '';
+		var goods_id = Method.getUrlParam('goods_id');
 		// 教师id
-		var teacher_id = Method.getUrlParam('teacher_id') ? Method.getUrlParam('teacher_id') : '';
+		var teacher_id = Method.getUrlParam('teacher_id');
 
 		// 计算star个数
 		function setStar(data) {

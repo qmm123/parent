@@ -9,7 +9,7 @@ define([
 		var allNum = 200; //总字数
 		var isLock = false;//是否锁定当前的输入状态  
 		//是否匿名评论
-		$('.evaluation').on('click', '.submit .left', function() {
+		$('.evaluation').on('tap', '.submit .left', function() {
 			$(this).toggleClass('active');
 			if($(this).hasClass('active')){
 				result.is_anonymous = 1;
@@ -20,7 +20,7 @@ define([
 
 		// 返回上一页
 
-		$('header .back').on('click', function() {
+		$('header .back').on('tap', function() {
 			layerFz.confirm({
 				yes: function(index){
 					nativeFun("goBack");
@@ -35,17 +35,19 @@ define([
 		})
 		// 获取参数
 		var page_param = Method.getUrlParam('page_param')
-		var  goods_id = page_param ? JSON.parse(page_param)["goods_id"] : "d012786c35874fddb89ddb318a59e2c1";
-		var  order_id = page_param ? JSON.parse(page_param)["order_id"] : "59d55531b2d64559adb65bb06b43df14";
-		var  student_id = page_param ? JSON.parse(page_param)["student_id"] : "2d53c54bbd994aa4a45b08949858e55a";
-		var  campus_id = page_param ? JSON.parse(page_param)["campus_id"] : "441a0ebd14324d3b8f8fd3d8b1f45787";
-		var  teacher_id = page_param ? JSON.parse(page_param)["teacher_id"] : "02afda9e75344b5c967af5506b605546";
+		var  goods_id = JSON.parse(page_param)["goods_id"];
+		var  order_id = JSON.parse(page_param)["order_id"];
+		var  student_id = JSON.parse(page_param)["student_id"];
+		var  campus_id = JSON.parse(page_param)["campus_id"];
+		var  teacher_id = JSON.parse(page_param)["teacher_id"];
 		var  class_effect_score = '5.0';
 		var  teaching_environment_score = '5.0';
 		var  service_attitude_score = '5.0';
 		var  curriculum_evaluation = '';
 		var  is_anonymous = '2';
+		var id;
 		if(page_param) {
+			id = JSON.parse(page_param)["id"];
 			class_effect_score = JSON.parse(page_param)["class_effect_score"] || "5.0"; //上课效果评分
 			teaching_environment_score = JSON.parse(page_param)["teaching_environment_score"] || "5.0"; //教学环境评分
 			service_attitude_score = JSON.parse(page_param)["service_attitude_score"] || "5.0"; // 服务态度评分
@@ -145,8 +147,32 @@ define([
 			}) 
 		})
 		// 发表评论
-		$('.submit .right').on('click', function() {
-			Server.getClassPingWritePing(null,{
+		$('.submit .right').on('tap', function() {
+			if(id){
+				Server.editComment(null,{
+					id: id,
+					student_id: student_id,
+					goods_id: goods_id,
+					order_id: order_id,
+					campus_id: campus_id,
+					teacher_id: teacher_id,
+					class_effect_score: result.class_effect_score,
+					teaching_environment_score: result.teaching_environment_score,
+					service_attitude_score: result.service_attitude_score,
+					is_anonymous: result.is_anonymous,
+					creator_id: parent_id,
+					parent_id: parent_id,
+					modifier_id: parent_id,
+					curriculum_evaluation: result.curriculum_evaluation
+				} , function(data) {
+					if(data.result == true && data.status == true){
+						nativeFun("toClassEvaluationSuccess");
+					}
+				}, function() {
+					console.log('错误');
+				})
+			}else{
+				Server.getClassPingWritePing(null,{
 					student_id: student_id,
 					goods_id: goods_id,
 					order_id: order_id,
@@ -160,12 +186,13 @@ define([
 					parent_id: parent_id,
 					curriculum_evaluation: result.curriculum_evaluation
 				} , function(data) {
-				if(data.result == true && data.status == true){
-					nativeFun("toClassEvaluationSuccess");
-				}
-			}, function() {
-				console.log('错误');
-			})
+					if(data.result == true && data.status == true){
+						nativeFun("toClassEvaluationSuccess");
+					}
+				}, function() {
+					console.log('错误');
+				})
+			}
 		})
 	}
 })

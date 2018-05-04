@@ -51,9 +51,9 @@ define(["publicLogic/messageList",
 		})
 		// 跳转到考勤页
 		var isKao = true;
-		$('#wrapper').on('click', '.item .kao', function() {
+		$('#wrapper').on('tap', '.item .kao', function() {
 			if(isKao) {
-				isKao = false;
+				isKao = false; 
 				nativeFun("toClassEvaluationAttendance", {
 					"goods_id": $(this).data("goods_id"),
 					"student_id": $(this).data("student_id"),
@@ -66,26 +66,20 @@ define(["publicLogic/messageList",
 		})
 		// 跳转到我要评价页
 		var isPing = true;
-		$('#wrapper').on('click', '.item .ping', function() {
-			if(isPing) {
-				isPing = false;
+		$('#wrapper').on('tap', '.item .ping', function() {			
 				nativeFun("toClassEvaluationEvaluation", {
 					"sub_order_id": $(this).data("sub_order_id")
 				});
-			}
-			setTimeout(function() {
-				isPing = true;
-			})
 		})
 	/*	// 跳转到我要评价页
-		$('#wrapper').on('click', '.item .ping', function() {
+		$('#wrapper').on('tap', '.item .ping', function() {
 			nativeFun("toClassEvaluationEvaluation", {
 				"sub_order_id": $(this).data("sub_order_id")
 			});
 		})
 */
 		//跳转到评价记录页
-		$('header .rightText').on('click', function() {
+		$('header .rightText').on('tap', function() {
 			nativeFun("toClassEvaluationRecord", {
 			});
 		})

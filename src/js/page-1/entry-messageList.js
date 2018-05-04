@@ -18,7 +18,8 @@ define([
 				nativeFun("toClassEvaluationAttendance", {
 					"goods_id": $(this).data("goods_id"),
 					"parent_id": $(this).data("parent_id") || localStorage.parent_id,
-					"student_id": $(this).data("student_id")
+					"student_id": $(this).data("student_id"),
+					"name": $(this).data("name")
 				});
 			}else if(push_type == 3) { // 去课程&评价-评价页面
 				nativeFun("toClassEvaluationMyClass", {

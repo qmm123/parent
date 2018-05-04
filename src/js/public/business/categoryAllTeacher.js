@@ -37,7 +37,7 @@ define([
     eleClick: function(){
       var _this = this;
       // 附近点击事件
-      this.tabEle.on("click", ".all_teacher_list [data-role='selectTeacher']", function(){
+      this.tabEle.on("tap", ".all_teacher_list [data-role='selectTeacher']", function(){
         _this.topTabEle.html( $(this).html() );
         _this.topTabEle.attr("data-teacher-id", $(this).data("teacher-id") );
         _this.hideTab();

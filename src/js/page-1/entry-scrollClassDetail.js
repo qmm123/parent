@@ -4,7 +4,7 @@ define(["publicService/service",
 	], function(Server, Method, nativeFun) {
 	return function() {
 		var page_param = Method.getUrlParam("page_param");
-		var course_id = page_param ? JSON.parse(page_param)['course_id'] : "881129c332474d669d54566534a44538";
+		var course_id = JSON.parse(page_param)['course_id'];
 		var purchase_number = 0;
 		Server.getScrollDetail(null, {
 			course_id: course_id
@@ -94,7 +94,7 @@ define(["publicService/service",
 
 		// 打电话
 		$('.content').on('click', '.tel', function() {
-			nativeFun('callPhone');
+			nativeFun('callPhone', {"phone": Method.getUrlParam("merchant_phone")});
 		})
 	}
 })

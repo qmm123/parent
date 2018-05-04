@@ -20,6 +20,7 @@ define([
 				data: option
 			}
 		}, function(data){
+			console.log('成功')
 			successCall && successCall(data);
 		}, function(jqXhr, statusTxt, data){
 			console.log(data)
@@ -288,7 +289,21 @@ define([
 			version: localStorage.version
 		}, param, successCall, failCall);
 	}
-
+	// 课程&评价-修改评价
+	Service.editComment = function(apiConfig, param, successCall, failCall){
+		var option = {
+			apiName: "",
+			url: "/app/communion/GcComment/editComment"
+		};
+		if(apiConfig){
+			$.extend(true, option, apiConfig);
+		}
+		Service.commonLogic(option, {
+			merchant_id: localStorage.merchant_id,
+			project_id: localStorage.project_id,
+			version: localStorage.version
+		}, param, successCall, failCall);
+	}
 	// 课程&评价-考勤情况页
 	Service.getClassPingQin = function(apiConfig, param, successCall, failCall){
 		var option = {

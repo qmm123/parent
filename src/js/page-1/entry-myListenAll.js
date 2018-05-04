@@ -28,7 +28,7 @@ define(["publicLogic/messageList",
 			}
 			return result;
 		}
-		var parent_id = localStorage.parent_id ? localStorage.parent_id : "3c1b0646ce520407a0fedfd17f3a56b6";
+		var parent_id = localStorage.parent_id;
 		messageList.init({
 			name: 'getMyListenAll',
 			type: 'MyListenAll',
@@ -39,7 +39,14 @@ define(["publicLogic/messageList",
 		});
 		// 执行刷新的交互
 		jsFun("wbReload", function(){
-			window.location.reload();
+			messageList.init({
+				name: 'getMyListenAll',
+				type: 'MyListenAll',
+				conditions: {
+					parent_id: parent_id
+				},
+				fn: fn
+			});
 		});
 		// tab
 		var index = 0;
@@ -136,12 +143,19 @@ define(["publicLogic/messageList",
 			}
 		})
 		// 重新预约
+		var isToRescheduling = true;
 		$('#wrapper').on('click', '.btn[data-tab="2"] span', function() {
-			nativeFun("toRescheduling", {
-				"goods_id": $(this).data('goods_id'),
-				"name": $(this).data('goods_name')
+			if(isToRescheduling) {
+				isToRescheduling = false;
+				nativeFun("toAudition", {
+					"goods_id": $(this).data('goods_id'),
+					"name": $(this).data('goods_name')
+				})
+				console.log(333)
+			}
+			setTimeout(function() {
+				isToRescheduling = true;
 			})
-			console.log(333)
 		})
 		// 返回上一页
 		Header.init();

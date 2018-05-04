@@ -1,16 +1,26 @@
 define(["publicLogic/messageList",
 	"public/business/nativeFun",
-	"publicLogic/header"
-	], function(messageList, nativeFun, Header) {
+	"publicLogic/header",
+	"public/business/jsFun"
+	], function(messageList, nativeFun, Header, jsFun) {
 	return function() {
-		messageList.init({
-			name: 'getClassPingRecord',
-			type: 'ClassPingRecord'
+		function getRecord() {
+			messageList.init({
+				name: 'getClassPingRecord',
+				type: 'ClassPingRecord'
+			});
+		}
+		getRecord();
+		// 执行刷新的交互
+		jsFun("wbReload", function(){
+			getRecord();
+			//console.log(11)
 		});
 
 		// 跳转到写评论页面
 
-		$('#wrapper').on('click', '.item .btn', function() {
+		$('#wrapper').on('tap', '.item .btn', function() {
+			var id = $(this).data('id');
 			var student_id = $(this).data('student_id');
 			var goods_id = $(this).data('goods_id');
 			var campus_id = $(this).data('campus_id');
@@ -22,6 +32,7 @@ define(["publicLogic/messageList",
 			var teaching_environment_score = $(this).data('teaching_environment_score');
 			var is_anonymous = $(this).data('is_anonymous');
 			var result = {
+				id: id,
 				student_id: student_id,
 				goods_id: goods_id,
 				campus_id: campus_id,

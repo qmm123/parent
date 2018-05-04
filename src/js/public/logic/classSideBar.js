@@ -5,7 +5,10 @@ define([
 	"publicTool/sidebar",
 	"text!template/classList/sidebar.html!strip",
 	"public/tools/radioCheck",
-], function (Method, artTempFun, Sidebar, tplSidebar, radioCheck) {
+	"artlib"
+], function (Method, artTempFun, Sidebar, tplSidebar, radioCheck, template) {
+	// 定义上课时间变量
+	template.defaults.imports.isShowClassTime = false;
 	// 对象写法（避免出现new改变this指向问题）
 	var ClassListSidebar = {
 		// 初始化
@@ -34,11 +37,21 @@ define([
 		},
 		// 获取配置参数
 		getConfigData: function(){
-			this.sideData = JSON.parse( Method.getUrlParam(this.config.paramKey) );
+			if( Method.getUrlParam(this.config.paramKey) ){
+				this.sideData = JSON.parse( Method.getUrlParam(this.config.paramKey) );
+			}else{
+				this.sideData = {};
+			}
 		},
 		// 渲染侧边栏
 		renderSidebar: function(){
-			artTempFun.artRenderString( $("body"), $(tplSidebar).html(), this.sideData, true );
+			if( Method.getUrlParam(this.config.paramKey) ){
+				var aSide = this.sideData.goods_otm.config.goods_list_screen;
+				if( $.inArray(2, aSide) != -1 ){//上课时间
+					template.defaults.imports.isShowClassTime = true;
+				}
+			}
+			artTempFun.artRenderString( $("body"), $(tplSidebar).html(), this.sideData.goods_otm, true );
 			this.sideBar = Sidebar.init();
 		},
 		// 侧边栏元素单选及多选绑定事件
@@ -53,14 +66,14 @@ define([
 		sidebarBottomEvent: function(){
 			var _this = this;
 			// 重置按钮
-			$("body").on("click", ".bottom_btn .btn.reset", function(){
+			$("body").on("tap", ".bottom_btn .btn.reset", function(){
 				radioCheck.checkboxReset({
 					eleFolder: "[data-role='checkbox']",
 					eleEvent: ">li"
 				});
 			})
 			// 确定按钮
-			$("body").on("click", ".bottom_btn .btn.ok", function(){
+			$("body").on("tap", ".bottom_btn .btn.ok", function(){
 				_this.sideBar.moveOut();
 				_this.config.callConfirm && _this.config.callConfirm();
 			})

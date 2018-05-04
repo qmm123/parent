@@ -4,6 +4,21 @@ define(["publicLogic/messageList",
 	"publicLogic/header"
 	], function(messageList, Method, nativeFun, Header) {
 	return function() {
+
+		//是否显示评论页面
+		var tpl_config = Method.getUrlParam('tpl_config');
+		var isShow;
+		if(tpl_config){
+			tpl_config = JSON.parse(tpl_config);
+			if(!$.isEmptyObject(tpl_config)){
+				isShow = tpl_config.teacher.config.is_show_campus_comment;
+				isShow = isShow == '1' ? true : false;
+				var $data = {isShow: isShow}
+				Method.artRender($('.tab'), 'tabClass', {"isShow": isShow}, false, function() {})
+			}
+		}
+
+
 		var isLoad = true;
 		//头像数据
 		function avaFn(data){
@@ -14,7 +29,6 @@ define(["publicLogic/messageList",
 										
 						var topH = $('#top').css('height');
 						var height = parseFloat(topH);
-						console.log(topH)
 						$('#wrapper').css("top",height+ 'px');
 						$('.tab').css("top",height+ 'px');
 						setTimeout(function() {
@@ -32,7 +46,6 @@ define(["publicLogic/messageList",
 						
 						var topH = $('#top').css('height');
 						var height = parseFloat(topH);
-						console.log(topH)
 						$('#wrapper').css("top",height+ 'px');
 						$('.tab').css("top",height+ 'px');
 						setTimeout(function() {
@@ -48,7 +61,6 @@ define(["publicLogic/messageList",
 
 		// 学生评分
 		function setStar(result) {
-			console.log(result)
 			if(result.data.length > 0) {
 				for(var i=0;i<result.data.length;i++) {
 					var item = result.data[i];
@@ -130,9 +142,10 @@ define(["publicLogic/messageList",
 		}
 
 		var param = Method.getUrlParam('page_param');
+
 		param = JSON.parse(param)
 		// 教师id
-		var teacher_id = "44a917708a964607a4bb50eb8acd2f16";
+		var teacher_id = param.teacher_id;
 		
 		messageList.init({
 			name: 'getTeacherIntroduce',
@@ -144,13 +157,7 @@ define(["publicLogic/messageList",
 		});
 
 
-		//是否显示评论页面
-		var tpl_config = JSON.parse(Method.getUrlParam('tpl_config'));
-		if(tpl_config){
-			var isShow = tpl_config.teacher.config.is_show_campus_comment;
-			isShow = isShow == '1' ? true : false;
-			Method.artRender($('.tab'), 'tabClass', {isShow: isShow}, false, function() {})
-		}
+
 		/*messageList.init({
 			name: 'getClassList',
 			type: 'ClassList',

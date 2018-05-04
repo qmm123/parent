@@ -26,7 +26,7 @@ define([
 		});
 
 		// 城市id
-		var city_id = Method.getUrlParam('city_id') ? Method.getUrlParam('city_id') : '35';
+		var city_id = Method.getUrlParam('city_id');
 
 		// 执行搜索的交互
 		jsFun("wbSearchList", function(paramNative){

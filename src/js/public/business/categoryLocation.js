@@ -60,14 +60,14 @@ define([
       this.nearTabEle = $("#location_fu .right_area_d[data-type='near']");//附近选项卡对应元素
       this.schoolTabEle = $("#location_fu .right_area_d[data-role='school']");//附近选项卡对应元素
       // 附近点击事件
-      this.tabEle.on("click", ".switch_a[data-type='near']", function(){
+      this.tabEle.on("tap", ".switch_a[data-type='near']", function(){
         _this.schoolTabEle.hide();
         _this.nearTabEle.show();
         $(this).siblings("a").removeClass("on");
         $(this).addClass("on");
       })
       // 校区点击事件
-      this.tabEle.on("click", "a[data-type='school']", function(){
+      this.tabEle.on("tap", "a[data-type='school']", function(){
         _this.nearTabEle.hide();
         _this.schoolTabEle.show();
         $(this).siblings("a").removeClass("on");
@@ -79,7 +79,7 @@ define([
     eleClick: function(){
       var _this = this;
       // 附近点击事件
-      this.tabEle.on("click", ".right_area_d[data-type='near'] a", function(){
+      this.tabEle.on("tap", ".right_area_d[data-type='near'] a", function(){
         _this.topTabEle.html( $(this).html() );
         _this.topTabEle.attr("data-nearby", $(this).data("id") );
         _this.topTabEle.removeAttr("data-campus-id");
@@ -88,7 +88,7 @@ define([
         _this.config.callClick && _this.config.callClick( $(this).data("id") );
       })
       // 校区点击事件
-      this.tabEle.on("click", ".right_area_d[data-role='school'] a", function(){
+      this.tabEle.on("tap", ".right_area_d[data-role='school'] a", function(){
         _this.topTabEle.html( $(this).data("name") );
         if( $(this).data("type") == "all" ){
           _this.topTabEle.attr("data-district-id", $(this).data("id") );

@@ -79,7 +79,7 @@ define([
     eleClick: function(){
       var _this = this;
       // 附近点击事件
-      this.tabEle.on("click", "a[data-role='category']", function(){
+      this.tabEle.on("tap", "a[data-role='category']", function(){
         _this.topTabEle.html( $(this).data("name") );
         _this.topTabEle.attr("data-level", $(this).data("level") );
         _this.hideTab();

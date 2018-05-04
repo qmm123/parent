@@ -5,7 +5,7 @@ define(["publicService/service",
 	], function(Server, Method, nativeFun, Header) {
 	return function() {
 		var page_param = Method.getUrlParam("page_param");
-		var oto_id = page_param ? JSON.parse(page_param)['oto_id'] : "3be24a6b3df9444f96482b9674e713fe";
+		var oto_id = JSON.parse(page_param)['oto_id'];
 		// 传递参数
 		var parent_id = localStorage.parent_id;
 		var class_hour = 0;
