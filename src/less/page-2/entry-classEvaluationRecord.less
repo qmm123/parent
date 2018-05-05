@@ -1,0 +1,124 @@
+/* 1-课程&评论-评价记录 */
+@import "../public";
+@import "./variable";
+@import "./search-shai";
+
+#wrapper{
+	& > div{
+
+	}
+	#listContainer {
+		.item{
+			position: relative;
+			margin-bottom: 12px;
+			padding: 10px 0 8px 0;
+			background: #fff;
+			.title{
+				overflow: hidden;
+				padding-left: 10px;
+				img{
+					float: left;
+					width: 36px;
+					height: 35px;
+					border-radius: 50%;
+					vertical-align: middle;
+				}
+				.name{
+					display: block;
+					margin-left: 40px;
+					line-height: 36px;
+					font-size: 1.6rem;
+					font-weight: bold;
+					padding-left: 5px;
+					vertical-align: middle;
+				}
+			}
+			.starWrapper{
+				padding: 10px;
+				font-size: 0;
+				.star{
+					display: inline-block;
+					width: 10px;
+					height: 10px;
+					margin-right: 2px;
+					background: url(../../img/tpl1/smart_star_select.png) no-repeat;
+					-webkit-background-size: cover;
+					background-size: cover;
+				}
+				.star1{
+
+				}
+				.star2{
+					background: url(../../img/tpl1/smart_star_normal.png) no-repeat;
+					-webkit-background-size: cover;
+					background-size: cover;
+				}
+			}
+			.paro{
+				padding-left: 10px;
+				padding-right: 10px;
+				font-size: 1.5rem;
+				color: #333;
+				line-height: 17px;
+				word-break: break-all;
+				padding: 0 10px 8px 10px;
+			}
+			.desc{
+				display: table;
+				width: 100%;
+				padding: 10px 10px 10px 0;
+				background: #eee;
+				.img{
+					display: table-cell;
+					width: 90px;
+					vertical-align: middle;
+					text-align: center;
+					padding: 0 10px;
+					img{
+						width: 70px;
+						height: 70px;
+						margin: 0;
+					}
+				}
+				.text{
+					display: table-cell;
+					vertical-align: middle;
+					.title{
+						font-size: 1.5rem;
+						padding: 0;
+						line-height: 2.2rem;
+					}
+					p{
+						font-size: 1.3rem;
+						line-height: 1.7rem;
+						color: #999;
+					}
+				}
+			}
+			.btnWrapper{
+				margin-top: 8px;
+				padding-right: 10px;
+				text-align: right;
+				.btn{
+					display: inline-block;
+					padding-right: 10px;
+					font-size: 1.2rem;
+					line-height: 1;
+					color: @col-main;
+					padding: 8px 10px;
+					border: 1px solid @col-main;
+					border-radius: 5px;
+				}
+			}
+			.time{
+				position: absolute;
+				right: 10px;
+				top: 15px;
+				color: #999;
+				font-size: 1.3rem;
+			}
+		}
+	}
+}
+
+

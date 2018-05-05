@@ -40,6 +40,8 @@ define([
 		var  student_id = JSON.parse(page_param)["student_id"];
 		var  campus_id = JSON.parse(page_param)["campus_id"];
 		var  teacher_id = JSON.parse(page_param)["teacher_id"];
+		var  lessons_id = JSON.parse(page_param)["lessons_id"];
+		console.log(page_param)
 		var  class_effect_score = '5.0';
 		var  teaching_environment_score = '5.0';
 		var  service_attitude_score = '5.0';
@@ -177,6 +179,7 @@ define([
 					goods_id: goods_id,
 					order_id: order_id,
 					campus_id: campus_id,
+					lessons_id: lessons_id,
 					teacher_id: teacher_id,
 					class_effect_score: result.class_effect_score,
 					teaching_environment_score: result.teaching_environment_score,

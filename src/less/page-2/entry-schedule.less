@@ -1,0 +1,252 @@
+@import "../public";
+@import "./variable";
+
+/* 课表 */
+
+.schedule{
+	// 日期选择
+	position: fixed;
+	top: @header-h;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;
+	.calendar{
+		position: relative;
+		text-align: center;
+		background-color: #fff;
+		border-left: 1px solid #e4e4e4;
+		border-right: 1px solid #e4e4e4;
+		overflow: hidden;
+		.calendar_date{
+			height: @header-h;
+			position: relative;
+			.prev{
+				width: 5rem;
+				height: 100%;
+				-webkit-background-size: 8px 15px;
+				background-size: 8px 15px;
+				left: 16px;
+				margin-left: 15px;
+				-webkit-tap-highlight-color: transparent;
+				line-height: @header-h;
+				font-size: 1.5rem;
+				color: @col-main;
+				position: absolute;
+				left: 0;
+			}
+			h3{
+				font-size: 1.5rem;
+				line-height: @header-h;
+				display: inline;
+				font-weight: bold;
+			}
+			.next{
+				width: 5rem;
+				height: 100%;
+				-webkit-background-size: 8px 15px;
+				background-size: 8px 15px;
+				margin-right: 15px;
+				-webkit-tap-highlight-color: transparent;
+				color: @col-main;
+				line-height: @header-h;
+				font-size: 1.5rem;
+				position: absolute;
+				right: 0;	
+			}
+		}
+		.week_list{
+			padding-top: 1.2rem;
+			margin-bottom: 0;
+			padding-left: 0;
+			overflow: hidden;
+			padding-bottom: 1.2rem;
+			background: #f0f0f0;
+			margin-top: 0;
+			li{
+				width: 14.28%;
+				float: left;
+				text-align: center;
+				font-size: 1.3rem;
+				&.weekend{
+					color: #666;
+				}
+				&.last{
+					margin-right: 0;
+				}
+			}
+		}
+		.date_list{
+			overflow: hidden;
+			padding: 1rem 0;
+			li{
+				width: 14.28%;
+				position: relative;
+				padding-top: 0.8rem;
+				padding-bottom: 0.8rem;
+				float: left;
+				line-height: 17px;
+				font-size: 1.3rem;
+				position: relative;
+				font-weight: bold;
+				&[date="no_pass"] {
+					color: #ccc;
+					font-weight: normal;
+				}
+				&.has:after{
+					content: '';
+					position: absolute;
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background: @col-main;
+					bottom: 3px;
+					left: 50%;
+					margin-left: -2px;
+				}
+				&._current.today{
+					color: #fff;
+					text-align: center;
+					background: url("@{img_url_tpl}/schedule_ok.png") no-repeat center 0.3rem;
+					-webkit-background-size: 2.5rem 2.5rem;
+					background-size: 2.5rem 2.5rem;
+				}
+				&._current.active{
+					color: #fff;
+					text-align: center;
+					background: url("@{img_url_tpl}/check_ok.png") no-repeat center 0.3rem;
+					-webkit-background-size: 2.5rem 2.5rem;
+					background-size: 2.5rem 2.5rem;
+				}
+			}
+		}
+	}	
+
+	// 孩子列表
+
+	.nav{
+		position: relative;
+		height: @header-h;
+		margin-top: 10px;
+		font-size: 1.6rem;
+		line-height: @header-h;
+		padding-left: 10px;
+		background: #fff;
+		font-weight: bold;
+		.right-arrow{
+			position: absolute;
+			height: 100%;
+			width: 80px;
+			right: 0;
+			top: 0;
+			background: url("@{img_url_tpl}/right_next.png") no-repeat 60px center;
+			background-size: 9px 15px;
+		}
+	}
+
+	#wrapper{
+		width: 100%;
+		top: 92.78px;
+		bottom: 0;
+		position: absolute;
+		&>div{
+			
+			min-height: 100%;
+			#listContainer{
+				padding-bottom: 10px;
+				.item{
+					overflow: hidden;
+					position: relative;
+					border-left: 2px solid #ef4040;
+					margin-bottom: 10px;
+					margin-top: 10px;
+					font-size: 1.2rem;
+					background: #fff;
+					.left{
+						float: left;
+						width: 71px;
+						padding-top: 5px;
+						text-align: center;
+						img{
+							width: 51px;
+							height: 51px;
+							display: inline-block;
+							border-radius: 50%;
+						}
+						p{
+							text-align: center;
+							line-height: 2.8rem;
+							color: #333;
+							padding: 0 3px;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+						}
+					}
+					.right{
+						margin-left: 71px;
+						color: #999;
+						.title{
+							font-size: 1.5rem;
+							color: #333;
+							font-weight: bold;
+							text-overflow: ellipsis;
+							max-width: 95%;
+							white-space: nowrap;
+							overflow: hidden;
+						}
+						p{
+							padding-bottom: 3px;
+							transition: all 1s;
+							&.hide{
+								
+							}
+						}
+						.time{
+							line-height: 2.2rem;
+						}
+						.teacher{
+							line-height: 2.2rem;
+						}
+						.roo{
+							line-height: 2.2rem;
+							max-height: 0;
+							overflow: hidden;
+							&.active{
+								padding-top: 3px;
+								border-top: 1px dashed #ddd;
+								max-height: 70px;
+							}
+						}
+						.address{
+							line-height: 2.2rem;
+							overflow: hidden;
+							max-height: 0;
+							&.active{
+								max-height: 70px;
+							}
+						}
+					}
+					.right-arrow{
+						position: absolute;
+						height: @header-h;
+						width: 80px;
+						right: 0;
+						top: 0;
+						background: url("@{img_url_tpl}/area_no_new.png") no-repeat 55px center;
+						background-size: 15px 9px;
+						&.active{
+							transform: rotate(180deg);
+							background: url("@{img_url_tpl}/area_no_new.png") no-repeat 10px center;
+							background-size: 15px 9px;
+						}
+					}
+				}
+			}
+		}
+		._empty{
+			text-align: center;
+			line-height: 36px;
+			font-size: 1.2rem;
+		}
+	}
+}

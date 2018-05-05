@@ -1,0 +1,86 @@
+@@include('../../include/header-common.html', {
+  "subtitle": "-1-一对一详情页页",
+  "css": "page-2/entry-oneToOneDetail"
+})
+<!-- 1-一对一详情页 -->
+<body>
+	<div class="container">
+			<div class="content">
+				
+			</div>
+	</div>
+	<script type="text/html" id="TplClass">
+		<div class="header">
+			{{if oto_photo}}
+				<img src="{{oto_photo}}" alt="">
+			{{else}}
+				<img src="/img/tpl1/ic_default_teacher.png" alt="">
+			{{/if}}
+			<span class="back"></span>
+		</div>
+		<div class="body" data-oto_id="{{oto_id}}" data-end_class_hour_son="{{end_class_hour_son}}" data-real_amount="{{real_amount}}" data-oto_son_id="{{floor_price_son_id}}" data-student_num_son="{{student_num_son}}">
+			<h3 class="title">{{oto_name}}</h3>
+			<div class="line">
+				{{each lable value i}}
+					<span>{{value}}</span>
+				{{/each}}
+			</div>
+			<div class="price"><span>￥</span><span class="num" data-price="true">{{floor_price}}</span>/节</div>
+			<div class="category mode">
+				<h4 class="title">授课模式</h4>
+				<div class="list">
+					{{each price_system item index}}
+							{{if item.is_minimum== 1}}
+								<span class="active" data-student_num="{{item.student_num}}">{{item.oto_teaching_mode}}</span>
+							{{else}}
+								<span  data-student_num="{{item.student_num}}">{{item.oto_teaching_mode}}</span>
+							{{/if}}
+					{{/each}}
+				</div>
+			</div>
+			<div class="category lesson">
+				<h4 class="title">选择课时</h4>
+				<div class="list">
+					{{each price_system pV p}}
+						{{if pV.is_minimum == 1}}
+							<div class="normal active">
+								{{each pV.price_system_sub pV1 p1}}
+									{{if pV1.id == floor_price_son_id}}
+										<span class="active" data-unit_price = "{{pV1.unit_price}}" data-id="{{pV1.id}}" data-start_class_hour="{{pV1.start_class_hour}}" data-end_class_hour="{{pV1.end_class_hour}}">{{pV1.end_class_hour}}</span>
+									{{else}}
+										<span data-unit_price = "{{pV1.unit_price}}" data-id="{{pV1.id}}" data-start_class_hour="{{pV1.start_class_hour}}"  data-end_class_hour="{{pV1.end_class_hour}}">{{pV1.end_class_hour}}</span>
+									{{/if}}
+								{{/each}}
+							</div>
+						{{else}}
+							<div class="normal">
+								{{each pV.price_system_sub pV1 p1}}
+									{{if pV1.id == floor_price_son_id}}
+										<span class="active" data-unit_price = "{{pV1.unit_price}}" data-id="{{pV1.id}}" data-start_class_hour="{{pV1.start_class_hour}}"  data-end_class_hour="{{pV1.end_class_hour}}">{{pV1.end_class_hour}}</span>
+									{{else}}
+										<span data-unit_price = "{{pV1.unit_price}}" data-id="{{pV1.id}}" data-start_class_hour="{{pV1.start_class_hour}}"  data-end_class_hour="{{pV1.end_class_hour}}">{{pV1.end_class_hour}}</span>
+									{{/if}}
+								{{/each}}
+							</div>
+						{{/if}}
+					{{/each}}
+					<div class="special">
+						<span>自定义</span>
+						<div class="num hide">
+							<div class="cut"></div>
+							<div class="count">1</div>
+							<div class="add"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="right">立即报名</div>
+			<div class="left">
+				总价：<span>￥{{real_amount}}</span>
+			</div>
+		</div>
+	</script>
+</body>
+</html>

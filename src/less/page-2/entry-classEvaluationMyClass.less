@@ -1,0 +1,245 @@
+/* 1-课程&评论-我的课程页 */
+@import "../public";
+@import "./variable";
+@import "./search-shai";
+
+header{
+	
+}
+body.header{
+	padding-top: 75px;
+}
+// 选项卡
+.tab {
+	position: fixed;
+	left: 0;
+	top: @header-h;
+	width: 100%;
+	height: 34px;
+	z-index: 1000;
+	font-size: 0;
+	padding: 0 10px;
+	background: #fff;
+	a{
+		display: inline-block;
+		width: 50%;
+		height: 34px;
+		text-align: center;
+		font-size: 1.3rem;
+		color: #999;
+		line-height: 34px;
+		box-sizing: border-box;
+		&.active{
+			color: @col-main;
+			border-bottom: 2px solid @col-main;
+		}
+	}
+}
+// 列表
+#wrapper{
+	padding-top: 30px;
+	& > div{
+		padding-bottom: 40px;
+	}
+	#listContainer{
+		margin-top: 15px;
+		// 我的课程
+		.item{
+			overflow: hidden;
+			padding-top: 10px;
+			position: relative;
+			margin-bottom: 10px;
+			font-size: 1.2rem;
+			background: #fff;
+			&.other{
+				.right{
+					p{
+						line-height: 1.6rem;
+					}
+					.btnWrapper{
+						margin-top: 8px;
+						padding-right: 10px;
+						margin-bottom: 10px;
+						text-align: right;
+						.btn{
+							display: inline-block;
+							padding-right: 10px;
+							font-size: 1.2rem;
+							line-height: 1;
+							color: @col-main;
+							padding: 6px 15px;
+							border: 1px solid @col-main;
+							border-radius: 5px;
+						}
+					}
+				}
+			}
+			.left{
+				float: left;
+				width: 71px;
+				padding-top: 5px;
+				text-align: center;
+				img{
+					width: 51px;
+					height: 51px;
+					display: inline-block;
+					border-radius: 50%;
+				}
+				p{
+					text-align: center;
+					line-height: 2.8rem;
+					font-size: 1.2rem;
+					color: #333;
+					padding: 0 6px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+			}
+			.right{
+				margin-left: 71px;
+				color: #999;
+				.title{
+					font-size: 1.5rem;
+					color: #333;
+					font-weight: bold;
+					text-overflow: ellipsis;
+					max-width: 95%;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+				p{
+					padding-bottom: 3px;
+					line-height: 2.2rem;
+					font-size: 1.2rem
+				}
+				.time{
+					padding-top: 3px;
+					border-top: 1px dashed #ddd
+				}
+			}
+			.inner{
+				width: 100%;
+				overflow: hidden;
+				font-size: 0;
+				text-align: right;
+				padding: 0 10px 6px 0;
+				a{
+					display: inline-block;
+					border: 1px solid #ddd;
+					text-align: center;
+					line-height: 17px;
+					font-size: 1.2rem;
+					color: #666;
+					padding: 2px 12px;
+					border: 1px solid #ddd;
+					margin-right: 8px;
+					border-radius: 2px;
+					&.ping{
+						margin-right: 8px;
+						border: 1px solid @col-main;
+						color: @col-main;
+					}
+					&.active{
+
+					}
+				}
+			}
+			.tag{
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: 5px 12px 0 0;
+				color: @col-main;
+				font-size: 1.2rem;
+			}
+		}
+		// 收到评价
+		.othitem{
+			margin-bottom: 10px;
+			padding: 10px 0 15px 0;
+			background: #fff;
+			.title{
+				overflow: hidden;
+				padding-left: 10px;
+				img{
+					float: left;
+					width: 36px;
+					height: 35px;
+					border-radius: 50%;
+					vertical-align: middle;
+				}
+				.name{
+					display: block;
+					margin-left: 40px;
+					line-height: 36px;
+					font-size: 1.4rem;
+					font-weight: bold;
+					padding-left: 5px;
+					vertical-align: middle;
+				}
+			}
+			.yello{
+				padding-left: 10px;
+				color: #ffc822;
+				font-size: 1.2rem;
+				line-height: 2.2rem;
+			}
+			.line{
+				padding-left: 10px;
+				color: #333;
+				font-size: 1.2rem;
+				line-height: 2.2rem;
+				.star{
+					display: inline-block;
+					width: 15px;
+					height: 15px;
+					margin-right: 4px;
+					background: url("@{img_url_tpl}/smart_star_select.png") no-repeat;
+					background-size: cover;
+					&:first-child{
+						margin-left: 5px;
+					}
+				}
+				.star1{
+					background: url("@{img_url_tpl}/big-star-half@2x.png") no-repeat;
+					background-size: cover;
+				}
+				.star2{
+					background: url("@{img_url_tpl}/smart_star_normal.png") no-repeat;
+					background-size: cover;
+				}
+				.num{
+					margin-left: 8px;
+					color: #ffc822;
+				}
+				.gray{
+					color: #aaa;
+				}
+			}
+			.student{
+				overflow: hidden;
+				background: #eee;
+				margin-top: 5px;
+				padding: 10px 0 10px 10px;
+				img{
+					float: left;
+					width: 60px;
+					height: 60px;
+				}
+				.text{
+					margin-left: 70px;
+					.name{
+						font-weight: bold;
+						padding-top: 8px;
+						font-size: 1.4rem;
+						margin-bottom: 3px;
+					}
+					.desc{
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+	}
+}

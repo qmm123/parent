@@ -1,0 +1,119 @@
+/* 1-校区列表页 */
+@import "../public";
+@import "./variable";
+
+
+body.header{
+	padding-top: 91px;
+}
+// tab选项卡
+.tabWrapper{
+	position: fixed;
+	top: 45px;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+.tab{
+	padding: 10px 5px 10px 10px;
+	background: #fff;
+	font-size: 0;
+	overflow: hidden;
+	a{
+		display: inline-block;
+		width: 24%;
+		height: 27px;
+		margin-right: 1%;
+		text-align: center;
+		color: #333;
+		font-size: 1.2rem;
+		line-height: 17px;
+		padding-top: 5px;
+		background-image: linear-gradient(-90deg, #FFD3C4 0%, #FFBDC9 100%);
+		border-radius: 31px;
+		&.center{
+		
+		}
+		&.last{
+			margin-right: 0;
+			background: #f0f0f0;
+		}
+		&.active{
+			color: #fff;
+			background-image: linear-gradient(90deg, #FF6166 0%, #FF8670 100%);
+		}
+	}
+}
+// 列表
+#wrapper{
+	top: 45px !important;
+	#listContainer{
+		.item{
+			margin-top: 10px;
+			margin-bottom: 10px;
+			background: #fff;
+			.header{
+				position: relative;
+				padding: 10px;
+				border-bottom: 1px solid #ddd;
+				img{
+					width: 25px;
+					height: 25px;
+					float: left;
+					border-radius: 50%;
+					vertical-align: middle;
+				}
+				.tel{
+					margin-left: 30px;
+					font-size: 1.5rem;
+					color: #333;
+					line-height: 25px;
+					vertical-align: middle;
+				}
+				.time{
+					position: absolute;
+					right: 10px;
+					top: 14px;
+					line-height: 17px;
+					font-size: 1.2rem;
+					color: #999;
+				}
+			}
+			.body{
+				padding: 10px;
+				p{
+					font-size: 1.2rem;
+					color: #999;
+					&.starWrapper{
+						margin: 5px 0 9px 0;
+						font-size: 0;
+						.star{
+							display: inline-block;
+							width: 8px;
+							height: 8px;
+							margin-right: 3px;
+							background: url("@{img_url_tpl}/smart_star_select.png") no-repeat;
+							background-size: cover;
+							&.star1{
+								background: url("@{img_url_tpl}/big-star-half@2x.png") no-repeat;
+								background-size: cover;
+							}
+							&.star2{
+								background: url("@{img_url_tpl}/smart_star_normal.png") no-repeat;
+								background-size: cover;
+							}
+						}
+					}
+					&.more{
+						font-size: 1.3rem;
+						color: #333;
+						line-height: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+.pullDown, .pullUp{
+	visibility: hidden;
+} 

@@ -84,7 +84,7 @@
 				</div>
 				<div>
 				{{each lessons value i}}
-					<div class="line" data-goods_id="{{goods_id}}" data-student_id="{{student_id}}" data-order_id="{{order_id}}" data-campus_id="{{campus_id}}" data-teacher_id="{{teacher_id}}">
+					<div class="line" data-goods_id="{{goods_id}}" data-student_id="{{student_id}}" data-order_id="{{order_id}}" data-lessons_id="{{value.lesson_id}}" data-campus_id="{{campus_id}}" data-teacher_id="{{teacher_id}}">
 						{{value.lesson_num}} {{value.open_date}} {{value.class_time}} <span>待评价</span>
 					</div>
 				{{/each}}

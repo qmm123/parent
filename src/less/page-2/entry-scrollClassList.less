@@ -1,0 +1,70 @@
+/* 1-滚动表-列表页 */
+@import "../public";
+@import "./variable";
+@import "./search-shai";
+
+.icon{
+	display: inline-block;
+	width: 15px;
+	height: 17px;
+	&:before{
+		content: '\3000';
+	}
+}
+#wrapper{
+	top: @header-h !important;
+	#listContainer{
+		.item{
+			position: relative;
+			margin-bottom: 10px;
+			margin-top: 10px;
+			padding: 13px 10px 12px 10px;
+			background: #fff;
+			.img{
+				float: left;
+				width: 65px;
+				height: 65px;
+				border-radius: 5px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.text{
+				margin-left: 75px;
+				.title{
+					font-size: 1.4rem;
+					font-weight: bold;
+				}
+				p{
+					position: relative;
+					font-size: 1.2rem;
+					line-height: 17px;
+					color: #848484;
+					.icon1{
+						background: url("@{img_url_tpl}/class_address.png") no-repeat left center;
+						background-size: 10px 13px;
+					}
+					&.price{
+						margin-top: 4px;
+					}
+					.red{
+						color: #f84848;
+						font-size: 1.5rem;
+					}
+					.distance{
+						position: absolute;
+						top: 0;
+						right: 0;
+						font-size: 1rem;
+						line-height: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.order_sort .order_sort_u li{
+	width: 50%;
+}

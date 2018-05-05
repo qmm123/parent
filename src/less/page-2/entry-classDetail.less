@@ -1,0 +1,415 @@
+@import "../public";
+@import "./variable";
+@import "./ping-parent";
+@import "../component/btn";
+// 家长评价
+.cls_evel_zone{
+	border-top: none;
+	margin-top: 0;
+}
+
+// 课程详情
+.class-detail{
+	.banner_infor{
+		position: relative;
+	}
+	.infor{
+		@h: 35px;
+		width: 100%;
+		height: @h;
+		background-color: rgba(0, 0, 0, .5);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		.txt{
+			width: 49%;
+			display: inline-block;
+			font-size: 1.3rem;
+			color: #fff;
+			line-height: @h;
+			text-align: center;
+		}
+	}
+	// banner图
+	.banner{
+		position: relative;
+		img{
+			width: 100%;
+		}
+	}
+	/* 课程详情 */
+	.class-content{
+		background: #fff;
+		padding: 10px 0 0 10px;
+		position: relative;
+		.title{
+			line-height: 1.4;
+			font-size: 1.5rem;
+			font-weight: bold;
+			color: #333;
+		}
+		.price{
+			margin-top: 8px;
+			.rq{
+				margin-right: 5px;
+				line-height: 1;
+				padding: 2px 1px 1px 1px;
+				text-align: center;
+				border: 1px solid #f84848;
+				border-radius: 2.5px;
+				font-size: 1rem;
+				color: #f84848;
+			}
+			.new{
+				margin-right: 5px;
+				font-size: 1.7rem;
+				vertical-align: middle;
+				line-height: 1;
+				color: @col-main;
+				i{
+					font-style: normal;
+					font-size: 1.2rem;
+				}
+			}
+			.old{
+				font-size: 1.2rem;
+				line-height: 1.4;
+				vertical-align: middle;
+				color: #ddd;
+				text-decoration: line-through;
+			}
+		}
+		.num{
+			margin-top: 6px;
+			font-size: 1.2rem;
+			color: #999;
+		}
+		.rqt-wrapper{
+			margin-top: 7px;
+			.rqt{
+				font-size: 1.5rem;
+				font-weight: bold;
+				color: #f84844;
+				margin-right: 5px;
+				margin-left: -9px;
+			}
+			.time{
+				font-size: 1.2rem;
+				color: #848484;
+			}
+		}
+		.icon-wrapper{
+			margin-top: 5px;
+			padding-bottom: 5px;
+			border-bottom: 1px solid #ddd;
+			.icon{
+				margin-right: 20px;
+				font-size: 1.2rem;
+				color: #848484;
+				&:before{
+					content: '';
+					display: inline-block;
+					width: 13px;
+					height: 13px;
+					vertical-align: middle;
+					margin-right: 5px;
+					background: url("@{img_url_tpl}/red_check_icon.png") no-repeat;
+					background-size: cover;
+				}
+			}
+		}
+		.fav{
+			position: relative;
+			margin-top: 5px;
+			padding-bottom: 10px;
+			.point-click{
+				position: absolute;
+				height: 100%;
+				top: -3px;
+				right: 0;
+				width: 40px;
+				background: url("@{img_url_tpl}/discount_point.png") no-repeat center center;
+				background-size: 20px 4px;
+			}
+			.icon{
+				font-size: 1.2rem;
+				color: #848484;
+				span{
+					color: #fff;
+					border-radius: 2px;
+					padding: 1px;
+				}
+			}
+			.icon1{
+				font-size: 1.2rem;
+				color: #848484;
+				&:before{
+					content: '折';
+					display: inline-block;
+					width: 14px;
+					height: 14px;
+					margin-right: 5px;
+					color: #fff;
+					text-align: center;
+					line-height: 14px;
+					background: #eab629;
+					border-radius: 2.5px;
+				}
+			}
+			.icon2{
+				margin-top: 3px;
+				font-size: 1.2rem;
+				color: #848484;
+				&:before{
+					content: '连';
+					display: inline-block;
+					width: 14px;
+					height: 14px;
+					margin-right: 5px;
+					color: #fff;
+					text-align: center;
+					line-height: 14px;
+					background: #eab629;
+					border-radius: 2.5px;
+				}
+			}
+		}
+		// 班级状态
+		.class_status{
+			@icon-w: 64px;
+			@icon-h: 55px;
+			width: @icon-w;
+			height: @icon-h;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-size: @icon-w @icon-h;
+			position: absolute;
+			right: 5px;
+			top: 8px;
+			z-index: 100;
+			// 上课中
+			&.ing{
+				background-image: url("@{img_url_tpl}/ic_lesson_status_ing.png");
+			}
+			// 招生中
+			&.zhao{
+				background-image: url("@{img_url_tpl}/ic_lesson_recruiting.png");
+			}
+			// 已满班-可报&已满班-不可报
+			&.man{
+				background-image: url("@{img_url_tpl}/ic_lesson_status_full_enable.png");
+			}
+			// 已结课
+			&.end{
+				background-image: url("@{img_url_tpl}/ic_lesson_status_finished.png");
+			}
+			// 已下架
+			&.off{
+				background-image: url("@{img_url_tpl}/ic_lesson_status_lose.png");
+			}
+		}
+	}
+	// 课程信息
+	.class-message{
+		margin-top: 10px;
+		padding-left: 10px;
+		background: #fff;
+		.title{
+			padding: 12px 0;
+			border-bottom: 1px solid #ddd;
+			font-size: 1.4rem;
+			color: #333;
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 2px;
+				height: 14px;
+				vertical-align: middle;
+				margin-right: 5px;
+				background: @col-main;
+			}
+			.text-arrow{
+				float: right;
+				position: relative;
+				padding-right: 25px;
+				color: #f84848;
+				font-size: 1.2rem;
+				&:after{
+					content: '';
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					right: 10px;
+					width: 6.7px;
+					height: 100%;
+					background: url("@{img_url_tpl}/right_next.png") no-repeat center;
+					background-size: 6.7px 13px;
+				}
+			}
+			.text{
+				float: right;
+				padding-right: 10px;
+				font-size: 1.2rem;
+				color: #999;
+			}
+		}
+		.item{
+			position: relative;
+			padding: 12px 0;
+			border-bottom: 1px solid #ddd;
+			.arrow-right{
+				position: absolute;
+				right: 0;
+				top: 0;
+				height: 100%;
+				width: 40px;
+				background: url("@{img_url_tpl}/right_next.png") no-repeat center center;
+				background-size: 6.7px 13px;
+			}
+			.point-click{
+				position: absolute;
+				height: 36px;
+				top: 4px;
+				right: 0;
+				width: 40px;
+				background: url("@{img_url_tpl}/discount_point.png") no-repeat center center;
+				background-size: 20px 4px;
+			}
+			.item-left{
+				float: left;
+				font-size: 1.3rem;
+				color: #999;
+			}
+			.item-right{
+				overflow: hidden;
+				padding-right: 35px;
+				font-size: 1.3rem;
+				color: #666;
+				min-height: 19px;
+				.item-right-weak-wrapper{
+					margin-top: 2px;
+					.weak{
+						float: left;
+						margin-right: 8px;
+					}
+					.time{
+						overflow: hidden;
+						p{
+
+						}
+					}
+				}
+			}
+			a{
+				display: block;
+			}
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+	}
+}
+// 课程安排弹出层
+.class-plan-shadow{
+	.class-plan{
+		.content{
+			height: 255px;
+			overflow: auto;
+			ul{
+				pointer-events: none;
+				padding-left: 10px;
+				.item{
+					width: 100%;
+					overflow: hidden;
+					padding: 8px 0 5px 0;
+					border-bottom: 1px solid #ddd;
+					.left{
+						vertical-align: middle;
+						float: left;
+						margin-top: 8px;
+						span{
+							display: inline-block;
+							width: 23px;
+							height: 23px;
+							text-align: center;
+							line-height: 23px;
+							font-size: 1.6rem;
+							color: #666;
+							background: #ddd;
+							border-radius: 50%;
+						}
+					}
+					.right{
+						vertical-align: middle;
+						float: left;
+						margin-left: 10px;
+						p{
+							font-size: 1.3rem;
+							color: #333;
+							&.time{
+								font-size: 1.2rem;
+								color: #999;
+							}
+						}
+					}
+					&.disabled{
+						.left{
+							span{
+								color: #fff;
+								background: #f0f0f0;
+							}
+						}
+						.right{
+							p{
+								color: #e0e0e0;
+								&.time{
+									color: #e0e0e0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.open{
+		display: block;
+		.class-plan{
+			transform: translate3d(0, 0, 0);
+		}
+	}
+}
+// 优惠详情
+.hui_detail_list{
+	li{
+		font-size: 1.2rem;
+		margin: 0 0 5px 0;
+		&.tip{
+			background: url("@{img_url_tpl}/note_icon.png") no-repeat left 3px;
+			background-size: 15px 15px;
+			padding: 0 0 0 20px;
+		}
+		&.arrow{
+			position: relative;
+			&:before{
+				@w: 7px;
+				@h: 13px;
+				width: @w;
+				height: 100%;
+				content: "";
+				background: url("@{img_url_tpl}/right_next.png") no-repeat center center;
+				background-size: @w @h;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+		.icon{
+			color: #fff;
+			border-radius: 2px;
+			padding: 2px 3px 1px 3px;
+			margin: 0 5px 0 0;
+		}
+	}
+	padding: 10px 10px 0 10px;
+}

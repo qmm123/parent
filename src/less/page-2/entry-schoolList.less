@@ -1,0 +1,99 @@
+/* 1-校区列表页 */
+@import "../public";
+@import "./variable";
+@import "./search-shai";
+
+
+// tab选项卡
+.order_sort{
+	.order_sort_u{
+		li{
+			width: 33.3%;
+		}
+	}
+}
+
+.icon{
+	display: inline-block;
+	width: 15px;
+	height: 17px;
+	&:before{
+		content: '\3000';
+	}
+}
+
+// 校区列表
+#wrapper{
+	width: 100%;
+    overflow: auto;
+    position: absolute;
+    z-index: 10;
+    top: 45px !important;
+    bottom: 0;
+    left: 0;
+	#listContainer{
+		.item{
+			position: relative;
+			margin-bottom: 10px;
+			margin-top: 10px;
+			padding: 13px 10px 12px 10px;
+			background: #fff;
+			.img{
+				float: left;
+				width: 65px;
+				height: 65px;
+				border-radius: 5px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.text{
+				margin-left: 75px;
+				.title{
+					font-size: 1.4rem;
+					font-weight: bold;
+				}
+				p{
+					position: relative;
+					font-size: 1.2rem;
+					line-height: 17px;
+					color: #848484;
+					.icon1{
+						background: url("@{img_url_tpl}/class_address.png") no-repeat left center;
+						background-size: 10px 13px;
+					}
+					.distance{
+						position: absolute;
+						top: 0;
+						right: 0;
+						font-size: 1rem;
+						line-height: 14px;
+					}
+				}
+			}
+			.hot{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 0;
+				border-top: 40px solid #f84848;
+				border-right: 80px solid transparent;
+				span{
+					position: absolute;
+					left: 0;
+					top: -38px;
+					width: 70px;
+					line-height: 14px;
+					font-size: 1.2rem;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.pullDown, .pullUp{
+	visibility: hidden;
+}

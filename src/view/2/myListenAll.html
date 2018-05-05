@@ -1,0 +1,79 @@
+@@include('../../include/header-common.html', {
+  "subtitle": "-我的课程页",
+  "css": "page-2/entry-myListenAll"
+})
+<!-- 1-全部试听 -->
+<body class="header">
+	<!-- 头部 -->
+		@@include('./c-header.html', {
+			"type": "0",
+			"txt": "我的试听",
+			"rightText": ""
+		})
+	<!-- /头部 -->
+	<!-- tab -->
+	<div class="tab">
+		<a href="javascript:;" class="active">全部</a>
+		<a href="javascript:;">待试听</a>
+	</div>
+	<!-- /tab -->
+	<!-- 列表 -->
+	<div id="wrapper">
+		<div>
+			<ul id="listContainer">
+				<!-- <li class="item">
+					<h3 class="title"></h3>
+					<p>所属校区：测试数据F班</p>
+					<p>上课地点：北京市朝阳区</p>
+					<p>预约时间：2018-04-19 05:30-07:00</p>
+					<span class="not">待试听</span>
+					<div class="btn"><span>取消试听</span></div>
+				</li> -->
+			</ul>		
+		</div>
+	</div>
+	<!-- /列表 -->
+	<!-- 暂无数据-->
+		@@include('../../include/no-content.html', {
+			"id": "emptyContentClass",
+			"style": "margin-top:30px;",
+			"className": "",
+			"txt": ""
+		})
+		<!-- /暂无数据 -->
+	<!-- 模板 -->
+	<script type="text/html" id="TplClass">
+		{{each data value i}}
+			<li class="item">
+				<h3 class="title">{{value.goods_name}}</h3>
+				<p>所属校区：{{value.campus_name}}</p>
+				<p>上课地点：{{value.campus_address}}</p>
+				<p>预约时间：{{value.audition_date}} {{value.audition_time}}</p>
+				{{if value.status == 1}}
+					<span class="not">未试听</span>
+				{{else if value.status == 2}}
+					<span class="not">已试听</span>
+				{{else if value.status == 3}}
+					<span class="not">已报名</span>
+				{{else if value.status == 4}}
+					<span class="not">已取消</span>
+				{{else if value.status == 5}}
+					{{if value.isStatus}}
+						<span class="not">待试听</span>
+					{{else}}
+						<span class="not">已过期</span>
+					{{/if}}
+				{{/if}}
+				{{if value.status == 1}}
+					<div class="btn" data-tab="1" data-show="{{value.status}}"><span data-goods_id="{{value.id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">取消试听</span></div>
+				{{else if value.status == 4}}
+					<div class="btn" data-tab="2" ><span data-goods_id="{{value.id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">重新预约</span></div>
+				{{else if value.status == 5}}
+					{{if value.isStatus}}
+						<div class="btn" data-tab="1" data-show="{{value.status}}"><span data-goods_id="{{value.id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">取消试听</span></div>
+					{{/if}}
+				{{/if}}
+			</li>
+		{{/each}}
+	</script>
+</body>

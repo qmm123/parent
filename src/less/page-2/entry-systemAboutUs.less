@@ -1,0 +1,50 @@
+// 关于我们
+@import "../public";
+@import "./variable";
+
+.container{
+	padding-left: 0;
+	padding-right: 0;
+  @hei: 150px;
+  .logo_zone{
+    height: @hei;
+    text-align: center;
+    background-color: rgba(@col-main-r, @col-main-g, @col-main-b, .8);
+    position: relative;
+    .logo{
+      @w: 80px;
+      @h: 80px;
+      width: @w;
+      height: @h;
+      display: inline-block;
+      margin: -@w/2 0 0 -@h/2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+  }
+  .infor_list{
+    background: #fff;
+    padding-left: 20px;
+    li{
+      border-bottom: 1px solid @bor-col-ddd;
+      padding: 10px 0 10px 0;
+      &.last{
+        border-bottom: none;
+      }
+      h1{
+        font-size: 1.4rem;
+        color: #333;
+        margin: 0 0 3px 0;
+      }
+      p{
+        font-size: 1.3rem;
+        color: #666;
+        min-height: 1.3rem;
+      }
+    }
+  }
+  .banner{
+    width: 100%;
+  }
+}

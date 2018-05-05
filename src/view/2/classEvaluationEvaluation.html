@@ -1,0 +1,94 @@
+@@include('../../include/header-common.html', {
+  "subtitle": "-我要评价页",
+  "css": "page-2/entry-classEvaluationEvaluation"
+})
+<!-- 1-课程&评价 我要评价页 -->
+<body class="header">
+	<!-- 头部 -->
+		@@include('./c-header.html', {
+			"type": "0",
+			"txt": "我要评价",
+			"rightText": ""
+		})
+	<!-- /头部 -->
+
+	
+	<!-- 列表 -->
+	<div id="wrapper">
+		<div>
+			<ul id="listContainer">
+				<!-- <li class="item">
+					<div class="itemInner">
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<div class="text">
+							<h3 class="title">语文学习班1</h3>
+							<p>所属校区：海淀校区</p>
+							<p>主讲老师：周老师</p>
+						</div>
+					</div>
+					<div class="line">
+						第2节 2018-0208 18:30-18:35 <span>待评价</span>
+					</div>
+				</li>
+				<li class="item">
+					<div class="itemInner">
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<div class="text">
+							<h3 class="title">语文学习班1</h3>
+							<p>所属校区：海淀校区</p>
+							<p>主讲老师：周老师</p>
+						</div>
+					</div>
+					<div class="line">
+						第2节 2018-0208 18:30-18:35 <span>待评价</span>
+					</div>
+				</li>
+				<li class="item">
+					<div class="itemInner">
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<div class="text">
+							<h3 class="title">语文学习班1</h3>
+							<p>所属校区：海淀校区</p>
+							<p>主讲老师：周老师</p>
+						</div>
+					</div>
+					<div class="line">
+						第2节 2018-0208 18:30-18:35 <span>待评价</span>
+					</div>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+	<!-- /列表 -->
+	<!-- 暂无数据-->
+		@@include('../../include/no-content.html', {
+			"id": "emptyContentClass",
+			"style": "margin-top:30px;",
+			"className": "",
+			"txt": ""
+		})
+		<!-- /暂无数据 -->
+	<script type="text/html" id="TplClass">
+			<li class="item">
+				<div class="itemInner">
+					{{if teacher_photo}}
+						<img src="{{teacher_photo}}" alt="">
+					{{else}}
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+					{{/if}}
+					<div class="text">
+						<h3 class="title">{{goods_name}}</h3>
+						<p>所属校区：{{campus_name}}</p>
+						<p>主讲老师：{{teacher_name}}</p>
+					</div>
+				</div>
+				<div>
+				{{each lessons value i}}
+					<div class="line" data-goods_id="{{goods_id}}" data-student_id="{{student_id}}" data-order_id="{{order_id}}" data-campus_id="{{campus_id}}" data-teacher_id="{{teacher_id}}">
+						{{value.lesson_num}} {{value.open_date}} {{value.class_time}} <span>待评价</span>
+					</div>
+				{{/each}}
+				</div>
+			</li>
+	</script>
+</body>

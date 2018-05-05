@@ -1,0 +1,110 @@
+@@include('../../include/header-common.html', {
+  "subtitle": "-校区列表页",
+  "css": "page-2/entry-schoolDetailEvaluation"
+})
+<!-- 1-校区评价页 -->
+<body class="header">
+	<!-- 头部 -->
+	@@include('./c-header.html', {
+		"type": "0",
+		"txt": "杰瑞",
+		"rightText": ""
+	})
+	<div class="tabWrapper">
+		<div class="tab">
+			<a href="javascript:;" class="active">全部(596)</a>
+			<a href="javascript:;" class="center">好评(521)</a>
+			<a href="javascript:;" class="center">中评(15)</a>
+			<a href="javascript:;" class="last">差评(0)</a>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div>
+			<!-- <div class="pullDown">
+				<div>
+					<span class="pullDownIcon"></span>
+					<span class="pullDownLabel">下拉刷新</span>
+				</div>
+			</div> -->
+			<ul id="listContainer">
+				<!-- <li class="item">
+					<div class="header">
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<div class="tel">135****2213</div>
+						<div class="time">2016-2-17</div>
+					</div>
+					<div class="body">
+						<p>高三数学高考冲刺精品教学班</p>
+						<p>主讲老师：张老师</p>
+						<p class="starWrapper">
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star star1"></span>
+							<span class="star"></span>
+							<span class="star star2"></span>
+						</p>
+						<p class="more">
+							首先得对老师致以感谢，孩子的好成绩当然离不开他们的辛勤教导;再个就是从孩子平时的学习生活中去发现些问题，来提出相应的建议，哪些方法，可以继续提倡下去，或者哪些方面，哪些地方还需做进一步的调整。
+						</p>
+					</div>
+				</li> -->
+			</ul>
+			<!-- <div class="pullUp">
+				<div>
+					<span class="pullUpIcon"></span>
+					<span class="pullUpLabel">上拉加载</span>
+				</div>
+			</div> -->
+		</div>
+	</div>
+	<!-- 暂无数据-->
+		@@include('../../include/no-content.html', {
+			"id": "emptyContentClass",
+			"style": "margin-top:30px;",
+			"className": "",
+			"txt": ""
+		})
+		<!-- /暂无数据 -->
+	<script type="text/html" id="TplClass">
+		{{each data value i}}
+			<li class="item">
+				<div class="header">
+					{{if value.avatar}}
+						<img src="{{value.avatar}}" alt="">
+					{{else}}
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+					{{/if}}
+					<div class="tel">{{value.phone}}</div>
+					<div class="time">{{value.modified}}</div>
+				</div>
+				<div class="body">
+					<p>{{value.goods_name}}</p>
+					<p>主讲老师：{{value.employees_name}}</p>
+					<p class="starWrapper">
+						{{if value.scoreNum}}
+							{{each value.scoreNum.star1 item i}}
+								<span class="star"></span>
+							{{/each}}
+							{{each value.scoreNum.star2 item i}}
+								<span class="star star1"></span>
+							{{/each}}
+							{{each value.scoreNum.star3 item i}}
+								<span class="star star2"></span>
+							{{/each}}
+						{{/if}}
+					</p>
+					<p class="more">
+						{{value.curriculum_evaluation}}
+					</p>
+				</div>
+			</li>
+		{{/each}}
+	</script>
+	<script type="text/html" id="TabTpl">
+		<a href="javascript:;" class="active">全部({{count}})</a>
+		<a href="javascript:;" class="center">好评({{good_comment}})</a>
+		<a href="javascript:;" class="center">中评({{middle_comment}})</a>
+		<a href="javascript:;" class="last">差评({{bad}})</a>
+	</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* 1-一对一列表 */
+@import "../public";
+@import "./variable";
+@import "./search-shai";
+
+.order_sort{
+	position: fixed;
+	top: @header-h;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+#wrapper{
+	top: @header-h !important;
+	#listContainer{
+		overflow: hidden;
+		padding: 0 8px;
+		margin-top: 5px;
+	}
+	.item{
+		width: 49%;
+		float: left;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		margin-right: 2%;
+		background: #fff;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+		.top{
+			position: relative;
+			border-radius: 5px;
+			border-top-right-radius: 0;
+			img{
+				width: 100%;
+				border-top-left-radius: 3px;
+			}
+			p{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				font-size: 1rem;
+				vertical-align: middle;
+				background: rgba(0,0,0,0.3);
+				color: #fff;
+				padding: 2px 5px;
+				line-height: 26px;
+				height: 26px;
+				span{
+					color: @col-main;
+					&._price{
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}
+		.bottom{
+			padding-bottom: 7px;
+			.title{
+				padding-left: 5px;
+				font-size: 1.4rem;
+				color: #333;
+			}
+			.line{
+				margin-top: -3px;
+				padding: 0 5px;
+				font-size: 0;
+				span{
+					display: inline-block;
+					margin-top: 4px;
+					margin-right: 4px;
+					font-size: 0.9rem;
+					height: 14px;
+					line-height: 14px;
+					padding: 0 10px;
+					border-radius: 3px;
+					color: #848484;
+					border: 1px solid #848484;
+				}
+			}
+		}
+	}
+}
+
+.order_sort .order_sort_u li{
+	width: 33.3%;
+}

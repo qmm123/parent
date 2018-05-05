@@ -1,0 +1,81 @@
+/* 1-我的试听 */
+@import "../public";
+@import "./variable";
+
+body.header{
+	padding-top: 75px;
+}
+//tab
+
+.tab{
+	position: fixed;
+	left: 0;
+	top: 45px;
+	width: 100%;
+	height: 34px;
+	z-index: 1000;
+	font-size: 0;
+	padding: 0 10px;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+
+	a{
+		display: inline-block;
+		width: 50%;
+		height: 34px;
+		text-align: center;
+		font-size: 1.3rem;
+		color: #999;
+		line-height: 34px;
+		box-sizing: border-box;
+		&.active{
+			color: @col-main;
+			border-bottom: 1px solid @col-main;
+		}
+	}
+}
+// 列表
+#wrapper{
+	top: 30px !important;
+	#listContainer{
+		margin-top: 15px;
+		.item{
+			background: #fff;
+			position: relative;
+			margin-bottom: 10px;
+			padding: 12px 0 0 10px;
+			.title{
+				font-size: 1.5rem;
+				line-height: 30px;
+				border-bottom: 1px solid #ddd;
+			}
+			p{
+				font-size: 1.3rem;
+				line-height: 30px;
+				border-bottom: 1px solid #ddd;
+			}
+			.not{
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				display: inline-block;
+				line-height: 30px;
+				font-size: 1.3rem;
+				color: #f84848;
+			}
+			.btn{
+				text-align: right;
+				padding: 5px 10px 5px 0;
+				span{
+					display: inline-block;
+					font-size: 1.2rem;
+					color: @col-main;
+					line-height: 17px;
+					padding: 2px 8px;
+					border: 1px solid @col-main;
+					border-radius: 2px;
+				}
+			}
+		}
+	}
+}

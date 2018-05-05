@@ -1,0 +1,68 @@
+@@include('../../include/header-common.html', {
+  "subtitle": "-评价页",
+  "css": "page-2/entry-classEvaluationWriteEvaluation"
+})
+<!-- 1-课程&评价 我要评价页 -->
+<body class="header">
+	<!-- 头部 -->
+		@@include('./c-header.html', {
+			"type": "0",
+			"txt": "我要评价",
+			"rightText": ""
+		})
+	<!-- /头部 -->
+
+	<div class="evaluation">
+		
+	</div>
+	<script type="text/html" id="TplClass">
+		<div class="textWrapper">
+			{{if curriculum_evaluation}}
+				<textarea name="" maxlength="200">{{curriculum_evaluation}}</textarea>
+			{{else}}
+				<textarea name="" placeholder="请写下上课的感受,助人快乐( ^_^ )" maxlength="200"></textarea>
+			{{/if}}
+		</div>
+		<div class="textareaT">限定<span>{{num}}</span>字以内</div>
+		<div class="starWrapper">
+			<div class="first">学习效果<p>
+				{{each scoreNum1.star1}}
+					<span class="star active"></span>
+				{{/each}}
+				{{each scoreNum1.star3}}
+					<span class="star"></span>
+				{{/each}}
+			</p></div>
+			<div class="second">课后服务<p>
+				{{each scoreNum2.star1}}
+					<span class="star active"></span>
+				{{/each}}
+				{{each scoreNum2.star3}}
+					<span class="star">
+				{{/each}}
+			</p></div>
+			<div class="last">教学态度<p>
+				{{each scoreNum3.star1}}
+					<span class="star active"></span>
+				{{/each}}
+				{{each scoreNum3.star3}}
+					<span class="star"></span>
+				{{/each}}
+			</p></div>
+		</div>
+		<div class="submit">
+			{{if is_anonymous == 1}}
+				<div class="left active">
+					<span class="circle"></span>
+					匿名评论
+				</div>
+			{{else}}
+				<div class="left">
+					<span class="circle"></span>
+					匿名评论
+				</div>
+			{{/if}}
+			<div class="right">发表评论</div>
+		</div>
+	</script>
+</body>

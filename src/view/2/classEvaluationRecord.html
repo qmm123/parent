@@ -1,0 +1,85 @@
+@@include('../../include/header-common.html', {
+  "subtitle": "-评价记录页",
+  "css": "page-2/entry-classEvaluationRecord"
+})
+<!-- 1-课程&评价 评价记录页 -->
+<body class="header">
+	<!-- 头部 -->
+		@@include('./c-header.html', {
+			"type": "0",
+			"txt": "评价记录",
+			"rightText": ""
+		})
+	<!-- /头部 -->
+
+	
+	<!-- 列表 -->
+	<div class="" id="wrapper">
+		<div>
+			<ul id="listContainer">
+				
+			</ul>
+		</div>
+	</div>
+	<!-- /列表 -->
+	<!-- 暂无数据-->
+	@@include('../../include/no-content.html', {
+		"id": "emptyContentClass",
+		"style": "margin-top:30px;",
+		"className": "",
+		"txt": ""
+	})
+	<!-- /暂无数据 -->
+	<!-- 模板 -->
+	<script type="text/html" id="TplClass">
+		{{each data value i}}
+			<li class="item">
+				<div class="title">
+					{{if value.parent_photo}}
+						<img src="{{value.parent_photo}}" alt="">
+					{{else}}
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+					{{/if}}
+					<span class="name">{{value.parent_name}}</span>
+				</div>
+				<div class="starWrapper">
+					{{if value.scoreNum}}
+						{{each value.scoreNum.star1 item i}}
+							<span class="star"></span>
+						{{/each}}
+						{{each value.scoreNum.star2 item i}}
+							<span class="star star1"></span>
+						{{/each}}
+						{{each value.scoreNum.star3 item i}}
+							<span class="star star2"></span>
+						{{/each}}
+					{{/if}}
+				</div>
+				<div class="paro">{{value.curriculum_evaluation}}</div>
+				<div class="desc">
+					<div class="img">
+						{{if value.teacher_photo}}
+							<img src="{{value.teacher_photo}}" alt="">
+						{{else}}
+							<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						{{/if}}
+					</div>
+					<div class="text">
+						<h3 class="title">{{value.goods_name}}</h3>
+						<p>{{value.lesson_info}}</p>
+						<p>主讲教师：{{value.teacher_name}}</p>
+						<p>上课孩子：{{value.student_name}}</p>
+					</div>
+				</div>
+				{{if value.is_edit == 1}}
+					<div class="btnWrapper">
+						<div class="btn" data-id="{{value.id}}" data-student_id="{{value.student_id}}" data-goods_id="{{value.goods_id}}" data-campus_id="{{value.campus_id}}" data-class_effect_score="{{value.class_effect_score}}" data-curriculum_evaluation="{{value.curriculum_evaluation}}" data-order_id="{{value.order_id}}" data-service_attitude_score="{{value.service_attitude_score}}" data-teacher_id="{{value.teacher_id}}" data-teaching_environment_score="{{value.teaching_environment_score}}" data-is_anonymous="{{value.parent_name ? '2' : '1'}}">
+							修改评价
+						</div>
+					</div>
+				{{/if}}
+				<div class="time">{{value.created}}</div>
+			</li>
+		{{/each}}
+	</script>
+</body>

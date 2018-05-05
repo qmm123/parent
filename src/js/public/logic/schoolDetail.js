@@ -60,7 +60,7 @@ define([
 			this.config = $.extend(true, defaults, opt);
 			// 通过桥接传递过来的参数
 			this.wbParam = JSON.parse( Method.getUrlParam("page_param") );
-			this.pageConfig = JSON.parse( Method.getUrlParam("tpl_config") ) ? JSON.parse( Method.getUrlParam("tpl_config") ) : {};//模板页面配置信息
+			this.pageConfig = Method.getUrlParam("tpl_config") ? JSON.parse( Method.getUrlParam("tpl_config") ) : {};//模板页面配置信息
 			console.log(this.wbParam, this.pageConfig)
 			this.dataInfor = null;//基本信息
 			this.campus_id = this.wbParam.campus_id;//校区id

@@ -1,2 +1,27 @@
-/* 2-课程列表页 */
+/* 1-课程列表页 */
 @import "../public";
+@import "./variable";
+@import "./search-shai";
+@import "./classList";
+@import "../component/radioCheckbox";
+@import "./class-sidebar";
+
+// 滚动加载容器
+.scrollWrapper{
+	margin-top: @header-h + 46 - @scroll-h;
+}
+
+// 滚动加载列表包裹层
+.ScrollContent{
+	margin-top: 5px;
+}
+
+// 头部
+header{
+	.search{
+		margin-right: 50px;
+	}
+}
+.btn_list{
+	margin-bottom: 10px;
+}

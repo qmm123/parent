@@ -1,0 +1,35 @@
+@@include('../../include/header-common.html', {
+  "subtitle": "关于我们",
+  "css": "page-2/entry-systemAboutUs"
+})
+<!-- 1-关于我们页 -->
+<body class="header foot">
+	<!-- 头部 -->
+	@@include('./c-header.html', {
+		"type": "0",
+		"txt": "关于我们"
+	})
+	<div class="container">
+		<!-- <div class="logo_zone">
+			<img src="/img/default/merchant_logo.png" alt="" class="logo" />
+		</div> -->
+		<img src="/img/tpl1/about_us.png" alt="" class="banner" />
+		<ul class="infor_list">
+			<li>
+				<h1>版本号</h1>
+				<p id="version"></p>
+			</li>
+			<li>
+				<h1>客服电话</h1>
+				<p id="phone"></p>
+			</li>
+			<li class="last">
+				<h1>总部地址</h1>
+				<p id="address"></p>
+			</li>
+		</ul>
+	</div>
+	<!-- 页脚 -->
+	@@include('../../include/layout/footer.html')
+</body>
+</html>

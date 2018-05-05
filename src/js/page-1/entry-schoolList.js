@@ -117,8 +117,15 @@ define([
 		}
 		requeseDataList();
 		// 跳转校区详情
+		var isTrue = true;
 		$("#wrapper").on("click", ".item", function(){
-			nativeFun("toSchoolDetailMain", {"campus_id": $(this).data("id")});
+			if(isTrue) {
+				isTrue = false;
+				nativeFun("toSchoolDetailMain", {"campus_id": $(this).data("id")});
+			}
+			setTimeout(function() {
+				isTrue = true;
+			})
 		})
 	}
 

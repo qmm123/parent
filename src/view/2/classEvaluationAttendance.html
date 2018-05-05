@@ -1,0 +1,100 @@
+@@include('../../include/header-common.html', {
+  "subtitle": "-考勤情况",
+  "css": "page-2/entry-classEvaluationAttendance"
+})
+<!-- 1-课程&评价 考勤情况页 -->
+<body class="header">
+	<!-- 头部 -->
+		@@include('./c-header.html', {
+			"type": "0",
+			"txt": "语文学习班1-考勤",
+			"rightText": ""
+		})
+	<!-- /头部 -->
+
+	
+	<!-- 列表 -->
+	<div id="wrapper">
+		<div>
+			<ul id="listContainer">
+				<!-- <li class="item">
+					<div class="bg">
+						2018-02-08
+					</div>
+					<div class="text">
+						<p>第1课时15:00-16:30</p>
+						<p>主讲：张淼</p>
+						<p>教室：302</p>
+					</div>
+					<div class="tagWrapper"><span class="tag tag1">缺勤</span></div>
+				</li>
+				<li class="item">
+					<div class="bg">
+						2018-02-08
+					</div>
+					<div class="text">
+						<p>第1课时15:00-16:30</p>
+						<p>主讲：张淼</p>
+						<p>教室：302</p>
+					</div>
+					<div class="tagWrapper"><span class="tag tag2">考勤</span></div>
+				</li>
+				<li class="item">
+					<div class="bg">
+						2018-02-08
+					</div>
+					<div class="text">
+						<p>第1课时15:00-16:30</p>
+						<p>主讲：张淼</p>
+						<p>教室：302</p>
+					</div>
+					<div class="tagWrapper"><span class="tag tag3">未勤</span></div>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+	<!-- /列表 -->
+	<!-- 暂无数据-->
+		@@include('../../include/no-content.html', {
+			"id": "emptyContentClass",
+			"style": "margin-top:30px;",
+			"className": "",
+			"txt": ""
+		})
+		<!-- /暂无数据 -->
+	<script type="text/html" id="TplClass">
+		{{each data value i}}
+			<li class="item">
+				<div class="bg">
+					{{value.open_date}}
+				</div>
+				<div class="text">
+					<p>{{value.title}}{{value.class_time}}</p>
+					<p>主讲：
+						{{if value.teacher_name}}
+							{{value.teacher_name}}
+						{{else}}
+							待定
+						{{/if}}
+					</p>
+					<p>教室：{{value.classroom_name}}</p>
+				</div>
+				<div class="tagWrapper">
+					{{if value.status == 1}}
+						<span class="tag tag3">未出勤</span>
+					{{else if value.status == 2}}
+						<span class="tag tag2">考勤</span>
+					{{else if value.status == 3}}
+						<span class="tag tag1">缺勤</span>
+					{{else if value.status == 4}}
+						<span class="tag tag1">退班</span>
+					{{else if value.status == 5}}
+						<span class="tag tag1">转班</span>
+					{{else}}
+						<span class="tag tag1">退费中</span>
+					{{/if}}
+				</div>
+			</li>
+		{{/each}}
+	</script>
+</body>

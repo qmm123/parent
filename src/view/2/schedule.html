@@ -1,0 +1,85 @@
+@@include('../../include/header-common.html', {
+  "subtitle": "-课表",
+  "css": "page-2/entry-schedule"
+})
+<!-- 1-课表 -->
+<body>
+	<!-- 头部 -->
+		@@include('./c-header.html', {
+			"type": "0",
+			"txt": "课表",
+			"rightText": ""
+		})
+	<!-- /头部 -->
+	<div class="schedule">
+		<div class="calendar" id="datepicker">
+			<div class="calendar_date"> 
+				<a href="javascript:;" class="prev">上一月</a>
+				<h3>2015年10月</h3>
+				<a href="javascript:;" class="next">下一月</a>
+			</div> 
+			<ol class="week_list">
+				<li class="weekend">周日</li>
+				<li>周一</li>
+				<li>周二</li>
+				<li>周三</li>
+				<li>周四</li>
+				<li>周五</li>
+				<li class="weekend last">周六</li>
+			</ol>
+			<ul class="date_list">
+				
+			</ul>
+		</div>
+		<div class="nav">全部孩子<span class="right-arrow"></span></div>
+		<div class="list" id="wrapper">
+			<div>
+				<ul id="listContainer">
+					<p class="_empty">今天没有课程,请选择日历查看有课程的日期</p>	
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 暂无数据-->
+	@@include('../../include/no-content.html', {
+		"id": "emptyContentClass",
+		"style": "margin-top:30px;",
+		"className": "",
+		"txt": ""
+	})
+	<!-- /暂无数据 -->
+</body>
+<script type="text/html" id="TplClass">
+		{{if data.length > 0}}
+			{{each data value i}}
+			<li class="item" data-goods_id="{{value.goods_id}}">
+				<div class="left">
+					{{if value.avatar}}
+						<img src="{{value.avatar}}" alt="">
+					{{else}}
+						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+					{{/if}}
+					<p>{{value.name}}</p>
+				</div>
+				<div class="right">
+					<h3 class="title">{{value.goods_name}}</h3>
+					<p class="time">时间: {{value.start_time}}-{{value.end_time}}</p>
+					{{if value.teacher_name}}
+						<p class="teacher">主讲：{{value.teacher_name}}</p>
+					{{else}}
+						<p class="teacher">主讲：待定</p>
+					{{/if}}
+					{{if value.classroom_name}}
+						<p class="roo">教室：{{value.classroom_name}}</p>
+					{{else}}
+						<p class="roo">教室：未定</p>
+					{{/if}}
+					<p class="address">地址：{{value.address}}</p>
+				</div>
+				<span class="right-arrow"></span>
+			</li>
+			{{/each}}
+		{{else}}
+			<p class="_empty">今天没有课程,请选择日历查看有课程的日期</p>
+		{{/if}}
+</script>

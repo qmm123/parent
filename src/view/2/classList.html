@@ -1,9 +1,141 @@
 @@include('../../include/header-common.html', {
-  "subtitle": "-课程列表页",
+  "subtitle": "课程列表页",
   "css": "page-2/entry-classList"
 })
-<!-- 2-课程列表页 -->
-<body>
-	<p>课程列表页</p>
+<!-- 1-课程列表页 -->
+<body class="header">
+	<!-- 头部 -->
+	@@include('./c-header.html', {
+		"type": "2",
+		"searchTxt": "搜索课程/机构"
+	})
+	<!-- 列表 -->
+	<div class="container full">
+		<!-- 筛选条件-顶部 -->
+		<div class="order_sort">
+			<!-- 选项卡头部 -->
+			<ul class="order_sort_u clearfix">
+				<li>
+					<a href="javascript:;" class="tab_swi_a" id="locationTab">位置</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="tab_swi_a" id="classTab">课程分类</a>
+				</li>
+				<!-- <li>
+					<a href="javascript:;" class="tab_swi_a" id="aiSortTab">智能排序</a>
+				</li> -->
+				<!-- <li>
+					<a href="javascript:;" class="tab_swi_a" id="teachModeTab">授课模式</a>
+				</li> -->
+				<li>
+					<!-- <a href="javascript:;" class="tab_swi_a" id="selectSelectTab">筛选</a> -->
+				</li>
+				<li>
+					<a href="javascript:;" class="tab_swi_a" id="gradeTab">年部年级</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="tab_swi_a" id="allTeacherTab">全部老师</a>
+				</li>
+			</ul>
+			<!-- 搜索选项卡 -->
+			<div class="search_tabs">
+				<!-- 选项卡-位置 -->
+				<div class="search_tab location_fu" id="location_fu">
+					<div class="left_area"></div>
+					<div class="right_area"></div>
+				</div>
+				<!-- 选项卡-课程分类 -->
+				<div class="search_tab" id="classify"></div>
+				<!-- 选项卡-智能排序 -->
+				<!-- <div class="search_tab min_hieght" id="aiSort" data-sort="1"></div> -->
+				<!-- 选项卡-授课模式 -->
+				<!-- <div class="search_tab teachMode" id="teachMode"></div> -->
+				<!-- 选项卡-筛选(老师) -->
+				<!-- <div class="search_tab" id="selectSelect"></div> -->
+				<!-- 选项卡-年部年级 -->
+				<div class="search_tab min_hieght" id="gradeJi"></div>
+				<!-- 选项卡-全部老师 -->
+				<div class="search_tab" id="allTeacher"></div>
+			</div>
+		</div>
+		<!-- 课程列表 -->
+		<div id="wrapper" class="scrollWrapper">
+			<div style="width: 100%;">
+				<div id="ScrollContent" class="ScrollContent">
+					<ul class="class_list_folder" id="listContainer"></ul>
+				</div>
+			</div>
+		</div>
+		<!-- 数据为空 -->
+		@@include('../../include/no-content.html', {
+			"id": "emptyContent",
+			"style": "margin-top:50px;",
+			"className": "",
+			"txt": ""
+		})
+	</div>
+	
+	<!-- 模板-课程 -->
+	<script type="text/html" id="TplClass">
+		{{each data value i}}
+			<li data-goodsid="{{value.goods_id}}" data-courseid="{{value.course_id}}" data-campus_id={{value.campus_id}} data-role='clickLi'>
+				<div class="up">
+					<div class="u">
+						{{if value.teacher_photo}}
+						<img src={{value.teacher_photo}} alt="" class="img" />
+						{{else}}
+						<img src="/img/tpl3/default/teacher.png" alt="" class="img" />
+						{{/if}}
+						<span class="name">{{value.teacher_name}}<img src="/img/tpl3/name_arrow.png" alt="" class="arrow" /></span>
+						<div class="money">
+							{{if value.privileges && value.privileges.length}}
+								{{if value.privilege_price_tag}}
+								<span class="money_status">{{value.privilege_price_tag.name}}</span>
+								{{/if}}
+							￥{{value.mall_cost}}
+							<div class="money_yuan">{{value.cost}}</div>
+							{{else}}
+							￥{{value.mall_cost}}
+							{{/if}}
+						</div>
+					</div>
+					<div class="d">
+						{{if value.retreat_rule == 1}}
+						<span class="mark">随时退班</span>
+						{{/if}}
+						{{if value.is_transfer == 1}}
+						<span class="mark">随时插班</span>
+						{{/if}}
+						{{if value.is_audition == 1}}
+						<span class="mark">免费试听</span>
+						{{/if}}
+						<div class="bao">
+							已报<span>{{value.saled}}</span>/<span>{{value.total}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="down">
+					<div class="class_infor">
+						<span class="name">{{value.name}}</span>
+						<div class="hui">
+							{{if value.privileges}}
+								{{each value.privileges val j}}
+								<span class="hui" style="background:{{val.bkg_color}};">{{val.name}}</span>
+								{{/each}}
+							{{/if}}
+						</div>
+					</div>
+					<p class="campus">{{value.campus_name}}</p>
+					<p class="time"><span>{{value.open_date}}</span>至<span>{{value.end_date}}</span></p>
+					<p class="date">{{value.goods_week}}</p>
+					<p class="position">{{value.districtinfo}}</p>
+				</div>
+				<!-- 班级状态 -->
+				{{if value.is_full_class == 1}}
+					<div class="class_status man"></div>
+				{{/if}}
+			</li>
+		{{/each}}
+	</script>
 </body>
 </html>

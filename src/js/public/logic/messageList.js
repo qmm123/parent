@@ -312,6 +312,7 @@ define([
 	var mess = ClassList();
 	return {
 		init: function(opt) {
+			console.log('条用了')
 			mess.init(opt);
 		},
 		refresh: function() {
