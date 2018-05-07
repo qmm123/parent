@@ -74,7 +74,7 @@ define([
 		$('.pullDown').css("visibility" , 'visible');
 		var _this = this;
 		this.scroll.on('pullingDown', function() { // 松手
-
+			console.log('下拉');
 			_this.obj.beforePullDown = false;
 			_this.obj.isPullingDown = true;
 			_this.obj.isPullDowning = true;
@@ -82,8 +82,37 @@ define([
 			$('.pullDown').addClass('loading');
 			$('.pullDown .pullDownLabel').html('刷新中,请稍后');
 		})
-
+		var touch = {}
+		var is = false;
+		$('#wrapper').on('touchstart',function(e) {
+			if(parseFloat($(this).css('height')) >= parseFloat($(this).find('>div').css('height'))) {
+				is = true;
+			}else{
+				is = false
+			}
+			if(!is) {
+				return
+			}
+			touch.y = e.touches[0].pageY;
+			//console.log(touch);
+		})
+		$('#wrapper').on('touchmove',function(e) {
+			if(!is) {
+				return
+			}
+			var delay = e.touches[0].pageY - touch.y;
+			if(Number(delay) <= 0) {
+				return
+			}
+			delay = Math.min(delay, 60)
+			_this.scroll.scrollTo(0, delay, 0);
+			//console.log('1-------',delay)
+			if(delay > 100) {
+				console.log(1)
+			}
+		})
 		this.scroll.on('scroll', function(pos) { // 监听滚动事件
+			//console.log(pos.y)
 			if(!_this.config.pullDownRefresh) {
 				return
 			}
@@ -94,7 +123,9 @@ define([
 				// console.log('下拉', + top);
 				
 			}
+			//console.log('2-------',pos.y)
 			if(pos.y > 50 && isDown && !_this.obj.isPullDowning){ // 下拉加载
+				//console.log(2)
 				isDown = false;
 				$('.pullDown').addClass('flip');
 				$('.pullDown .pullDownLabel').html('释放刷新');

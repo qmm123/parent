@@ -71,7 +71,7 @@ define(["publicLogic/messageList",
 					type: 'MyListenAll',
 					conditions: {
 						parent_id: parent_id,
-						status: 5
+						status: 1
 					},
 					data: {
 
@@ -106,7 +106,7 @@ define(["publicLogic/messageList",
 				}else{
 					layer.confirm({
 						yes: function(index1){
-							var id = $(_this).data('goods_id');
+							var id = $(_this).data('id');
 							var modifier_id = localStorage.parent_id;
 							Server.cancelAudition(null, {id: id, modifier_id: modifier_id}, function(data) {
 								console.log(data);
