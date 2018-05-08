@@ -6,8 +6,6 @@ define([
 	"publicLogic/header",
 	"publicBusiness/categoryLocation",
   "publicBusiness/categoryClass",
-  "publicBusiness/categoryGrade",
-  "publicBusiness/categoryAllTeacher",
   "publicBusiness/tabSwitch",
   "public/tools/method",
   "public/business/jsFun",
@@ -15,7 +13,7 @@ define([
   "public/business/categoryAiSort"
 ], function (
 	ajax, layer, messageList, Header, categoryLocation, 
-	categoryClass, categoryGrade, categoryAllTeacher, tabSwitchs, Method, jsFun, nativeFun, categoryAiSort
+	categoryClass, tabSwitchs, Method, jsFun, nativeFun, categoryAiSort
 ) {
 	return function(){
 		// 头部
@@ -46,14 +44,11 @@ define([
 			};
 			var oLocation = categoryLocation.getValue();
 			var sClassLevel = categoryClass.getValue();
-			var sGradeLevel = categoryGrade.getValue();
-			var sTeacherVal = categoryAllTeacher.getValue();
 			var sAiSort = categoryAiSort.getValue();
 			var sSearchVal = Header.searchEle.data("value");
-			$.extend(true, oConditions, oLocation, sAiSort);
+			$.extend(true, oConditions, oLocation);
 			oConditions.category = sClassLevel;
-			oConditions.grade_id = sGradeLevel;
-			oConditions.teacher_id = sTeacherVal;
+			oConditions.sort = sAiSort;
 			if(sSearchVal){
 				oConditions.campus_name = sSearchVal;
 			}
@@ -72,14 +67,6 @@ define([
 		categoryClass.init({
 			initCategoryName: Method.getUrlParam("name"),
 			initCategoryLevel: Method.getUrlParam("category_class_level"),
-		  callClick: requeseDataList
-		});
-		// =年部年级点击回调函数
-		categoryGrade.init({
-		  callClick: requeseDataList
-		});
-		// =全部老师点击回调函数
-		categoryAllTeacher.init({
 		  callClick: requeseDataList
 		});
 		// 智能排序
@@ -117,8 +104,15 @@ define([
 		}
 		requeseDataList();
 		// 跳转校区详情
+		var isTrue = true;
 		$("#wrapper").on("click", ".item", function(){
-			nativeFun("toSchoolDetailMain", {"campus_id": $(this).data("id")});
+			if(isTrue) {
+				isTrue = false;
+				nativeFun("toSchoolDetailMain", {"campus_id": $(this).data("id")});
+			}
+			setTimeout(function() {
+				isTrue = true;
+			})
 		})
 	}
 

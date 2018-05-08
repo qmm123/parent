@@ -136,6 +136,7 @@ define([
    * @return    {[null]}        null
    */
   methods.artRender = function(listEle, tplId, data, isAppend, callback){
+    console.log(data)
     var sTpl = template(tplId, data);
     if(isAppend){
       listEle.append(sTpl);

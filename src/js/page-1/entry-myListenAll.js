@@ -9,7 +9,6 @@ define(["publicLogic/messageList",
 	return function() {
 		// 数据预处理
 		function fn(result) {
-			console.log(result);
 			var data = result.data;
 			for(var i=0;i<data.length;i++){
 				var item = data[i];
@@ -55,6 +54,7 @@ define(["publicLogic/messageList",
 			if(index == _index) {
 				return
 			}
+			$('#emptyContentClass').addClass('hide');
 			index = _index;
 			if(index == 0) {
 				messageList.init({
@@ -112,6 +112,9 @@ define(["publicLogic/messageList",
 								console.log(data);
 								if(index == 1){
 									$(_this).parent().parent().remove();
+									if($('#listContainer .item').length == 0){
+										$('#emptyContentClass').removeClass('hide');
+									}
 								}else{
 									console.log('成功');
 									setTimeout(function() {

@@ -102,7 +102,7 @@ define([
 				var _this = this;
 				// 请求数据
 				Server[this.options.name](apiConfid, param, function(data) {
-					console.log(data);
+					//console.log(data);
 					if(data.result && data.result.data && data.result.data.length > 0) {
 						_this.emptyEle.addClass('hide');
 						data.result.data[0].type = _this.options.type;
@@ -196,11 +196,12 @@ define([
 
 				// 请求数据
 				Server[this.options.name](null, param, function(data) {
-					console.log(data);
 					_this.isPullUpMoreRequest = false;
 					data.result.data[0].type = _this.options.type;
+					setStar(data.result.data);
+					setAdvantage(data.result.data);
 					if(_this.options.fn){
-						_this.$data.data = _this.options.fn(data.result);
+						_this.$data = _this.options.fn(data.result);
 					}else{
 						_this.$data = data.result;
 					}
@@ -305,7 +306,9 @@ define([
 				emptyEle.removeClass("hide");
 			},
 			refresh: function() {
-				this.scroll.refresh();
+				if(this.scroll){
+					this.scroll.refresh();
+				}
 			} 
 		}
 	}

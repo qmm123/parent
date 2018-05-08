@@ -50,7 +50,9 @@ define(["publicTool/datepicker",
 			$('.schedule .nav').html(name + '<span class="right-arrow"></span>');*/
 			var param = JSON.parse(param);
 			//console.log(RequestSchedule)
-			$('.schedule .nav').html(param.student_name + '<span class="right-arrow"></span>');
+			var student_name = param.student_name || '全部孩子';
+			console.log(student_name);
+			$('.schedule .nav').html(student_name + '<span class="right-arrow"></span>');
 			$('.schedule .nav').data('id',param.student_id);
 			$('.schedule .date_list li').removeClass('active');
 			var time = new Date();

@@ -23,8 +23,13 @@ define(["publicTool/requestSchedule",
 				month = "0"+month
 			}
 			var day = time.getDate();
+			if(parseInt(day) < 10) {
+				day = "0"+day
+			}
 			var date_time = years + '-' + month + '-' + day;
-			RequestSchedule.getList({date_time: date_time}, function() {
+			var current_month = years + '-' + month;
+			console.log(date_time)
+			RequestSchedule.getList({date_time: date_time, current_month: current_month}, function() {
 				bScroll.refresh();
 			});
 		}
@@ -170,9 +175,10 @@ define(["publicTool/requestSchedule",
 				else{
 					var iMonth = sYearM.substring(5,7);
 				}
+				var current_month = iYear + '-' + iMonth;
 				var date_time = iYear + '-' + iMonth + '-' + iDate;
 				var student_id = $('.schedule .nav').data('id');
-				RequestSchedule.getList({date_time: date_time, student_id: student_id}, function() {
+				RequestSchedule.getList({date_time: date_time, current_month: current_month, student_id: student_id}, function() {
 					bScroll.refresh();
 				});
 			}

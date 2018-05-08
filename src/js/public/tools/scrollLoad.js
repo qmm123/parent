@@ -104,7 +104,7 @@ define([
 			if(Number(delay) <= 0) {
 				return
 			}
-			delay = Math.min(delay, 60)
+			delay = Math.min(delay, 100) * 0.6; 
 			_this.scroll.scrollTo(0, delay, 0);
 			//console.log('1-------',delay)
 			if(delay > 100) {

@@ -11,7 +11,7 @@ define(["publicLogic/messageList",
 		if(tpl_config){
 			tpl_config = JSON.parse(tpl_config);
 			if(!$.isEmptyObject(tpl_config)){
-				isShow = tpl_config.teacher.config.is_show_campus_comment;
+				isShow = tpl_config.course_comment.is_show_campus_comment;
 				isShow = isShow == '1' ? true : false;
 				var $data = {isShow: isShow}
 				Method.artRender($('.tab'), 'tabClass', {"isShow": isShow}, false, function() {})

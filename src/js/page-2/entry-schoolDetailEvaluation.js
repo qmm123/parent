@@ -3,13 +3,13 @@ define(["publicLogic/messageList",
 	"publicLogic/header"
 	], function(messageList, Method, Header) {
 	return function() {
-
+		var page_param = Method.getUrlParam('page_param');
 		// 校区id
-		var campus_id = Method.getUrlParam('campus_id');
+		var campus_id = page_param.campus_id;
 		// 班级id
-		var goods_id = Method.getUrlParam('goods_id');
+		var goods_id = page_param.goods_id;
 		// 教师id
-		var teacher_id = Method.getUrlParam('teacher_id');
+		var teacher_id = page_param.teacher_id;
 
 		// 计算star个数
 		function setStar(data) {

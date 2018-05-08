@@ -18,11 +18,15 @@
   </script>
   <!-- 手机端调试 -->
   @@if(IsProxy == true){
-    <script src="/lib/js/vconsole.min.js"></script>
+    <!-- <script src="/lib/js/vconsole.min.js"></script>
     <script>
       var vConsole = new VConsole();
-    </script>
+    </script> -->
   }
+  <script src="/lib/js/vconsole.min.js"></script>
+  <script>
+    var vConsole = new VConsole();
+  </script>
   <script data-main="/js/config.js?v=v@@version" src="/lib/js/require.js"></script>
   <script src="/js/init.js?v=v@@version"></script>
 </head>

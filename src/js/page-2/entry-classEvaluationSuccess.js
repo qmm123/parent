@@ -5,9 +5,10 @@ define([
 	return function() {
 		
 		// 跳转到我的课程页
-		$('.sub_btn .submit').on('tap',function() {
+		$('.sub_btn .submit').on('click',function() {
 			nativeFun("toClassEvaluationRecord", {
 			});
+			return false;
 		})
 		// 完成
 		$('.success_ok').on('click', function() {

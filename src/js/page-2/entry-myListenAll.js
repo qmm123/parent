@@ -9,7 +9,6 @@ define(["publicLogic/messageList",
 	return function() {
 		// 数据预处理
 		function fn(result) {
-			console.log(result);
 			var data = result.data;
 			for(var i=0;i<data.length;i++){
 				var item = data[i];
@@ -55,6 +54,7 @@ define(["publicLogic/messageList",
 			if(index == _index) {
 				return
 			}
+			$('#emptyContentClass').addClass('hide');
 			index = _index;
 			if(index == 0) {
 				messageList.init({
@@ -71,7 +71,7 @@ define(["publicLogic/messageList",
 					type: 'MyListenAll',
 					conditions: {
 						parent_id: parent_id,
-						status: 5
+						status: 1
 					},
 					data: {
 
@@ -106,12 +106,15 @@ define(["publicLogic/messageList",
 				}else{
 					layer.confirm({
 						yes: function(index1){
-							var id = $(_this).data('goods_id');
+							var id = $(_this).data('id');
 							var modifier_id = localStorage.parent_id;
 							Server.cancelAudition(null, {id: id, modifier_id: modifier_id}, function(data) {
 								console.log(data);
 								if(index == 1){
 									$(_this).parent().parent().remove();
+									if($('#listContainer .item').length == 0){
+										$('#emptyContentClass').removeClass('hide');
+									}
 								}else{
 									console.log('成功');
 									setTimeout(function() {

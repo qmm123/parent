@@ -28,7 +28,7 @@ define([
 				$("<div class='"+ _this.config.sidebarMask +"'></div>").appendTo($("body"));
 				_this.moveIn();
 			})
-			$("body").on("click", "." + this.config.sidebarMask, function(){
+			$("body").on("tap", "." + this.config.sidebarMask, function(){
 				_this.moveOut();
 			})
 		},

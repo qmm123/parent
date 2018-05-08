@@ -96,8 +96,10 @@ define([
 		}
 		Service.commonLogic(option, {
 			version: localStorage.version,
+			merchant_id: localStorage.merchant_id,
 			conditions: {
-				parent_id: localStorage.parent_id
+				parent_id: localStorage.parent_id,
+				merchant_id: localStorage.merchant_id
 			}
 		}, param, successCall, failCall);
 	}
@@ -112,7 +114,10 @@ define([
 			$.extend(true, option, apiConfig);
 		}
 		Service.commonLogic(option, {
+			merchant_id: localStorage.merchant_id,
+			version: localStorage.version,
 			conditions: {
+				merchant_id: localStorage.merchant_id,
 				parent_id: localStorage.parent_id
 			}
 		}, param, successCall, failCall);
@@ -419,6 +424,7 @@ define([
 			project_id: localStorage.project_id,
 			version: localStorage.version,
 			parent_id: localStorage.parent_id,
+			merchant_id: localStorage.merchant_id,
 		}, param, successCall, failCall);
 	}
 

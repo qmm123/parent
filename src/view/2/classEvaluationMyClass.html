@@ -24,7 +24,7 @@
 				<!-- 我的课程 -->
 				<!-- <li class="item">
 					<div class="left">
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<img src="/img/tpl2/ic_default_teacher.png" alt="">
 						<p>张三</p>
 					</div>
 					<div class="right">
@@ -43,7 +43,7 @@
 				<!-- 收到评价 -->
 				<!-- <li class="othitem">
 					<div class="title">
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<img src="/img/tpl2/ic_default_teacher.png" alt="">
 						<span class="name">张晓雅</span>
 					</div>
 					<p class="yello">表现极好</p>
@@ -52,7 +52,7 @@
 					<p class="line">待改进: <span class="gray">上课走神</span></p>
 					<p class="line">评语：</p>
 					<div class="student">
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<img src="/img/tpl2/ic_default_teacher.png" alt="">
 						<div class="text">
 							<p class="name">孩子：王勇</p>
 							<p class="desc">小学数学A班</p>
@@ -83,7 +83,7 @@
 							{{if value.avatar}}
 								<img src="{{value.avatar}}" alt="">
 							{{else}}
-								<img src="/img/tpl1/default/ic_default_child.png" alt="">
+								<img src="/img/tpl2/default/ic_default_child.png" alt="">
 							{{/if}}
 							<p>{{value.student_name}}</p>
 						</div>
@@ -122,7 +122,7 @@
 							{{/if}}
 						</div>
 						<div class="inner">
-							{{if value.order_type == 1 || value.order_type == 2}}
+							{{if value.order_type == 1}}
 								{{if value.is_allow_comment == 1}}
 									<a href="javascript:;" class="ping" data-sub_order_id="{{value.sub_order_id}}">评价</a>
 								{{/if}}
@@ -147,7 +147,7 @@
 							{{if value.avatar}}
 								<img src="{{value.avatar}}" alt="">
 							{{else}}
-								<img src="/img/tpl1/ic_default_teacher.png" alt="">
+								<img src="/img/tpl2/ic_default_teacher.png" alt="">
 							{{/if}}
 							<p>{{value.student_name}}</p>
 						</div>
@@ -174,13 +174,13 @@
 							</p>
 							<p>课时：总{{value.buy_lesson}}节,用{{value.finish_lesson}}节,转出{{value.turn_out_lesson}}节,剩余{{value.surplus_lesson}}节</p>
 							<p>结课时间：{{value.end_class_time}}</p>
-							{{if value.order_type == 2}}
+							<!-- {{if value.order_type == 2}}
 								<div class="inner">
 									{{if value.is_allow_comment == 1}}
 										<a href="javascript:;" class="ping" data-sub_order_id="{{value.sub_order_id}}">评价</a>
 									{{/if}}
 								</div>
-							{{/if}}
+							{{/if}} -->
 						</div>
 					</li>
 				{{/if}}
@@ -192,7 +192,7 @@
 						{{if value.teacher_photo}}
 							<img src="{{value.teacher_photo}}" alt="">
 						{{else}}
-							<img src="/img/tpl1/ic_default_teacher.png" alt="">
+							<img src="/img/tpl2/ic_default_teacher.png" alt="">
 						{{/if}}
 						<span class="name">{{value.teacher_name}}</span>
 					</div>
@@ -220,7 +220,7 @@
 						{{if value.student_photo}}
 							<img src="{{value.student_photo}}" alt="">
 						{{else}}
-							<img src="/img/tpl1/default/ic_default_child.png" alt="">
+							<img src="/img/tpl2/default/ic_default_child.png" alt="">
 						{{/if}}
 						<div class="text">
 							<p class="name">孩子：{{value.student_name}}</p>

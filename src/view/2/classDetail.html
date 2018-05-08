@@ -13,7 +13,7 @@
 			<!-- banner图部分 -->
 			<div class="banner_infor">
 				<div id="banner" class="banner">
-					<img src="/img/tpl1/default/bg_class_detail.png" alt="" />
+					<img src="/img/tpl2/default/bg_class_detail.png" alt="" />
 				</div>
 				<div class="infor">
 					<span class="txt">剩余<em id="leftStudentNum"></em>个名额</span>
@@ -37,8 +37,8 @@
 					<span class="icon">随时插班</span>
 					<span class="icon">免费试听</span>
 				</p>
-				<div id="huiPagZone" class="fav">
-					<a href="javascript:;" id="lookHuiPag" class="point-click hide"></a>
+				<div id="lookHuiPag" class="fav">
+					<a href="javascript:;" class="point-click hide"></a>
 					<p class="icon"></p>
 				</div>
 				<!-- 班级状态 -->
@@ -57,8 +57,8 @@
 					</li>
 					<li class="item">
 						<p class="item-left">课程安排：</p>
-						<div id="classPlan" class="item-right">
-							<!-- <a href="javascript:;" id="lookClassPlan" class="point-click point-special"></a> -->
+						<div id="lookClassPlan" class="item-right">
+							<!-- <a href="javascript:;" class="point-click point-special"></a> -->
 							<p class="item-right-date"> </p>
 							<div class="item-right-weak-wrapper">
 								<p class="weak"></p>
@@ -147,7 +147,7 @@
 	    	{{if val.avatar}}
 	      <img src={{val.avatar}} width="25" height="25" alt="头像" class="ping_img" />
 	      {{else}}
-	      <img src="/img/tpl1/default/ic_default_user_avatar.png" width="25" height="" alt="25" class="ping_img" />
+	      <img src="/img/tpl2/default/ic_default_user_avatar.png" width="25" height="" alt="25" class="ping_img" />
 	      {{/if}}
 	      <div class="ping_txt">
 	        <div class="ping_tit">
@@ -181,11 +181,11 @@
 						{{if goods_imgs.length >= 2}}
 							<img src={{goods_imgs[1].url}} alt="" />
 						{{else}}
-							<img src="/img/tpl1/default/bg_class_detail.png" alt="" />
+							<img src="/img/tpl2/default/bg_class_detail.png" alt="" />
 						{{/if}}
 					{{/if}}
 				{{else}}
-				<img src="/img/tpl1/default/bg_class_detail.png" alt="" />
+				<img src="/img/tpl2/default/bg_class_detail.png" alt="" />
 				{{/if}}
 			</div>
 			<div class="infor">
@@ -228,8 +228,8 @@
 				{{/if}}
 			</p>
 			{{if discount_info && discount_info.length}}
-			<div id="huiPagZone" class="fav">
-				<a href="javascript:;" id="lookHuiPag" class="point-click"></a>
+			<div id="lookHuiPag" class="fav">
+				<a href="javascript:;" class="point-click"></a>
 				<p class="icon">
 					<span style="background-color:{{discount_info[1].colour}};">{{discount_info[1].tag}}</span>
 					{{discount_info[1].msg}}
@@ -257,10 +257,10 @@
 				</li>
 				<li class="item">
 					<p class="item-left">课程安排：</p>
-					<div id="classPlan" class="item-right">
+					<div id="lookClassPlan" class="item-right">
 						{{if lessons.length}}
 						<p class="item-right-date">{{lessons[0].open_date}} 至 {{lessons[lessons.length-1].open_date}}</p>
-						<a href="javascript:;" id="lookClassPlan" class="point-click point-special"></a>
+						<a href="javascript:;" class="point-click point-special"></a>
 						<div class="item-right-weak-wrapper">
 							{{each lession_arrange val i}}
 							<div class="time">

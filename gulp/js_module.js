@@ -37,7 +37,7 @@ const jstask = () => {
 
       .pipe( changed(distFolder.js) )
       
-      .pipe( gulpif(options.env === "production", stripDebug() ) ) 
+      // .pipe( gulpif(options.env === "production", stripDebug() ) ) 
       .pipe( gulpif(options.env === "production", uglify() ) ) 
       //.pipe(rev())
       .pipe(gulp.dest(distFolder.js))

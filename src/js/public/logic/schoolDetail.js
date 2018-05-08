@@ -23,7 +23,7 @@ define([
 			// tab切换
 			this.slideSwitch();
 			this.renderMain();
-			if(this.pageConfig.course_comment && this.pageConfig.course_comment.is_show_campus_comment == 1){
+			if(this.pageConfig.course_comment && this.pageConfig.course_comment.config.is_show_campus_comment == 1){
 				this.renderPing();
 				this.pingClassZone.removeClass(this.config.hide_class);
 			}
@@ -94,10 +94,21 @@ define([
 		// tab切换
 		slideSwitch: function(callEnd){
 			var _this = this;
-			Method.tabChange(this.config.titCell, this.config.mainCell, function(iIdx){
-				_this.initRender(iIdx);
-				messageList.refresh();
-			});
+			var aTit = $(this.config.titCell);
+			var aCon = $(this.config.mainCell);
+			aTit.on("tap", function(){
+				var iIdx = aTit.index( $(this) );
+				aTit.removeClass("on");
+				aTit.eq(iIdx).addClass("on");
+				aCon.hide().removeClass(_this.config.hide_class);
+				if(iIdx == 0){
+					aCon.eq(iIdx).show();
+				}
+				if(iIdx == 1 || iIdx == 2){
+					aCon.eq(1).show();
+					_this.renderClassTeacher(iIdx);
+				}
+			})
 		},
 		// 渲染主页
 		renderMain: function(){
@@ -121,8 +132,9 @@ define([
 						});
 						_this.setContentHeight();
 					});
+				}else{
+					_this.setContentHeight();
 				}
-				_this.setContentHeight();
 				if(data.result.candial == 1){
 					_this.campusPhoneEle.html(data.result.telephone);
 					_this.campusPhoneEle.click(function(){
@@ -178,9 +190,10 @@ define([
 		renderTeacher: function(){
 			var _this = this;
 			messageList.init({
-				listWrapper: _this.config.teacherList,
+				listFolder: "wrapperClass",
+				listWrapper: _this.config.classList,
 				classTpl: "tplTeacher",
-				emptyEle: "#emptyContent",
+				emptyEle: "#emptyContentClass",
 				name: 'getSchoolDetailTeacher',
 				conditions:{
 					campus_id: _this.campus_id
@@ -198,32 +211,40 @@ define([
 			$(this.config.slideCell).on("tap", "ul[data-role='goToPing']", function(){
 				nativeFun("toSchoolDetailEvaluation", {campus_id: _this.campus_id});
 			})
-			// 去课程详情页
+			// 去课程详情页&去老师详情页
 			$(this.config.slideCell).on("tap", "#classList >li", function(){
-				nativeFun("toClassDetail", {"campus_id": _this.campus_id, "goods_id": $(this).data("goodsid")});
-			})
-			// 去老师详情页
-			$(this.config.slideCell).on("tap", "#teacherList >li", function(){
-				nativeFun("toTeacherDetailIntroduce", {"campus_id": _this.campus_id, "teacher_id": $(this).data("id")});
+				if( $(this).attr("data-role") == "class" ){
+					nativeFun("toClassDetail", {"campus_id": _this.campus_id, "goods_id": $(this).data("goodsid")});
+				}
+				if( $(this).attr("data-role") == "teacher" ){
+					nativeFun("toTeacherDetailIntroduce", {"campus_id": _this.campus_id, "teacher_id": $(this).data("id")});
+				}
 			})
 		},
 		// 设置课程和老师列表的高度
 		setContentHeight: function(){
 			var oTab = $("#tabZone .tab_lik");
-			var iHei = this.winHei - $(".school_env").height() - parseInt( oTab.css("margin-top") ) - parseInt( oTab.css("margin-bottom") );
+			var iHei = this.winHei 
+			- $(".school_env").height() 
+			- oTab.height() 
+			- parseInt( oTab.css("margin-top") ) 
+			- parseInt( oTab.css("margin-bottom") );
+			
 			$("#wrapper").parent().height(iHei);
 			$("#wrapperClass").parent().height(iHei);
 		},
 		// 初始化渲染函数
-		initRender: function(idx){
+		// 参数 [对应tab的索引]
+		renderClassTeacher: function(idx){
 			if(idx == 1 && this.isLoadClass){
 				this.renderClass();
-				this.isLoadClass = false;
+				// this.isLoadClass = false;
 			}
 			if(idx == 2 && this.isLoadTeacher){
 				this.renderTeacher();
-				this.isLoadTeacher = false;
+				// this.isLoadTeacher = false;
 			}
+			messageList.refresh();
 		},
 		// 视频播放
 		playVideo: function(){

@@ -4,7 +4,8 @@ define([
 ], function (Bridge) {
 	var nativeFunConfig = {
 		// 功能性部分
-		logout: "logout",//登出
+		logout: "logout",//登出-token失效情况
+		login: "login",//登录-无token情况
 		goBack: "goBack",//返回上一页
 		callPhone: "callPhone",//拨打电话
 		// H5部分(页面由H5做)

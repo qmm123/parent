@@ -19,7 +19,7 @@
 			<ul id="listContainer">
 				<!-- <li class="item">
 					<div class="itemInner">
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<img src="/img/tpl2/ic_default_teacher.png" alt="">
 						<div class="text">
 							<h3 class="title">语文学习班1</h3>
 							<p>所属校区：海淀校区</p>
@@ -32,7 +32,7 @@
 				</li>
 				<li class="item">
 					<div class="itemInner">
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<img src="/img/tpl2/ic_default_teacher.png" alt="">
 						<div class="text">
 							<h3 class="title">语文学习班1</h3>
 							<p>所属校区：海淀校区</p>
@@ -45,7 +45,7 @@
 				</li>
 				<li class="item">
 					<div class="itemInner">
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<img src="/img/tpl2/ic_default_teacher.png" alt="">
 						<div class="text">
 							<h3 class="title">语文学习班1</h3>
 							<p>所属校区：海淀校区</p>
@@ -74,7 +74,7 @@
 					{{if teacher_photo}}
 						<img src="{{teacher_photo}}" alt="">
 					{{else}}
-						<img src="/img/tpl1/ic_default_teacher.png" alt="">
+						<img src="/img/tpl2/ic_default_teacher.png" alt="">
 					{{/if}}
 					<div class="text">
 						<h3 class="title">{{goods_name}}</h3>
@@ -84,7 +84,7 @@
 				</div>
 				<div>
 				{{each lessons value i}}
-					<div class="line" data-goods_id="{{goods_id}}" data-student_id="{{student_id}}" data-order_id="{{order_id}}" data-campus_id="{{campus_id}}" data-teacher_id="{{teacher_id}}">
+					<div class="line" data-goods_id="{{goods_id}}" data-student_id="{{student_id}}" data-order_id="{{order_id}}" data-lessons_id="{{value.lesson_id}}" data-campus_id="{{campus_id}}" data-teacher_id="{{teacher_id}}">
 						{{value.lesson_num}} {{value.open_date}} {{value.class_time}} <span>待评价</span>
 					</div>
 				{{/each}}

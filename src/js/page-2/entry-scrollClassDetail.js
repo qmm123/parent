@@ -48,14 +48,45 @@ define(["publicService/service",
 			if(!$(this).hasClass('cut')){
 				return
 			}else{
-				var num = Number($(this).next('.count').html())
+				var num = Number($(this).next('.count').val())
 				num = num - 1;
 				num = Math.max(1, num);
 				purchase_number= num;
-				$(this).next('.count').html(num)
+				$(this).next('.count').val(num)
 				var price = Number($('.container .body .price .num').data('unit_price'));
 				var priceAll = Number(num * price).toFixed(2);
+				console.log(priceAll)
 				$('.container .footer .left span').text('￥'+priceAll);
+			}
+		})
+
+		$('.content').on('input','.category .list .special .num .count', function(e) {
+			if(!$(this).hasClass('count')){
+				return
+			}else{
+				var num = Number(this.value);
+				var reg = /\d+/;
+				if(!reg.test(num)){
+					this.value = 1;
+				}else{
+					if(num>999) {
+						num = 999;
+						this.value = 999;
+					}else if(num < 1){
+						num = 1;
+						this.value = '';
+					}
+				}
+				purchase_number= num;
+				var price = Number($('.container .body .price .num').data('unit_price'));
+				var priceAll = Number(num * price).toFixed(2);
+				console.log(priceAll)
+				$('.container .footer .left span').text('￥'+priceAll);
+			}
+		})
+		$('.content').on('blur','.category .list .special .num .count', function(e) {
+			if(!this.value) {
+				this.value = 1;
 			}
 		})
 
@@ -64,11 +95,12 @@ define(["publicService/service",
 				return
 			}else{
 				//alert(num)
-				var num = Number($(this).prev('.count').html())
+				var num = Number($(this).prev('.count').val())
+				console.log(num, '--------')
 				num = num + 1;
 				num = Math.min(999, num);
 				purchase_number = num;
-				$(this).prev('.count').html(num);
+				$(this).prev('.count').val(num);
 				var price = Number($('.container .body .price .num').data('unit_price'));
 				var priceAll = Number(num * price).toFixed(2);
 				$('.container .footer .left span').text('￥'+priceAll);

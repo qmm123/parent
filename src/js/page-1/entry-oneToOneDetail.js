@@ -105,7 +105,7 @@ define(["publicService/service",
 			if(!$(this).hasClass('cut')){
 				return
 			}else{
-				var num = Number($(this).next('.count').html())
+				var num = Number($(this).next('.count').val())
 				num = num - 1;
 				num = Math.max(1, num);
 				var priceAll = 0;
@@ -144,11 +144,11 @@ define(["publicService/service",
 					oto_son_id = item.data('id');
 					priceAll += (num - $num + 1) * Number(item.data('unit_price'));
 				}
-				$(this).next('.count').html(num)
+				$(this).next('.count').val(num)
+				priceAll = padEnd(priceAll);
 				$('.container .footer .left span').text('￥'+priceAll);
 				class_hour = num;
 				money = priceAll;
-
 			}
 		})
 
@@ -157,7 +157,7 @@ define(["publicService/service",
 				return
 			}else{
 				//alert(num)
-				var num = Number($(this).prev('.count').html())
+				var num = Number($(this).prev('.count').val())
 				num = num + 1;
 				num = Math.min(999, num);
 				var priceAll = 0;
@@ -197,13 +197,78 @@ define(["publicService/service",
 					priceAll += (num - $num + 1) * Number(item.data('unit_price'));
 				}
 				priceAll = padEnd(priceAll);
-				$(this).prev('.count').html(num);
+				$(this).prev('.count').val(num);
 				$('.container .footer .left span').text('￥'+priceAll);
 				class_hour = num;
 				money = priceAll;
 			}
 		})
-
+		// count
+		$('.content').on('input','.category .list .special .num .count', function(e) {
+			if(!$(this).hasClass('count')){
+				return
+			}else{
+				var num = Number(this.value);
+				var reg = /\d+/;
+				if(!reg.test(num)){
+					this.value = 1;
+				}else{
+					if(num>999) {
+						num = 999;
+						this.value = 999;
+					}else if(num < 1){
+						num = 1;
+						this.value = '';
+					}
+				}
+				var priceAll = 0;
+				var _len = $('.category.lesson .normal.active').find('span').length;
+				var allN= $('.category.lesson .normal.active').find('span').eq(_len - 1).html();
+				if(num > Number(allN)){
+					for(var i =0;i< _len;i++){
+						var item = $('.category.lesson .normal.active').find('span').eq(i);
+						var fNum = item.data('start_class_hour');
+						var cNum = item.data('end_class_hour');
+						var zPrice = item.data('unit_price');
+						priceAll += (Number(cNum) - Number(fNum) + 1) * Number(zPrice);
+					}
+					var item = $('.category.lesson .normal.active').find('span').eq(_len - 1);
+					priceAll += (num - Number(item.data('end_class_hour'))) * Number(item.data('unit_price'));
+					oto_son_id = item.data('id');
+				}else{
+					var index = 0;
+					for(var j =0;j< _len;j++){
+						var item = $('.category.lesson .normal.active').find('span').eq(j);
+						var fNum = item.data('start_class_hour');
+						var cNum = item.data('end_class_hour');
+						if(num >= Number(fNum) && num <= Number(cNum)) {
+							index = j;
+						}
+					}
+					for(var n=0;n<index;n++){
+						var item = $('.category.lesson .normal.active').find('span').eq(n);
+						var fNum = item.data('start_class_hour');
+						var cNum = item.data('end_class_hour');
+						var zPrice = item.data('unit_price');
+						priceAll += (Number(cNum) - Number(fNum) + 1) * Number(zPrice);
+					}
+					var item = $('.category.lesson .normal.active').find('span').eq(index);
+					var $num = Number(item.data('start_class_hour'));
+					oto_son_id = item.data('id');
+					priceAll += (num - $num + 1) * Number(item.data('unit_price'));
+				}
+				priceAll = padEnd(priceAll);
+				//$(this).prev('.count').html(num);
+				$('.container .footer .left span').text('￥'+priceAll);
+				class_hour = num;
+				money = priceAll;
+			}
+		})
+		$('.content').on('blur','.category .list .special .num .count', function(e) {
+			if(!this.value) {
+				this.value = 1;
+			}
+		})
 		// 跳转到报名页面
 		$('.container').on('click','.footer .right', function() {
 			var param = {

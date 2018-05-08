@@ -65,12 +65,12 @@
 					{{/if}}
 				{{/if}}
 				{{if value.status == 1}}
-					<div class="btn" data-tab="1" data-show="{{value.status}}"><span data-goods_id="{{value.id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">取消试听</span></div>
+					<div class="btn" data-tab="1" data-show="{{value.status}}"><span data-id="{{value.id}}" data-goods_id="{{value.goods_id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">取消试听</span></div>
 				{{else if value.status == 4}}
-					<div class="btn" data-tab="2" ><span data-goods_id="{{value.id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">重新预约</span></div>
+					<div class="btn" data-tab="2" ><span data-id="{{value.id}}" data-goods_id="{{value.goods_id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">重新预约</span></div>
 				{{else if value.status == 5}}
 					{{if value.isStatus}}
-						<div class="btn" data-tab="1" data-show="{{value.status}}"><span data-goods_id="{{value.id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">取消试听</span></div>
+						<div class="btn" data-tab="1" data-show="{{value.status}}"><span data-id="{{value.id}}" data-goods_id="{{value.goods_id}}" data-goods_name="{{value.goods_name}}" data-audition_date="{{value.audition_date}}" data-audition_time="{{value.audition_time}}">取消试听</span></div>
 					{{/if}}
 				{{/if}}
 			</li>

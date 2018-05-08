@@ -16,8 +16,8 @@ define(["publicLogic/messageList",
 			isPullUp: true
 		});
 		// 执行刷新的交互
-		/*jsFun("wbReload", function(){
-			console.log('jjjjjj')
+		jsFun("wbReload", function(){
+			console.log('wbReload')
 			messageList.init({
 				name: 'getClassPingWantPing',
 				type: 'ClassPingWantPing',
@@ -26,7 +26,7 @@ define(["publicLogic/messageList",
 				},
 				isPullUp: true
 			});
-		});*/
+		});
 		
 
 		// 跳转到写评价页
@@ -39,12 +39,14 @@ define(["publicLogic/messageList",
 				var order_id = $(this).data('order_id');
 				var campus_id = $(this).data('campus_id');
 				var teacher_id = $(this).data('teacher_id');
+				var lessons_id = $(this).data('lessons_id');
 				nativeFun("toClassEvaluationWriteEvaluation", 
 					{"goods_id": goods_id,
 					"student_id": student_id,
 					"order_id": order_id,
 					"campus_id": campus_id,
-					"teacher_id": teacher_id
+					"teacher_id": teacher_id,
+					"lessons_id": lessons_id
 				});
 			}
 			setTimeout(function(){

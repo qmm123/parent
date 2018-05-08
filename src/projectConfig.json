@@ -1,6 +1,6 @@
 {
-  "version"           : "v1.0.0",
-  "svnVersion"        : "v1.0.0",
+  "version"           : "v1.0.1_5",
+  "svnVersion"        : "v1.0.1_5",
   "title"             : "机构专属家长APP",
   "sftpProjectConfig" : {
     "host"       : "192.168.1.101",

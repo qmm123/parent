@@ -33,14 +33,14 @@
 	{{/if}}
 </script>
 <script type="text/html" id="avator">
-	<img src="/img/tpl1/default/bg_teacher_detail.png" alt="">
+	<img src="/img/tpl2/default/bg_teacher_detail.png" alt="">
 	<div class="text">
 		{{if sex == 1}}
 			<div class="avator avator2">
 				{{if photo}}
 					<img src="{{photo}}" alt="">
 				{{else}}
-					<img src="/img/tpl1/default/ic_default_teacher.png" alt="">
+					<img src="/img/tpl2/default/ic_default_teacher.png" alt="">
 				{{/if}}
 			</div>
 		{{else}}
@@ -64,9 +64,9 @@
 					<span>{{value}}</span>&nbsp;
 				{{/each}}
 			</p>
-			<p class="tag"><span class="gray">教授标签：</span>
+			<p class="tag"><span class="gray">教师标签：</span>
 				{{if label.length > 0}}
-					{{each goods_label value i}}
+					{{each label value i}}
 						<span class="inner">{{value}}</span>
 					{{/each}}
 				{{else}}
@@ -189,7 +189,7 @@
 									{{if value.avatar}}
 										<img src="{{value.avatar}}" alt="">
 									{{else}}
-										<img src="/img/tpl1/ic_default_teacher.png" alt="">
+										<img src="/img/tpl2/ic_default_teacher.png" alt="">
 									{{/if}}
 									<div class="tel">{{value.phone}}</div>
 									<div class="time">{{value.modified}}</div>

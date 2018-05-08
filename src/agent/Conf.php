@@ -5,7 +5,7 @@ $Conf = [
 	// api请求地址
 	// 'api_url'	 => 'http://api.baonahao.com.cn', // 本地
 	// 'api_url'	 => 'https://api.test.baonahao.com', // 测试
-	'api_url'	 => 'https://api.fangzhen.baonahao.com', // 仿真
+	'api_url'	 => 'https://apifz.baonahao.com', // 仿真
 	// 'api_url'	 => 'https://api.baonahao.com', // 线上
 
 	// 文件服务器

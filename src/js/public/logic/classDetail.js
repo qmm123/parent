@@ -16,7 +16,7 @@ define([
 		init: function(opt){
 			this.configer(opt);
 			this.renderClassInfor();
-			if(this.pageConfig.course_comment && this.pageConfig.course_comment.is_show_goods_details_comment == 1){
+			if(this.pageConfig.course_comment && this.pageConfig.course_comment.config.is_show_goods_details_comment == 1){
 				this.renderClassPing();
 				this.pingZone.removeClass("hide");
 			}
@@ -186,6 +186,7 @@ define([
 				this.classDetailBasic.on("tap", "#" + this.config.lookClassPlan, function(){
 					layer.pageUp({
 						style: "height:300px;",
+						shadeClose: true,
 						title: "课时安排<span class='font_12 font_gray'>("+ data.result.lessons_minutes.lessons_count +","+ data.result.lessons_minutes.minutes +")</span>",
 						content: artTempFun.getArtString( $("#" + _this.config.tplClassDetailLesson).html(), data.result, true )
 					});
@@ -212,6 +213,16 @@ define([
 			this.joinCart.click(function(){
 				var $this = $(this);
 				if( $this.hasClass("disable_deep") ){
+					return;
+				}
+				if(!localStorage.parent_id){//检测未登录状态
+					nativeFun("login", {}, function(res){
+						var oRes = JSON.parse(res);
+						localStorage.parent_id = oRes.parent_id;
+						localStorage.token_val = oRes.token_val;
+						localStorage.token_key = oRes.token_key;
+						_this.renderClassInfor();
+					})
 					return;
 				}
 				_this.joinCart.addClass("disable_deep");
@@ -246,15 +257,24 @@ define([
 			}
 			// 未开班、已满班、已结课、已下架
 			if(data.result.status == 7 || data.result.status == 3 || data.result.status == 2 || data.result.status == 1){
+				this.yueTing.addClass("disable");
+				this.joinCart.addClass("disable_deep");
+				this.signClass.addClass("disable");
 				return;
 			}
 			// 预约试听
 			if(data.result.parent_is_audition == "1"){
 				this.yueTing.removeClass("disable");
 			}
+			if(data.result.parent_is_audition == "2"){
+				this.yueTing.addClass("disable");
+			}
 			// 加入购物车
 			if(data.result.is_shiopping_cart == "2"){
 				this.joinCart.removeClass("disable_deep");
+			}
+			if(data.result.is_shiopping_cart == "1"){
+				this.joinCart.addClass("disable_deep");
 			}
 			// 立即报名-按钮状态
 			if(data.result.status == "4" && data.result.is_transfer == "1"){

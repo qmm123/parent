@@ -45,7 +45,7 @@ define([
 		},
 		// 渲染侧边栏
 		renderSidebar: function(){
-			if( Method.getUrlParam(this.config.paramKey) ){
+			if( Method.getUrlParam(this.config.paramKey) && this.sideData.goods_otm){
 				var aSide = this.sideData.goods_otm.config.goods_list_screen;
 				if( $.inArray(2, aSide) != -1 ){//上课时间
 					template.defaults.imports.isShowClassTime = true;

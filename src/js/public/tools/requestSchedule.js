@@ -8,6 +8,9 @@ define([
 		// 获取课表 (全部日期)
 		requestSchedule.getSche = function(current_month, successCallback, errorCallback) {
 			Service.getScheduleCourseListOpenDate(null, {
+				conditions: {
+					open_date: current_month
+				}
 			}, function(data) {
 				var _data = data.result.data;
 				if (data.status) {
@@ -25,13 +28,14 @@ define([
 			Service.getScheduleCourseList(null, {
 				conditions: {
 					open_date: opt.date_time,
-					student_id: opt.student_id
+					student_id: opt.student_id,
+					current_month: opt.current_month
 				}
 			}, function(data) {
-				console.log(opt.isEmpty)
+				console.log(data)
 				if(data.status) {
 					var _data = {}
-					var data = data.result;
+					var data = data.result.data;
 					if(data && data.length > 0) {
 						_data.data = data;
 						setRender(_data, function() {
